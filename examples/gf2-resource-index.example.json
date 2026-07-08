@@ -1,0 +1,29 @@
+{
+  "format": "gf2-resource-index",
+  "version": 1,
+  "source": "manual example using exilium codes and gf2.mcc.wiki images",
+  "generatedAt": "2026-06-25T00:00:00.000Z",
+  "items": {
+    "1069": {
+      "id": 1069,
+      "name": "洛蕾莱",
+      "type": "doll",
+      "rarity": 5,
+      "code": "LoreleySSR",
+      "server": "haoplay",
+      "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LoreleySSR.png",
+      "imageSource": "mcc-wiki",
+      "aliases": ["Loreley"]
+    },
+    "10693": {
+      "id": 10693,
+      "name": "Nighttide Nocturne",
+      "type": "weapon",
+      "rarity": 5,
+      "code": "Weapon_DSR50_5",
+      "server": "haoplay",
+      "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_5_1024.png",
+      "imageSource": "mcc-wiki"
+    }
+  }
+}

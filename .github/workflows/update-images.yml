@@ -1,0 +1,95 @@
+name: Update Resource Images
+
+on:
+  workflow_dispatch:
+    inputs:
+      servers:
+        description: "Comma-separated server codes"
+        required: false
+        default: "haoplay"
+  schedule:
+    - cron: "0 11 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      SERVERS: ${{ github.event.inputs.servers || 'haoplay' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Check for banner state changes
+        id: check-banners
+        run: |
+          INDEX_FILE="examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$INDEX_FILE" ]; then
+            if node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only; then
+              echo "Changes detected, proceeding with update."
+              echo "should_update=true" >> $GITHUB_OUTPUT
+            else
+              echo "No changes detected, skipping update."
+              echo "should_update=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "Forcing update (manual dispatch or missing existing index)."
+            echo "should_update=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update resource index
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: |
+          node scripts/update-resource-index.mjs \
+            --servers "$SERVERS" \
+            --out-dir examples \
+            --existing examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json \
+            --probe-images --probe-concurrency 24 --probe-timeout-ms 20000
+
+      - name: Download images
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: |
+          node scripts/download-images.mjs \
+            --index examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json \
+            --out-dir public/images \
+            --concurrency 16 --timeout-ms 30000
+
+      - name: Fetch i18n names from community sources
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: |
+          node scripts/fetch-i18n-names.mjs \
+            --index public/images/resource-index.json \
+            --existing-i18n src/i18n.json \
+            --out src/i18n-names.json \
+            --sources mcc,gfl2help,dandegate,wikiru \
+            --concurrency 8 --timeout-ms 20000
+
+      - name: Merge i18n names into resource indexes
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: |
+          node scripts/merge-i18n-names.mjs \
+            --index public/images/resource-index.json \
+            --names src/i18n-names.json \
+            --out public/images/resource-index.json \
+            --app-i18n src/i18n.json
+
+      - name: Commit changes
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add examples/ public/images/ src/i18n-names.json src/i18n.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update resource images and i18n names ($SERVERS)"
+            git push
+          fi

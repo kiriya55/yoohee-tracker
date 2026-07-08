@@ -1,0 +1,30 @@
+{
+  "name": "gf2-local-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc && vite build",
+    "test": "vitest run",
+    "preview": "vite preview --host 127.0.0.1",
+    "resources:update": "node scripts/update-resource-index.mjs",
+    "resources:check-images": "node scripts/check-resource-images.mjs",
+    "i18n:fetch-names": "node scripts/fetch-i18n-names.mjs",
+    "i18n:merge-names": "node scripts/merge-i18n-names.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^5.9.2",
+    "vite": "^8.1.0",
+    "vitest": "^4.1.9"
+  }
+}
