@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-07-10T22:14:22.682Z",
+  "generatedAt": "2026-07-12T11:52:10.207Z",
   "servers": [
     "haoplay"
   ],
@@ -2429,6 +2429,9 @@
       "code": "Weapon_DP12_4",
       "server": "haoplay",
       "aliases": [],
+      "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_4_1024.png",
+      "imageSource": "mcc-wiki",
+      "verifiedAt": "2026-07-12T11:52:10.207Z",
       "localIcon": "/images/weapon/Weapon_DP12_4_1024.png",
       "cn": "12型双管霰弹枪",
       "en": "DP-12",
@@ -2796,6 +2799,9 @@
       "code": "Weapon_ROBINSONXCR_3",
       "server": "haoplay",
       "aliases": [],
+      "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_ROBINSONXCR_3_1024.png",
+      "imageSource": "mcc-wiki",
+      "verifiedAt": "2026-07-12T11:52:10.207Z",
       "localIcon": "/images/weapon/Weapon_ROBINSONXCR_3_1024.png",
       "cn": "旧式罗宾逊先进步枪",
       "en": "Retired Robinson XCR",
