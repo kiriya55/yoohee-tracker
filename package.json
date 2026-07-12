@@ -11,7 +11,8 @@
     "resources:update": "node scripts/update-resource-index.mjs",
     "resources:check-images": "node scripts/check-resource-images.mjs",
     "i18n:fetch-names": "node scripts/fetch-i18n-names.mjs",
-    "i18n:merge-names": "node scripts/merge-i18n-names.mjs"
+    "i18n:merge-names": "node scripts/merge-i18n-names.mjs",
+    "i18n:check": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

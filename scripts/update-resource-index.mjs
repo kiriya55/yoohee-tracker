@@ -2,6 +2,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
+import { fetchWithRetry } from "./fetch-with-retry.mjs";
+import { buildMccImageUrl, findResourceCatalogChanges, selectResourceCatalogUpdates } from "./resource-catalog.mjs";
 
 const EXILIUM_ORIGIN = "https://exilium.xyz";
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
@@ -52,8 +54,8 @@ Options:
   --probe-images               HEAD-check generated MCC image URLs
   --probe-concurrency <n>      Parallel image probes. Default: 16
   --probe-timeout-ms <ms>      Per-image probe timeout. Default: 10000
-  --check-only                 Only check if active banners changed state since last run.
-                               Exits 0 if changes found, 1 if no changes. Requires --existing.
+  --check-only                 Compare the current resource catalog with --existing.
+                               Exits 0 if images changed, 1 if unchanged. Requires --existing.
 
 Examples:
   node scripts/update-resource-index.mjs --server haoplay --out-dir examples
@@ -123,24 +125,18 @@ function extractSignals(server, payload) {
   };
 }
 
-function buildMccImageUrl(type, code) {
-  if (type === "doll") return `${MCC_ORIGIN}/image/doll/Avatar_Head_${encodeURIComponent(code)}.png`;
-  if (type === "weapon") return `${MCC_ORIGIN}/image/weapon/${encodeURIComponent(code)}_1024.png`;
-  return undefined;
-}
-
 function codeToName(code) {
   return code.replace(/S{1,2}R$/i, "").replace(/_5$|_4$|_3$|_2$/, "");
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url);
+  const response = await fetchWithRetry(url);
   if (!response.ok) throw new Error(`GET ${url} failed: ${response.status} ${response.statusText}`);
   return response.json();
 }
 
 async function fetchText(url) {
-  const response = await fetch(url);
+  const response = await fetchWithRetry(url);
   if (!response.ok) throw new Error(`GET ${url} failed: ${response.status} ${response.statusText}`);
   return response.text();
 }
@@ -328,57 +324,39 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const generatedAt = new Date().toISOString();
   const existing = await readExisting(args.existing);
-
-  if (args.checkOnly) {
-    if (!existing || !existing.generatedAt) {
-      console.error("Error: --check-only requires a valid --existing file with a generatedAt timestamp.");
-      process.exit(2);
-    }
-    const lastGeneratedSec = Math.floor(Date.parse(existing.generatedAt) / 1000);
-    const currentSec = Math.floor(Date.now() / 1000);
-    console.log(`Checking banner schedules. Last generated at: ${existing.generatedAt} (${lastGeneratedSec}). Current time: ${new Date().toISOString()} (${currentSec})`);
-
-    let changeDetected = false;
-    for (const server of args.servers) {
-      const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`);
-      const items = (events.banner ?? []).concat(events.notice ?? []);
-      for (const item of items) {
-        const start = Number(item.start_time);
-        const end = Number(item.end_time);
-        if (Number.isFinite(start)) {
-          if (start > lastGeneratedSec && start <= currentSec) {
-            console.log(`Change detected: banner/notice "${item.name}" (ID ${item.id}) started at ${new Date(start * 1000).toISOString()}`);
-            changeDetected = true;
-          }
-        }
-        if (Number.isFinite(end)) {
-          if (end > lastGeneratedSec && end <= currentSec) {
-            console.log(`Change detected: banner/notice "${item.name}" (ID ${item.id}) ended at ${new Date(end * 1000).toISOString()}`);
-            changeDetected = true;
-          }
-        }
-      }
-    }
-
-    if (changeDetected) {
-      console.log("Status check: Active banners/notices changed state since last run. Exiting with 0.");
-      process.exit(0);
-    } else {
-      console.log("Status check: No changes in banner/notice state. Exiting with 1.");
-      process.exit(1);
-    }
-  }
-
   const chunkTexts = await loadChunkTexts(args.chunksDir);
   if (!chunkTexts.length) throw new Error("No exilium chunks were loaded.");
+
+  if (args.checkOnly) {
+    if (!existing || !existing.items) {
+      console.error("Error: --check-only requires a valid --existing resource index.");
+      process.exit(2);
+    }
+    const server = args.servers[0] ?? "haoplay";
+    const incomingItems = extractResourcesFromChunks(chunkTexts, server, generatedAt);
+    const changes = findResourceCatalogChanges(existing.items, incomingItems);
+    console.log(`Catalog check: ${changes.added.length} added, ${changes.changed.length} changed.`);
+    if (changes.added.length) console.log(`  added: ${changes.added.join(", ")}`);
+    if (changes.changed.length) console.log(`  changed: ${changes.changed.join(", ")}`);
+
+    if (changes.hasChanges) {
+      console.log("Status check: Resource catalog changed. Exiting with 0.");
+      process.exit(0);
+    }
+    console.log("Status check: Resource catalog unchanged. Exiting with 1.");
+    process.exit(1);
+  }
 
   await fs.mkdir(args.outDir, { recursive: true });
   for (const server of args.servers) {
     const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`);
     const signals = extractSignals(server, events);
-    let items = extractResourcesFromChunks(chunkTexts, server, generatedAt);
-    if (args.probeImages) items = await probeItems(items, { concurrency: args.probeConcurrency, timeoutMs: args.probeTimeoutMs });
-    const index = mergeIndex(existing, items, {
+    const catalogItems = extractResourcesFromChunks(chunkTexts, server, generatedAt);
+    let updatedItems = existing?.items
+      ? selectResourceCatalogUpdates(existing.items, catalogItems)
+      : catalogItems;
+    if (args.probeImages) updatedItems = await probeItems(updatedItems, { concurrency: args.probeConcurrency, timeoutMs: args.probeTimeoutMs });
+    const index = mergeIndex(existing, updatedItems, {
       generatedAt,
       servers: [server],
       updateSignals: { [server]: signals },
@@ -386,6 +364,7 @@ async function main() {
     const outPath = path.join(args.outDir, `gf2-resource-index.${server}.json`);
     await fs.writeFile(outPath, `${JSON.stringify(index, null, 2)}\n`, "utf8");
     console.log(`${server}: wrote ${Object.keys(index.items).length} items to ${outPath}`);
+    console.log(`  resource updates: ${updatedItems.length}`);
     console.log(`  new dolls: ${signals.newDolls.join(", ") || "(none)"}`);
     console.log(`  rate ups: ${signals.rateUpNames.join(", ") || "(none)"}`);
   }

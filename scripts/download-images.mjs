@@ -13,6 +13,7 @@ function parseArgs(argv) {
     concurrency: 16,
     timeoutMs: 20000,
     retries: 2,
+    force: false,
     dryRun: false,
   };
   for (let i = 0; i < argv.length; i += 1) {
@@ -22,6 +23,7 @@ function parseArgs(argv) {
     else if (arg === "--concurrency") args.concurrency = Math.max(1, Number(argv[++i]) || 16);
     else if (arg === "--timeout-ms") args.timeoutMs = Math.max(1000, Number(argv[++i]) || 20000);
     else if (arg === "--retries") args.retries = Math.max(0, Number(argv[++i]) || 2);
+    else if (arg === "--force") args.force = true;
     else if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--help" || arg === "-h") {
       printHelp();
@@ -40,8 +42,18 @@ Options:
   --concurrency <n>       Parallel downloads. Default: 16
   --timeout-ms <ms>       Per-image timeout. Default: 20000
   --retries <n>           Retries on failure. Default: 2
+  --force                 Download and overwrite existing local images
   --dry-run               List targets without downloading
 `);
+}
+
+async function fileExists(file) {
+  try {
+    await fs.access(file);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function localPathForItem(item, outDir) {
@@ -96,6 +108,7 @@ async function main() {
     const dest = localPathForItem(item, args.outDir);
     const sourceUrl = item.iconUrl ?? buildFallbackUrl(item);
     if (!dest || !sourceUrl) continue;
+    if (!args.force && await fileExists(dest)) continue;
     targets.push({ item, dest, sourceUrl });
   }
 
@@ -139,7 +152,9 @@ async function main() {
   const updated = { ...index };
   for (const item of Object.values(updated.items ?? {})) {
     const pub = localPublicPath(item);
-    if (pub) item.localIcon = pub;
+    const dest = localPathForItem(item, args.outDir);
+    if (pub && dest && await fileExists(dest)) item.localIcon = pub;
+    else delete item.localIcon;
   }
   const outIndexPath = path.join(args.outDir, "resource-index.json");
   await fs.mkdir(args.outDir, { recursive: true });

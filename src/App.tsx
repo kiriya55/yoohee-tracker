@@ -32,6 +32,7 @@ import { enrichRecords, getResourceImageUrl, getDisplayName, loadDefaultResource
 import { computeGachaStats, formatDate, mergePoolsByType, pityColor, poolTypeLabel, computeCommanderProfile } from "./lib/stats";
 import type { ResourceIndex } from "./types";
 import type { RemoteServerId } from "./lib/remoteImport";
+import { localizeMessage } from "./lib/i18n";
 
 import i18nData from "./i18n.json";
 const TRANSLATIONS = i18nData.ui;
@@ -555,7 +556,7 @@ export default function App() {
         setStatus(tf("fileParsedStatus", { file: file.name, count: result.records.length, added: merged.added }));
       } else {
         setPreview(null);
-        setStatus(result.errors[0] ?? t("importFailedStatus"));
+        setStatus(result.errors[0] ? localizeMessage(locale, result.errors[0]) : t("importFailedStatus"));
       }
       return;
     }
@@ -569,7 +570,7 @@ export default function App() {
       setStatus(tf("fileParsedStatus", { file: file.name, count: result.records.length, added: merged.added }));
     } else {
       setPreview(null);
-      setStatus(result.errors[0] ?? t("importFailedStatus"));
+      setStatus(result.errors[0] ? localizeMessage(locale, result.errors[0]) : t("importFailedStatus"));
     }
   }
 
@@ -590,7 +591,7 @@ export default function App() {
         setStatus(tf("decryptCompleteStatus", { count: result.records.length, added: merged.added }));
       } else {
         setPreview(null);
-        setStatus(result.errors[0] ?? t("decryptNoRecordsStatus"));
+        setStatus(result.errors[0] ? localizeMessage(locale, result.errors[0]) : t("decryptNoRecordsStatus"));
       }
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -599,7 +600,7 @@ export default function App() {
         fileName: file.name,
         format: "exilium-encrypted",
         records: [],
-        errors: [message],
+        errors: [{ key: "remoteFetchFailed", detail: message }],
       });
       setPreview(null);
       setStatus(tf("decryptFailedStatus", { message }));
@@ -633,7 +634,7 @@ export default function App() {
       setStatus(tf("remoteFetchCompleteStatus", { count: result.records.length, added: merged.added }));
     } else {
       setPreview(null);
-      setStatus(result.errors[0] ?? t("remoteFetchFailedStatus"));
+      setStatus(result.errors[0] ? localizeMessage(locale, result.errors[0]) : t("remoteFetchFailedStatus"));
     }
   }
 
@@ -762,9 +763,9 @@ export default function App() {
                     <dd>{preview?.duplicates ?? 0}</dd>
                   </div>
                 </dl>
-                {importResult.errors.map((error) => (
-                  <p className="error" key={error}>
-                    {error}
+                {importResult.errors.map((error, index) => (
+                  <p className="error" key={`${error.key}-${index}`}>
+                    {localizeMessage(locale, error)}
                   </p>
                 ))}
                 <button className="primary wide" onClick={commitImport} disabled={!importResult.ok || !preview?.added}>

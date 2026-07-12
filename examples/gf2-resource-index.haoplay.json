@@ -2,33 +2,21 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-06-25T15:05:24.423Z",
+  "generatedAt": "2026-07-10T22:14:22.682Z",
   "servers": [
     "haoplay"
   ],
   "updateSignals": {
     "haoplay": {
       "server": "haoplay",
-      "newDolls": [
-        "Loreley",
-        "Harpsy"
-      ],
-      "newWeapons": [
-        "Nighttide Nocturne",
-        ".50BMG Anti-Materiel Rifle",
-        "Retired .50BMG Anti-Materiel Rifle",
-        "Antinomy",
-        "TMP",
-        "Retired TMP"
-      ],
+      "newDolls": [],
+      "newWeapons": [],
       "rateUpNames": [
         "Loreley",
         "Lainie",
         "Lewis"
       ],
       "sourceNoticeIds": [
-        538,
-        537,
         526,
         525,
         524,
@@ -37,11 +25,12 @@
         521,
         520,
         519,
-        515,
         518,
         517,
-        496,
-        494,
+        514,
+        516,
+        512,
+        511,
         467,
         317,
         40,
@@ -50,7 +39,6 @@
         28,
         27,
         14,
-        539,
         534,
         533,
         528,
@@ -60,8 +48,7 @@
         536,
         532,
         531,
-        535,
-        493
+        535
       ]
     }
   },
@@ -524,7 +511,10 @@
       "type": "doll",
       "rarity": 5,
       "code": "LindSSR",
-      "server": "haoplay"
+      "server": "haoplay",
+      "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+      "imageSource": "mcc-wiki",
+      "aliases": []
     },
     "1060": {
       "id": 1060,
@@ -1225,7 +1215,11 @@
       "type": "weapon",
       "rarity": 5,
       "code": "Weapon_HAWK12_5",
-      "server": "haoplay"
+      "server": "haoplay",
+      "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "verifiedAt": "2026-07-10T22:14:22.682Z",
+      "aliases": []
     },
     "10491": {
       "id": 10491,
@@ -1805,7 +1799,8 @@
       "type": "weapon",
       "rarity": 4,
       "code": "Weapon_DP12_4",
-      "server": "haoplay"
+      "server": "haoplay",
+      "aliases": []
     },
     "10673": {
       "id": 10673,
@@ -2077,7 +2072,8 @@
       "type": "weapon",
       "rarity": 3,
       "code": "Weapon_ROBINSONXCR_3",
-      "server": "haoplay"
+      "server": "haoplay",
+      "aliases": []
     },
     "11031": {
       "id": 11031,

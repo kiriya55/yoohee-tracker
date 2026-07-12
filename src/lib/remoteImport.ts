@@ -178,10 +178,10 @@ export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Prom
   const headers = parsedRequest.headers ?? parseHeaderText(options.headersText);
   const endpoint = parsedRequest.endpoint ?? options.endpoint.trim();
   const poolTypes = options.poolTypes ?? REMOTE_POOL_TYPES;
-  if (!options.uid.trim()) return { ok: false, format: "uid-headers-fetch", records: [], errors: ["请填写 UID。"] };
-  if (!endpoint) return { ok: false, format: "uid-headers-fetch", records: [], errors: ["请填写抽卡记录 URL，或粘贴完整 Fiddler 请求。"] };
+  if (!options.uid.trim()) return { ok: false, format: "uid-headers-fetch", records: [], errors: [{ key: "remoteMissingUid" }] };
+  if (!endpoint) return { ok: false, format: "uid-headers-fetch", records: [], errors: [{ key: "remoteMissingUrl" }] };
   if (!headers.Authorization && !headers.authorization) {
-    return { ok: false, format: "uid-headers-fetch", records: [], errors: ["Headers 中缺少 Authorization。"] };
+    return { ok: false, format: "uid-headers-fetch", records: [], errors: [{ key: "remoteMissingAuthorization" }] };
   }
 
   const fetchImpl = options.fetchImpl ?? fetch;
@@ -195,8 +195,8 @@ export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Prom
         const response = await fetchImpl(request.url, request.init);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const json = await response.json();
-        if (!isObject(json)) throw new Error("返回值不是 JSON 对象");
-        if (json.code !== 0) throw new Error(String(json.message ?? `接口返回 code=${json.code}`));
+        if (!isObject(json)) throw { localized: { key: "remoteInvalidJson" as const } };
+        if (json.code !== 0) throw { localized: { key: "remoteApiError" as const, detail: String(json.message ?? `code=${json.code}`) } };
 
         const data = isObject(json.data) ? json.data : {};
         const list = Array.isArray(data.list) ? data.list : [];
@@ -208,16 +208,18 @@ export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Prom
       } while (next);
     }));
   } catch (error) {
-    const message = error instanceof TypeError
-      ? "远程抓取失败：浏览器可能拦截了跨域请求，或 Headers/URL 已失效。"
-      : `远程抓取失败：${error instanceof Error ? error.message : String(error)}`;
-    return { ok: false, format: "uid-headers-fetch", records, errors: [message] };
+    const localized = typeof error === "object" && error !== null && "localized" in error
+      ? (error as { localized: import("./i18n").LocalizedMessage }).localized
+      : error instanceof TypeError
+        ? { key: "remoteNetworkFailed" as const }
+        : { key: "remoteFetchFailed" as const, detail: error instanceof Error ? error.message : String(error) };
+    return { ok: false, format: "uid-headers-fetch", records, errors: [localized] };
   }
 
   return {
     ok: records.length > 0,
     format: "uid-headers-fetch",
     records,
-    errors: records.length ? [] : ["远程接口返回为空。"],
+    errors: records.length ? [] : [{ key: "remoteEmpty" }],
   };
 }

@@ -2,33 +2,21 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-06-25T15:05:24.420Z",
+  "generatedAt": "2026-07-10T22:14:22.682Z",
   "servers": [
     "haoplay"
   ],
   "updateSignals": {
     "haoplay": {
       "server": "haoplay",
-      "newDolls": [
-        "Loreley",
-        "Harpsy"
-      ],
-      "newWeapons": [
-        "Nighttide Nocturne",
-        ".50BMG Anti-Materiel Rifle",
-        "Retired .50BMG Anti-Materiel Rifle",
-        "Antinomy",
-        "TMP",
-        "Retired TMP"
-      ],
+      "newDolls": [],
+      "newWeapons": [],
       "rateUpNames": [
         "Loreley",
         "Lainie",
         "Lewis"
       ],
       "sourceNoticeIds": [
-        538,
-        537,
         526,
         525,
         524,
@@ -37,11 +25,12 @@
         521,
         520,
         519,
-        515,
         518,
         517,
-        496,
-        494,
+        514,
+        516,
+        512,
+        511,
         467,
         317,
         40,
@@ -50,7 +39,6 @@
         28,
         27,
         14,
-        539,
         534,
         533,
         528,
@@ -60,8 +48,7 @@
         536,
         532,
         531,
-        535,
-        493
+        535
       ]
     }
   },
@@ -256,8 +243,8 @@
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_QiongjiuSSR.png",
       "imageSource": "mcc-wiki",
       "verifiedAt": "2026-06-25T12:38:05.271Z",
-      "localIcon": "/images/doll/Avatar_Head_QiongjiuSSR.png",
       "cn": "琼玖",
+      "localIcon": "/images/doll/Avatar_Head_QiongjiuSSR.png",
       "en": "Qiongjiu",
       "jp": "瓊玖"
     },
@@ -688,6 +675,9 @@
       "rarity": 5,
       "code": "LindSSR",
       "server": "haoplay",
+      "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+      "imageSource": "mcc-wiki",
+      "aliases": [],
       "localIcon": "/images/doll/Avatar_Head_LindSSR.png",
       "cn": "琳德",
       "en": "Lind",
@@ -837,7 +827,9 @@
       "code": "BastiSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_BastiSSR.png",
-      "imageSource": "mcc-wiki"
+      "imageSource": "mcc-wiki",
+      "localIcon": "/images/doll/Avatar_Head_BastiSSR.png",
+      "en": "Basti"
     },
     "10002": {
       "id": 10002,
@@ -1641,6 +1633,10 @@
       "rarity": 5,
       "code": "Weapon_HAWK12_5",
       "server": "haoplay",
+      "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "verifiedAt": "2026-07-10T22:14:22.682Z",
+      "aliases": [],
       "localIcon": "/images/weapon/Weapon_HAWK12_5_1024.png",
       "cn": "逐光",
       "en": "Chase the Light",
@@ -1808,8 +1804,7 @@
       "verifiedAt": "2026-06-25T12:38:05.271Z",
       "localIcon": "/images/weapon/Weapon_HK416_4_1024.png",
       "cn": "黑克勒科赫416",
-      "en": "HK416",
-      "jp": "416"
+      "en": "HK416"
     },
     "10523": {
       "id": 10523,
@@ -2433,6 +2428,7 @@
       "rarity": 4,
       "code": "Weapon_DP12_4",
       "server": "haoplay",
+      "aliases": [],
       "localIcon": "/images/weapon/Weapon_DP12_4_1024.png",
       "cn": "12型双管霰弹枪",
       "en": "DP-12",
@@ -2552,7 +2548,9 @@
       "code": "Weapon_MK23_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_3_1024.png",
-      "imageSource": "mcc-wiki"
+      "imageSource": "mcc-wiki",
+      "localIcon": "/images/weapon/Weapon_MK23_3_1024.png",
+      "en": "Retired MK23"
     },
     "10712": {
       "id": 10712,
@@ -2563,7 +2561,9 @@
       "code": "Weapon_MK23_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_4_1024.png",
-      "imageSource": "mcc-wiki"
+      "imageSource": "mcc-wiki",
+      "localIcon": "/images/weapon/Weapon_MK23_4_1024.png",
+      "en": "MK23"
     },
     "10713": {
       "id": 10713,
@@ -2574,7 +2574,9 @@
       "code": "Weapon_MK23_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_5_1024.png",
-      "imageSource": "mcc-wiki"
+      "imageSource": "mcc-wiki",
+      "localIcon": "/images/weapon/Weapon_MK23_5_1024.png",
+      "en": "MK23"
     },
     "11007": {
       "id": 11007,
@@ -2793,6 +2795,7 @@
       "rarity": 3,
       "code": "Weapon_ROBINSONXCR_3",
       "server": "haoplay",
+      "aliases": [],
       "localIcon": "/images/weapon/Weapon_ROBINSONXCR_3_1024.png",
       "cn": "旧式罗宾逊先进步枪",
       "en": "Retired Robinson XCR",

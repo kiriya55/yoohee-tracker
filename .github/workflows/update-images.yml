@@ -28,16 +28,16 @@ jobs:
 
       - run: npm ci
 
-      - name: Check for banner state changes
+      - name: Check for resource catalog changes
         id: check-banners
         run: |
           INDEX_FILE="examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$INDEX_FILE" ]; then
             if node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only; then
-              echo "Changes detected, proceeding with update."
+              echo "Resource catalog changes detected, proceeding with update."
               echo "should_update=true" >> $GITHUB_OUTPUT
             else
-              echo "No changes detected, skipping update."
+              echo "No resource catalog changes detected, skipping update."
               echo "should_update=false" >> $GITHUB_OUTPUT
             fi
           else

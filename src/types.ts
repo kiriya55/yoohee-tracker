@@ -40,7 +40,7 @@ export type ImportResult = {
   fileName?: string;
   format?: string;
   records: GachaRecordDraft[];
-  errors: string[];
+  errors: import("./lib/i18n").LocalizedMessage[];
 };
 
 export type MergeResult = {

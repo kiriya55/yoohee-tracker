@@ -13,6 +13,8 @@ const KNOWN_RESOURCE_ITEMS: Record<string, ResourceItem> = {
     code: "BastiSSR",
     server: "haoplay",
     imageSource: "mcc-wiki",
+    localIcon: "/images/doll/Avatar_Head_BastiSSR.png",
+    en: "Basti",
   },
   "10711": {
     id: 10711,
@@ -23,6 +25,8 @@ const KNOWN_RESOURCE_ITEMS: Record<string, ResourceItem> = {
     code: "Weapon_MK23_3",
     server: "haoplay",
     imageSource: "mcc-wiki",
+    localIcon: "/images/weapon/Weapon_MK23_3_1024.png",
+    en: "Retired MK23",
   },
   "10712": {
     id: 10712,
@@ -33,6 +37,8 @@ const KNOWN_RESOURCE_ITEMS: Record<string, ResourceItem> = {
     code: "Weapon_MK23_4",
     server: "haoplay",
     imageSource: "mcc-wiki",
+    localIcon: "/images/weapon/Weapon_MK23_4_1024.png",
+    en: "MK23",
   },
   "10713": {
     id: 10713,
@@ -43,6 +49,8 @@ const KNOWN_RESOURCE_ITEMS: Record<string, ResourceItem> = {
     code: "Weapon_MK23_5",
     server: "haoplay",
     imageSource: "mcc-wiki",
+    localIcon: "/images/weapon/Weapon_MK23_5_1024.png",
+    en: "MK23",
   },
 };
 
@@ -151,7 +159,16 @@ export function enrichRecords(records: GachaRecord[], index?: ResourceIndex): Ga
 }
 
 export function getResourceItem(index: ResourceIndex | undefined, itemId: number): ResourceItem | undefined {
-  return index?.items[String(itemId)] ?? KNOWN_RESOURCE_ITEMS[String(itemId)];
+  const id = String(itemId);
+  const indexedItem = index?.items[id];
+  const knownItem = KNOWN_RESOURCE_ITEMS[id];
+  if (!knownItem) return indexedItem;
+  if (!indexedItem) return knownItem;
+
+  const definedIndexFields = Object.fromEntries(
+    Object.entries(indexedItem).filter(([, value]) => value !== undefined),
+  );
+  return { ...knownItem, ...definedIndexFields } as ResourceItem;
 }
 
 export function getResourceImageUrl(index: ResourceIndex | undefined, itemId: number): string | undefined {

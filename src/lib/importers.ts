@@ -70,8 +70,7 @@ function parseMergedNormalized(json: AnyObject): ImportResult | undefined {
     records: json.records
       .map((record, index) => {
         if (!isObject(record)) return undefined;
-        const draft = draftFromLoose({ ...record, uid: record.uid ?? uid, server: record.server ?? server }, "merged-normalized", index);
-        return draft;
+        return draftFromLoose({ ...record, uid: record.uid ?? uid, server: record.server ?? server }, "merged-normalized", index);
       })
       .filter((record): record is GachaRecordDraft => Boolean(record)),
     errors: [],
@@ -176,6 +175,6 @@ export function parseImportText(text: string, fileName?: string): ImportResult {
     ok: false,
     fileName,
     records: [],
-    errors: ["无法识别文件格式。文件导入支持本工具导出的 JSON、ElmoBeacon 数据库 .db、gf2gacha的数据库.db。"],
+    errors: [{ key: "unknownImportFormat" }],
   };
 }

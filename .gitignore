@@ -4,3 +4,5 @@ dist/
 output/
 .env
 .env.local
+docs/
+docs/superpowers/

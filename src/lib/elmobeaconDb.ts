@@ -73,7 +73,7 @@ export async function parseElmoBeaconDb(buffer: ArrayBuffer, fileName?: string):
         fileName,
         format: "elmobeacon-db",
         records,
-        errors: records.length ? [] : ["ElmoBeacon.db 中没有 record 记录。"],
+        errors: records.length ? [] : [{ key: "elmoEmpty" }],
       };
     }
 
@@ -87,7 +87,7 @@ export async function parseElmoBeaconDb(buffer: ArrayBuffer, fileName?: string):
         fileName,
         format: "sqlite-db",
         records: [],
-        errors: ["这不是可识别的 SQLite 数据库：缺少 user/record 表（ElmoBeacon）或 gacha_record/records 表（gf2gacha）。"],
+        errors: [{ key: "sqliteUnknownSchema" }],
       };
     }
 
@@ -111,7 +111,7 @@ export async function parseElmoBeaconDb(buffer: ArrayBuffer, fileName?: string):
         fileName,
         format: "sqlite-db",
         records: [],
-        errors: [`在 ${recordTable} 表中缺少关键列，需要包含 pool_type、pool_id、item_id、timestamp。`],
+        errors: [{ key: "sqliteMissingColumns", values: { table: recordTable } }],
       };
     }
 
@@ -157,7 +157,7 @@ export async function parseElmoBeaconDb(buffer: ArrayBuffer, fileName?: string):
       fileName,
       format: "gf2gacha-db",
       records,
-      errors: records.length ? [] : [`SQLite 表 ${recordTable} 中没有记录。`],
+      errors: records.length ? [] : [{ key: "sqliteEmpty", values: { table: recordTable } }],
     };
   } catch (error) {
     return {
@@ -165,7 +165,7 @@ export async function parseElmoBeaconDb(buffer: ArrayBuffer, fileName?: string):
       fileName,
       format: "sqlite-db",
       records: [],
-      errors: [`读取 SQLite 数据库失败：${error instanceof Error ? error.message : String(error)}`],
+      errors: [{ key: "sqliteReadFailed", detail: error instanceof Error ? error.message : String(error) }],
     };
   } finally {
     db.close();

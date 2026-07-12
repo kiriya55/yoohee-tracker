@@ -363,7 +363,7 @@
       "fiddlerSessionStep": "Fiddlerに戻り、左側のリストから `/list?game_channel_id=` で始まるセッションを探します。",
       "fiddlerCopyStep": "対象セッションを選択し、Ctrl + Shift + C でリクエスト内容（Authorizationヘッダーを含む）をコピーします。",
       "fiddlerPasteStep": "コピーした内容を下のテキストボックスに貼り付けます。URLとヘッダーが自动解析されます。",
-      "fiddlerDownloadBeforeName": "",
+      "fiddlerDownloadBeforeName": "ダウンロードしてインストール：",
       "fiddlerDownloadBeforeLink": " をダウンロードしてインストールします（",
       "fiddlerOfficialDirectLink": "公式直接ダウンロードリンク",
       "fiddlerDownloadAfterLink": "より）。",
@@ -814,6 +814,12 @@
       "type": "doll",
       "en": "Loreley",
       "jp": "ローレライ"
+    },
+    "1071": {
+      "code": "BastiSSR",
+      "cn": "贝丝蒂",
+      "type": "doll",
+      "en": "Basti"
     },
     "10002": {
       "code": "Weapon_BpSMGssr001_5",
@@ -1612,6 +1618,24 @@
       "type": "weapon",
       "en": "Nighttide Nocturne",
       "jp": "潮涌夜曲"
+    },
+    "10711": {
+      "code": "Weapon_MK23_3",
+      "cn": "旧式马克23进攻型手枪",
+      "type": "weapon",
+      "en": "Retired MK23"
+    },
+    "10712": {
+      "code": "Weapon_MK23_4",
+      "cn": "马克23进攻型手枪",
+      "type": "weapon",
+      "en": "MK23"
+    },
+    "10713": {
+      "code": "Weapon_MK23_5",
+      "cn": "告死礼赞",
+      "type": "weapon",
+      "en": "MK23"
     },
     "11007": {
       "code": "Weapon_Blade_4",

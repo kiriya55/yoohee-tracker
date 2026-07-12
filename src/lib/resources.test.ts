@@ -80,8 +80,26 @@ describe("resources", () => {
       "马克23进攻型手枪",
       "告死礼赞",
     ]);
-    expect(getResourceImageUrl(index, 1071)).toBe("https://gf2.mcc.wiki/image/doll/Avatar_Head_BastiSSR.png");
-    expect(getResourceImageUrl(index, 10713)).toBe("https://gf2.mcc.wiki/image/weapon/Weapon_MK23_5_1024.png");
+    expect(getResourceImageUrl(index, 1071)).toBe("/images/doll/Avatar_Head_BastiSSR.png");
+    expect(getResourceImageUrl(index, 10713)).toBe("/images/weapon/Weapon_MK23_5_1024.png");
+  });
+
+  it("uses bundled Basti and MK23 resources with a stale index", () => {
+    const index = parseResourceIndexText(
+      JSON.stringify({
+        format: "gf2-resource-index",
+        version: 1,
+        items: {
+          "1071": { id: 1071, type: "doll", rarity: 5, code: "BastiSSR", iconUrl: "https://gf2.mcc.wiki/image/doll/Avatar_Head_BastiSSR.png" },
+          "10713": { id: 10713, type: "weapon", rarity: 5, code: "Weapon_MK23_5", iconUrl: "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_5_1024.png" },
+        },
+      }),
+    );
+
+    expect(getResourceImageUrl(index, 1071)).toBe("/images/doll/Avatar_Head_BastiSSR.png");
+    expect(getResourceImageUrl(index, 10713)).toBe("/images/weapon/Weapon_MK23_5_1024.png");
+    expect(getDisplayName(index, 1071, "en")).toBe("Basti");
+    expect(getDisplayName(index, 10713, "en")).toBe("MK23");
   });
 
   it("uses bundled i18n names when resource indexes contain raw numeric text", () => {

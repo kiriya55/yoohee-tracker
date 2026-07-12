@@ -118,7 +118,7 @@ export function mergeRecords(existing: GachaRecord[], incomingDrafts: GachaRecor
     }
   }
 
-  const records = Array.from(seen.values()).filter((record) => isImportablePoolType(record.poolType)).sort((a, b) => b.timestamp - a.timestamp || b.orderInSecond - a.orderInSecond);
+  const records = Array.from(seen.values()).sort((a, b) => b.timestamp - a.timestamp || b.orderInSecond - a.orderInSecond);
   return {
     records,
     added: Math.max(0, records.length - importableExisting.length),
