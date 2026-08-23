@@ -846,6 +846,12 @@ tr:hover td {
   font-size: 1.15rem;
 }
 
+.pool-schedule {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
 .pool-stats-strip {
   display: flex;
   gap: 1px;

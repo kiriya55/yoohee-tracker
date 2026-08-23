@@ -79,6 +79,17 @@ export function parseGfl2WeaponNames(html, sourceUrl) {
   return names;
 }
 
+export function parseGfl2CharacterNames(html, sourceUrl) {
+  const names = [];
+  for (const match of String(html ?? "").matchAll(/<h6[^>]*>([\s\S]*?)<\/h6>/gi)) {
+    const name = cleanText(match[1]);
+    if (name && !names.some((candidate) => candidate.name === name)) {
+      names.push({ name, sourceUrl });
+    }
+  }
+  return names;
+}
+
 async function main() {
   const argv = process.argv.slice(2);
   const proxyIndex = argv.indexOf("--proxy-url");

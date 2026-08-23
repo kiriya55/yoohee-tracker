@@ -68,7 +68,7 @@ node scripts/decrypt-exilium-backup.mjs .\你的加密备份.json .\exilium-decr
 更新资源索引：
 
 ```powershell
-npm run resources:update -- --server haoplay --out-dir examples
+npm run resources:update -- --servers dw-cn,haoplay --out-dir examples
 ```
 
 下载图片到本地：
@@ -87,9 +87,9 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 
 仓库包含 `Update Resource Images` GitHub Action：
 
-- 手动触发：在 GitHub Actions 页面运行 workflow，可传入 `servers`，默认 `haoplay`。
+- 手动触发：在 GitHub Actions 页面运行 workflow，可传入 `servers`，默认 `dw-cn,haoplay`。
 - 定时触发：每天 UTC 11:00 运行一次。
-- 定时任务会先检查 exilium.xyz 网站事件数据中的 banner / notice `start_time` 与 `end_time`。只有上次资源索引生成后有卡池或公告状态变化时，才继续更新资源。
+- 定时任务会检查 Exilium 国服/国际服资源目录、卡池起止时间和 timeset hash；资源、名称或 timeset 任一变化都可以触发提交。
 - 手动触发或缺少现有索引文件时会强制更新。
 
 触发更新后会同步维护：
@@ -98,15 +98,18 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 - `public/images/**`
 - `public/images/resource-index.json`
 - `src/i18n-names.json`
+- `src/i18n-name-sources.json`
 - `src/i18n.json` 中的 `names`
 
-i18n 名称来源会优先保留现有人工修正，并尝试从 MCC Wiki、gfl2.help、Dandegate、wikiru 补充中文、英文和日文名称。冲突项不会自动覆盖现有名称，只会在 Action 日志中报告。
+i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文为 wikiru 详情页，英文人形/卡池为 gfl2.help banners 和同站 characters，英文武器为同站 weapons。MCC 页面标题、wikiru 日文括号读音和 gfl2.help HTML 实体都会在解析阶段规范化；权威值会覆盖旧值，旧拼写只保留为 aliases。Exilium BBS 和 wikiru recovery 仅用于正式部署前的 bootstrap，不进入普通 Action 来源。
+
+名称抓取和合并步骤在每次定时或手动 Action 中运行，不依赖图片资源是否变化。外部站点本地调试可加 `--proxy-url http://127.0.0.1:7890`；Action 不传代理。当前 R2 上传和小程序远程索引发布暂未接入。
 
 本地也可以手动运行：
 
 ```powershell
 npm run i18n:fetch-names -- --index public/images/resource-index.json --existing-i18n src/i18n.json --out src/i18n-names.json
-npm run i18n:merge-names -- --index public/images/resource-index.json --names src/i18n-names.json --out public/images/resource-index.json --app-i18n src/i18n.json
+npm run i18n:merge-names -- --index public/images/resource-index.json --names src/i18n-names.json --sources src/i18n-name-sources.json --out public/images/resource-index.json --app-i18n src/i18n.json
 ```
 
 ## 开发

@@ -30,6 +30,7 @@ import { filterHighRarityEntries, paginate } from "./lib/presentation";
 import { defaultEndpointForServer, fetchRemoteGachaRecords, parseFiddlerRequest, REMOTE_POOL_TYPES, REMOTE_SERVERS, serverOptionForId } from "./lib/remoteImport";
 import { enrichRecords, getResourceImageUrl, getDisplayName, loadDefaultResourceIndex, loadResourceIndex, parseResourceIndexText, saveResourceIndex } from "./lib/resources";
 import { computeGachaStats, formatDate, mergePoolsByType, pityColor, poolTypeLabel, computeCommanderProfile } from "./lib/stats";
+import { formatPoolSchedule, getPoolDetailTitle, resolvePoolSchedule } from "./lib/poolSchedule";
 import type { ResourceIndex } from "./types";
 import type { RemoteServerId } from "./lib/remoteImport";
 import { localizeMessage } from "./lib/i18n";
@@ -489,28 +490,14 @@ export default function App() {
     [mergedPoolTypes, selectedPoolType],
   );
   const poolDetailLabels = useMemo(() => {
-    if (!selectedMerged) return { eyebrow: "", title: "" };
-    const poolType = selectedMerged.poolType;
-    const label = t(getPoolTypeKey(poolType));
-
-    if (poolType === 3 || poolType === 6) {
-      return {
-        eyebrow: "PICK UP · Doll",
-        title: label,
-      };
-    }
-    if (poolType === 4 || poolType === 7) {
-      return {
-        eyebrow: "PICK UP · Weapon",
-        title: label,
-      };
-    }
-
+    if (!selectedMerged) return { eyebrow: "", title: "", schedule: undefined };
+    const title = getPoolDetailTitle(selectedMerged.poolType, locale, (key) => t(key as keyof typeof TRANSLATIONS.zh));
+    const schedule = resolvePoolSchedule(resourceIndex, selectedMerged);
     return {
-      eyebrow: label,
-      title: label,
+      ...title,
+      schedule: schedule ? formatPoolSchedule(schedule, locale) : undefined,
     };
-  }, [selectedMerged, t]);
+  }, [locale, resourceIndex, selectedMerged, t]);
   const sourceOptions = stats.sources.map((entry) => entry.source);
   const fiveStarPage = useMemo(
     () => paginate([...(selectedMerged?.fiveStarEntries ?? [])].sort((a, b) => b.globalIndex - a.globalIndex), cardPage, cardPageSize),
@@ -1026,6 +1013,7 @@ export default function App() {
                 <div className="pool-detail-title">
                   <p className="eyebrow">{poolDetailLabels.eyebrow}</p>
                   <h2>{poolDetailLabels.title} · {selectedMerged.count}{t("pullsCountSuffix")}</h2>
+                  {poolDetailLabels.schedule && <p className="pool-schedule">{poolDetailLabels.schedule}</p>}
                 </div>
                 <div className="pool-stats-strip">
                   <div>

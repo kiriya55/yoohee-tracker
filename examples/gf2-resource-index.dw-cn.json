@@ -70,28 +70,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_CharolicSR.png",
-      "cn": "克罗丽科",
-      "en": "Krolik",
-      "jp": "キャロリック",
-      "nameSources": {
-        "cn": {
-          "value": "克罗丽科",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/CharolicSR"
-        },
-        "en": {
-          "value": "Krolik",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "キャロリック",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AD%E3%83%A3%E3%83%AD%E3%83%AA%E3%83%83%E3%82%AF"
-        }
-      }
+      ]
     },
     "1008": {
       "id": 1008,
@@ -112,23 +91,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_NemesisSR.png",
-      "cn": "纳美西丝",
-      "en": "Nemesis",
-      "jp": "ネメシス",
-      "nameSources": {
-        "cn": {
-          "value": "纳美西丝",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/NemesisSR"
-        },
-        "en": {
-          "value": "Nemesis",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1009": {
       "id": 1009,
@@ -149,23 +112,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_ColphneSR.png",
-      "cn": "寇尔芙",
-      "en": "Colphne",
-      "jp": "コルフェン",
-      "nameSources": {
-        "cn": {
-          "value": "寇尔芙",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/ColphneSR"
-        },
-        "en": {
-          "value": "Colphne",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1013": {
       "id": 1013,
@@ -186,23 +133,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LennaSSR.png",
-      "cn": "莱娜",
-      "en": "Lenna",
-      "jp": "レナ",
-      "nameSources": {
-        "cn": {
-          "value": "莱娜",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LennaSSR"
-        },
-        "en": {
-          "value": "Lenna",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1015": {
       "id": 1015,
@@ -223,28 +154,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_VepleySSR.png",
-      "cn": "维普蕾",
-      "en": "Vepley",
-      "jp": "ヴェプリー",
-      "nameSources": {
-        "cn": {
-          "value": "维普蕾",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/VepleySSR"
-        },
-        "en": {
-          "value": "Vepley",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "ヴェプリー",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A7%E3%83%97%E3%83%AA%E3%83%BC"
-        }
-      }
+      ]
     },
     "1017": {
       "id": 1017,
@@ -265,23 +175,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_GrozaSR.png",
-      "cn": "闪电",
-      "en": "Groza",
-      "jp": "グローザ",
-      "nameSources": {
-        "cn": {
-          "value": "闪电",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/GrozaSR"
-        },
-        "en": {
-          "value": "Groza",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1021": {
       "id": 1021,
@@ -302,28 +196,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_PerityaSSR.png",
-      "cn": "佩里缇亚",
-      "en": "Peritya",
-      "jp": "ペリティア",
-      "nameSources": {
-        "cn": {
-          "value": "佩里缇亚",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/PerityaSSR"
-        },
-        "en": {
-          "value": "Peritya",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "ペリティア",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2"
-        }
-      }
+      ]
     },
     "1022": {
       "id": 1022,
@@ -344,28 +217,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_SharkrySR.png",
-      "cn": "夏克里",
-      "en": "Sharkry",
-      "jp": "シャークリー",
-      "nameSources": {
-        "cn": {
-          "value": "夏克里",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/SharkrySR"
-        },
-        "en": {
-          "value": "Sharkry",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "シャークリー",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%BC"
-        }
-      }
+      ]
     },
     "1023": {
       "id": 1023,
@@ -386,28 +238,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_DusevnyjSSR.png",
-      "cn": "杜莎妮",
-      "en": "Dushevnaya",
-      "jp": "ドゥシェーヴヌイ",
-      "nameSources": {
-        "cn": {
-          "value": "杜莎妮",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/DusevnyjSSR"
-        },
-        "en": {
-          "value": "Dushevnaya",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "ドゥシェーヴヌイ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%89%E3%82%A5%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%B4%E3%83%8C%E3%82%A4"
-        }
-      }
+      ]
     },
     "1024": {
       "id": 1024,
@@ -428,23 +259,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_CheetaSR.png",
-      "cn": "奇塔",
-      "en": "Cheeta",
-      "jp": "チータ",
-      "nameSources": {
-        "cn": {
-          "value": "奇塔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/CheetaSR"
-        },
-        "en": {
-          "value": "Cheeta",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1025": {
       "id": 1025,
@@ -465,23 +280,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_TololoSSR.png",
-      "cn": "托洛洛",
-      "en": "Tololo",
-      "jp": "トロロ",
-      "nameSources": {
-        "cn": {
-          "value": "托洛洛",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/TololoSSR"
-        },
-        "en": {
-          "value": "Tololo",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1026": {
       "id": 1026,
@@ -502,23 +301,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_NagantSR.png",
-      "cn": "纳甘",
-      "en": "Nagant",
-      "jp": "ナガン",
-      "nameSources": {
-        "cn": {
-          "value": "纳甘",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/NagantSR"
-        },
-        "en": {
-          "value": "Nagant",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1027": {
       "id": 1027,
@@ -540,22 +323,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_QiongjiuSSR.png",
-      "en": "Qiongjiu",
-      "jp": "瓊玖",
-      "nameSources": {
-        "cn": {
-          "value": "琼玖",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/QiongjiuSSR"
-        },
-        "en": {
-          "value": "Qiongjiu",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1028": {
       "id": 1028,
@@ -576,28 +344,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_CentaureissiSSR.png",
-      "cn": "桑朵莱希",
-      "en": "Centaureissi",
-      "jp": "センタウレイシー",
-      "nameSources": {
-        "cn": {
-          "value": "桑朵莱希",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/CentaureissiSSR"
-        },
-        "en": {
-          "value": "Centaureissi",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "センタウレイシー",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A6%E3%83%AC%E3%82%A4%E3%82%B7%E3%83%BC"
-        }
-      }
+      ]
     },
     "1029": {
       "id": 1029,
@@ -618,23 +365,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_SabrinaSSR.png",
-      "cn": "塞布丽娜",
-      "en": "Sabrina",
-      "jp": "サブリナ",
-      "nameSources": {
-        "cn": {
-          "value": "塞布丽娜",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/SabrinaSSR"
-        },
-        "en": {
-          "value": "Sabrina",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1032": {
       "id": 1032,
@@ -655,23 +386,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_DaiyanSSR.png",
-      "cn": "黛烟",
-      "en": "Daiyan",
-      "jp": "黛煙",
-      "nameSources": {
-        "cn": {
-          "value": "黛烟",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/DaiyanSSR"
-        },
-        "en": {
-          "value": "Daiyan",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1033": {
       "id": 1033,
@@ -692,23 +407,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_MosinnagantSSR.png",
-      "cn": "莫辛纳甘",
-      "en": "Mosin-Nagant",
-      "jp": "モシン・ナガン",
-      "nameSources": {
-        "cn": {
-          "value": "莫辛纳甘",
-          "source": "exilium-bbs-bootstrap",
-          "url": "https://gf2-bbs-api.exiliumgf.com/wiki/category"
-        },
-        "en": {
-          "value": "Mosin-Nagant",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1034": {
       "id": 1034,
@@ -729,18 +428,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_MacqiatoSSR.png",
-      "cn": "玛绮朵",
-      "en": "Macchiato",
-      "jp": "マキアート",
-      "nameSources": {
-        "cn": {
-          "value": "玛绮朵",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/MacqiatoSSR"
-        }
-      }
+      ]
     },
     "1035": {
       "id": 1035,
@@ -761,23 +449,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_JiangyuSSR.png",
-      "cn": "绛雨",
-      "en": "Jiangyu",
-      "jp": "絳雨",
-      "nameSources": {
-        "cn": {
-          "value": "绛雨",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/JiangyuSSR"
-        },
-        "en": {
-          "value": "Jiangyu",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1036": {
       "id": 1036,
@@ -798,28 +470,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_KseniaSR.png",
-      "cn": "科谢尼娅",
-      "en": "Ksenia",
-      "jp": "クシーニヤ",
-      "nameSources": {
-        "cn": {
-          "value": "科谢尼娅",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/KseniaSR"
-        },
-        "en": {
-          "value": "Ksenia",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "クシーニヤ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%8B%E3%83%A4"
-        }
-      }
+      ]
     },
     "1037": {
       "id": 1037,
@@ -840,28 +491,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_UllridSSR.png",
-      "cn": "乌尔丽德",
-      "en": "Ullrid",
-      "jp": "ウルリド",
-      "nameSources": {
-        "cn": {
-          "value": "乌尔丽德",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/UllridSSR"
-        },
-        "en": {
-          "value": "Ullrid",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "ウルリド",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A6%E3%83%AB%E3%83%AA%E3%83%89"
-        }
-      }
+      ]
     },
     "1038": {
       "id": 1038,
@@ -882,28 +512,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LittaraSR.png",
-      "cn": "莉塔拉",
-      "en": "Littara",
-      "jp": "リッタラ",
-      "nameSources": {
-        "cn": {
-          "value": "莉塔拉",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LittaraSR"
-        },
-        "en": {
-          "value": "Littara",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "リッタラ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AA%E3%83%83%E3%82%BF%E3%83%A9"
-        }
-      }
+      ]
     },
     "1039": {
       "id": 1039,
@@ -924,23 +533,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_SuomiSSR.png",
-      "cn": "索米",
-      "en": "Suomi",
-      "jp": "スオミ",
-      "nameSources": {
-        "cn": {
-          "value": "索米",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/SuomiSSR"
-        },
-        "en": {
-          "value": "Suomi",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1040": {
       "id": 1040,
@@ -961,28 +554,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_PapashaSSR.png",
-      "cn": "波波沙",
-      "en": "Papasha",
-      "jp": "ペーペーシャ",
-      "nameSources": {
-        "cn": {
-          "value": "波波沙",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/PapashaSSR"
-        },
-        "en": {
-          "value": "Papasha",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "ペーペーシャ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B7%E3%83%A3"
-        }
-      }
+      ]
     },
     "1041": {
       "id": 1041,
@@ -1003,23 +575,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LottaSR.png",
-      "cn": "洛塔",
-      "en": "Lotta",
-      "jp": "ロッタ",
-      "nameSources": {
-        "cn": {
-          "value": "洛塔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LottaSR"
-        },
-        "en": {
-          "value": "Lotta",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1042": {
       "id": 1042,
@@ -1040,28 +596,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_AndorisSSR.png",
-      "cn": "安朵丝",
-      "en": "Andoris",
-      "jp": "アンドリス",
-      "nameSources": {
-        "cn": {
-          "value": "安朵丝",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/AndorisSSR"
-        },
-        "en": {
-          "value": "Andoris",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "アンドリス",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%82%B9"
-        }
-      }
+      ]
     },
     "1043": {
       "id": 1043,
@@ -1082,23 +617,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_FayeSSR.png",
-      "cn": "绯",
-      "en": "Faye",
-      "jp": "フェイ",
-      "nameSources": {
-        "cn": {
-          "value": "绯",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/FayeSSR"
-        },
-        "en": {
-          "value": "Faye",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1044": {
       "id": 1044,
@@ -1119,28 +638,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_VectorSSR.png",
-      "cn": "维克托",
-      "en": "Vector",
-      "jp": "ヴェクター",
-      "nameSources": {
-        "cn": {
-          "value": "维克托",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/VectorSSR"
-        },
-        "en": {
-          "value": "Vector",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "ヴェクター",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A7%E3%82%AF%E3%82%BF%E3%83%BC"
-        }
-      }
+      ]
     },
     "1045": {
       "id": 1045,
@@ -1161,18 +659,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_BiyocaSSR.png",
-      "cn": "比悠卡",
-      "en": "Biyoca",
-      "jp": "ビヨカ",
-      "nameSources": {
-        "cn": {
-          "value": "比悠卡",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/BiyocaSSR"
-        }
-      }
+      ]
     },
     "1047": {
       "id": 1047,
@@ -1193,23 +680,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_SpringfieldSSR.png",
-      "cn": "春田",
-      "en": "Springfield",
-      "jp": "スプリングフィールド",
-      "nameSources": {
-        "cn": {
-          "value": "春田",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/SpringfieldSSR"
-        },
-        "en": {
-          "value": "Springfield",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1048": {
       "id": 1048,
@@ -1230,23 +701,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_QiuhuaSSR.png",
-      "cn": "秋桦",
-      "en": "Qiuhua",
-      "jp": "秋樺",
-      "nameSources": {
-        "cn": {
-          "value": "秋桦",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/QiuhuaSSR"
-        },
-        "en": {
-          "value": "Qiuhua",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1049": {
       "id": 1049,
@@ -1267,23 +722,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_HarpsySSR.png",
-      "cn": "哈卜茜",
-      "en": "Harpsy",
-      "jp": "ハープシー",
-      "nameSources": {
-        "cn": {
-          "value": "哈卜茜",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/HarpsySSR"
-        },
-        "en": {
-          "value": "Harpsy",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        }
-      }
+      ]
     },
     "1050": {
       "id": 1050,
@@ -1304,28 +743,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_ZhaohuiSSR.png",
-      "cn": "朝晖",
-      "en": "Zhaohui",
-      "jp": "朝暉",
-      "nameSources": {
-        "cn": {
-          "value": "朝晖",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/ZhaohuiSSR"
-        },
-        "en": {
-          "value": "Zhaohui",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "朝暉",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%9C%9D%E6%9A%89"
-        }
-      }
+      ]
     },
     "1051": {
       "id": 1051,
@@ -1346,23 +764,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_MishtySSR.png",
-      "cn": "米什缇",
-      "en": "Mechty",
-      "jp": "ミシュティ",
-      "nameSources": {
-        "cn": {
-          "value": "米什缇",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/MishtySSR"
-        },
-        "en": {
-          "value": "Mechty",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1052": {
       "id": 1052,
@@ -1383,23 +785,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_ClukaySSR.png",
-      "cn": "可露凯",
-      "en": "Klukai",
-      "jp": "クルカイ",
-      "nameSources": {
-        "cn": {
-          "value": "可露凯",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/ClukaySSR"
-        },
-        "en": {
-          "value": "Klukai",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1053": {
       "id": 1053,
@@ -1420,28 +806,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_PeriSSR.png",
-      "cn": "佩莉",
-      "en": "Peri",
-      "jp": "ペリー",
-      "nameSources": {
-        "cn": {
-          "value": "佩莉",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/PeriSSR"
-        },
-        "en": {
-          "value": "Peri",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "ペリー",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%AA%E3%83%BC"
-        }
-      }
+      ]
     },
     "1054": {
       "id": 1054,
@@ -1462,23 +827,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_YooHeeSSR.png",
-      "cn": "幼熙",
-      "en": "Yoohee",
-      "jp": "幼熙",
-      "nameSources": {
-        "cn": {
-          "value": "幼熙",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/YooHeeSSR"
-        },
-        "en": {
-          "value": "Yoohee",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1055": {
       "id": 1055,
@@ -1499,23 +848,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_NikketaSSR.png",
-      "cn": "妮基塔",
-      "en": "Nikketa",
-      "jp": "ニキータ",
-      "nameSources": {
-        "cn": {
-          "value": "妮基塔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/NikketaSSR"
-        },
-        "en": {
-          "value": "Nikketa",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1056": {
       "id": 1056,
@@ -1536,23 +869,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LevaSSR.png",
-      "cn": "莱娅",
-      "en": "Leva",
-      "jp": "リヴァ",
-      "nameSources": {
-        "cn": {
-          "value": "莱娅",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LevaSSR"
-        },
-        "en": {
-          "value": "Leva",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1057": {
       "id": 1057,
@@ -1573,23 +890,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_RobellaSSR.png",
-      "cn": "洛贝拉",
-      "en": "Robella",
-      "jp": "ロベラ",
-      "nameSources": {
-        "cn": {
-          "value": "洛贝拉",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/RobellaSSR"
-        },
-        "en": {
-          "value": "Robella",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1058": {
       "id": 1058,
@@ -1610,23 +911,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LeneSSR.png",
-      "cn": "莱妮",
-      "en": "Lainie",
-      "jp": "レイニー",
-      "nameSources": {
-        "cn": {
-          "value": "莱妮",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LeneSSR"
-        },
-        "en": {
-          "value": "Lainie",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1059": {
       "id": 1059,
@@ -1647,28 +932,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LindSSR.png",
-      "cn": "琳德",
-      "en": "Lind",
-      "jp": "リンド",
-      "nameSources": {
-        "cn": {
-          "value": "琳德",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LindSSR"
-        },
-        "en": {
-          "value": "Lind",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "リンド",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AA%E3%83%B3%E3%83%89"
-        }
-      }
+      ]
     },
     "1060": {
       "id": 1060,
@@ -1689,23 +953,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_PhaetusaSSR.png",
-      "cn": "翡图萨",
-      "en": "Phaetusa",
-      "jp": "パエトゥーサ",
-      "nameSources": {
-        "cn": {
-          "value": "翡图萨",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/PhaetusaSSR"
-        },
-        "en": {
-          "value": "Phaetusa",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1061": {
       "id": 1061,
@@ -1726,28 +974,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_BalthildeSSR.png",
-      "cn": "巴希达",
-      "en": "Balthilde",
-      "jp": "バチルダ",
-      "nameSources": {
-        "cn": {
-          "value": "巴希达",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/BalthildeSSR"
-        },
-        "en": {
-          "value": "Balthilde",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
-        },
-        "jp": {
-          "value": "バチルダ",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%90%E3%83%81%E3%83%AB%E3%83%80"
-        }
-      }
+      ]
     },
     "1062": {
       "id": 1062,
@@ -1768,23 +995,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LewisSSR.png",
-      "cn": "刘易斯",
-      "en": "Lewis",
-      "jp": "ルイス",
-      "nameSources": {
-        "cn": {
-          "value": "刘易斯",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LewisSSR"
-        },
-        "en": {
-          "value": "Lewis",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1064": {
       "id": 1064,
@@ -1805,23 +1016,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_FlorenceSSR.png",
-      "cn": "芙洛伦",
-      "en": "Florence",
-      "jp": "フローレンス",
-      "nameSources": {
-        "cn": {
-          "value": "芙洛伦",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/FlorenceSSR"
-        },
-        "en": {
-          "value": "Florence",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1065": {
       "id": 1065,
@@ -1842,23 +1037,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_AlvaSSR.png",
-      "cn": "埃芙",
-      "en": "Alva",
-      "jp": "アルヴァ",
-      "nameSources": {
-        "cn": {
-          "value": "埃芙",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/AlvaSSR"
-        },
-        "en": {
-          "value": "Alva",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1066": {
       "id": 1066,
@@ -1879,23 +1058,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_VoymastinaSSR.png",
-      "cn": "威玛西娜",
-      "en": "Voymastina",
-      "jp": "ヴォイマスティナ",
-      "nameSources": {
-        "cn": {
-          "value": "威玛西娜",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/VoymastinaSSR"
-        },
-        "en": {
-          "value": "Voymastina",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1067": {
       "id": 1067,
@@ -1916,28 +1079,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_HelenSSR.png",
-      "cn": "海伦",
-      "en": "Helen",
-      "jp": "ヘレン",
-      "nameSources": {
-        "cn": {
-          "value": "海伦",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/HelenSSR"
-        },
-        "en": {
-          "value": "Helen",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "ヘレン",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%98%E3%83%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "1068": {
       "id": 1068,
@@ -1958,23 +1100,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_SakuraSSR.png",
-      "cn": "樱花",
-      "en": "Sakura",
-      "jp": "サクラ",
-      "nameSources": {
-        "cn": {
-          "value": "樱花",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/SakuraSSR"
-        },
-        "en": {
-          "value": "Sakura",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        }
-      }
+      ]
     },
     "1069": {
       "id": 1069,
@@ -1995,28 +1121,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_LoreleySSR.png",
-      "cn": "罗蕾莱",
-      "en": "Loreley",
-      "jp": "ローレライ",
-      "nameSources": {
-        "cn": {
-          "value": "罗蕾莱",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/LoreleySSR"
-        },
-        "en": {
-          "value": "Loreley",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "ローレライ",
-          "source": "wikiru-detail",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%A9%E3%82%A4"
-        }
-      }
+      ]
     },
     "1071": {
       "id": 1071,
@@ -2030,34 +1135,7 @@
       "imageSource": "mcc-wiki",
       "servers": [
         "haoplay"
-      ],
-      "localIcon": "/images/doll/Avatar_Head_BastiSSR.png",
-      "assetPath": "doll/Avatar_Head_BastiSSR.png",
-      "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_BastiSSR.png",
-        "targetPath": "doll/Avatar_Head_BastiSSR.png",
-        "localIcon": "/images/doll/Avatar_Head_BastiSSR.png",
-        "source": "mcc-wiki"
-      },
-      "en": "Basti",
-      "jp": "バスティ",
-      "nameSources": {
-        "cn": {
-          "value": "贝丝蒂",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll/BastiSSR"
-        },
-        "en": {
-          "value": "Basti",
-          "source": "gfl2.help",
-          "url": "https://gfl2.help/en/banners"
-        },
-        "jp": {
-          "value": "バスティ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%90%E3%82%B9%E3%83%86%E3%82%A3"
-        }
-      }
+      ]
     },
     "10002": {
       "id": 10002,
@@ -2078,23 +1156,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_BpSMGssr001_5_1024.png",
-      "cn": "绝密手稿",
-      "en": "Classified Manuscript",
-      "jp": "極秘手稿",
-      "nameSources": {
-        "cn": {
-          "value": "绝密手稿",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpSMGssr001_5"
-        },
-        "jp": {
-          "value": "極秘手稿",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%A5%B5%E7%A7%98%E6%89%8B%E7%A8%BF"
-        }
-      }
+      ]
     },
     "10003": {
       "id": 10003,
@@ -2115,23 +1177,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_BpRFssr001_5_1024.png",
-      "cn": "阿尔克纳",
-      "en": "Arcana",
-      "jp": "アルカナ",
-      "nameSources": {
-        "cn": {
-          "value": "阿尔克纳",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpRFssr001_5"
-        },
-        "jp": {
-          "value": "アルカナ",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10004": {
       "id": 10004,
@@ -2152,23 +1198,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_BpARssr001_5_1024.png",
-      "cn": "盖尔诺",
-      "en": "Gerno",
-      "jp": "ゲルノ",
-      "nameSources": {
-        "cn": {
-          "value": "盖尔诺",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpARssr001_5"
-        },
-        "jp": {
-          "value": "ゲルノ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B2%E3%83%AB%E3%83%8E"
-        }
-      }
+      ]
     },
     "10005": {
       "id": 10005,
@@ -2189,23 +1219,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_BpKnifessr001_5_1024.png",
-      "cn": "王冠鹿角兔",
-      "en": "Crown Jackalope",
-      "jp": "王冠ジャッカロープ",
-      "nameSources": {
-        "cn": {
-          "value": "王冠鹿角兔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpKnifessr001_5"
-        },
-        "jp": {
-          "value": "王冠ジャッカロープ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E7%8E%8B%E5%86%A0%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AB%E3%83%AD%E3%83%BC%E3%83%97"
-        }
-      }
+      ]
     },
     "10006": {
       "id": 10006,
@@ -2226,23 +1240,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_BpMGssr001_5_1024.png",
-      "cn": "妙尔尼尔",
-      "en": "Mjolnir",
-      "jp": "ミョルニル",
-      "nameSources": {
-        "cn": {
-          "value": "妙尔尼尔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpMGssr001_5"
-        },
-        "jp": {
-          "value": "ミョルニル",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10007": {
       "id": 10007,
@@ -2263,23 +1261,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_BpSGssr001_5_1024.png",
-      "cn": "远行游鸽",
-      "en": "Migratory Pigeon",
-      "jp": "遠行遊鳩",
-      "nameSources": {
-        "cn": {
-          "value": "远行游鸽",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpSGssr001_5"
-        },
-        "jp": {
-          "value": "遠行遊鳩",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E9%81%A0%E8%A1%8C%E9%81%8A%E9%B3%A9"
-        }
-      }
+      ]
     },
     "10131": {
       "id": 10131,
@@ -2300,23 +1282,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP9_3_1024.png",
-      "cn": "旧式通用冲锋枪9",
-      "en": "UMP 9",
-      "jp": "旧式UMP9",
-      "nameSources": {
-        "cn": {
-          "value": "旧式通用冲锋枪9",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP9_3"
-        },
-        "jp": {
-          "value": "旧式UMP9",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FUMP9"
-        }
-      }
+      ]
     },
     "10132": {
       "id": 10132,
@@ -2337,23 +1303,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP9_4_1024.png",
-      "cn": "通用冲锋枪9",
-      "en": "UMP 9",
-      "jp": "UMP9",
-      "nameSources": {
-        "cn": {
-          "value": "通用冲锋枪9",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP9_4"
-        },
-        "jp": {
-          "value": "UMP9",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?UMP9"
-        }
-      }
+      ]
     },
     "10133": {
       "id": 10133,
@@ -2374,23 +1324,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP9_5_1024.png",
-      "cn": "幼狮",
-      "en": "UMP 9",
-      "jp": "小獅子",
-      "nameSources": {
-        "cn": {
-          "value": "幼狮",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP9_5"
-        },
-        "jp": {
-          "value": "小獅子",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E5%B0%8F%E7%8D%85%E5%AD%90"
-        }
-      }
+      ]
     },
     "10231": {
       "id": 10231,
@@ -2411,23 +1345,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_KSVK_3_1024.png",
-      "cn": "旧式科夫罗夫",
-      "en": "KSVK",
-      "jp": "旧式KSVK",
-      "nameSources": {
-        "cn": {
-          "value": "旧式科夫罗夫",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_KSVK_3"
-        },
-        "jp": {
-          "value": "旧式KSVK",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FKSVK"
-        }
-      }
+      ]
     },
     "10232": {
       "id": 10232,
@@ -2448,23 +1366,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_KSVK_4_1024.png",
-      "cn": "科夫罗夫",
-      "en": "KSVK",
-      "jp": "KSVK",
-      "nameSources": {
-        "cn": {
-          "value": "科夫罗夫",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_KSVK_4"
-        },
-        "jp": {
-          "value": "KSVK",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?KSVK"
-        }
-      }
+      ]
     },
     "10233": {
       "id": 10233,
@@ -2485,23 +1387,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_KSVK_5_1024.png",
-      "cn": "传颂之诗",
-      "en": "KSVK",
-      "jp": "語り継がれる詩",
-      "nameSources": {
-        "cn": {
-          "value": "传颂之诗",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_KSVK_5"
-        },
-        "jp": {
-          "value": "語り継がれる詩",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E8%AA%9E%E3%82%8A%E7%B6%99%E3%81%8C%E3%82%8C%E3%82%8B%E8%A9%A9"
-        }
-      }
+      ]
     },
     "10331": {
       "id": 10331,
@@ -2522,23 +1408,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1891_3_1024.png",
-      "cn": "旧式莫辛-纳甘",
-      "en": "Retired Mosin-Nagant",
-      "jp": "M1891",
-      "nameSources": {
-        "cn": {
-          "value": "旧式莫辛-纳甘",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1891_3"
-        },
-        "jp": {
-          "value": "M1891",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10332": {
       "id": 10332,
@@ -2559,23 +1429,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1891_4_1024.png",
-      "cn": "莫辛-纳甘",
-      "en": "Mosin-Nagant",
-      "jp": "M1891",
-      "nameSources": {
-        "cn": {
-          "value": "莫辛-纳甘",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1891_4"
-        },
-        "jp": {
-          "value": "M1891",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10333": {
       "id": 10333,
@@ -2596,23 +1450,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1891_5_1024.png",
-      "cn": "斯摩希克",
-      "en": "Smochek",
-      "jp": "ミエティエリ",
-      "nameSources": {
-        "cn": {
-          "value": "斯摩希克",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1891_5"
-        },
-        "jp": {
-          "value": "ミエティエリ",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10341": {
       "id": 10341,
@@ -2633,23 +1471,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_WA2000_3_1024.png",
-      "cn": "旧式瓦尔特2000",
-      "en": "Retired WA2000",
-      "jp": "旧式W2000",
-      "nameSources": {
-        "cn": {
-          "value": "旧式瓦尔特2000",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_WA2000_3"
-        },
-        "jp": {
-          "value": "旧式W2000",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FW2000"
-        }
-      }
+      ]
     },
     "10342": {
       "id": 10342,
@@ -2670,23 +1492,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_WA2000_4_1024.png",
-      "cn": "瓦尔特2000",
-      "en": "WA2000",
-      "jp": "W2000",
-      "nameSources": {
-        "cn": {
-          "value": "瓦尔特2000",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_WA2000_4"
-        },
-        "jp": {
-          "value": "W2000",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?W2000"
-        }
-      }
+      ]
     },
     "10343": {
       "id": 10343,
@@ -2707,23 +1513,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_WA2000_5_1024.png",
-      "cn": "苦涩焦糖",
-      "en": "Bitter Caramel",
-      "jp": "ビターキャラメル",
-      "nameSources": {
-        "cn": {
-          "value": "苦涩焦糖",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_WA2000_5"
-        },
-        "jp": {
-          "value": "ビターキャラメル",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%93%E3%82%BF%E3%83%BC%E3%82%AD%E3%83%A3%E3%83%A9%E3%83%A1%E3%83%AB"
-        }
-      }
+      ]
     },
     "10351": {
       "id": 10351,
@@ -2744,23 +1534,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ97_3_1024.png",
-      "cn": "旧式九七式",
-      "en": "Retired QBZ-97",
-      "jp": "旧式97式",
-      "nameSources": {
-        "cn": {
-          "value": "旧式九七式",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ97_3"
-        },
-        "jp": {
-          "value": "旧式97式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F97%E5%BC%8F"
-        }
-      }
+      ]
     },
     "10352": {
       "id": 10352,
@@ -2781,23 +1555,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ97_4_1024.png",
-      "cn": "九七式",
-      "en": "QBZ-97",
-      "jp": "97式",
-      "nameSources": {
-        "cn": {
-          "value": "九七式",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ97_4"
-        },
-        "jp": {
-          "value": "97式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?97%E5%BC%8F"
-        }
-      }
+      ]
     },
     "10353": {
       "id": 10353,
@@ -2818,23 +1576,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ97_5_1024.png",
-      "cn": "跃虎",
-      "en": "Leaping Tiger",
-      "jp": "躍虎",
-      "nameSources": {
-        "cn": {
-          "value": "跃虎",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ97_5"
-        },
-        "jp": {
-          "value": "躍虎",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E8%BA%8D%E8%99%8E"
-        }
-      }
+      ]
     },
     "10361": {
       "id": 10361,
@@ -2855,23 +1597,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_APS_3_1024.png",
-      "cn": "旧式斯捷奇金",
-      "en": "Retired Stechkin",
-      "jp": "旧式スチェッキン",
-      "nameSources": {
-        "cn": {
-          "value": "旧式斯捷奇金",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_APS_3"
-        },
-        "jp": {
-          "value": "旧式スチェッキン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%B9%E3%83%81%E3%82%A7%E3%83%83%E3%82%AD%E3%83%B3"
-        }
-      }
+      ]
     },
     "10362": {
       "id": 10362,
@@ -2892,23 +1618,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_APS_4_1024.png",
-      "cn": "斯捷奇金",
-      "en": "Stechkin",
-      "jp": "スチェッキン",
-      "nameSources": {
-        "cn": {
-          "value": "斯捷奇金",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_APS_4"
-        },
-        "jp": {
-          "value": "スチェッキン",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10371": {
       "id": 10371,
@@ -2929,23 +1639,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Ullr_3_1024.png",
-      "cn": "旧式羽锋",
-      "en": "Retired Ullr",
-      "jp": "旧式ウィングエッジ",
-      "nameSources": {
-        "cn": {
-          "value": "旧式羽锋",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Ullr_3"
-        },
-        "jp": {
-          "value": "旧式ウィングエッジ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%A6%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A8%E3%83%83%E3%82%B8"
-        }
-      }
+      ]
     },
     "10372": {
       "id": 10372,
@@ -2966,23 +1660,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Ullr_4_1024.png",
-      "cn": "羽锋",
-      "en": "Ullr",
-      "jp": "ウィングエッジ",
-      "nameSources": {
-        "cn": {
-          "value": "羽锋",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Ullr_4"
-        },
-        "jp": {
-          "value": "ウィングエッジ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A6%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A8%E3%83%83%E3%82%B8"
-        }
-      }
+      ]
     },
     "10373": {
       "id": 10373,
@@ -3003,23 +1681,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Ullr_5_1024.png",
-      "cn": "流羽白英",
-      "en": "Flowing Feather White Aster",
-      "jp": "ヒヨドリジョウゴ",
-      "nameSources": {
-        "cn": {
-          "value": "流羽白英",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Ullr_5"
-        },
-        "jp": {
-          "value": "ヒヨドリジョウゴ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%92%E3%83%A8%E3%83%89%E3%83%AA%E3%82%B8%E3%83%A7%E3%82%A6%E3%82%B4"
-        }
-      }
+      ]
     },
     "10381": {
       "id": 10381,
@@ -3040,23 +1702,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Galil_3_1024.png",
-      "cn": "旧式加利尔轻机枪",
-      "en": "Retired Galil LMG",
-      "jp": "旧式ガリル軽機関銃",
-      "nameSources": {
-        "cn": {
-          "value": "旧式加利尔轻机枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Galil_3"
-        },
-        "jp": {
-          "value": "旧式ガリル軽機関銃",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%AC%E3%83%AA%E3%83%AB%E8%BB%BD%E6%A9%9F%E9%96%A2%E9%8A%83"
-        }
-      }
+      ]
     },
     "10382": {
       "id": 10382,
@@ -3077,23 +1723,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Galil_4_1024.png",
-      "cn": "加利尔轻机枪",
-      "en": "Galil LMG",
-      "jp": "ガリル軽機関銃",
-      "nameSources": {
-        "cn": {
-          "value": "加利尔轻机枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Galil_4"
-        },
-        "jp": {
-          "value": "ガリル軽機関銃",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AC%E3%83%AA%E3%83%AB%E8%BB%BD%E6%A9%9F%E9%96%A2%E9%8A%83"
-        }
-      }
+      ]
     },
     "10391": {
       "id": 10391,
@@ -3114,23 +1744,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1931_3_1024.png",
-      "cn": "旧式索米",
-      "en": "Retired Suomi",
-      "jp": "旧式スオミ",
-      "nameSources": {
-        "cn": {
-          "value": "旧式索米",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1931_3"
-        },
-        "jp": {
-          "value": "旧式スオミ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%B9%E3%82%AA%E3%83%9F"
-        }
-      }
+      ]
     },
     "10392": {
       "id": 10392,
@@ -3151,23 +1765,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1931_4_1024.png",
-      "cn": "索米",
-      "en": "Suomi",
-      "jp": "スオミ",
-      "nameSources": {
-        "cn": {
-          "value": "索米",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1931_4"
-        },
-        "jp": {
-          "value": "スオミ",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10393": {
       "id": 10393,
@@ -3188,23 +1786,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1931_5_1024.png",
-      "cn": "未言使命",
-      "en": "Silent Mission",
-      "jp": "サライスース",
-      "nameSources": {
-        "cn": {
-          "value": "未言使命",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1931_5"
-        },
-        "jp": {
-          "value": "サライスース",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B5%E3%83%A9%E3%82%A4%E3%82%B9%E3%83%BC%E3%82%B9"
-        }
-      }
+      ]
     },
     "10401": {
       "id": 10401,
@@ -3225,23 +1807,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_PPSh41_3_1024.png",
-      "cn": "旧式波波沙冲锋枪",
-      "en": "PPSh-41",
-      "jp": "旧式PPSh-41",
-      "nameSources": {
-        "cn": {
-          "value": "旧式波波沙冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_PPSh41_3"
-        },
-        "jp": {
-          "value": "旧式PPSh-41",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FPPSh-41"
-        }
-      }
+      ]
     },
     "10402": {
       "id": 10402,
@@ -3262,23 +1828,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_PPSh41_4_1024.png",
-      "cn": "波波沙冲锋枪",
-      "en": "PPSh-41",
-      "jp": "PPSh-41",
-      "nameSources": {
-        "cn": {
-          "value": "波波沙冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_PPSh41_4"
-        },
-        "jp": {
-          "value": "PPSh-41",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?PPSh-41"
-        }
-      }
+      ]
     },
     "10403": {
       "id": 10403,
@@ -3299,23 +1849,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_PPSh41_5_1024.png",
-      "cn": "斯瓦罗格",
-      "en": "Svarog",
-      "jp": "スヴァローグ",
-      "nameSources": {
-        "cn": {
-          "value": "斯瓦罗格",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_PPSh41_5"
-        },
-        "jp": {
-          "value": "スヴァローグ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B9%E3%83%B4%E3%82%A1%E3%83%AD%E3%83%BC%E3%82%B0"
-        }
-      }
+      ]
     },
     "10411": {
       "id": 10411,
@@ -3336,23 +1870,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1_3_1024.png",
-      "cn": "旧式超级90",
-      "en": "Retired Super 90",
-      "jp": "旧式スーパー90",
-      "nameSources": {
-        "cn": {
-          "value": "旧式超级90",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1_3"
-        },
-        "jp": {
-          "value": "旧式スーパー90",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC90"
-        }
-      }
+      ]
     },
     "10412": {
       "id": 10412,
@@ -3373,23 +1891,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1_4_1024.png",
-      "cn": "超级90",
-      "en": "Super 90",
-      "jp": "スーパー90",
-      "nameSources": {
-        "cn": {
-          "value": "超级90",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1_4"
-        },
-        "jp": {
-          "value": "スーパー90",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC90"
-        }
-      }
+      ]
     },
     "10421": {
       "id": 10421,
@@ -3410,23 +1912,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G36KKSK_3_1024.png",
-      "cn": "旧式格威尔36-斯佩凯芙特",
-      "en": "G36K-KSK",
-      "jp": "旧式StG36-シュペッカフォルテ",
-      "nameSources": {
-        "cn": {
-          "value": "旧式格威尔36-斯佩凯芙特",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36KKSK_3"
-        },
-        "jp": {
-          "value": "旧式StG36-シュペッカフォルテ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FStG36-%E3%82%B7%E3%83%A5%E3%83%9A%E3%83%83%E3%82%AB%E3%83%95%E3%82%A9%E3%83%AB%E3%83%86"
-        }
-      }
+      ]
     },
     "10422": {
       "id": 10422,
@@ -3447,23 +1933,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G36KKSK_4_1024.png",
-      "cn": "格威尔36-斯佩凯芙特",
-      "en": "G36K-KSK",
-      "jp": "StG36-シュペッカフォルテ",
-      "nameSources": {
-        "cn": {
-          "value": "格威尔36-斯佩凯芙特",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36KKSK_4"
-        },
-        "jp": {
-          "value": "StG36-シュペッカフォルテ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?StG36-%E3%82%B7%E3%83%A5%E3%83%9A%E3%83%83%E3%82%AB%E3%83%95%E3%82%A9%E3%83%AB%E3%83%86"
-        }
-      }
+      ]
     },
     "10423": {
       "id": 10423,
@@ -3484,23 +1954,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G36KKSK_5_1024.png",
-      "cn": "阿格莱亚",
-      "en": "G36K-KSK",
-      "jp": "アグライア",
-      "nameSources": {
-        "cn": {
-          "value": "阿格莱亚",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36KKSK_5"
-        },
-        "jp": {
-          "value": "アグライア",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A2%E3%82%B0%E3%83%A9%E3%82%A4%E3%82%A2"
-        }
-      }
+      ]
     },
     "10431": {
       "id": 10431,
@@ -3521,23 +1975,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_CZ75_3_1024.png",
-      "cn": "旧式斯柯达75",
-      "en": "CZ75",
-      "jp": "旧式CZ75",
-      "nameSources": {
-        "cn": {
-          "value": "旧式斯柯达75",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_CZ75_3"
-        },
-        "jp": {
-          "value": "旧式CZ75",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FCZ75"
-        }
-      }
+      ]
     },
     "10432": {
       "id": 10432,
@@ -3558,23 +1996,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_CZ75_4_1024.png",
-      "cn": "斯柯达75",
-      "en": "CZ75",
-      "jp": "CZ75",
-      "nameSources": {
-        "cn": {
-          "value": "斯柯达75",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_CZ75_4"
-        },
-        "jp": {
-          "value": "CZ75",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?CZ75"
-        }
-      }
+      ]
     },
     "10433": {
       "id": 10433,
@@ -3595,23 +2017,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_CZ75_5_1024.png",
-      "cn": "赫斯提亚",
-      "en": "Hestia",
-      "jp": "ヘスティア",
-      "nameSources": {
-        "cn": {
-          "value": "赫斯提亚",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_CZ75_5"
-        },
-        "jp": {
-          "value": "ヘスティア",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%98%E3%82%B9%E3%83%86%E3%82%A3%E3%82%A2"
-        }
-      }
+      ]
     },
     "10441": {
       "id": 10441,
@@ -3632,23 +2038,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Vector_3_1024.png",
-      "cn": "旧式短剑",
-      "en": "Retired Vector",
-      "jp": "旧式ベクター",
-      "nameSources": {
-        "cn": {
-          "value": "旧式短剑",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vector_3"
-        },
-        "jp": {
-          "value": "旧式ベクター",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC"
-        }
-      }
+      ]
     },
     "10442": {
       "id": 10442,
@@ -3669,23 +2059,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Vector_4_1024.png",
-      "cn": "短剑",
-      "en": "Vector",
-      "jp": "ベクター",
-      "nameSources": {
-        "cn": {
-          "value": "短剑",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vector_4"
-        },
-        "jp": {
-          "value": "ベクター",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC"
-        }
-      }
+      ]
     },
     "10443": {
       "id": 10443,
@@ -3706,23 +2080,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Vector_5_1024.png",
-      "cn": "报丧轻语",
-      "en": "Banshee's Whisper",
-      "jp": "バンシィ",
-      "nameSources": {
-        "cn": {
-          "value": "报丧轻语",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vector_5"
-        },
-        "jp": {
-          "value": "バンシィ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%90%E3%83%B3%E3%82%B7%E3%82%A3"
-        }
-      }
+      ]
     },
     "10451": {
       "id": 10451,
@@ -3743,23 +2101,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G28_3_1024.png",
-      "cn": "旧式格威尔28",
-      "en": "Retired G28",
-      "jp": "旧式G28",
-      "nameSources": {
-        "cn": {
-          "value": "旧式格威尔28",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G28_3"
-        },
-        "jp": {
-          "value": "旧式G28",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FG28"
-        }
-      }
+      ]
     },
     "10452": {
       "id": 10452,
@@ -3780,23 +2122,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G28_4_1024.png",
-      "cn": "格威尔28",
-      "en": "G28",
-      "jp": "G28",
-      "nameSources": {
-        "cn": {
-          "value": "格威尔28",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G28_4"
-        },
-        "jp": {
-          "value": "G28",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?G28"
-        }
-      }
+      ]
     },
     "10453": {
       "id": 10453,
@@ -3817,23 +2143,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G28_5_1024.png",
-      "cn": "林野精灵",
-      "en": "Woodland Elf",
-      "jp": "林野の精霊",
-      "nameSources": {
-        "cn": {
-          "value": "林野精灵",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G28_5"
-        },
-        "jp": {
-          "value": "林野の精霊",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%9E%97%E9%87%8E%E3%81%AE%E7%B2%BE%E9%9C%8A"
-        }
-      }
+      ]
     },
     "10471": {
       "id": 10471,
@@ -3854,23 +2164,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1903_3_1024.png",
-      "cn": "旧式斯普林菲尔德",
-      "en": "M1903",
-      "jp": "旧式スプリングフィールド",
-      "nameSources": {
-        "cn": {
-          "value": "旧式斯普林菲尔德",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1903_3"
-        },
-        "jp": {
-          "value": "旧式スプリングフィールド",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89"
-        }
-      }
+      ]
     },
     "10472": {
       "id": 10472,
@@ -3891,23 +2185,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1903_4_1024.png",
-      "cn": "斯普林菲尔德",
-      "en": "M1903",
-      "jp": "スプリングフィールド",
-      "nameSources": {
-        "cn": {
-          "value": "斯普林菲尔德",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1903_4"
-        },
-        "jp": {
-          "value": "スプリングフィールド",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "10473": {
       "id": 10473,
@@ -3928,23 +2206,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1903_5_1024.png",
-      "cn": "信仰棘光",
-      "en": "M1903",
-      "jp": "信仰の光",
-      "nameSources": {
-        "cn": {
-          "value": "信仰棘光",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1903_5"
-        },
-        "jp": {
-          "value": "信仰の光",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E4%BF%A1%E4%BB%B0%E3%81%AE%E5%85%89"
-        }
-      }
+      ]
     },
     "10481": {
       "id": 10481,
@@ -3965,23 +2227,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_HAWK12_3_1024.png",
-      "cn": "旧式九七式霰",
-      "en": "Retired HAWK 12",
-      "jp": "旧式97式ショットガン",
-      "nameSources": {
-        "cn": {
-          "value": "旧式九七式霰",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_HAWK12_3"
-        },
-        "jp": {
-          "value": "旧式97式ショットガン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F97%E5%BC%8F%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "10482": {
       "id": 10482,
@@ -4002,23 +2248,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_HAWK12_4_1024.png",
-      "cn": "九七式霰",
-      "en": "HAWK 12",
-      "jp": "97式ショットガン",
-      "nameSources": {
-        "cn": {
-          "value": "九七式霰",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_HAWK12_4"
-        },
-        "jp": {
-          "value": "97式ショットガン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?97%E5%BC%8F%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "10483": {
       "id": 10483,
@@ -4039,23 +2269,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_HAWK12_5_1024.png",
-      "cn": "逐光",
-      "en": "Chase the Light",
-      "jp": "逐光",
-      "nameSources": {
-        "cn": {
-          "value": "逐光",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_HAWK12_5"
-        },
-        "jp": {
-          "value": "逐光",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E9%80%90%E5%85%89"
-        }
-      }
+      ]
     },
     "10491": {
       "id": 10491,
@@ -4076,23 +2290,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_SteyrTMP_3_1024.png",
-      "cn": "旧式施泰尔冲锋手枪",
-      "en": "Retired TMP",
-      "jp": "旧式TMP",
-      "nameSources": {
-        "cn": {
-          "value": "旧式施泰尔冲锋手枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_SteyrTMP_3"
-        },
-        "jp": {
-          "value": "旧式TMP",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FTMP"
-        }
-      }
+      ]
     },
     "10492": {
       "id": 10492,
@@ -4113,23 +2311,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_SteyrTMP_4_1024.png",
-      "cn": "施泰尔冲锋手枪",
-      "en": "TMP",
-      "jp": "TMP",
-      "nameSources": {
-        "cn": {
-          "value": "施泰尔冲锋手枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_SteyrTMP_4"
-        },
-        "jp": {
-          "value": "TMP",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?TMP"
-        }
-      }
+      ]
     },
     "10493": {
       "id": 10493,
@@ -4150,23 +2332,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_SteyrTMP_5_1024.png",
-      "cn": "二律背反",
-      "en": "Antinomy",
-      "jp": "二律背反",
-      "nameSources": {
-        "cn": {
-          "value": "二律背反",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_SteyrTMP_5"
-        },
-        "jp": {
-          "value": "二律背反",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E4%BA%8C%E5%BE%8B%E8%83%8C%E5%8F%8D"
-        }
-      }
+      ]
     },
     "10501": {
       "id": 10501,
@@ -4187,23 +2353,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_CSLS06_3_1024.png",
-      "cn": "旧式长风零六",
-      "en": "CS/LS06",
-      "jp": "旧式06式",
-      "nameSources": {
-        "cn": {
-          "value": "旧式长风零六",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_CSLS06_3"
-        },
-        "jp": {
-          "value": "旧式06式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F06%E5%BC%8F"
-        }
-      }
+      ]
     },
     "10502": {
       "id": 10502,
@@ -4224,23 +2374,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_CSLS06_4_1024.png",
-      "cn": "长风零六",
-      "en": "CS/LS06",
-      "jp": "06式",
-      "nameSources": {
-        "cn": {
-          "value": "长风零六",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_CSLS06_4"
-        },
-        "jp": {
-          "value": "06式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?06%E5%BC%8F"
-        }
-      }
+      ]
     },
     "10503": {
       "id": 10503,
@@ -4261,23 +2395,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_CSLS06_5_1024.png",
-      "cn": "不留行",
-      "en": "CS/LS06",
-      "jp": "風来坊",
-      "nameSources": {
-        "cn": {
-          "value": "不留行",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_CSLS06_5"
-        },
-        "jp": {
-          "value": "風来坊",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E9%A2%A8%E6%9D%A5%E5%9D%8A"
-        }
-      }
+      ]
     },
     "10511": {
       "id": 10511,
@@ -4298,23 +2416,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G11_3_1024.png",
-      "cn": "旧式无壳弹步枪11",
-      "en": "G11",
-      "jp": "旧式StG11",
-      "nameSources": {
-        "cn": {
-          "value": "旧式无壳弹步枪11",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G11_3"
-        },
-        "jp": {
-          "value": "旧式StG11",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FStG11"
-        }
-      }
+      ]
     },
     "10512": {
       "id": 10512,
@@ -4335,23 +2437,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G11_4_1024.png",
-      "cn": "无壳弹步枪11",
-      "en": "G11",
-      "jp": "StG11",
-      "nameSources": {
-        "cn": {
-          "value": "无壳弹步枪11",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G11_4"
-        },
-        "jp": {
-          "value": "StG11",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?StG11"
-        }
-      }
+      ]
     },
     "10513": {
       "id": 10513,
@@ -4372,23 +2458,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G11_5_1024.png",
-      "cn": "白日梦",
-      "en": "Daydream",
-      "jp": "白昼夢",
-      "nameSources": {
-        "cn": {
-          "value": "白日梦",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G11_5"
-        },
-        "jp": {
-          "value": "白昼夢",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E7%99%BD%E6%98%BC%E5%A4%A2"
-        }
-      }
+      ]
     },
     "10521": {
       "id": 10521,
@@ -4409,23 +2479,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_HK416_3_1024.png",
-      "cn": "旧式黑克勒科赫416",
-      "en": "Retired HK416",
-      "jp": "旧式416",
-      "nameSources": {
-        "cn": {
-          "value": "旧式黑克勒科赫416",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_HK416_3"
-        },
-        "jp": {
-          "value": "旧式416",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F416"
-        }
-      }
+      ]
     },
     "10522": {
       "id": 10522,
@@ -4446,23 +2500,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_HK416_4_1024.png",
-      "cn": "黑克勒科赫416",
-      "en": "HK416",
-      "jp": "HK416",
-      "nameSources": {
-        "cn": {
-          "value": "黑克勒科赫416",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_HK416_4"
-        },
-        "jp": {
-          "value": "HK416",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?HK416"
-        }
-      }
+      ]
     },
     "10523": {
       "id": 10523,
@@ -4483,23 +2521,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_HK416_5_1024.png",
-      "cn": "斯库拉",
-      "en": "Scylla",
-      "jp": "スキュラ",
-      "nameSources": {
-        "cn": {
-          "value": "斯库拉",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_HK416_5"
-        },
-        "jp": {
-          "value": "スキュラ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B9%E3%82%AD%E3%83%A5%E3%83%A9"
-        }
-      }
+      ]
     },
     "10531": {
       "id": 10531,
@@ -4520,23 +2542,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MP5_3_1024.png",
-      "cn": "旧式五号九毫米冲锋枪",
-      "en": "MP5",
-      "jp": "旧式MP5",
-      "nameSources": {
-        "cn": {
-          "value": "旧式五号九毫米冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP5_3"
-        },
-        "jp": {
-          "value": "旧式MP5",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FMP5"
-        }
-      }
+      ]
     },
     "10532": {
       "id": 10532,
@@ -4557,23 +2563,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MP5_4_1024.png",
-      "cn": "五号九毫米冲锋枪",
-      "en": "MP5",
-      "jp": "MP5",
-      "nameSources": {
-        "cn": {
-          "value": "五号九毫米冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP5_4"
-        },
-        "jp": {
-          "value": "MP5",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?MP5"
-        }
-      }
+      ]
     },
     "10533": {
       "id": 10533,
@@ -4594,23 +2584,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MP5_5_1024.png",
-      "cn": "厄梅尼塔",
-      "en": "MP5",
-      "jp": "エウメニタ",
-      "nameSources": {
-        "cn": {
-          "value": "厄梅尼塔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP5_5"
-        },
-        "jp": {
-          "value": "エウメニタ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A8%E3%82%A6%E3%83%A1%E3%83%8B%E3%82%BF"
-        }
-      }
+      ]
     },
     "10541": {
       "id": 10541,
@@ -4631,23 +2605,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_K2_3_1024.png",
-      "cn": "旧式卡宾刻2型",
-      "en": "K2",
-      "jp": "旧式K2",
-      "nameSources": {
-        "cn": {
-          "value": "旧式卡宾刻2型",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_K2_3"
-        },
-        "jp": {
-          "value": "旧式K2",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FK2"
-        }
-      }
+      ]
     },
     "10542": {
       "id": 10542,
@@ -4668,23 +2626,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_K2_4_1024.png",
-      "cn": "卡宾刻2型",
-      "en": "K2",
-      "jp": "K2",
-      "nameSources": {
-        "cn": {
-          "value": "卡宾刻2型",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_K2_4"
-        },
-        "jp": {
-          "value": "K2",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?K2"
-        }
-      }
+      ]
     },
     "10543": {
       "id": 10543,
@@ -4705,23 +2647,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_K2_5_1024.png",
-      "cn": "流光花火",
-      "en": "K2",
-      "jp": "フラッシュスパーク",
-      "nameSources": {
-        "cn": {
-          "value": "流光花火",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_K2_5"
-        },
-        "jp": {
-          "value": "フラッシュスパーク",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF"
-        }
-      }
+      ]
     },
     "10551": {
       "id": 10551,
@@ -4742,23 +2668,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_VSK94_3_1024.png",
-      "cn": "旧式维斯卡94",
-      "en": "VSK-94",
-      "jp": "旧式VSK-94",
-      "nameSources": {
-        "cn": {
-          "value": "旧式维斯卡94",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_VSK94_3"
-        },
-        "jp": {
-          "value": "旧式VSK-94",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FVSK-94"
-        }
-      }
+      ]
     },
     "10552": {
       "id": 10552,
@@ -4779,23 +2689,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_VSK94_4_1024.png",
-      "cn": "维斯卡94",
-      "en": "VSK-94",
-      "jp": "VSK-94",
-      "nameSources": {
-        "cn": {
-          "value": "维斯卡94",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_VSK94_4"
-        },
-        "jp": {
-          "value": "VSK-94",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?VSK-94"
-        }
-      }
+      ]
     },
     "10553": {
       "id": 10553,
@@ -4816,23 +2710,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_VSK94_5_1024.png",
-      "cn": "护梦银翼",
-      "en": "VSK-94",
-      "jp": "夢の翼",
-      "nameSources": {
-        "cn": {
-          "value": "护梦银翼",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_VSK94_5"
-        },
-        "jp": {
-          "value": "夢の翼",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E5%A4%A2%E3%81%AE%E7%BF%BC"
-        }
-      }
+      ]
     },
     "10561": {
       "id": 10561,
@@ -4853,23 +2731,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP45_3_1024.png",
-      "cn": "旧式通用冲锋枪45",
-      "en": "UMP45",
-      "jp": "旧式UMP45",
-      "nameSources": {
-        "cn": {
-          "value": "旧式通用冲锋枪45",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP45_3"
-        },
-        "jp": {
-          "value": "旧式UMP45",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FUMP45"
-        }
-      }
+      ]
     },
     "10562": {
       "id": 10562,
@@ -4890,23 +2752,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP45_4_1024.png",
-      "cn": "通用冲锋枪45",
-      "en": "UMP45",
-      "jp": "UMP45",
-      "nameSources": {
-        "cn": {
-          "value": "通用冲锋枪45",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP45_4"
-        },
-        "jp": {
-          "value": "UMP45",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?UMP45"
-        }
-      }
+      ]
     },
     "10563": {
       "id": 10563,
@@ -4927,23 +2773,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP45_5_1024.png",
-      "cn": "狡狐",
-      "en": "UMP45",
-      "jp": "ヴィクセン",
-      "nameSources": {
-        "cn": {
-          "value": "狡狐",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP45_5"
-        },
-        "jp": {
-          "value": "ヴィクセン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A3%E3%82%AF%E3%82%BB%E3%83%B3"
-        }
-      }
+      ]
     },
     "10571": {
       "id": 10571,
@@ -4964,23 +2794,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_RO635_3_1024.png",
-      "cn": "旧式柯尔特635型冲锋枪",
-      "en": "RO635",
-      "jp": "旧式RO635",
-      "nameSources": {
-        "cn": {
-          "value": "旧式柯尔特635型冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_RO635_3"
-        },
-        "jp": {
-          "value": "旧式RO635",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FRO635"
-        }
-      }
+      ]
     },
     "10572": {
       "id": 10572,
@@ -5001,23 +2815,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_RO635_4_1024.png",
-      "cn": "柯尔特635型冲锋枪",
-      "en": "RO635",
-      "jp": "RO635",
-      "nameSources": {
-        "cn": {
-          "value": "柯尔特635型冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_RO635_4"
-        },
-        "jp": {
-          "value": "RO635",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?RO635"
-        }
-      }
+      ]
     },
     "10573": {
       "id": 10573,
@@ -5038,23 +2836,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_RO635_5_1024.png",
-      "cn": "流浪者赞歌",
-      "en": "RO635",
-      "jp": "渡り人の讃歌",
-      "nameSources": {
-        "cn": {
-          "value": "流浪者赞歌",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_RO635_5"
-        },
-        "jp": {
-          "value": "渡り人の讃歌",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%B8%A1%E3%82%8A%E4%BA%BA%E3%81%AE%E8%AE%83%E6%AD%8C"
-        }
-      }
+      ]
     },
     "10581": {
       "id": 10581,
@@ -5075,23 +2857,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP40_3_1024.png",
-      "cn": "旧式通用冲锋枪40",
-      "en": "UMP40",
-      "jp": "旧式UMP40",
-      "nameSources": {
-        "cn": {
-          "value": "旧式通用冲锋枪40",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP40_3"
-        },
-        "jp": {
-          "value": "旧式UMP40",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FUMP40"
-        }
-      }
+      ]
     },
     "10582": {
       "id": 10582,
@@ -5112,23 +2878,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP40_4_1024.png",
-      "cn": "通用冲锋枪40",
-      "en": "UMP40",
-      "jp": "UMP40",
-      "nameSources": {
-        "cn": {
-          "value": "通用冲锋枪40",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP40_4"
-        },
-        "jp": {
-          "value": "UMP40",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?UMP40"
-        }
-      }
+      ]
     },
     "10583": {
       "id": 10583,
@@ -5149,23 +2899,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_UMP40_5_1024.png",
-      "cn": "骄阳构想",
-      "en": "UMP40",
-      "jp": "ペリヘリオン",
-      "nameSources": {
-        "cn": {
-          "value": "骄阳构想",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP40_5"
-        },
-        "jp": {
-          "value": "ペリヘリオン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%AA%E3%83%98%E3%83%AA%E3%82%AA%E3%83%B3"
-        }
-      }
+      ]
     },
     "10591": {
       "id": 10591,
@@ -5186,23 +2920,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AA12_3_1024.png",
-      "cn": "旧式艾奇逊12自动霰弹枪",
-      "en": "Retired AA-12",
-      "jp": "旧式AA-12",
-      "nameSources": {
-        "cn": {
-          "value": "旧式艾奇逊12自动霰弹枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AA12_3"
-        },
-        "jp": {
-          "value": "旧式AA-12",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FAA-12"
-        }
-      }
+      ]
     },
     "10592": {
       "id": 10592,
@@ -5223,23 +2941,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AA12_4_1024.png",
-      "cn": "艾奇逊12自动霰弹枪",
-      "en": "AA-12",
-      "jp": "AA-12",
-      "nameSources": {
-        "cn": {
-          "value": "艾奇逊12自动霰弹枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AA12_4"
-        },
-        "jp": {
-          "value": "AA-12",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?AA-12"
-        }
-      }
+      ]
     },
     "10593": {
       "id": 10593,
@@ -5260,23 +2962,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AA12_5_1024.png",
-      "cn": "刺棘法则",
-      "en": "Spiny Law",
-      "jp": "棘の法則",
-      "nameSources": {
-        "cn": {
-          "value": "刺棘法则",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AA12_5"
-        },
-        "jp": {
-          "value": "棘の法則",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%A3%98%E3%81%AE%E6%B3%95%E5%89%87"
-        }
-      }
+      ]
     },
     "10601": {
       "id": 10601,
@@ -5297,23 +2983,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Phaetusa_3_1024.png",
-      "cn": "旧式灰棘",
-      "en": "Retired Phaetusa",
-      "jp": "旧式灰の棘",
-      "nameSources": {
-        "cn": {
-          "value": "旧式灰棘",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Phaetusa_3"
-        },
-        "jp": {
-          "value": "旧式灰の棘",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E7%81%B0%E3%81%AE%E6%A3%98"
-        }
-      }
+      ]
     },
     "10602": {
       "id": 10602,
@@ -5334,23 +3004,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Phaetusa_4_1024.png",
-      "cn": "灰棘",
-      "en": "Phaetusa",
-      "jp": "灰の棘",
-      "nameSources": {
-        "cn": {
-          "value": "灰棘",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Phaetusa_4"
-        },
-        "jp": {
-          "value": "灰の棘",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E7%81%B0%E3%81%AE%E6%A3%98"
-        }
-      }
+      ]
     },
     "10603": {
       "id": 10603,
@@ -5371,23 +3025,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Phaetusa_5_1024.png",
-      "cn": "因果律理",
-      "en": "Causality",
-      "jp": "フィリア",
-      "nameSources": {
-        "cn": {
-          "value": "因果律理",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Phaetusa_5"
-        },
-        "jp": {
-          "value": "フィリア",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%95%E3%82%A3%E3%83%AA%E3%82%A2"
-        }
-      }
+      ]
     },
     "10611": {
       "id": 10611,
@@ -5408,23 +3046,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M26_3_1024.png",
-      "cn": "旧式拉赫蒂26型轻机枪",
-      "en": "Retired M26 MASS",
-      "jp": "旧式LS26",
-      "nameSources": {
-        "cn": {
-          "value": "旧式拉赫蒂26型轻机枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M26_3"
-        },
-        "jp": {
-          "value": "旧式LS26",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FLS26"
-        }
-      }
+      ]
     },
     "10612": {
       "id": 10612,
@@ -5445,23 +3067,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M26_4_1024.png",
-      "cn": "拉赫蒂26型轻机枪",
-      "en": "M26 MASS",
-      "jp": "LS26",
-      "nameSources": {
-        "cn": {
-          "value": "拉赫蒂26型轻机枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M26_4"
-        },
-        "jp": {
-          "value": "LS26",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?LS26"
-        }
-      }
+      ]
     },
     "10613": {
       "id": 10613,
@@ -5482,23 +3088,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M26_5_1024.png",
-      "cn": "尼奥尔德",
-      "en": "Njord",
-      "jp": "ネオルド",
-      "nameSources": {
-        "cn": {
-          "value": "尼奥尔德",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M26_5"
-        },
-        "jp": {
-          "value": "ネオルド",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8D%E3%82%AA%E3%83%AB%E3%83%89"
-        }
-      }
+      ]
     },
     "10621": {
       "id": 10621,
@@ -5519,23 +3109,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Lewisgun_3_1024.png",
-      "cn": "旧式刘易斯轻机枪",
-      "en": "Lewis Gun",
-      "jp": "旧式ルイスマシンガン",
-      "nameSources": {
-        "cn": {
-          "value": "旧式刘易斯轻机枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Lewisgun_3"
-        },
-        "jp": {
-          "value": "旧式ルイスマシンガン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%83%AB%E3%82%A4%E3%82%B9%E3%83%9E%E3%82%B7%E3%83%B3%E3%82%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "10622": {
       "id": 10622,
@@ -5556,23 +3130,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Lewisgun_4_1024.png",
-      "cn": "刘易斯轻机枪",
-      "en": "Lewis Gun",
-      "jp": "ルイスマシンガン",
-      "nameSources": {
-        "cn": {
-          "value": "刘易斯轻机枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Lewisgun_4"
-        },
-        "jp": {
-          "value": "ルイスマシンガン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AB%E3%82%A4%E3%82%B9%E3%83%9E%E3%82%B7%E3%83%B3%E3%82%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "10623": {
       "id": 10623,
@@ -5593,23 +3151,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Lewisgun_5_1024.png",
-      "cn": "玩具匠",
-      "en": "Lewis Gun",
-      "jp": "おもちゃ職人",
-      "nameSources": {
-        "cn": {
-          "value": "玩具匠",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Lewisgun_5"
-        },
-        "jp": {
-          "value": "おもちゃ職人",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E8%81%B7%E4%BA%BA"
-        }
-      }
+      ]
     },
     "10641": {
       "id": 10641,
@@ -5630,23 +3172,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_PA15_3_1024.png",
-      "cn": "旧式15型自动手枪",
-      "en": "Retired PA-15",
-      "jp": "旧式PA-15",
-      "nameSources": {
-        "cn": {
-          "value": "旧式15型自动手枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_PA15_3"
-        },
-        "jp": {
-          "value": "旧式PA-15",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FPA-15"
-        }
-      }
+      ]
     },
     "10642": {
       "id": 10642,
@@ -5667,23 +3193,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_PA15_4_1024.png",
-      "cn": "15型自动手枪",
-      "en": "PA-15",
-      "jp": "PA-15",
-      "nameSources": {
-        "cn": {
-          "value": "15型自动手枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_PA15_4"
-        },
-        "jp": {
-          "value": "PA-15",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?PA-15"
-        }
-      }
+      ]
     },
     "10643": {
       "id": 10643,
@@ -5704,23 +3214,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_PA15_5_1024.png",
-      "cn": "伊阿索",
-      "en": "Iaso",
-      "jp": "イアソ",
-      "nameSources": {
-        "cn": {
-          "value": "伊阿索",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_PA15_5"
-        },
-        "jp": {
-          "value": "イアソ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A4%E3%82%A2%E3%82%BD"
-        }
-      }
+      ]
     },
     "10651": {
       "id": 10651,
@@ -5741,23 +3235,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AN94_3_1024.png",
-      "cn": "旧式尼科诺夫突击步枪94",
-      "en": "Retired AN-94",
-      "jp": "旧式ニコノフ94",
-      "nameSources": {
-        "cn": {
-          "value": "旧式尼科诺夫突击步枪94",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AN94_3"
-        },
-        "jp": {
-          "value": "旧式ニコノフ94",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%83%8B%E3%82%B3%E3%83%8E%E3%83%9594"
-        }
-      }
+      ]
     },
     "10652": {
       "id": 10652,
@@ -5778,23 +3256,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AN94_4_1024.png",
-      "cn": "尼科诺夫突击步枪94",
-      "en": "AN-94",
-      "jp": "ニコノフ94",
-      "nameSources": {
-        "cn": {
-          "value": "尼科诺夫突击步枪94",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AN94_4"
-        },
-        "jp": {
-          "value": "ニコノフ94",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8B%E3%82%B3%E3%83%8E%E3%83%9594"
-        }
-      }
+      ]
     },
     "10653": {
       "id": 10653,
@@ -5815,23 +3277,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AN94_5_1024.png",
-      "cn": "6P33",
-      "en": "6P33",
-      "jp": "6P33",
-      "nameSources": {
-        "cn": {
-          "value": "6P33",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AN94_5"
-        },
-        "jp": {
-          "value": "6P33",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?6P33"
-        }
-      }
+      ]
     },
     "10661": {
       "id": 10661,
@@ -5852,23 +3298,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AK15_3_1024.png",
-      "cn": "旧式卡拉什尼科夫突击步枪15",
-      "en": "Retired AK-15",
-      "jp": "旧式カラシニコフ15",
-      "nameSources": {
-        "cn": {
-          "value": "旧式卡拉什尼科夫突击步枪15",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK15_3"
-        },
-        "jp": {
-          "value": "旧式カラシニコフ15",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%AB%E3%83%A9%E3%82%B7%E3%83%8B%E3%82%B3%E3%83%9515"
-        }
-      }
+      ]
     },
     "10662": {
       "id": 10662,
@@ -5889,23 +3319,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AK15_4_1024.png",
-      "cn": "卡拉什尼科夫突击步枪15",
-      "en": "AK-15",
-      "jp": "カラシニコフ15",
-      "nameSources": {
-        "cn": {
-          "value": "卡拉什尼科夫突击步枪15",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK15_4"
-        },
-        "jp": {
-          "value": "カラシニコフ15",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AB%E3%83%A9%E3%82%B7%E3%83%8B%E3%82%B3%E3%83%9515"
-        }
-      }
+      ]
     },
     "10663": {
       "id": 10663,
@@ -5926,23 +3340,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AK15_5_1024.png",
-      "cn": "6P71",
-      "en": "6P71",
-      "jp": "6P71",
-      "nameSources": {
-        "cn": {
-          "value": "6P71",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK15_5"
-        },
-        "jp": {
-          "value": "6P71",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?6P71"
-        }
-      }
+      ]
     },
     "10671": {
       "id": 10671,
@@ -5963,23 +3361,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_DP12_3_1024.png",
-      "cn": "旧式12型双管霰弹枪",
-      "en": "Retired DP-12",
-      "jp": "旧式12ゲージ二連ショットガン",
-      "nameSources": {
-        "cn": {
-          "value": "旧式12型双管霰弹枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_DP12_3"
-        },
-        "jp": {
-          "value": "旧式12ゲージ二連ショットガン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F12%E3%82%B2%E3%83%BC%E3%82%B8%E4%BA%8C%E9%80%A3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "10672": {
       "id": 10672,
@@ -6000,23 +3382,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_DP12_4_1024.png",
-      "cn": "12型双管霰弹枪",
-      "en": "DP-12",
-      "jp": "12ゲージ二連ショットガン",
-      "nameSources": {
-        "cn": {
-          "value": "12型双管霰弹枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_DP12_4"
-        },
-        "jp": {
-          "value": "12ゲージ二連ショットガン",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?12%E3%82%B2%E3%83%BC%E3%82%B8%E4%BA%8C%E9%80%A3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E3%82%AC%E3%83%B3"
-        }
-      }
+      ]
     },
     "10673": {
       "id": 10673,
@@ -6037,23 +3403,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_DP12_5_1024.png",
-      "cn": "谧语永护",
-      "en": "Whispered Protection",
-      "jp": "ダルセット",
-      "nameSources": {
-        "cn": {
-          "value": "谧语永护",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_DP12_5"
-        },
-        "jp": {
-          "value": "ダルセット",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%80%E3%83%AB%E3%82%BB%E3%83%83%E3%83%88"
-        }
-      }
+      ]
     },
     "10681": {
       "id": 10681,
@@ -6074,23 +3424,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Sakura_3_1024.png",
-      "cn": "旧式樱花冲锋枪",
-      "en": "Retired Type 100",
-      "jp": "旧式サクラカスタム",
-      "nameSources": {
-        "cn": {
-          "value": "旧式樱花冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sakura_3"
-        },
-        "jp": {
-          "value": "旧式サクラカスタム",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0"
-        }
-      }
+      ]
     },
     "10682": {
       "id": 10682,
@@ -6111,23 +3445,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Sakura_4_1024.png",
-      "cn": "樱花冲锋枪",
-      "en": "Type 100",
-      "jp": "サクラカスタム",
-      "nameSources": {
-        "cn": {
-          "value": "樱花冲锋枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sakura_4"
-        },
-        "jp": {
-          "value": "サクラカスタム",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0"
-        }
-      }
+      ]
     },
     "10683": {
       "id": 10683,
@@ -6148,23 +3466,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Sakura_5_1024.png",
-      "cn": "绯红契约",
-      "en": "Crimson Covenant",
-      "jp": "緋色の約束",
-      "nameSources": {
-        "cn": {
-          "value": "绯红契约",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sakura_5"
-        },
-        "jp": {
-          "value": "緋色の約束",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E7%B7%8B%E8%89%B2%E3%81%AE%E7%B4%84%E6%9D%9F"
-        }
-      }
+      ]
     },
     "10691": {
       "id": 10691,
@@ -6185,23 +3487,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_DSR50_3_1024.png",
-      "cn": "旧式因戈尔夫50",
-      "en": "Retired DSR-50",
-      "jp": "旧式DSR-50",
-      "nameSources": {
-        "cn": {
-          "value": "旧式因戈尔夫50",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_DSR50_3"
-        },
-        "jp": {
-          "value": "旧式DSR-50",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FDSR-50"
-        }
-      }
+      ]
     },
     "10692": {
       "id": 10692,
@@ -6222,23 +3508,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_DSR50_4_1024.png",
-      "cn": "因戈尔夫50",
-      "en": "DSR-50",
-      "jp": "DSR-50",
-      "nameSources": {
-        "cn": {
-          "value": "因戈尔夫50",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_DSR50_4"
-        },
-        "jp": {
-          "value": "DSR-50",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?DSR-50"
-        }
-      }
+      ]
     },
     "10693": {
       "id": 10693,
@@ -6259,23 +3529,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_DSR50_5_1024.png",
-      "cn": "潮涌夜曲",
-      "en": "Nighttide Nocturne",
-      "jp": "潮涌夜曲",
-      "nameSources": {
-        "cn": {
-          "value": "潮涌夜曲",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_DSR50_5"
-        },
-        "jp": {
-          "value": "潮涌夜曲",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%BD%AE%E6%B6%8C%E5%A4%9C%E6%9B%B2"
-        }
-      }
+      ]
     },
     "10711": {
       "id": 10711,
@@ -6289,29 +3543,7 @@
       "imageSource": "mcc-wiki",
       "servers": [
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MK23_3_1024.png",
-      "assetPath": "weapon/Weapon_MK23_3_1024.png",
-      "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_3_1024.png",
-        "targetPath": "weapon/Weapon_MK23_3_1024.png",
-        "localIcon": "/images/weapon/Weapon_MK23_3_1024.png",
-        "source": "mcc-wiki"
-      },
-      "en": "Retired MK23",
-      "jp": "MK23",
-      "nameSources": {
-        "cn": {
-          "value": "旧式马克23进攻型手枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MK23_3"
-        },
-        "jp": {
-          "value": "MK23",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?MK23"
-        }
-      }
+      ]
     },
     "10712": {
       "id": 10712,
@@ -6325,29 +3557,7 @@
       "imageSource": "mcc-wiki",
       "servers": [
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MK23_4_1024.png",
-      "assetPath": "weapon/Weapon_MK23_4_1024.png",
-      "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_4_1024.png",
-        "targetPath": "weapon/Weapon_MK23_4_1024.png",
-        "localIcon": "/images/weapon/Weapon_MK23_4_1024.png",
-        "source": "mcc-wiki"
-      },
-      "en": "MK23",
-      "jp": "MK23",
-      "nameSources": {
-        "cn": {
-          "value": "马克23进攻型手枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MK23_4"
-        },
-        "jp": {
-          "value": "MK23",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?MK23"
-        }
-      }
+      ]
     },
     "10713": {
       "id": 10713,
@@ -6361,29 +3571,7 @@
       "imageSource": "mcc-wiki",
       "servers": [
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MK23_5_1024.png",
-      "assetPath": "weapon/Weapon_MK23_5_1024.png",
-      "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MK23_5_1024.png",
-        "targetPath": "weapon/Weapon_MK23_5_1024.png",
-        "localIcon": "/images/weapon/Weapon_MK23_5_1024.png",
-        "source": "mcc-wiki"
-      },
-      "en": "MK23",
-      "jp": "MK23",
-      "nameSources": {
-        "cn": {
-          "value": "告死礼赞",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MK23_5"
-        },
-        "jp": {
-          "value": "MK23",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?MK23"
-        }
-      }
+      ]
     },
     "11007": {
       "id": 11007,
@@ -6404,23 +3592,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Blade_4_1024.png",
-      "cn": "野兔",
-      "en": "Blade",
-      "jp": "刀",
-      "nameSources": {
-        "cn": {
-          "value": "野兔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Blade_4"
-        },
-        "jp": {
-          "value": "刀",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11008": {
       "id": 11008,
@@ -6441,23 +3613,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_TaurusCurve_3_1024.png",
-      "cn": "旧式金牛座曲线",
-      "en": "Retired Curve",
-      "jp": "旧式カーブ",
-      "nameSources": {
-        "cn": {
-          "value": "旧式金牛座曲线",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_TaurusCurve_3"
-        },
-        "jp": {
-          "value": "旧式カーブ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%82%AB%E3%83%BC%E3%83%96"
-        }
-      }
+      ]
     },
     "11009": {
       "id": 11009,
@@ -6478,23 +3634,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_OM50_3_1024.png",
-      "cn": "旧式复仇女神",
-      "en": "Retired OM 50",
-      "jp": "旧式OM 50",
-      "nameSources": {
-        "cn": {
-          "value": "旧式复仇女神",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_OM50_3"
-        },
-        "jp": {
-          "value": "旧式OM 50",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FOM%2050"
-        }
-      }
+      ]
     },
     "11010": {
       "id": 11010,
@@ -6515,23 +3655,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_OTS14_3_1024.png",
-      "cn": "旧式格洛利娅",
-      "en": "OTs-14",
-      "jp": "OTs-14",
-      "nameSources": {
-        "cn": {
-          "value": "旧式格洛利娅",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_OTS14_3"
-        },
-        "jp": {
-          "value": "OTs-14",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11014": {
       "id": 11014,
@@ -6552,23 +3676,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_OM50_4_1024.png",
-      "cn": "复仇女神",
-      "en": "OM 50",
-      "jp": "OM 50",
-      "nameSources": {
-        "cn": {
-          "value": "复仇女神",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_OM50_4"
-        },
-        "jp": {
-          "value": "OM 50",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?OM%2050"
-        }
-      }
+      ]
     },
     "11015": {
       "id": 11015,
@@ -6589,23 +3697,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_TaurusCurve_4_1024.png",
-      "cn": "金牛座曲线",
-      "en": "Curve",
-      "jp": "カーブ",
-      "nameSources": {
-        "cn": {
-          "value": "金牛座曲线",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_TaurusCurve_4"
-        },
-        "jp": {
-          "value": "カーブ",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AB%E3%83%BC%E3%83%96"
-        }
-      }
+      ]
     },
     "11016": {
       "id": 11016,
@@ -6626,23 +3718,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Vepr12_5_1024.png",
-      "cn": "猎心者",
-      "en": "Heart Seeker",
-      "jp": "ハートハンター",
-      "nameSources": {
-        "cn": {
-          "value": "猎心者",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vepr12_5"
-        },
-        "jp": {
-          "value": "ハートハンター",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11017": {
       "id": 11017,
@@ -6663,23 +3739,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Vepr12_3_1024.png",
-      "cn": "旧式莫洛12",
-      "en": "Vepr-12",
-      "jp": "Vepr-12",
-      "nameSources": {
-        "cn": {
-          "value": "旧式莫洛12",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vepr12_3"
-        },
-        "jp": {
-          "value": "Vepr-12",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11020": {
       "id": 11020,
@@ -6700,23 +3760,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Pecheng_5_1024.png",
-      "cn": "光学幻境",
-      "en": "Optical Illusion",
-      "jp": "ミラージュ",
-      "nameSources": {
-        "cn": {
-          "value": "光学幻境",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Pecheng_5"
-        },
-        "jp": {
-          "value": "ミラージュ",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11021": {
       "id": 11021,
@@ -6737,23 +3781,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Vepr12_4_1024.png",
-      "cn": "莫洛12",
-      "en": "Vepr-12",
-      "jp": "Vepr-12",
-      "nameSources": {
-        "cn": {
-          "value": "莫洛12",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vepr12_4"
-        },
-        "jp": {
-          "value": "Vepr-12",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11022": {
       "id": 11022,
@@ -6774,23 +3802,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Blade_3_1024.png",
-      "cn": "旧式野兔",
-      "en": "Retired Blade",
-      "jp": "旧式刀",
-      "nameSources": {
-        "cn": {
-          "value": "旧式野兔",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Blade_3"
-        },
-        "jp": {
-          "value": "旧式刀",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E5%88%80"
-        }
-      }
+      ]
     },
     "11023": {
       "id": 11023,
@@ -6811,23 +3823,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_OTS14_4_1024.png",
-      "cn": "格洛利娅",
-      "en": "OTs-14",
-      "jp": "グローザ",
-      "nameSources": {
-        "cn": {
-          "value": "格洛利娅",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_OTS14_4"
-        },
-        "jp": {
-          "value": "グローザ",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11024": {
       "id": 11024,
@@ -6848,23 +3844,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Pecheng_3_1024.png",
-      "cn": "旧式佩切涅",
-      "en": "Retired PKP",
-      "jp": "旧式ペチェネグ-SP",
-      "nameSources": {
-        "cn": {
-          "value": "旧式佩切涅",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Pecheng_3"
-        },
-        "jp": {
-          "value": "旧式ペチェネグ-SP",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%83%9A%E3%83%81%E3%82%A7%E3%83%8D%E3%82%B0-SP"
-        }
-      }
+      ]
     },
     "11026": {
       "id": 11026,
@@ -6885,23 +3865,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_Pecheng_4_1024.png",
-      "cn": "佩切涅",
-      "en": "PKP",
-      "jp": "ペチェネグ-SP",
-      "nameSources": {
-        "cn": {
-          "value": "佩切涅",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_Pecheng_4"
-        },
-        "jp": {
-          "value": "ペチェネグ-SP",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11030": {
       "id": 11030,
@@ -6922,23 +3886,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_ROBINSONXCR_3_1024.png",
-      "cn": "旧式罗宾逊先进步枪",
-      "en": "Retired Robinson XCR",
-      "jp": "旧式ロビンソンXCR",
-      "nameSources": {
-        "cn": {
-          "value": "旧式罗宾逊先进步枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_ROBINSONXCR_3"
-        },
-        "jp": {
-          "value": "旧式ロビンソンXCR",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%83%AD%E3%83%93%E3%83%B3%E3%82%BD%E3%83%B3XCR"
-        }
-      }
+      ]
     },
     "11031": {
       "id": 11031,
@@ -6959,23 +3907,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_ROBINSONXCR_4_1024.png",
-      "cn": "罗宾逊先进步枪",
-      "en": "Robinson XCR",
-      "jp": "ロビンソンXCR",
-      "nameSources": {
-        "cn": {
-          "value": "罗宾逊先进步枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_ROBINSONXCR_4"
-        },
-        "jp": {
-          "value": "ロビンソンXCR",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AD%E3%83%93%E3%83%B3%E3%82%BD%E3%83%B3XCR"
-        }
-      }
+      ]
     },
     "11036": {
       "id": 11036,
@@ -6996,23 +3928,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AK-Alfa_3_1024.png",
-      "cn": "旧式卡拉什-阿尔法",
-      "en": "Retired AK-Alfa",
-      "jp": "AK-Alfa",
-      "nameSources": {
-        "cn": {
-          "value": "旧式卡拉什-阿尔法",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK-Alfa_3"
-        },
-        "jp": {
-          "value": "AK-Alfa",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11037": {
       "id": 11037,
@@ -7033,23 +3949,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AK-Alfa_4_1024.png",
-      "cn": "卡拉什-阿尔法",
-      "en": "AK-Alfa",
-      "jp": "AK-Alfa",
-      "nameSources": {
-        "cn": {
-          "value": "卡拉什-阿尔法",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK-Alfa_4"
-        },
-        "jp": {
-          "value": "AK-Alfa",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11038": {
       "id": 11038,
@@ -7070,23 +3970,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_AK-Alfa_5_1024.png",
-      "cn": "游星",
-      "en": "Wandering Star",
-      "jp": "遊星",
-      "nameSources": {
-        "cn": {
-          "value": "游星",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK-Alfa_5"
-        },
-        "jp": {
-          "value": "遊星",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11039": {
       "id": 11039,
@@ -7107,23 +3991,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MP7_3_1024.png",
-      "cn": "旧式黑科赫7",
-      "en": "Retired MP7",
-      "jp": "旧式MP7",
-      "nameSources": {
-        "cn": {
-          "value": "旧式黑科赫7",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP7_3"
-        },
-        "jp": {
-          "value": "旧式MP7",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FMP7"
-        }
-      }
+      ]
     },
     "11040": {
       "id": 11040,
@@ -7144,23 +4012,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_MP7_4_1024.png",
-      "cn": "黑科赫7",
-      "en": "MP7",
-      "jp": "MP7",
-      "nameSources": {
-        "cn": {
-          "value": "黑科赫7",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP7_4"
-        },
-        "jp": {
-          "value": "MP7",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?MP7"
-        }
-      }
+      ]
     },
     "11042": {
       "id": 11042,
@@ -7181,23 +4033,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ-191_3_1024.png",
-      "cn": "旧式一九一式",
-      "en": "QBZ-191",
-      "jp": "旧式191式",
-      "nameSources": {
-        "cn": {
-          "value": "旧式一九一式",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-191_3"
-        },
-        "jp": {
-          "value": "旧式191式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F191%E5%BC%8F"
-        }
-      }
+      ]
     },
     "11043": {
       "id": 11043,
@@ -7218,23 +4054,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ-191_4_1024.png",
-      "cn": "一九一式",
-      "en": "QBZ-191",
-      "jp": "191式",
-      "nameSources": {
-        "cn": {
-          "value": "一九一式",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-191_4"
-        },
-        "jp": {
-          "value": "191式",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11044": {
       "id": 11044,
@@ -7255,23 +4075,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ-191_5_1024.png",
-      "cn": "金石奏",
-      "en": "QBZ-191",
-      "jp": "金石奏",
-      "nameSources": {
-        "cn": {
-          "value": "金石奏",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-191_5"
-        },
-        "jp": {
-          "value": "金石奏",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11045": {
       "id": 11045,
@@ -7292,23 +4096,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_SPAS-12_3_1024.png",
-      "cn": "旧式特殊用途自动型霰弹枪",
-      "en": "Retired SPAS-12",
-      "jp": "S.P.A.S.12",
-      "nameSources": {
-        "cn": {
-          "value": "旧式特殊用途自动型霰弹枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_SPAS-12_3"
-        },
-        "jp": {
-          "value": "S.P.A.S.12",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11046": {
       "id": 11046,
@@ -7329,23 +4117,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_SPAS-12_4_1024.png",
-      "cn": "特殊用途自动型霰弹枪",
-      "en": "SPAS-12",
-      "jp": "S.P.A.S.12",
-      "nameSources": {
-        "cn": {
-          "value": "特殊用途自动型霰弹枪",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_SPAS-12_4"
-        },
-        "jp": {
-          "value": "S.P.A.S.12",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11047": {
       "id": 11047,
@@ -7366,23 +4138,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_SPAS-12_5_1024.png",
-      "cn": "梅扎露娜",
-      "en": "Mezzaluna",
-      "jp": "メッツァルーナ",
-      "nameSources": {
-        "cn": {
-          "value": "梅扎露娜",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_SPAS-12_5"
-        },
-        "jp": {
-          "value": "メッツァルーナ",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11048": {
       "id": 11048,
@@ -7403,23 +4159,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1895_3_1024.png",
-      "cn": "旧式纳甘左轮",
-      "en": "Retired Nagant Revolver",
-      "jp": "旧式ナガンM1895",
-      "nameSources": {
-        "cn": {
-          "value": "旧式纳甘左轮",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1895_3"
-        },
-        "jp": {
-          "value": "旧式ナガンM1895",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F%E3%83%8A%E3%82%AC%E3%83%B3M1895"
-        }
-      }
+      ]
     },
     "11049": {
       "id": 11049,
@@ -7440,23 +4180,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_M1895_4_1024.png",
-      "cn": "纳甘左轮",
-      "en": "Nagant Revolver",
-      "jp": "ナガンM1895",
-      "nameSources": {
-        "cn": {
-          "value": "纳甘左轮",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1895_4"
-        },
-        "jp": {
-          "value": "ナガンM1895",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8A%E3%82%AC%E3%83%B3M1895"
-        }
-      }
+      ]
     },
     "11051": {
       "id": 11051,
@@ -7477,23 +4201,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ-95_3_1024.png",
-      "cn": "旧式九五式",
-      "en": "Retired QBZ-95",
-      "jp": "旧式95式",
-      "nameSources": {
-        "cn": {
-          "value": "旧式九五式",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-95_3"
-        },
-        "jp": {
-          "value": "旧式95式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8F95%E5%BC%8F"
-        }
-      }
+      ]
     },
     "11052": {
       "id": 11052,
@@ -7514,23 +4222,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ-95_4_1024.png",
-      "cn": "九五式",
-      "en": "QBZ-95",
-      "jp": "95式",
-      "nameSources": {
-        "cn": {
-          "value": "九五式",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-95_4"
-        },
-        "jp": {
-          "value": "95式",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?95%E5%BC%8F"
-        }
-      }
+      ]
     },
     "11053": {
       "id": 11053,
@@ -7551,23 +4243,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_QBZ-95_5_1024.png",
-      "cn": "重弦",
-      "en": "Heavy String",
-      "jp": "重弦",
-      "nameSources": {
-        "cn": {
-          "value": "重弦",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-95_5"
-        },
-        "jp": {
-          "value": "重弦",
-          "source": "wikiru",
-          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
-        }
-      }
+      ]
     },
     "11054": {
       "id": 11054,
@@ -7588,23 +4264,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G36_3_1024.png",
-      "cn": "旧式格威尔36",
-      "en": "Retired G36",
-      "jp": "旧式StG36",
-      "nameSources": {
-        "cn": {
-          "value": "旧式格威尔36",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36_3"
-        },
-        "jp": {
-          "value": "旧式StG36",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E6%97%A7%E5%BC%8FStG36"
-        }
-      }
+      ]
     },
     "11055": {
       "id": 11055,
@@ -7625,23 +4285,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G36_4_1024.png",
-      "cn": "格威尔36",
-      "en": "G36",
-      "jp": "StG36",
-      "nameSources": {
-        "cn": {
-          "value": "格威尔36",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36_4"
-        },
-        "jp": {
-          "value": "StG36",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?StG36"
-        }
-      }
+      ]
     },
     "11056": {
       "id": 11056,
@@ -7662,23 +4306,7 @@
       "servers": [
         "dw-cn",
         "haoplay"
-      ],
-      "localIcon": "/images/weapon/Weapon_G36_5_1024.png",
-      "cn": "女仆准则",
-      "en": "Maid's Principle",
-      "jp": "メイドコード",
-      "nameSources": {
-        "cn": {
-          "value": "女仆准则",
-          "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36_5"
-        },
-        "jp": {
-          "value": "メイドコード",
-          "source": "wikiru-recovery",
-          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%A1%E3%82%A4%E3%83%89%E3%82%B3%E3%83%BC%E3%83%89"
-        }
-      }
+      ]
     }
   },
   "timesets": [

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
+import { buildAssetDescriptor } from "./asset-mapping.mjs";
 
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
 const DEFAULT_INDEX = "examples/gf2-resource-index.haoplay.json";
@@ -57,6 +58,8 @@ async function fileExists(file) {
 }
 
 function localPathForItem(item, outDir) {
+  const asset = buildAssetDescriptor(item.type, item.code);
+  if (asset) return path.join(outDir, ...asset.targetPath.split("/"));
   if (item.type === "doll" && item.code) {
     return path.join(outDir, "doll", `Avatar_Head_${item.code}.png`);
   }
@@ -71,6 +74,8 @@ function localPathForItem(item, outDir) {
 }
 
 function localPublicPath(item) {
+  const asset = buildAssetDescriptor(item.type, item.code);
+  if (asset) return asset.localIcon;
   if (item.type === "doll" && item.code) {
     return `/images/doll/Avatar_Head_${item.code}.png`;
   }
@@ -106,7 +111,8 @@ async function main() {
   const targets = [];
   for (const item of items) {
     const dest = localPathForItem(item, args.outDir);
-    const sourceUrl = item.iconUrl ?? buildFallbackUrl(item);
+    const asset = buildAssetDescriptor(item.type, item.code);
+    const sourceUrl = item.assetSource?.sourceUrl ?? asset?.sourceUrl ?? item.iconUrl ?? buildFallbackUrl(item);
     if (!dest || !sourceUrl) continue;
     if (!args.force && await fileExists(dest)) continue;
     targets.push({ item, dest, sourceUrl });
@@ -151,9 +157,16 @@ async function main() {
 
   const updated = { ...index };
   for (const item of Object.values(updated.items ?? {})) {
+    const asset = buildAssetDescriptor(item.type, item.code);
     const pub = localPublicPath(item);
     const dest = localPathForItem(item, args.outDir);
-    if (pub && dest && await fileExists(dest)) item.localIcon = pub;
+    if (pub && dest && await fileExists(dest)) {
+      item.localIcon = pub;
+      if (asset) {
+        item.assetPath = asset.targetPath;
+        item.assetSource = asset;
+      }
+    }
     else delete item.localIcon;
   }
   const outIndexPath = path.join(args.outDir, "resource-index.json");

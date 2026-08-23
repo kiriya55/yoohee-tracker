@@ -1,0 +1,8 @@
+{
+  "overrides": {
+    "doll:LindSSR": {
+      "sourceFile": "Avatar_Bust_LindSSR.png",
+      "targetFile": "Avatar_Head_LindSSR.png"
+    }
+  }
+}

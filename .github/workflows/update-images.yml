@@ -6,7 +6,7 @@ on:
       servers:
         description: "Comma-separated server codes"
         required: false
-        default: "haoplay"
+        default: "dw-cn,haoplay"
   schedule:
     - cron: "0 11 * * *"
 
@@ -17,7 +17,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     env:
-      SERVERS: ${{ github.event.inputs.servers || 'haoplay' }}
+      SERVERS: ${{ github.event.inputs.servers || 'dw-cn,haoplay' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,7 +33,7 @@ jobs:
         run: |
           INDEX_FILE="examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$INDEX_FILE" ]; then
-            if node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only; then
+            if node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only --check-timesets; then
               echo "Resource catalog changes detected, proceeding with update."
               echo "should_update=true" >> $GITHUB_OUTPUT
             else
@@ -66,10 +66,12 @@ jobs:
         if: success()
         run: |
           node scripts/fetch-i18n-names.mjs \
+            --mode normal \
             --index public/images/resource-index.json \
             --existing-i18n src/i18n.json \
             --out src/i18n-names.json \
-            --sources mcc,gfl2help,dandegate,wikiru \
+            --sources-out src/i18n-name-sources.json \
+            --sources mcc,gfl2help,wikiru \
             --concurrency 8 --timeout-ms 20000
 
       - name: Merge i18n names into resource indexes
@@ -78,6 +80,7 @@ jobs:
           node scripts/merge-i18n-names.mjs \
             --index public/images/resource-index.json \
             --names src/i18n-names.json \
+            --sources src/i18n-name-sources.json \
             --out public/images/resource-index.json \
             --app-i18n src/i18n.json
 
@@ -86,7 +89,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add examples/ public/images/ src/i18n-names.json src/i18n.json
+          git add examples/ public/images/ src/i18n-names.json src/i18n-name-sources.json src/i18n.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

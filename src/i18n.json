@@ -70,6 +70,12 @@
       "poolType7": "自选采购·军备",
       "poolType8": "神秘箱",
       "poolTypeUnknown": "其它卡池",
+      "poolPickupDoll": "限定人形",
+      "poolPickupWeapon": "限定武器",
+      "poolPickupOther": "卡池",
+      "poolTypeDoll": "定向采购",
+      "poolTypeWeapon": "军备提升",
+      "poolTypeOther": "其它卡池",
       "confirmTitle": "警告",
       "confirmMessage": "此操作不可逆，确定清空吗？",
       "recordsTable": "出货明细",
@@ -222,6 +228,12 @@
       "poolType7": "Custom Procurement - Weapons",
       "poolType8": "Mystery Box",
       "poolTypeUnknown": "Other Pool",
+      "poolPickupDoll": "Featured Doll",
+      "poolPickupWeapon": "Featured Weapon",
+      "poolPickupOther": "Pool",
+      "poolTypeDoll": "Targeted Procurement",
+      "poolTypeWeapon": "Military Upgrade",
+      "poolTypeOther": "Other Pool",
       "confirmTitle": "Warning",
       "confirmMessage": "This action cannot be undone. Are you sure you want to clear your data?",
       "recordsTable": "Record List",
@@ -374,6 +386,12 @@
       "poolType7": "カスタム調達・武器",
       "poolType8": "ミステリーボックス",
       "poolTypeUnknown": "他の調達",
+      "poolPickupDoll": "限定人形",
+      "poolPickupWeapon": "限定武器",
+      "poolPickupOther": "ガチャ",
+      "poolTypeDoll": "ターゲット調達",
+      "poolTypeWeapon": "武器アップグレード",
+      "poolTypeOther": "他の調達",
       "confirmTitle": "警告",
       "confirmMessage": "この操作は取り消せません。本当にデータを初期化しますか？",
       "recordsTable": "調達詳細一覧",
@@ -512,14 +530,20 @@
       "cn": "夏克里",
       "type": "doll",
       "en": "Sharkry",
-      "jp": "シャクリー"
+      "jp": "シャークリー",
+      "aliases": [
+        "シャクリー"
+      ]
     },
     "1023": {
       "code": "DusevnyjSSR",
       "cn": "杜莎妮",
       "type": "doll",
       "en": "Dushevnaya",
-      "jp": "デュセブニイ"
+      "jp": "ドゥシェーヴヌイ",
+      "aliases": [
+        "デュセブニイ"
+      ]
     },
     "1024": {
       "code": "CheetaSR",
@@ -596,7 +620,10 @@
       "cn": "科谢尼娅",
       "type": "doll",
       "en": "Ksenia",
-      "jp": "クセニア"
+      "jp": "クシーニヤ",
+      "aliases": [
+        "クセニア"
+      ]
     },
     "1037": {
       "code": "UllridSSR",
@@ -610,7 +637,10 @@
       "cn": "莉塔拉",
       "type": "doll",
       "en": "Littara",
-      "jp": "リタラ"
+      "jp": "リッタラ",
+      "aliases": [
+        "リタラ"
+      ]
     },
     "1039": {
       "code": "SuomiSSR",
@@ -624,7 +654,10 @@
       "cn": "波波沙",
       "type": "doll",
       "en": "Papasha",
-      "jp": "パパシャ"
+      "jp": "ペーペーシャ",
+      "aliases": [
+        "パパシャ"
+      ]
     },
     "1041": {
       "code": "LottaSR",
@@ -652,7 +685,10 @@
       "cn": "维克托",
       "type": "doll",
       "en": "Vector",
-      "jp": "ベクター"
+      "jp": "ヴェクター",
+      "aliases": [
+        "ベクター"
+      ]
     },
     "1045": {
       "code": "BiyocaSSR",
@@ -708,7 +744,10 @@
       "cn": "佩莉",
       "type": "doll",
       "en": "Peri",
-      "jp": "ペリ"
+      "jp": "ペリー",
+      "aliases": [
+        "ペリ"
+      ]
     },
     "1054": {
       "code": "YooHeeSSR",
@@ -819,7 +858,8 @@
       "code": "BastiSSR",
       "cn": "贝丝蒂",
       "type": "doll",
-      "en": "Basti"
+      "en": "Basti",
+      "jp": "バスティ"
     },
     "10002": {
       "code": "Weapon_BpSMGssr001_5",
@@ -867,29 +907,41 @@
       "code": "Weapon_UMP9_3",
       "cn": "旧式通用冲锋枪9",
       "type": "weapon",
-      "en": "Retired UMP9",
-      "jp": "旧式UMP9"
+      "en": "UMP 9",
+      "jp": "旧式UMP9",
+      "aliases": [
+        "Retired UMP9"
+      ]
     },
     "10132": {
       "code": "Weapon_UMP9_4",
       "cn": "通用冲锋枪9",
       "type": "weapon",
-      "en": "UMP9",
-      "jp": "UMP9"
+      "en": "UMP 9",
+      "jp": "UMP9",
+      "aliases": [
+        "UMP9"
+      ]
     },
     "10133": {
       "code": "Weapon_UMP9_5",
       "cn": "幼狮",
       "type": "weapon",
-      "en": "Young Lion",
-      "jp": "小獅子"
+      "en": "UMP 9",
+      "jp": "小獅子",
+      "aliases": [
+        "Young Lion"
+      ]
     },
     "10231": {
       "code": "Weapon_KSVK_3",
       "cn": "旧式科夫罗夫",
       "type": "weapon",
-      "en": "Retired KSVK",
-      "jp": "旧式KSVK"
+      "en": "KSVK",
+      "jp": "旧式KSVK",
+      "aliases": [
+        "Retired KSVK"
+      ]
     },
     "10232": {
       "code": "Weapon_KSVK_4",
@@ -902,15 +954,21 @@
       "code": "Weapon_KSVK_5",
       "cn": "传颂之诗",
       "type": "weapon",
-      "en": "Laudatory Poem",
-      "jp": "語り継がれる詩"
+      "en": "KSVK",
+      "jp": "語り継がれる詩",
+      "aliases": [
+        "Laudatory Poem"
+      ]
     },
     "10331": {
       "code": "Weapon_M1891_3",
       "cn": "旧式莫辛-纳甘",
       "type": "weapon",
       "en": "Retired Mosin-Nagant",
-      "jp": "旧式M1891"
+      "jp": "M1891",
+      "aliases": [
+        "旧式M1891"
+      ]
     },
     "10332": {
       "code": "Weapon_M1891_4",
@@ -1042,8 +1100,11 @@
       "code": "Weapon_PPSh41_3",
       "cn": "旧式波波沙冲锋枪",
       "type": "weapon",
-      "en": "Retired PPSh-41",
-      "jp": "旧式PPSh-41"
+      "en": "PPSh-41",
+      "jp": "旧式PPSh-41",
+      "aliases": [
+        "Retired PPSh-41"
+      ]
     },
     "10402": {
       "code": "Weapon_PPSh41_4",
@@ -1077,29 +1138,41 @@
       "code": "Weapon_G36KKSK_3",
       "cn": "旧式格威尔36-斯佩凯芙特",
       "type": "weapon",
-      "en": "Retired G36K SpecOps",
-      "jp": "旧式StG36-シュペッカフォルテ"
+      "en": "G36K-KSK",
+      "jp": "旧式StG36-シュペッカフォルテ",
+      "aliases": [
+        "Retired G36K SpecOps"
+      ]
     },
     "10422": {
       "code": "Weapon_G36KKSK_4",
       "cn": "格威尔36-斯佩凯芙特",
       "type": "weapon",
-      "en": "G36K SpecOps",
-      "jp": "StG36-シュペッカフォルテ"
+      "en": "G36K-KSK",
+      "jp": "StG36-シュペッカフォルテ",
+      "aliases": [
+        "G36K SpecOps"
+      ]
     },
     "10423": {
       "code": "Weapon_G36KKSK_5",
       "cn": "阿格莱亚",
       "type": "weapon",
-      "en": "Aglaia",
-      "jp": "アグライア"
+      "en": "G36K-KSK",
+      "jp": "アグライア",
+      "aliases": [
+        "Aglaia"
+      ]
     },
     "10431": {
       "code": "Weapon_CZ75_3",
       "cn": "旧式斯柯达75",
       "type": "weapon",
-      "en": "Retired CZ75",
-      "jp": "旧式CZ75"
+      "en": "CZ75",
+      "jp": "旧式CZ75",
+      "aliases": [
+        "Retired CZ75"
+      ]
     },
     "10432": {
       "code": "Weapon_CZ75_4",
@@ -1161,22 +1234,31 @@
       "code": "Weapon_M1903_3",
       "cn": "旧式斯普林菲尔德",
       "type": "weapon",
-      "en": "Retired Springfield",
-      "jp": "旧式スプリングフィールド"
+      "en": "M1903",
+      "jp": "旧式スプリングフィールド",
+      "aliases": [
+        "Retired Springfield"
+      ]
     },
     "10472": {
       "code": "Weapon_M1903_4",
       "cn": "斯普林菲尔德",
       "type": "weapon",
-      "en": "Springfield",
-      "jp": "スプリングフィールド"
+      "en": "M1903",
+      "jp": "スプリングフィールド",
+      "aliases": [
+        "Springfield"
+      ]
     },
     "10473": {
       "code": "Weapon_M1903_5",
       "cn": "信仰棘光",
       "type": "weapon",
-      "en": "Spine of Faith",
-      "jp": "信仰の光"
+      "en": "M1903",
+      "jp": "信仰の光",
+      "aliases": [
+        "Spine of Faith"
+      ]
     },
     "10481": {
       "code": "Weapon_HAWK12_3",
@@ -1224,8 +1306,11 @@
       "code": "Weapon_CSLS06_3",
       "cn": "旧式长风零六",
       "type": "weapon",
-      "en": "Retired CS/LS06",
-      "jp": "旧式06式"
+      "en": "CS/LS06",
+      "jp": "旧式06式",
+      "aliases": [
+        "Retired CS/LS06"
+      ]
     },
     "10502": {
       "code": "Weapon_CSLS06_4",
@@ -1238,15 +1323,21 @@
       "code": "Weapon_CSLS06_5",
       "cn": "不留行",
       "type": "weapon",
-      "en": "No Trace",
-      "jp": "風来坊"
+      "en": "CS/LS06",
+      "jp": "風来坊",
+      "aliases": [
+        "No Trace"
+      ]
     },
     "10511": {
       "code": "Weapon_G11_3",
       "cn": "旧式无壳弹步枪11",
       "type": "weapon",
-      "en": "Retired G11",
-      "jp": "旧式StG11"
+      "en": "G11",
+      "jp": "旧式StG11",
+      "aliases": [
+        "Retired G11"
+      ]
     },
     "10512": {
       "code": "Weapon_G11_4",
@@ -1274,7 +1365,7 @@
       "cn": "黑克勒科赫416",
       "type": "weapon",
       "en": "HK416",
-      "jp": "416"
+      "jp": "HK416"
     },
     "10523": {
       "code": "Weapon_HK416_5",
@@ -1287,8 +1378,11 @@
       "code": "Weapon_MP5_3",
       "cn": "旧式五号九毫米冲锋枪",
       "type": "weapon",
-      "en": "Retired MP5",
-      "jp": "旧式MP5"
+      "en": "MP5",
+      "jp": "旧式MP5",
+      "aliases": [
+        "Retired MP5"
+      ]
     },
     "10532": {
       "code": "Weapon_MP5_4",
@@ -1301,15 +1395,21 @@
       "code": "Weapon_MP5_5",
       "cn": "厄梅尼塔",
       "type": "weapon",
-      "en": "Eumenita",
-      "jp": "エウメニタ"
+      "en": "MP5",
+      "jp": "エウメニタ",
+      "aliases": [
+        "Eumenita"
+      ]
     },
     "10541": {
       "code": "Weapon_K2_3",
       "cn": "旧式卡宾刻2型",
       "type": "weapon",
-      "en": "Retired K2",
-      "jp": "旧式K2"
+      "en": "K2",
+      "jp": "旧式K2",
+      "aliases": [
+        "Retired K2"
+      ]
     },
     "10542": {
       "code": "Weapon_K2_4",
@@ -1322,15 +1422,21 @@
       "code": "Weapon_K2_5",
       "cn": "流光花火",
       "type": "weapon",
-      "en": "Flowing Fireworks",
-      "jp": "フラッシュスパーク"
+      "en": "K2",
+      "jp": "フラッシュスパーク",
+      "aliases": [
+        "Flowing Fireworks"
+      ]
     },
     "10551": {
       "code": "Weapon_VSK94_3",
       "cn": "旧式维斯卡94",
       "type": "weapon",
-      "en": "Retired VSK-94",
-      "jp": "旧式VSK-94"
+      "en": "VSK-94",
+      "jp": "旧式VSK-94",
+      "aliases": [
+        "Retired VSK-94"
+      ]
     },
     "10552": {
       "code": "Weapon_VSK94_4",
@@ -1343,15 +1449,21 @@
       "code": "Weapon_VSK94_5",
       "cn": "护梦银翼",
       "type": "weapon",
-      "en": "Dream Protecting Silver Wing",
-      "jp": "夢の翼"
+      "en": "VSK-94",
+      "jp": "夢の翼",
+      "aliases": [
+        "Dream Protecting Silver Wing"
+      ]
     },
     "10561": {
       "code": "Weapon_UMP45_3",
       "cn": "旧式通用冲锋枪45",
       "type": "weapon",
-      "en": "Retired UMP45",
-      "jp": "旧式UMP45"
+      "en": "UMP45",
+      "jp": "旧式UMP45",
+      "aliases": [
+        "Retired UMP45"
+      ]
     },
     "10562": {
       "code": "Weapon_UMP45_4",
@@ -1364,15 +1476,21 @@
       "code": "Weapon_UMP45_5",
       "cn": "狡狐",
       "type": "weapon",
-      "en": "Sly Fox",
-      "jp": "ヴィクセン"
+      "en": "UMP45",
+      "jp": "ヴィクセン",
+      "aliases": [
+        "Sly Fox"
+      ]
     },
     "10571": {
       "code": "Weapon_RO635_3",
       "cn": "旧式柯尔特635型冲锋枪",
       "type": "weapon",
-      "en": "Retired RO635",
-      "jp": "旧式RO635"
+      "en": "RO635",
+      "jp": "旧式RO635",
+      "aliases": [
+        "Retired RO635"
+      ]
     },
     "10572": {
       "code": "Weapon_RO635_4",
@@ -1385,15 +1503,21 @@
       "code": "Weapon_RO635_5",
       "cn": "流浪者赞歌",
       "type": "weapon",
-      "en": "Wanderer's Anthem",
-      "jp": "渡り人の讃歌"
+      "en": "RO635",
+      "jp": "渡り人の讃歌",
+      "aliases": [
+        "Wanderer's Anthem"
+      ]
     },
     "10581": {
       "code": "Weapon_UMP40_3",
       "cn": "旧式通用冲锋枪40",
       "type": "weapon",
-      "en": "Retired UMP40",
-      "jp": "旧式UMP40"
+      "en": "UMP40",
+      "jp": "旧式UMP40",
+      "aliases": [
+        "Retired UMP40"
+      ]
     },
     "10582": {
       "code": "Weapon_UMP40_4",
@@ -1406,8 +1530,11 @@
       "code": "Weapon_UMP40_5",
       "cn": "骄阳构想",
       "type": "weapon",
-      "en": "Bright Sun Conception",
-      "jp": "ペリヘリオン"
+      "en": "UMP40",
+      "jp": "ペリヘリオン",
+      "aliases": [
+        "Bright Sun Conception"
+      ]
     },
     "10591": {
       "code": "Weapon_AA12_3",
@@ -1476,8 +1603,11 @@
       "code": "Weapon_Lewisgun_3",
       "cn": "旧式刘易斯轻机枪",
       "type": "weapon",
-      "en": "Retired Lewis Gun",
-      "jp": "旧式ルイスマシンガン"
+      "en": "Lewis Gun",
+      "jp": "旧式ルイスマシンガン",
+      "aliases": [
+        "Retired Lewis Gun"
+      ]
     },
     "10622": {
       "code": "Weapon_Lewisgun_4",
@@ -1490,8 +1620,11 @@
       "code": "Weapon_Lewisgun_5",
       "cn": "玩具匠",
       "type": "weapon",
-      "en": "Toymaker",
-      "jp": "おもちゃ職人"
+      "en": "Lewis Gun",
+      "jp": "おもちゃ職人",
+      "aliases": [
+        "Toymaker"
+      ]
     },
     "10641": {
       "code": "Weapon_PA15_3",
@@ -1623,19 +1756,22 @@
       "code": "Weapon_MK23_3",
       "cn": "旧式马克23进攻型手枪",
       "type": "weapon",
-      "en": "Retired MK23"
+      "en": "Retired MK23",
+      "jp": "MK23"
     },
     "10712": {
       "code": "Weapon_MK23_4",
       "cn": "马克23进攻型手枪",
       "type": "weapon",
-      "en": "MK23"
+      "en": "MK23",
+      "jp": "MK23"
     },
     "10713": {
       "code": "Weapon_MK23_5",
       "cn": "告死礼赞",
       "type": "weapon",
-      "en": "MK23"
+      "en": "MK23",
+      "jp": "MK23"
     },
     "11007": {
       "code": "Weapon_Blade_4",
@@ -1662,8 +1798,12 @@
       "code": "Weapon_OTS14_3",
       "cn": "旧式格洛利娅",
       "type": "weapon",
-      "en": "Retired Groza",
-      "jp": "旧式グローザ"
+      "en": "OTs-14",
+      "jp": "OTs-14",
+      "aliases": [
+        "Retired Groza",
+        "旧式グローザ"
+      ]
     },
     "11014": {
       "code": "Weapon_OM50_4",
@@ -1683,15 +1823,22 @@
       "code": "Weapon_Vepr12_5",
       "cn": "猎心者",
       "type": "weapon",
-      "en": "Heartseeker",
-      "jp": "ハートハンター"
+      "en": "Heart Seeker",
+      "jp": "ハートハンター",
+      "aliases": [
+        "Heartseeker"
+      ]
     },
     "11017": {
       "code": "Weapon_Vepr12_3",
       "cn": "旧式莫洛12",
       "type": "weapon",
-      "en": "Retired Vepr-12",
-      "jp": "旧式Vepr-12"
+      "en": "Vepr-12",
+      "jp": "Vepr-12",
+      "aliases": [
+        "Retired Vepr-12",
+        "旧式Vepr-12"
+      ]
     },
     "11020": {
       "code": "Weapon_Pecheng_5",
@@ -1718,8 +1865,11 @@
       "code": "Weapon_OTS14_4",
       "cn": "格洛利娅",
       "type": "weapon",
-      "en": "Groza",
-      "jp": "グローザ"
+      "en": "OTs-14",
+      "jp": "グローザ",
+      "aliases": [
+        "Groza"
+      ]
     },
     "11024": {
       "code": "Weapon_Pecheng_3",
@@ -1754,7 +1904,10 @@
       "cn": "旧式卡拉什-阿尔法",
       "type": "weapon",
       "en": "Retired AK-Alfa",
-      "jp": "旧式AK-Alfa"
+      "jp": "AK-Alfa",
+      "aliases": [
+        "旧式AK-Alfa"
+      ]
     },
     "11037": {
       "code": "Weapon_AK-Alfa_4",
@@ -1788,8 +1941,11 @@
       "code": "Weapon_QBZ-191_3",
       "cn": "旧式一九一式",
       "type": "weapon",
-      "en": "Retired QBZ-191",
-      "jp": "旧式191式"
+      "en": "QBZ-191",
+      "jp": "旧式191式",
+      "aliases": [
+        "Retired QBZ-191"
+      ]
     },
     "11043": {
       "code": "Weapon_QBZ-191_4",
@@ -1802,15 +1958,21 @@
       "code": "Weapon_QBZ-191_5",
       "cn": "金石奏",
       "type": "weapon",
-      "en": "Chime Bells",
-      "jp": "金石奏"
+      "en": "QBZ-191",
+      "jp": "金石奏",
+      "aliases": [
+        "Chime Bells"
+      ]
     },
     "11045": {
       "code": "Weapon_SPAS-12_3",
       "cn": "旧式特殊用途自动型霰弹枪",
       "type": "weapon",
       "en": "Retired SPAS-12",
-      "jp": "旧式S.P.A.S.12"
+      "jp": "S.P.A.S.12",
+      "aliases": [
+        "旧式S.P.A.S.12"
+      ]
     },
     "11046": {
       "code": "Weapon_SPAS-12_4",

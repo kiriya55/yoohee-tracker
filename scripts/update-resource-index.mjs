@@ -3,7 +3,9 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { fetchWithRetry } from "./fetch-with-retry.mjs";
-import { buildMccImageUrl, findResourceCatalogChanges, selectResourceCatalogUpdates } from "./resource-catalog.mjs";
+import { buildMccImageUrl, findResourceCatalogChanges } from "./resource-catalog.mjs";
+import { buildAssetDescriptor } from "./asset-mapping.mjs";
+import { computeTimesetHash, mergeServerResourceIndexes, normalizeTimesets } from "./timeset.mjs";
 
 const EXILIUM_ORIGIN = "https://exilium.xyz";
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
@@ -14,7 +16,7 @@ const RESOURCE_MODULES = {
 
 function parseArgs(argv) {
   const args = {
-    servers: ["haoplay"],
+    servers: ["dw-cn", "haoplay"],
     outDir: ".",
     existing: undefined,
     chunksDir: undefined,
@@ -22,6 +24,8 @@ function parseArgs(argv) {
     probeConcurrency: 16,
     probeTimeoutMs: 10000,
     checkOnly: false,
+    checkTimesets: false,
+    proxyUrl: undefined,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -34,6 +38,8 @@ function parseArgs(argv) {
     else if (arg === "--probe-concurrency") args.probeConcurrency = Math.max(1, Number(argv[++index]) || 16);
     else if (arg === "--probe-timeout-ms") args.probeTimeoutMs = Math.max(1000, Number(argv[++index]) || 10000);
     else if (arg === "--check-only") args.checkOnly = true;
+    else if (arg === "--check-timesets") args.checkTimesets = true;
+    else if (arg === "--proxy-url") args.proxyUrl = argv[++index];
     else if (arg === "--help" || arg === "-h") {
       printHelp();
       process.exit(0);
@@ -47,7 +53,7 @@ function printHelp() {
   console.log(`Usage: node scripts/update-resource-index.mjs [options]
 
 Options:
-  --server, --servers <list>   Comma-separated exilium server codes. Default: haoplay
+  --server, --servers <list>   Comma-separated exilium server codes. Default: dw-cn,haoplay
   --out-dir <dir>              Output directory. Default: current directory
   --existing <file>            Existing gf2-resource-index JSON to merge
   --chunks-dir <dir>           Read already downloaded exilium chunks from a directory
@@ -55,7 +61,8 @@ Options:
   --probe-concurrency <n>      Parallel image probes. Default: 16
   --probe-timeout-ms <ms>      Per-image probe timeout. Default: 10000
   --check-only                 Compare the current resource catalog with --existing.
-                               Exits 0 if images changed, 1 if unchanged. Requires --existing.
+                               Exits 0 if resources or timesets changed, 1 if unchanged. Requires --existing.
+  --check-timesets              Include the deterministic event timeset hash in the check report.
 
 Examples:
   node scripts/update-resource-index.mjs --server haoplay --out-dir examples
@@ -129,19 +136,19 @@ function codeToName(code) {
   return code.replace(/S{1,2}R$/i, "").replace(/_5$|_4$|_3$|_2$/, "");
 }
 
-async function fetchJson(url) {
-  const response = await fetchWithRetry(url);
+async function fetchJson(url, options = {}) {
+  const response = await fetchWithRetry(url, options);
   if (!response.ok) throw new Error(`GET ${url} failed: ${response.status} ${response.statusText}`);
   return response.json();
 }
 
-async function fetchText(url) {
-  const response = await fetchWithRetry(url);
+async function fetchText(url, options = {}) {
+  const response = await fetchWithRetry(url, options);
   if (!response.ok) throw new Error(`GET ${url} failed: ${response.status} ${response.statusText}`);
   return response.text();
 }
 
-async function loadChunkTexts(chunksDir) {
+async function loadChunkTexts(chunksDir, options = {}) {
   if (chunksDir) {
     const entries = await fs.readdir(chunksDir, { withFileTypes: true });
     const chunks = [];
@@ -153,11 +160,11 @@ async function loadChunkTexts(chunksDir) {
     return chunks;
   }
 
-  const home = await fetchText(EXILIUM_ORIGIN);
+  const home = await fetchText(EXILIUM_ORIGIN, options);
   const urls = unique([...home.matchAll(/(?:src|href)="([^"]+\.js)"/g)].map((match) => new URL(match[1], EXILIUM_ORIGIN).href));
   const chunks = [];
   for (const url of urls) {
-    const text = await fetchText(url);
+    const text = await fetchText(url, options);
     if (text.includes("dolls/Avatar_Head_") || text.includes("weapons/") || text.includes("RESOURCE_MODULE_MARKER_NEVER")) {
       chunks.push(text);
     }
@@ -212,6 +219,7 @@ function normalizeDoll(raw, server, generatedAt) {
   const code = raw.avatar_name ?? raw.avatar;
   if (!raw.id || !code) return undefined;
   const iconUrl = buildMccImageUrl("doll", code);
+  const asset = buildAssetDescriptor("doll", code);
   const rawName = raw.name ? String(raw.name) : undefined;
   return {
     id: Number(raw.id),
@@ -222,6 +230,8 @@ function normalizeDoll(raw, server, generatedAt) {
     server,
     iconUrl,
     imageSource: "mcc-wiki",
+    assetPath: asset?.targetPath,
+    assetSource: asset,
     verifiedAt: generatedAt,
   };
 }
@@ -230,6 +240,7 @@ function normalizeWeapon(raw, server, generatedAt) {
   const code = raw.imageCode;
   if (!raw.id || !code) return undefined;
   const iconUrl = buildMccImageUrl("weapon", code);
+  const asset = buildAssetDescriptor("weapon", code);
   const rawName = raw.name ? String(raw.name) : undefined;
   return {
     id: Number(raw.id),
@@ -240,6 +251,8 @@ function normalizeWeapon(raw, server, generatedAt) {
     server,
     iconUrl,
     imageSource: "mcc-wiki",
+    assetPath: asset?.targetPath,
+    assetSource: asset,
     verifiedAt: generatedAt,
   };
 }
@@ -310,6 +323,8 @@ function mergeIndex(existing, incomingItems, metadata) {
     generatedAt: metadata.generatedAt,
     servers: metadata.servers,
     updateSignals: metadata.updateSignals,
+    timesets: metadata.timesets,
+    timesetHash: metadata.timesetHash,
     items,
     pools: existing?.pools,
   };
@@ -324,7 +339,7 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const generatedAt = new Date().toISOString();
   const existing = await readExisting(args.existing);
-  const chunkTexts = await loadChunkTexts(args.chunksDir);
+  const chunkTexts = await loadChunkTexts(args.chunksDir, { proxyUrl: args.proxyUrl });
   if (!chunkTexts.length) throw new Error("No exilium chunks were loaded.");
 
   if (args.checkOnly) {
@@ -332,35 +347,52 @@ async function main() {
       console.error("Error: --check-only requires a valid --existing resource index.");
       process.exit(2);
     }
-    const server = args.servers[0] ?? "haoplay";
-    const incomingItems = extractResourcesFromChunks(chunkTexts, server, generatedAt);
-    const changes = findResourceCatalogChanges(existing.items, incomingItems);
+    const incomingIndexes = [];
+    for (const server of args.servers) {
+      const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`, { proxyUrl: args.proxyUrl });
+      incomingIndexes.push({
+        servers: [server],
+        items: Object.fromEntries(extractResourcesFromChunks(chunkTexts, server, generatedAt).map((item) => [String(item.id), item])),
+        timesets: normalizeTimesets(server, events),
+      });
+    }
+    const incoming = mergeServerResourceIndexes(incomingIndexes);
+    const changes = findResourceCatalogChanges(existing.items, Object.values(incoming.items));
+    const existingTimesetHash = computeTimesetHash(existing.timesets);
+    const incomingTimesetHash = computeTimesetHash(incoming.timesets);
+    const timesetChanged = args.checkTimesets && existingTimesetHash !== incomingTimesetHash;
     console.log(`Catalog check: ${changes.added.length} added, ${changes.changed.length} changed.`);
     if (changes.added.length) console.log(`  added: ${changes.added.join(", ")}`);
     if (changes.changed.length) console.log(`  changed: ${changes.changed.join(", ")}`);
+    if (args.checkTimesets) {
+      console.log(`Timeset check: ${existingTimesetHash} -> ${incomingTimesetHash}${timesetChanged ? " (changed)" : " (unchanged)"}`);
+    } else {
+      console.log("Timeset check: skipped (pass --check-timesets to include event schedules).");
+    }
 
-    if (changes.hasChanges) {
-      console.log("Status check: Resource catalog changed. Exiting with 0.");
+    if (changes.hasChanges || timesetChanged) {
+      console.log("Status check: Resource catalog or timeset changed. Exiting with 0.");
       process.exit(0);
     }
-    console.log("Status check: Resource catalog unchanged. Exiting with 1.");
+    console.log("Status check: Resource catalog and timeset unchanged. Exiting with 1.");
     process.exit(1);
   }
 
   await fs.mkdir(args.outDir, { recursive: true });
+  const serverIndexes = [];
   for (const server of args.servers) {
-    const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`);
+    const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`, { proxyUrl: args.proxyUrl });
     const signals = extractSignals(server, events);
     const catalogItems = extractResourcesFromChunks(chunkTexts, server, generatedAt);
-    let updatedItems = existing?.items
-      ? selectResourceCatalogUpdates(existing.items, catalogItems)
-      : catalogItems;
+    let updatedItems = catalogItems;
     if (args.probeImages) updatedItems = await probeItems(updatedItems, { concurrency: args.probeConcurrency, timeoutMs: args.probeTimeoutMs });
     const index = mergeIndex(existing, updatedItems, {
       generatedAt,
       servers: [server],
       updateSignals: { [server]: signals },
+      timesets: normalizeTimesets(server, events),
     });
+    serverIndexes.push(index);
     const outPath = path.join(args.outDir, `gf2-resource-index.${server}.json`);
     await fs.writeFile(outPath, `${JSON.stringify(index, null, 2)}\n`, "utf8");
     console.log(`${server}: wrote ${Object.keys(index.items).length} items to ${outPath}`);
@@ -368,6 +400,13 @@ async function main() {
     console.log(`  new dolls: ${signals.newDolls.join(", ") || "(none)"}`);
     console.log(`  rate ups: ${signals.rateUpNames.join(", ") || "(none)"}`);
   }
+
+  const combined = mergeServerResourceIndexes(serverIndexes);
+  combined.generatedAt = generatedAt;
+  combined.timesetHash = computeTimesetHash(combined.timesets);
+  const combinedPath = path.join(args.outDir, `gf2-resource-index.${args.servers[0] ?? "haoplay"}.json`);
+  await fs.writeFile(combinedPath, `${JSON.stringify(combined, null, 2)}\n`, "utf8");
+  console.log(`combined: wrote ${Object.keys(combined.items).length} items for ${combined.servers.join(", ")} to ${combinedPath}`);
 }
 
 main().catch((error) => {

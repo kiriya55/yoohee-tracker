@@ -2,7 +2,7 @@ const FIELDS = ["cn", "en", "jp"];
 
 const NORMAL_SOURCES = {
   cn: new Set(["mcc-wiki"]),
-  en: new Set(["gfl2.help", "gfl2.help-banners", "gfl2.help-weapons"]),
+  en: new Set(["gfl2.help", "gfl2.help-banners", "gfl2.help-characters", "gfl2.help-weapons"]),
   jp: new Set(["wikiru", "wikiru-detail"]),
 };
 

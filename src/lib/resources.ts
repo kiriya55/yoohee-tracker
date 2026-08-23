@@ -1,5 +1,6 @@
 import type { GachaRecord, ResourceIndex, ResourceItem } from "../types";
 import { buildMccImageUrl } from "./resourceUpdater";
+import { buildAssetDescriptor } from "./assetMapping";
 import i18nData from "../i18n.json";
 
 const STORAGE_KEY = "gf2-resource-index";
@@ -86,7 +87,11 @@ export function parseResourceIndexText(text: string): ResourceIndex | undefined 
       icon: typeof value.icon === "string" ? value.icon : undefined,
       iconUrl: typeof value.iconUrl === "string" ? value.iconUrl : undefined,
       localIcon: typeof value.localIcon === "string" ? value.localIcon : undefined,
+      assetPath: typeof value.assetPath === "string" ? value.assetPath : undefined,
+      assetSource: isObject(value.assetSource) ? value.assetSource as ResourceItem["assetSource"] : undefined,
+      nameSources: isObject(value.nameSources) ? value.nameSources as ResourceItem["nameSources"] : undefined,
       server: typeof value.server === "string" ? value.server : undefined,
+      servers: Array.isArray(value.servers) ? value.servers.filter((server): server is string => typeof server === "string") : undefined,
       imageSource: typeof value.imageSource === "string" ? value.imageSource : undefined,
       verifiedAt: typeof value.verifiedAt === "string" ? value.verifiedAt : undefined,
       aliases: Array.isArray(value.aliases) ? value.aliases.filter((alias): alias is string => typeof alias === "string") : undefined,
@@ -101,8 +106,12 @@ export function parseResourceIndexText(text: string): ResourceIndex | undefined 
     version: Number(parsed.version ?? 1),
     source: typeof parsed.source === "string" ? parsed.source : undefined,
     generatedAt: typeof parsed.generatedAt === "string" ? parsed.generatedAt : undefined,
+    servers: Array.isArray(parsed.servers) ? parsed.servers.filter((server): server is string => typeof server === "string") : undefined,
+    updateSignals: isObject(parsed.updateSignals) ? parsed.updateSignals : undefined,
     items,
     pools: isObject(parsed.pools) ? (parsed.pools as ResourceIndex["pools"]) : undefined,
+    timesets: Array.isArray(parsed.timesets) ? (parsed.timesets as ResourceIndex["timesets"]) : undefined,
+    timesetHash: typeof parsed.timesetHash === "string" ? parsed.timesetHash : undefined,
   };
 }
 
@@ -176,6 +185,8 @@ export function getResourceImageUrl(index: ResourceIndex | undefined, itemId: nu
   if (!item) return undefined;
   if (item.localIcon) return item.localIcon;
   if (item.iconUrl) return item.iconUrl;
+  const asset = buildAssetDescriptor(item);
+  if (asset) return buildMccImageUrl(item);
   const codeUrl = buildMccImageUrl(item);
   if (codeUrl) return codeUrl;
   if (!item.icon) return undefined;

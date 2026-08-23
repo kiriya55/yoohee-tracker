@@ -1,15 +1,7 @@
-const MCC_ORIGIN = "https://gf2.mcc.wiki";
-
-const MCC_IMAGE_OVERRIDES = new Map([
-  ["doll:LindSSR", `${MCC_ORIGIN}/image/doll/Avatar_Bust_LindSSR.png`],
-]);
+import { buildAssetDescriptor } from "./asset-mapping.mjs";
 
 export function buildMccImageUrl(type, code) {
-  const override = MCC_IMAGE_OVERRIDES.get(`${type}:${code}`);
-  if (override) return override;
-  if (type === "doll") return `${MCC_ORIGIN}/image/doll/Avatar_Head_${encodeURIComponent(code)}.png`;
-  if (type === "weapon") return `${MCC_ORIGIN}/image/weapon/${encodeURIComponent(code)}_1024.png`;
-  return undefined;
+  return buildAssetDescriptor(type, code)?.sourceUrl;
 }
 
 export function resourceIdentity(item) {
@@ -18,6 +10,7 @@ export function resourceIdentity(item) {
     String(item?.type ?? ""),
     String(item?.code ?? ""),
     String(item?.iconUrl ?? ""),
+    String(item?.assetPath ?? ""),
   ]);
 }
 

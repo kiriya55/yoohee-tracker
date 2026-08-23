@@ -3,9 +3,10 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { extractWikiruNameRecord } from "./wikiru-names.mjs";
 import { fetchWithRetry } from "./fetch-with-retry.mjs";
-import { parseGfl2BannersHtml, parseGfl2WeaponNames } from "./gfl2-banners.mjs";
+import { parseGfl2BannersHtml, parseGfl2CharacterNames, parseGfl2WeaponNames } from "./gfl2-banners.mjs";
 import { parseBbsCategoryResponse, parseBbsHandbookResponse } from "./exilium-bbs.mjs";
 import { mergeAuthoritativeNames } from "./authoritative-names.mjs";
+import { parseMccNameFromHtml } from "./mcc-wiki.mjs";
 
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
 const GFL2_HELP_ORIGIN = "https://gfl2.help";
@@ -39,6 +40,13 @@ const WIKIRU_RECOVERY_HINTS = {
   PapashaSSR: "ペーペーシャ",
   PeriSSR: "ペリー",
   VectorSSR: "ヴェクター",
+};
+
+const WIKIRU_WEAPON_RECOVERY_HINTS = {
+  Weapon_HK416_4: "HK416",
+  Weapon_MK23_3: "MK23",
+  Weapon_MK23_4: "MK23",
+  Weapon_MK23_5: "MK23",
 };
 
 function parseArgs(argv) {
@@ -204,19 +212,6 @@ async function runPool(items, concurrency, worker) {
   }));
 }
 
-function extractMccNameFromTitle(title, type) {
-  const text = decodeHtml(title);
-  const prefixes = type === "doll" ? ["人形:", "Doll:"] : type === "weapon" ? ["武器:", "Weapon:"] : [];
-  for (const prefix of prefixes) {
-    if (text.startsWith(prefix)) return validName(text.slice(prefix.length).split("|")[0]);
-  }
-  return undefined;
-}
-
-function extractTitle(html) {
-  return html.match(/<title>([^<]+)<\/title>/i)?.[1];
-}
-
 function visibleWikiruNames(html) {
   const names = new Set();
   for (const match of String(html ?? "").matchAll(/<(?:a|td)\b[^>]*>([\s\S]*?)<\/(?:a|td)>/gi)) {
@@ -259,7 +254,7 @@ async function main() {
       const url = MCC_ORIGIN + "/" + item.type + "/" + encodeURIComponent(item.code);
       try {
         const html = await fetchText(url, args);
-        addCandidate(candidates.cn, item.id, extractMccNameFromTitle(extractTitle(html) ?? "", item.type), "mcc-wiki", url);
+        addCandidate(candidates.cn, item.id, parseMccNameFromHtml(html, item.type), "mcc-wiki", url);
       } catch (error) {
         failures.push({ id: item.id, code: item.code, source: "mcc-wiki", error: String(error.message ?? error) });
       }
@@ -269,6 +264,7 @@ async function main() {
 
   if (args.sources.has("gfl2help")) {
     const bannersUrl = GFL2_HELP_ORIGIN + "/en/banners";
+    const charactersUrl = GFL2_HELP_ORIGIN + "/en/characters";
     const weaponsUrl = GFL2_HELP_ORIGIN + "/en/weapons";
     try {
       const bannerNames = parseGfl2BannersHtml(await fetchText(bannersUrl, args), bannersUrl)
@@ -280,6 +276,17 @@ async function main() {
       }
     } catch (error) {
       failures.push({ source: "gfl2.help:banners", error: String(error.message ?? error) });
+    }
+    try {
+      const characterNames = parseGfl2CharacterNames(await fetchText(charactersUrl, args), charactersUrl);
+      for (const item of items.filter((candidate) => candidate.type === "doll")) {
+        if (candidates.en.has(String(item.id))) continue;
+        const entry = entries[String(item.id)];
+        const match = characterNames.find((candidate) => matchesName(item, entry, candidate.name));
+        if (match) addCandidate(candidates.en, item.id, match.name, "gfl2.help-characters", charactersUrl);
+      }
+    } catch (error) {
+      failures.push({ source: "gfl2.help:characters", error: String(error.message ?? error) });
     }
     try {
       const weaponNames = parseGfl2WeaponNames(await fetchText(weaponsUrl, args), weaponsUrl);
@@ -348,12 +355,33 @@ async function main() {
       const visibleNames = visibleWikiruNames(weaponHtml);
       for (const item of items.filter((candidate) => candidate.type === "weapon")) {
         const current = entries[String(item.id)]?.jp ?? item.jp;
-        if (current && visibleNames.has(current)) {
-          addCandidate(candidates.jp, item.id, current, "wikiru", WIKIRU_WEAPON_PAGE);
-        }
+        const currentMatch = current && visibleNames.has(current) ? current : undefined;
+        const asciiKeys = [item.en, enFallback(item), cleanWeaponCode(item.code)]
+          .map(normalizeName)
+          .filter(Boolean);
+        const asciiMatch = [...visibleNames].find((name) => asciiKeys.includes(normalizeName(name)));
+        const match = currentMatch ?? asciiMatch;
+        if (match) addCandidate(candidates.jp, item.id, match, "wikiru", WIKIRU_WEAPON_PAGE);
       }
     } catch (error) {
       failures.push({ source: "wikiru:weapon-index", error: String(error.message ?? error) });
+    }
+
+    if (args.mode === "bootstrap") {
+      for (const item of items.filter((candidate) => candidate.type === "weapon")) {
+        if (candidates.jp.has(String(item.id))) continue;
+        const existing = entries[String(item.id)]?.jp;
+        const recovery = existing ?? WIKIRU_WEAPON_RECOVERY_HINTS[item.code];
+        if (recovery) {
+          addCandidate(
+            candidates.jp,
+            item.id,
+            recovery,
+            "wikiru-recovery",
+            WIKIRU_ORIGIN + "/?" + encodeURIComponent(recovery),
+          );
+        }
+      }
     }
   }
 

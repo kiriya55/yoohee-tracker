@@ -89,7 +89,19 @@ export type ResourceItem = {
   icon?: string;
   iconUrl?: string;
   localIcon?: string;
+  assetPath?: string;
+  assetSource?: {
+    sourceUrl: string;
+    targetPath: string;
+    source: string;
+  };
+  nameSources?: Record<string, {
+    value: string;
+    source: string;
+    url: string;
+  }>;
   server?: string;
+  servers?: string[];
   imageSource?: "mcc-wiki" | "local" | "manual" | string;
   verifiedAt?: string;
   aliases?: string[];
@@ -105,13 +117,29 @@ export type ResourcePool = {
   upItems?: number[];
 };
 
+export type PoolTimeset = {
+  key: string;
+  server: string;
+  poolId?: number;
+  poolType?: number;
+  name?: string;
+  startTime?: string;
+  endTime?: string;
+  upItemIds: number[];
+  source: "exilium" | "gfl2.help" | string;
+};
+
 export type ResourceIndex = {
   format: "gf2-resource-index";
   version: number;
   source?: string;
   generatedAt?: string;
+  servers?: string[];
+  updateSignals?: Record<string, unknown>;
   items: Record<string, ResourceItem>;
   pools?: Record<string, ResourcePool>;
+  timesets?: PoolTimeset[];
+  timesetHash?: string;
 };
 
 export type CommanderPoolStats = {

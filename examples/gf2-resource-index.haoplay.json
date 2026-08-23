@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-07-12T11:52:10.207Z",
+  "generatedAt": "2026-08-23T20:18:33.239Z",
   "servers": [
     "haoplay"
   ],
@@ -12,25 +12,21 @@
       "newDolls": [],
       "newWeapons": [],
       "rateUpNames": [
-        "Loreley",
-        "Lainie",
-        "Lewis"
+        "Sextans",
+        "Phaetusa",
+        "Ullrid"
       ],
       "sourceNoticeIds": [
-        526,
-        525,
-        524,
-        523,
-        522,
+        575,
+        574,
+        573,
+        572,
+        571,
+        570,
+        567,
+        566,
+        565,
         521,
-        520,
-        519,
-        518,
-        517,
-        514,
-        516,
-        512,
-        511,
         467,
         317,
         40,
@@ -39,19 +35,66 @@
         28,
         27,
         14,
-        534,
-        533,
-        528,
-        527,
-        529,
-        530,
-        536,
-        532,
-        531,
-        535
+        580,
+        579,
+        578,
+        577,
+        576
       ]
     }
   },
+  "timesets": [
+    {
+      "key": "haoplay:576",
+      "server": "haoplay",
+      "poolId": 576,
+      "name": "Ullrid Is Rate Up!",
+      "startTime": "2026-08-06T01:00:00.000Z",
+      "endTime": "2026-08-26T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:577",
+      "server": "haoplay",
+      "poolId": 577,
+      "name": "Phaetusa Is Rate Up!",
+      "startTime": "2026-08-06T01:00:00.000Z",
+      "endTime": "2026-08-26T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:578",
+      "server": "haoplay",
+      "poolId": 578,
+      "name": "Outfit - Nocte Bewitchment",
+      "startTime": "2026-08-06T01:00:00.000Z",
+      "endTime": "2026-08-26T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:579",
+      "server": "haoplay",
+      "poolId": 579,
+      "name": "Sextans Is Rate Up!",
+      "startTime": "2026-08-06T01:00:00.000Z",
+      "endTime": "2026-08-26T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:580",
+      "server": "haoplay",
+      "poolId": 580,
+      "name": "[Moonshroud Requiem] Is Now Open!",
+      "startTime": "2026-08-06T01:00:00.000Z",
+      "endTime": "2026-08-26T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    }
+  ],
   "items": {
     "1001": {
       "id": 1001,
@@ -61,8 +104,14 @@
       "code": "CharolicSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_CharolicSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_CharolicSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_CharolicSR.png",
+        "targetPath": "doll/Avatar_Head_CharolicSR.png",
+        "localIcon": "/images/doll/Avatar_Head_CharolicSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1008": {
       "id": 1008,
@@ -72,8 +121,14 @@
       "code": "NemesisSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_NemesisSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_NemesisSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_NemesisSR.png",
+        "targetPath": "doll/Avatar_Head_NemesisSR.png",
+        "localIcon": "/images/doll/Avatar_Head_NemesisSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1009": {
       "id": 1009,
@@ -83,8 +138,14 @@
       "code": "ColphneSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_ColphneSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_ColphneSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_ColphneSR.png",
+        "targetPath": "doll/Avatar_Head_ColphneSR.png",
+        "localIcon": "/images/doll/Avatar_Head_ColphneSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1013": {
       "id": 1013,
@@ -94,8 +155,14 @@
       "code": "LennaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LennaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LennaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LennaSSR.png",
+        "targetPath": "doll/Avatar_Head_LennaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LennaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1015": {
       "id": 1015,
@@ -105,8 +172,14 @@
       "code": "VepleySSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_VepleySSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_VepleySSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_VepleySSR.png",
+        "targetPath": "doll/Avatar_Head_VepleySSR.png",
+        "localIcon": "/images/doll/Avatar_Head_VepleySSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1017": {
       "id": 1017,
@@ -116,8 +189,14 @@
       "code": "GrozaSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_GrozaSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_GrozaSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_GrozaSR.png",
+        "targetPath": "doll/Avatar_Head_GrozaSR.png",
+        "localIcon": "/images/doll/Avatar_Head_GrozaSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1021": {
       "id": 1021,
@@ -127,8 +206,14 @@
       "code": "PerityaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PerityaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_PerityaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PerityaSSR.png",
+        "targetPath": "doll/Avatar_Head_PerityaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_PerityaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1022": {
       "id": 1022,
@@ -138,8 +223,14 @@
       "code": "SharkrySR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SharkrySR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_SharkrySR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SharkrySR.png",
+        "targetPath": "doll/Avatar_Head_SharkrySR.png",
+        "localIcon": "/images/doll/Avatar_Head_SharkrySR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1023": {
       "id": 1023,
@@ -149,8 +240,14 @@
       "code": "DusevnyjSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_DusevnyjSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_DusevnyjSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_DusevnyjSSR.png",
+        "targetPath": "doll/Avatar_Head_DusevnyjSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_DusevnyjSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1024": {
       "id": 1024,
@@ -160,8 +257,14 @@
       "code": "CheetaSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_CheetaSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_CheetaSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_CheetaSR.png",
+        "targetPath": "doll/Avatar_Head_CheetaSR.png",
+        "localIcon": "/images/doll/Avatar_Head_CheetaSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1025": {
       "id": 1025,
@@ -171,8 +274,14 @@
       "code": "TololoSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_TololoSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_TololoSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_TololoSSR.png",
+        "targetPath": "doll/Avatar_Head_TololoSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_TololoSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1026": {
       "id": 1026,
@@ -182,8 +291,14 @@
       "code": "NagantSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_NagantSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_NagantSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_NagantSR.png",
+        "targetPath": "doll/Avatar_Head_NagantSR.png",
+        "localIcon": "/images/doll/Avatar_Head_NagantSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1027": {
       "id": 1027,
@@ -193,9 +308,15 @@
       "code": "QiongjiuSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_QiongjiuSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z",
-      "cn": "琼玖"
+      "cn": "琼玖",
+      "assetPath": "doll/Avatar_Head_QiongjiuSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_QiongjiuSSR.png",
+        "targetPath": "doll/Avatar_Head_QiongjiuSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_QiongjiuSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1028": {
       "id": 1028,
@@ -205,8 +326,14 @@
       "code": "CentaureissiSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_CentaureissiSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_CentaureissiSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_CentaureissiSSR.png",
+        "targetPath": "doll/Avatar_Head_CentaureissiSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_CentaureissiSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1029": {
       "id": 1029,
@@ -216,8 +343,14 @@
       "code": "SabrinaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SabrinaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_SabrinaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SabrinaSSR.png",
+        "targetPath": "doll/Avatar_Head_SabrinaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_SabrinaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1032": {
       "id": 1032,
@@ -227,8 +360,14 @@
       "code": "DaiyanSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_DaiyanSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_DaiyanSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_DaiyanSSR.png",
+        "targetPath": "doll/Avatar_Head_DaiyanSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_DaiyanSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1033": {
       "id": 1033,
@@ -238,8 +377,14 @@
       "code": "MosinnagantSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_MosinnagantSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_MosinnagantSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_MosinnagantSSR.png",
+        "targetPath": "doll/Avatar_Head_MosinnagantSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_MosinnagantSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1034": {
       "id": 1034,
@@ -249,8 +394,14 @@
       "code": "MacqiatoSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_MacqiatoSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_MacqiatoSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_MacqiatoSSR.png",
+        "targetPath": "doll/Avatar_Head_MacqiatoSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_MacqiatoSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1035": {
       "id": 1035,
@@ -260,8 +411,14 @@
       "code": "JiangyuSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_JiangyuSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_JiangyuSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_JiangyuSSR.png",
+        "targetPath": "doll/Avatar_Head_JiangyuSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_JiangyuSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1036": {
       "id": 1036,
@@ -271,8 +428,14 @@
       "code": "KseniaSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_KseniaSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_KseniaSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_KseniaSR.png",
+        "targetPath": "doll/Avatar_Head_KseniaSR.png",
+        "localIcon": "/images/doll/Avatar_Head_KseniaSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1037": {
       "id": 1037,
@@ -282,8 +445,14 @@
       "code": "UllridSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_UllridSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_UllridSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_UllridSSR.png",
+        "targetPath": "doll/Avatar_Head_UllridSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_UllridSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1038": {
       "id": 1038,
@@ -293,8 +462,14 @@
       "code": "LittaraSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LittaraSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LittaraSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LittaraSR.png",
+        "targetPath": "doll/Avatar_Head_LittaraSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LittaraSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1039": {
       "id": 1039,
@@ -304,8 +479,14 @@
       "code": "SuomiSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SuomiSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_SuomiSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SuomiSSR.png",
+        "targetPath": "doll/Avatar_Head_SuomiSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_SuomiSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1040": {
       "id": 1040,
@@ -315,8 +496,14 @@
       "code": "PapashaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PapashaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_PapashaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PapashaSSR.png",
+        "targetPath": "doll/Avatar_Head_PapashaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_PapashaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1041": {
       "id": 1041,
@@ -326,8 +513,14 @@
       "code": "LottaSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LottaSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LottaSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LottaSR.png",
+        "targetPath": "doll/Avatar_Head_LottaSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LottaSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1042": {
       "id": 1042,
@@ -337,8 +530,14 @@
       "code": "AndorisSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_AndorisSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_AndorisSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_AndorisSSR.png",
+        "targetPath": "doll/Avatar_Head_AndorisSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_AndorisSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1043": {
       "id": 1043,
@@ -348,8 +547,14 @@
       "code": "FayeSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_FayeSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_FayeSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_FayeSSR.png",
+        "targetPath": "doll/Avatar_Head_FayeSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_FayeSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1044": {
       "id": 1044,
@@ -359,8 +564,14 @@
       "code": "VectorSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_VectorSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_VectorSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_VectorSSR.png",
+        "targetPath": "doll/Avatar_Head_VectorSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_VectorSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1045": {
       "id": 1045,
@@ -370,8 +581,14 @@
       "code": "BiyocaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_BiyocaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_BiyocaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_BiyocaSSR.png",
+        "targetPath": "doll/Avatar_Head_BiyocaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_BiyocaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1047": {
       "id": 1047,
@@ -381,8 +598,14 @@
       "code": "SpringfieldSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SpringfieldSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_SpringfieldSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SpringfieldSSR.png",
+        "targetPath": "doll/Avatar_Head_SpringfieldSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_SpringfieldSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1048": {
       "id": 1048,
@@ -392,8 +615,14 @@
       "code": "QiuhuaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_QiuhuaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_QiuhuaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_QiuhuaSSR.png",
+        "targetPath": "doll/Avatar_Head_QiuhuaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_QiuhuaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1049": {
       "id": 1049,
@@ -403,8 +632,14 @@
       "code": "HarpsySSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_HarpsySSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_HarpsySSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_HarpsySSR.png",
+        "targetPath": "doll/Avatar_Head_HarpsySSR.png",
+        "localIcon": "/images/doll/Avatar_Head_HarpsySSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1050": {
       "id": 1050,
@@ -414,8 +649,14 @@
       "code": "ZhaohuiSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_ZhaohuiSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_ZhaohuiSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_ZhaohuiSSR.png",
+        "targetPath": "doll/Avatar_Head_ZhaohuiSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_ZhaohuiSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1051": {
       "id": 1051,
@@ -425,8 +666,14 @@
       "code": "MishtySSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_MishtySSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_MishtySSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_MishtySSR.png",
+        "targetPath": "doll/Avatar_Head_MishtySSR.png",
+        "localIcon": "/images/doll/Avatar_Head_MishtySSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1052": {
       "id": 1052,
@@ -436,8 +683,14 @@
       "code": "ClukaySSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_ClukaySSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_ClukaySSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_ClukaySSR.png",
+        "targetPath": "doll/Avatar_Head_ClukaySSR.png",
+        "localIcon": "/images/doll/Avatar_Head_ClukaySSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1053": {
       "id": 1053,
@@ -447,8 +700,14 @@
       "code": "PeriSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PeriSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_PeriSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PeriSSR.png",
+        "targetPath": "doll/Avatar_Head_PeriSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_PeriSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1054": {
       "id": 1054,
@@ -458,8 +717,14 @@
       "code": "YooHeeSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_YooHeeSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_YooHeeSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_YooHeeSSR.png",
+        "targetPath": "doll/Avatar_Head_YooHeeSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_YooHeeSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1055": {
       "id": 1055,
@@ -469,8 +734,14 @@
       "code": "NikketaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_NikketaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_NikketaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_NikketaSSR.png",
+        "targetPath": "doll/Avatar_Head_NikketaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_NikketaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1056": {
       "id": 1056,
@@ -480,8 +751,14 @@
       "code": "LevaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LevaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LevaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LevaSSR.png",
+        "targetPath": "doll/Avatar_Head_LevaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LevaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1057": {
       "id": 1057,
@@ -491,8 +768,14 @@
       "code": "RobellaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_RobellaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_RobellaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_RobellaSSR.png",
+        "targetPath": "doll/Avatar_Head_RobellaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_RobellaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1058": {
       "id": 1058,
@@ -502,8 +785,14 @@
       "code": "LeneSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LeneSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LeneSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LeneSSR.png",
+        "targetPath": "doll/Avatar_Head_LeneSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LeneSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1059": {
       "id": 1059,
@@ -513,8 +802,14 @@
       "code": "LindSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
-      "imageSource": "mcc-wiki",
-      "aliases": []
+      "aliases": [],
+      "assetPath": "doll/Avatar_Head_LindSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+        "targetPath": "doll/Avatar_Head_LindSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LindSSR.png",
+        "source": "mcc-wiki"
+      }
     },
     "1060": {
       "id": 1060,
@@ -524,8 +819,14 @@
       "code": "PhaetusaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PhaetusaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_PhaetusaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_PhaetusaSSR.png",
+        "targetPath": "doll/Avatar_Head_PhaetusaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_PhaetusaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1061": {
       "id": 1061,
@@ -535,8 +836,14 @@
       "code": "BalthildeSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_BalthildeSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_BalthildeSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_BalthildeSSR.png",
+        "targetPath": "doll/Avatar_Head_BalthildeSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_BalthildeSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1062": {
       "id": 1062,
@@ -546,8 +853,14 @@
       "code": "LewisSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LewisSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LewisSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LewisSSR.png",
+        "targetPath": "doll/Avatar_Head_LewisSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LewisSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1064": {
       "id": 1064,
@@ -557,8 +870,14 @@
       "code": "FlorenceSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_FlorenceSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_FlorenceSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_FlorenceSSR.png",
+        "targetPath": "doll/Avatar_Head_FlorenceSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_FlorenceSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1065": {
       "id": 1065,
@@ -568,8 +887,14 @@
       "code": "AlvaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_AlvaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_AlvaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_AlvaSSR.png",
+        "targetPath": "doll/Avatar_Head_AlvaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_AlvaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1066": {
       "id": 1066,
@@ -579,8 +904,14 @@
       "code": "VoymastinaSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_VoymastinaSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_VoymastinaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_VoymastinaSSR.png",
+        "targetPath": "doll/Avatar_Head_VoymastinaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_VoymastinaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1067": {
       "id": 1067,
@@ -590,8 +921,14 @@
       "code": "HelenSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_HelenSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_HelenSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_HelenSSR.png",
+        "targetPath": "doll/Avatar_Head_HelenSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_HelenSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1068": {
       "id": 1068,
@@ -601,8 +938,14 @@
       "code": "SakuraSSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SakuraSSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_SakuraSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_SakuraSSR.png",
+        "targetPath": "doll/Avatar_Head_SakuraSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_SakuraSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1069": {
       "id": 1069,
@@ -612,8 +955,14 @@
       "code": "LoreleySSR",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LoreleySSR.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "doll/Avatar_Head_LoreleySSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LoreleySSR.png",
+        "targetPath": "doll/Avatar_Head_LoreleySSR.png",
+        "localIcon": "/images/doll/Avatar_Head_LoreleySSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "1071": {
       "id": 1071,
@@ -634,8 +983,14 @@
       "code": "Weapon_BpSMGssr001_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpSMGssr001_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_BpSMGssr001_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpSMGssr001_5_1024.png",
+        "targetPath": "weapon/Weapon_BpSMGssr001_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_BpSMGssr001_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10003": {
       "id": 10003,
@@ -645,8 +1000,14 @@
       "code": "Weapon_BpRFssr001_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpRFssr001_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_BpRFssr001_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpRFssr001_5_1024.png",
+        "targetPath": "weapon/Weapon_BpRFssr001_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_BpRFssr001_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10004": {
       "id": 10004,
@@ -656,8 +1017,14 @@
       "code": "Weapon_BpARssr001_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpARssr001_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_BpARssr001_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpARssr001_5_1024.png",
+        "targetPath": "weapon/Weapon_BpARssr001_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_BpARssr001_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10005": {
       "id": 10005,
@@ -667,8 +1034,14 @@
       "code": "Weapon_BpKnifessr001_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpKnifessr001_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_BpKnifessr001_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpKnifessr001_5_1024.png",
+        "targetPath": "weapon/Weapon_BpKnifessr001_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_BpKnifessr001_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10006": {
       "id": 10006,
@@ -678,8 +1051,14 @@
       "code": "Weapon_BpMGssr001_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpMGssr001_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_BpMGssr001_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpMGssr001_5_1024.png",
+        "targetPath": "weapon/Weapon_BpMGssr001_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_BpMGssr001_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10007": {
       "id": 10007,
@@ -689,8 +1068,14 @@
       "code": "Weapon_BpSGssr001_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpSGssr001_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_BpSGssr001_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_BpSGssr001_5_1024.png",
+        "targetPath": "weapon/Weapon_BpSGssr001_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_BpSGssr001_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10131": {
       "id": 10131,
@@ -700,8 +1085,14 @@
       "code": "Weapon_UMP9_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP9_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP9_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP9_3_1024.png",
+        "targetPath": "weapon/Weapon_UMP9_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP9_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10132": {
       "id": 10132,
@@ -711,8 +1102,14 @@
       "code": "Weapon_UMP9_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP9_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP9_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP9_4_1024.png",
+        "targetPath": "weapon/Weapon_UMP9_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP9_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10133": {
       "id": 10133,
@@ -722,8 +1119,14 @@
       "code": "Weapon_UMP9_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP9_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP9_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP9_5_1024.png",
+        "targetPath": "weapon/Weapon_UMP9_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP9_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10231": {
       "id": 10231,
@@ -733,8 +1136,14 @@
       "code": "Weapon_KSVK_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_KSVK_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_KSVK_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_KSVK_3_1024.png",
+        "targetPath": "weapon/Weapon_KSVK_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_KSVK_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10232": {
       "id": 10232,
@@ -744,8 +1153,14 @@
       "code": "Weapon_KSVK_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_KSVK_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_KSVK_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_KSVK_4_1024.png",
+        "targetPath": "weapon/Weapon_KSVK_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_KSVK_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10233": {
       "id": 10233,
@@ -755,8 +1170,14 @@
       "code": "Weapon_KSVK_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_KSVK_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_KSVK_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_KSVK_5_1024.png",
+        "targetPath": "weapon/Weapon_KSVK_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_KSVK_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10331": {
       "id": 10331,
@@ -766,8 +1187,14 @@
       "code": "Weapon_M1891_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1891_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1891_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1891_3_1024.png",
+        "targetPath": "weapon/Weapon_M1891_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1891_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10332": {
       "id": 10332,
@@ -777,8 +1204,14 @@
       "code": "Weapon_M1891_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1891_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1891_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1891_4_1024.png",
+        "targetPath": "weapon/Weapon_M1891_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1891_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10333": {
       "id": 10333,
@@ -788,8 +1221,14 @@
       "code": "Weapon_M1891_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1891_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1891_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1891_5_1024.png",
+        "targetPath": "weapon/Weapon_M1891_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1891_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10341": {
       "id": 10341,
@@ -799,8 +1238,14 @@
       "code": "Weapon_WA2000_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_WA2000_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_WA2000_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_WA2000_3_1024.png",
+        "targetPath": "weapon/Weapon_WA2000_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_WA2000_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10342": {
       "id": 10342,
@@ -810,8 +1255,14 @@
       "code": "Weapon_WA2000_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_WA2000_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_WA2000_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_WA2000_4_1024.png",
+        "targetPath": "weapon/Weapon_WA2000_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_WA2000_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10343": {
       "id": 10343,
@@ -821,8 +1272,14 @@
       "code": "Weapon_WA2000_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_WA2000_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_WA2000_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_WA2000_5_1024.png",
+        "targetPath": "weapon/Weapon_WA2000_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_WA2000_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10351": {
       "id": 10351,
@@ -832,8 +1289,14 @@
       "code": "Weapon_QBZ97_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ97_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ97_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ97_3_1024.png",
+        "targetPath": "weapon/Weapon_QBZ97_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ97_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10352": {
       "id": 10352,
@@ -843,8 +1306,14 @@
       "code": "Weapon_QBZ97_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ97_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ97_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ97_4_1024.png",
+        "targetPath": "weapon/Weapon_QBZ97_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ97_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10353": {
       "id": 10353,
@@ -854,8 +1323,14 @@
       "code": "Weapon_QBZ97_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ97_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ97_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ97_5_1024.png",
+        "targetPath": "weapon/Weapon_QBZ97_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ97_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10361": {
       "id": 10361,
@@ -865,8 +1340,14 @@
       "code": "Weapon_APS_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_APS_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_APS_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_APS_3_1024.png",
+        "targetPath": "weapon/Weapon_APS_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_APS_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10362": {
       "id": 10362,
@@ -876,8 +1357,14 @@
       "code": "Weapon_APS_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_APS_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_APS_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_APS_4_1024.png",
+        "targetPath": "weapon/Weapon_APS_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_APS_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10371": {
       "id": 10371,
@@ -887,8 +1374,14 @@
       "code": "Weapon_Ullr_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Ullr_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Ullr_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Ullr_3_1024.png",
+        "targetPath": "weapon/Weapon_Ullr_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Ullr_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10372": {
       "id": 10372,
@@ -898,8 +1391,14 @@
       "code": "Weapon_Ullr_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Ullr_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Ullr_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Ullr_4_1024.png",
+        "targetPath": "weapon/Weapon_Ullr_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Ullr_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10373": {
       "id": 10373,
@@ -909,8 +1408,14 @@
       "code": "Weapon_Ullr_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Ullr_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Ullr_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Ullr_5_1024.png",
+        "targetPath": "weapon/Weapon_Ullr_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Ullr_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10381": {
       "id": 10381,
@@ -920,8 +1425,14 @@
       "code": "Weapon_Galil_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Galil_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Galil_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Galil_3_1024.png",
+        "targetPath": "weapon/Weapon_Galil_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Galil_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10382": {
       "id": 10382,
@@ -931,8 +1442,14 @@
       "code": "Weapon_Galil_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Galil_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Galil_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Galil_4_1024.png",
+        "targetPath": "weapon/Weapon_Galil_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Galil_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10391": {
       "id": 10391,
@@ -942,8 +1459,14 @@
       "code": "Weapon_M1931_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1931_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1931_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1931_3_1024.png",
+        "targetPath": "weapon/Weapon_M1931_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1931_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10392": {
       "id": 10392,
@@ -953,8 +1476,14 @@
       "code": "Weapon_M1931_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1931_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1931_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1931_4_1024.png",
+        "targetPath": "weapon/Weapon_M1931_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1931_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10393": {
       "id": 10393,
@@ -964,8 +1493,14 @@
       "code": "Weapon_M1931_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1931_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1931_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1931_5_1024.png",
+        "targetPath": "weapon/Weapon_M1931_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1931_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10401": {
       "id": 10401,
@@ -975,8 +1510,14 @@
       "code": "Weapon_PPSh41_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PPSh41_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_PPSh41_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PPSh41_3_1024.png",
+        "targetPath": "weapon/Weapon_PPSh41_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_PPSh41_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10402": {
       "id": 10402,
@@ -986,8 +1527,14 @@
       "code": "Weapon_PPSh41_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PPSh41_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_PPSh41_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PPSh41_4_1024.png",
+        "targetPath": "weapon/Weapon_PPSh41_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_PPSh41_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10403": {
       "id": 10403,
@@ -997,8 +1544,14 @@
       "code": "Weapon_PPSh41_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PPSh41_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_PPSh41_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PPSh41_5_1024.png",
+        "targetPath": "weapon/Weapon_PPSh41_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_PPSh41_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10411": {
       "id": 10411,
@@ -1008,8 +1561,14 @@
       "code": "Weapon_M1_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1_3_1024.png",
+        "targetPath": "weapon/Weapon_M1_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10412": {
       "id": 10412,
@@ -1019,8 +1578,14 @@
       "code": "Weapon_M1_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1_4_1024.png",
+        "targetPath": "weapon/Weapon_M1_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10421": {
       "id": 10421,
@@ -1030,8 +1595,14 @@
       "code": "Weapon_G36KKSK_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36KKSK_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G36KKSK_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36KKSK_3_1024.png",
+        "targetPath": "weapon/Weapon_G36KKSK_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_G36KKSK_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10422": {
       "id": 10422,
@@ -1041,8 +1612,14 @@
       "code": "Weapon_G36KKSK_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36KKSK_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G36KKSK_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36KKSK_4_1024.png",
+        "targetPath": "weapon/Weapon_G36KKSK_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_G36KKSK_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10423": {
       "id": 10423,
@@ -1052,8 +1629,14 @@
       "code": "Weapon_G36KKSK_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36KKSK_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G36KKSK_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36KKSK_5_1024.png",
+        "targetPath": "weapon/Weapon_G36KKSK_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_G36KKSK_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10431": {
       "id": 10431,
@@ -1063,8 +1646,14 @@
       "code": "Weapon_CZ75_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CZ75_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_CZ75_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CZ75_3_1024.png",
+        "targetPath": "weapon/Weapon_CZ75_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_CZ75_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10432": {
       "id": 10432,
@@ -1074,8 +1663,14 @@
       "code": "Weapon_CZ75_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CZ75_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_CZ75_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CZ75_4_1024.png",
+        "targetPath": "weapon/Weapon_CZ75_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_CZ75_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10433": {
       "id": 10433,
@@ -1085,8 +1680,14 @@
       "code": "Weapon_CZ75_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CZ75_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_CZ75_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CZ75_5_1024.png",
+        "targetPath": "weapon/Weapon_CZ75_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_CZ75_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10441": {
       "id": 10441,
@@ -1096,8 +1697,14 @@
       "code": "Weapon_Vector_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vector_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Vector_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vector_3_1024.png",
+        "targetPath": "weapon/Weapon_Vector_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Vector_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10442": {
       "id": 10442,
@@ -1107,8 +1714,14 @@
       "code": "Weapon_Vector_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vector_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Vector_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vector_4_1024.png",
+        "targetPath": "weapon/Weapon_Vector_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Vector_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10443": {
       "id": 10443,
@@ -1118,8 +1731,14 @@
       "code": "Weapon_Vector_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vector_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Vector_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vector_5_1024.png",
+        "targetPath": "weapon/Weapon_Vector_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Vector_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10451": {
       "id": 10451,
@@ -1129,8 +1748,14 @@
       "code": "Weapon_G28_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G28_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G28_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G28_3_1024.png",
+        "targetPath": "weapon/Weapon_G28_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_G28_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10452": {
       "id": 10452,
@@ -1140,8 +1765,14 @@
       "code": "Weapon_G28_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G28_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G28_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G28_4_1024.png",
+        "targetPath": "weapon/Weapon_G28_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_G28_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10453": {
       "id": 10453,
@@ -1151,8 +1782,14 @@
       "code": "Weapon_G28_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G28_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G28_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G28_5_1024.png",
+        "targetPath": "weapon/Weapon_G28_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_G28_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10471": {
       "id": 10471,
@@ -1162,8 +1799,14 @@
       "code": "Weapon_M1903_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1903_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1903_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1903_3_1024.png",
+        "targetPath": "weapon/Weapon_M1903_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1903_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10472": {
       "id": 10472,
@@ -1173,8 +1816,14 @@
       "code": "Weapon_M1903_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1903_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1903_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1903_4_1024.png",
+        "targetPath": "weapon/Weapon_M1903_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1903_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10473": {
       "id": 10473,
@@ -1184,8 +1833,14 @@
       "code": "Weapon_M1903_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1903_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1903_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1903_5_1024.png",
+        "targetPath": "weapon/Weapon_M1903_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1903_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10481": {
       "id": 10481,
@@ -1195,8 +1850,14 @@
       "code": "Weapon_HAWK12_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_HAWK12_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_3_1024.png",
+        "targetPath": "weapon/Weapon_HAWK12_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_HAWK12_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10482": {
       "id": 10482,
@@ -1206,8 +1867,14 @@
       "code": "Weapon_HAWK12_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_HAWK12_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_4_1024.png",
+        "targetPath": "weapon/Weapon_HAWK12_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_HAWK12_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10483": {
       "id": 10483,
@@ -1217,9 +1884,14 @@
       "code": "Weapon_HAWK12_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-07-10T22:14:22.682Z",
-      "aliases": []
+      "aliases": [],
+      "assetPath": "weapon/Weapon_HAWK12_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HAWK12_5_1024.png",
+        "targetPath": "weapon/Weapon_HAWK12_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_HAWK12_5_1024.png",
+        "source": "mcc-wiki"
+      }
     },
     "10491": {
       "id": 10491,
@@ -1229,8 +1901,14 @@
       "code": "Weapon_SteyrTMP_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_SteyrTMP_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_3_1024.png",
+        "targetPath": "weapon/Weapon_SteyrTMP_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_SteyrTMP_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10492": {
       "id": 10492,
@@ -1240,8 +1918,14 @@
       "code": "Weapon_SteyrTMP_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_SteyrTMP_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_4_1024.png",
+        "targetPath": "weapon/Weapon_SteyrTMP_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_SteyrTMP_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10493": {
       "id": 10493,
@@ -1251,8 +1935,14 @@
       "code": "Weapon_SteyrTMP_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_SteyrTMP_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_5_1024.png",
+        "targetPath": "weapon/Weapon_SteyrTMP_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_SteyrTMP_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10501": {
       "id": 10501,
@@ -1262,8 +1952,14 @@
       "code": "Weapon_CSLS06_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CSLS06_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_CSLS06_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CSLS06_3_1024.png",
+        "targetPath": "weapon/Weapon_CSLS06_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_CSLS06_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10502": {
       "id": 10502,
@@ -1273,8 +1969,14 @@
       "code": "Weapon_CSLS06_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CSLS06_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_CSLS06_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CSLS06_4_1024.png",
+        "targetPath": "weapon/Weapon_CSLS06_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_CSLS06_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10503": {
       "id": 10503,
@@ -1284,8 +1986,14 @@
       "code": "Weapon_CSLS06_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CSLS06_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_CSLS06_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_CSLS06_5_1024.png",
+        "targetPath": "weapon/Weapon_CSLS06_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_CSLS06_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10511": {
       "id": 10511,
@@ -1295,8 +2003,14 @@
       "code": "Weapon_G11_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G11_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G11_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G11_3_1024.png",
+        "targetPath": "weapon/Weapon_G11_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_G11_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10512": {
       "id": 10512,
@@ -1306,8 +2020,14 @@
       "code": "Weapon_G11_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G11_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G11_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G11_4_1024.png",
+        "targetPath": "weapon/Weapon_G11_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_G11_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10513": {
       "id": 10513,
@@ -1317,8 +2037,14 @@
       "code": "Weapon_G11_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G11_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G11_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G11_5_1024.png",
+        "targetPath": "weapon/Weapon_G11_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_G11_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10521": {
       "id": 10521,
@@ -1328,8 +2054,14 @@
       "code": "Weapon_HK416_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HK416_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_HK416_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HK416_3_1024.png",
+        "targetPath": "weapon/Weapon_HK416_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_HK416_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10522": {
       "id": 10522,
@@ -1339,8 +2071,14 @@
       "code": "Weapon_HK416_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HK416_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_HK416_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HK416_4_1024.png",
+        "targetPath": "weapon/Weapon_HK416_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_HK416_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10523": {
       "id": 10523,
@@ -1350,8 +2088,14 @@
       "code": "Weapon_HK416_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HK416_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_HK416_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_HK416_5_1024.png",
+        "targetPath": "weapon/Weapon_HK416_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_HK416_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10531": {
       "id": 10531,
@@ -1361,8 +2105,14 @@
       "code": "Weapon_MP5_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP5_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_MP5_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP5_3_1024.png",
+        "targetPath": "weapon/Weapon_MP5_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_MP5_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10532": {
       "id": 10532,
@@ -1372,8 +2122,14 @@
       "code": "Weapon_MP5_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP5_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_MP5_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP5_4_1024.png",
+        "targetPath": "weapon/Weapon_MP5_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_MP5_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10533": {
       "id": 10533,
@@ -1383,8 +2139,14 @@
       "code": "Weapon_MP5_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP5_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_MP5_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP5_5_1024.png",
+        "targetPath": "weapon/Weapon_MP5_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_MP5_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10541": {
       "id": 10541,
@@ -1394,8 +2156,14 @@
       "code": "Weapon_K2_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_K2_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_K2_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_K2_3_1024.png",
+        "targetPath": "weapon/Weapon_K2_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_K2_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10542": {
       "id": 10542,
@@ -1405,8 +2173,14 @@
       "code": "Weapon_K2_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_K2_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_K2_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_K2_4_1024.png",
+        "targetPath": "weapon/Weapon_K2_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_K2_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10543": {
       "id": 10543,
@@ -1416,8 +2190,14 @@
       "code": "Weapon_K2_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_K2_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_K2_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_K2_5_1024.png",
+        "targetPath": "weapon/Weapon_K2_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_K2_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10551": {
       "id": 10551,
@@ -1427,8 +2207,14 @@
       "code": "Weapon_VSK94_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_VSK94_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_VSK94_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_VSK94_3_1024.png",
+        "targetPath": "weapon/Weapon_VSK94_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_VSK94_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10552": {
       "id": 10552,
@@ -1438,8 +2224,14 @@
       "code": "Weapon_VSK94_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_VSK94_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_VSK94_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_VSK94_4_1024.png",
+        "targetPath": "weapon/Weapon_VSK94_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_VSK94_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10553": {
       "id": 10553,
@@ -1449,8 +2241,14 @@
       "code": "Weapon_VSK94_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_VSK94_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_VSK94_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_VSK94_5_1024.png",
+        "targetPath": "weapon/Weapon_VSK94_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_VSK94_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10561": {
       "id": 10561,
@@ -1460,8 +2258,14 @@
       "code": "Weapon_UMP45_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP45_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP45_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP45_3_1024.png",
+        "targetPath": "weapon/Weapon_UMP45_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP45_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10562": {
       "id": 10562,
@@ -1471,8 +2275,14 @@
       "code": "Weapon_UMP45_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP45_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP45_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP45_4_1024.png",
+        "targetPath": "weapon/Weapon_UMP45_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP45_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10563": {
       "id": 10563,
@@ -1482,8 +2292,14 @@
       "code": "Weapon_UMP45_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP45_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP45_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP45_5_1024.png",
+        "targetPath": "weapon/Weapon_UMP45_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP45_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10571": {
       "id": 10571,
@@ -1493,8 +2309,14 @@
       "code": "Weapon_RO635_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_RO635_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_RO635_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_RO635_3_1024.png",
+        "targetPath": "weapon/Weapon_RO635_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_RO635_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10572": {
       "id": 10572,
@@ -1504,8 +2326,14 @@
       "code": "Weapon_RO635_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_RO635_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_RO635_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_RO635_4_1024.png",
+        "targetPath": "weapon/Weapon_RO635_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_RO635_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10573": {
       "id": 10573,
@@ -1515,8 +2343,14 @@
       "code": "Weapon_RO635_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_RO635_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_RO635_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_RO635_5_1024.png",
+        "targetPath": "weapon/Weapon_RO635_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_RO635_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10581": {
       "id": 10581,
@@ -1526,8 +2360,14 @@
       "code": "Weapon_UMP40_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP40_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP40_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP40_3_1024.png",
+        "targetPath": "weapon/Weapon_UMP40_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP40_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10582": {
       "id": 10582,
@@ -1537,8 +2377,14 @@
       "code": "Weapon_UMP40_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP40_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP40_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP40_4_1024.png",
+        "targetPath": "weapon/Weapon_UMP40_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP40_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10583": {
       "id": 10583,
@@ -1548,8 +2394,14 @@
       "code": "Weapon_UMP40_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP40_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_UMP40_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_UMP40_5_1024.png",
+        "targetPath": "weapon/Weapon_UMP40_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_UMP40_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10591": {
       "id": 10591,
@@ -1559,8 +2411,14 @@
       "code": "Weapon_AA12_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AA12_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AA12_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AA12_3_1024.png",
+        "targetPath": "weapon/Weapon_AA12_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_AA12_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10592": {
       "id": 10592,
@@ -1570,8 +2428,14 @@
       "code": "Weapon_AA12_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AA12_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AA12_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AA12_4_1024.png",
+        "targetPath": "weapon/Weapon_AA12_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_AA12_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10593": {
       "id": 10593,
@@ -1581,8 +2445,14 @@
       "code": "Weapon_AA12_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AA12_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AA12_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AA12_5_1024.png",
+        "targetPath": "weapon/Weapon_AA12_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_AA12_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10601": {
       "id": 10601,
@@ -1592,8 +2462,14 @@
       "code": "Weapon_Phaetusa_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Phaetusa_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Phaetusa_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Phaetusa_3_1024.png",
+        "targetPath": "weapon/Weapon_Phaetusa_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Phaetusa_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10602": {
       "id": 10602,
@@ -1603,8 +2479,14 @@
       "code": "Weapon_Phaetusa_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Phaetusa_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Phaetusa_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Phaetusa_4_1024.png",
+        "targetPath": "weapon/Weapon_Phaetusa_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Phaetusa_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10603": {
       "id": 10603,
@@ -1614,8 +2496,14 @@
       "code": "Weapon_Phaetusa_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Phaetusa_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Phaetusa_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Phaetusa_5_1024.png",
+        "targetPath": "weapon/Weapon_Phaetusa_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Phaetusa_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10611": {
       "id": 10611,
@@ -1625,8 +2513,14 @@
       "code": "Weapon_M26_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M26_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M26_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M26_3_1024.png",
+        "targetPath": "weapon/Weapon_M26_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_M26_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10612": {
       "id": 10612,
@@ -1636,8 +2530,14 @@
       "code": "Weapon_M26_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M26_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M26_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M26_4_1024.png",
+        "targetPath": "weapon/Weapon_M26_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_M26_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10613": {
       "id": 10613,
@@ -1647,8 +2547,14 @@
       "code": "Weapon_M26_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M26_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M26_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M26_5_1024.png",
+        "targetPath": "weapon/Weapon_M26_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_M26_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10621": {
       "id": 10621,
@@ -1658,8 +2564,14 @@
       "code": "Weapon_Lewisgun_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Lewisgun_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Lewisgun_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Lewisgun_3_1024.png",
+        "targetPath": "weapon/Weapon_Lewisgun_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Lewisgun_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10622": {
       "id": 10622,
@@ -1669,8 +2581,14 @@
       "code": "Weapon_Lewisgun_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Lewisgun_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Lewisgun_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Lewisgun_4_1024.png",
+        "targetPath": "weapon/Weapon_Lewisgun_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Lewisgun_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10623": {
       "id": 10623,
@@ -1680,8 +2598,14 @@
       "code": "Weapon_Lewisgun_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Lewisgun_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Lewisgun_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Lewisgun_5_1024.png",
+        "targetPath": "weapon/Weapon_Lewisgun_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Lewisgun_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10641": {
       "id": 10641,
@@ -1691,8 +2615,14 @@
       "code": "Weapon_PA15_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PA15_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_PA15_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PA15_3_1024.png",
+        "targetPath": "weapon/Weapon_PA15_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_PA15_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10642": {
       "id": 10642,
@@ -1702,8 +2632,14 @@
       "code": "Weapon_PA15_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PA15_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_PA15_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PA15_4_1024.png",
+        "targetPath": "weapon/Weapon_PA15_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_PA15_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10643": {
       "id": 10643,
@@ -1713,8 +2649,14 @@
       "code": "Weapon_PA15_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PA15_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_PA15_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_PA15_5_1024.png",
+        "targetPath": "weapon/Weapon_PA15_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_PA15_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10651": {
       "id": 10651,
@@ -1724,8 +2666,14 @@
       "code": "Weapon_AN94_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AN94_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AN94_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AN94_3_1024.png",
+        "targetPath": "weapon/Weapon_AN94_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_AN94_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10652": {
       "id": 10652,
@@ -1735,8 +2683,14 @@
       "code": "Weapon_AN94_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AN94_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AN94_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AN94_4_1024.png",
+        "targetPath": "weapon/Weapon_AN94_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_AN94_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10653": {
       "id": 10653,
@@ -1746,8 +2700,14 @@
       "code": "Weapon_AN94_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AN94_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AN94_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AN94_5_1024.png",
+        "targetPath": "weapon/Weapon_AN94_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_AN94_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10661": {
       "id": 10661,
@@ -1757,8 +2717,14 @@
       "code": "Weapon_AK15_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK15_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AK15_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK15_3_1024.png",
+        "targetPath": "weapon/Weapon_AK15_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_AK15_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10662": {
       "id": 10662,
@@ -1768,8 +2734,14 @@
       "code": "Weapon_AK15_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK15_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AK15_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK15_4_1024.png",
+        "targetPath": "weapon/Weapon_AK15_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_AK15_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10663": {
       "id": 10663,
@@ -1779,8 +2751,14 @@
       "code": "Weapon_AK15_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK15_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AK15_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK15_5_1024.png",
+        "targetPath": "weapon/Weapon_AK15_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_AK15_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10671": {
       "id": 10671,
@@ -1790,8 +2768,14 @@
       "code": "Weapon_DP12_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_DP12_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_3_1024.png",
+        "targetPath": "weapon/Weapon_DP12_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_DP12_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10672": {
       "id": 10672,
@@ -1802,8 +2786,13 @@
       "server": "haoplay",
       "aliases": [],
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-07-12T11:52:10.207Z"
+      "assetPath": "weapon/Weapon_DP12_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_4_1024.png",
+        "targetPath": "weapon/Weapon_DP12_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_DP12_4_1024.png",
+        "source": "mcc-wiki"
+      }
     },
     "10673": {
       "id": 10673,
@@ -1813,8 +2802,14 @@
       "code": "Weapon_DP12_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_DP12_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DP12_5_1024.png",
+        "targetPath": "weapon/Weapon_DP12_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_DP12_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10681": {
       "id": 10681,
@@ -1824,8 +2819,14 @@
       "code": "Weapon_Sakura_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Sakura_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Sakura_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Sakura_3_1024.png",
+        "targetPath": "weapon/Weapon_Sakura_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Sakura_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10682": {
       "id": 10682,
@@ -1835,8 +2836,14 @@
       "code": "Weapon_Sakura_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Sakura_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Sakura_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Sakura_4_1024.png",
+        "targetPath": "weapon/Weapon_Sakura_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Sakura_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10683": {
       "id": 10683,
@@ -1846,8 +2853,14 @@
       "code": "Weapon_Sakura_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Sakura_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Sakura_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Sakura_5_1024.png",
+        "targetPath": "weapon/Weapon_Sakura_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Sakura_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10691": {
       "id": 10691,
@@ -1857,8 +2870,14 @@
       "code": "Weapon_DSR50_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_DSR50_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_3_1024.png",
+        "targetPath": "weapon/Weapon_DSR50_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_DSR50_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10692": {
       "id": 10692,
@@ -1868,8 +2887,14 @@
       "code": "Weapon_DSR50_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_DSR50_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_4_1024.png",
+        "targetPath": "weapon/Weapon_DSR50_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_DSR50_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10693": {
       "id": 10693,
@@ -1879,8 +2904,14 @@
       "code": "Weapon_DSR50_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_DSR50_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_5_1024.png",
+        "targetPath": "weapon/Weapon_DSR50_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_DSR50_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "10711": {
       "id": 10711,
@@ -1923,8 +2954,14 @@
       "code": "Weapon_Blade_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Blade_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Blade_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Blade_4_1024.png",
+        "targetPath": "weapon/Weapon_Blade_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Blade_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11008": {
       "id": 11008,
@@ -1934,8 +2971,14 @@
       "code": "Weapon_TaurusCurve_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_TaurusCurve_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_TaurusCurve_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_TaurusCurve_3_1024.png",
+        "targetPath": "weapon/Weapon_TaurusCurve_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_TaurusCurve_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11009": {
       "id": 11009,
@@ -1945,8 +2988,14 @@
       "code": "Weapon_OM50_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OM50_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_OM50_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OM50_3_1024.png",
+        "targetPath": "weapon/Weapon_OM50_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_OM50_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11010": {
       "id": 11010,
@@ -1956,8 +3005,14 @@
       "code": "Weapon_OTS14_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OTS14_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_OTS14_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OTS14_3_1024.png",
+        "targetPath": "weapon/Weapon_OTS14_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_OTS14_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11014": {
       "id": 11014,
@@ -1967,8 +3022,14 @@
       "code": "Weapon_OM50_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OM50_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_OM50_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OM50_4_1024.png",
+        "targetPath": "weapon/Weapon_OM50_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_OM50_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11015": {
       "id": 11015,
@@ -1978,8 +3039,14 @@
       "code": "Weapon_TaurusCurve_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_TaurusCurve_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_TaurusCurve_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_TaurusCurve_4_1024.png",
+        "targetPath": "weapon/Weapon_TaurusCurve_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_TaurusCurve_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11016": {
       "id": 11016,
@@ -1989,8 +3056,14 @@
       "code": "Weapon_Vepr12_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vepr12_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Vepr12_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vepr12_5_1024.png",
+        "targetPath": "weapon/Weapon_Vepr12_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Vepr12_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11017": {
       "id": 11017,
@@ -2000,8 +3073,14 @@
       "code": "Weapon_Vepr12_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vepr12_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Vepr12_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vepr12_3_1024.png",
+        "targetPath": "weapon/Weapon_Vepr12_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Vepr12_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11020": {
       "id": 11020,
@@ -2011,8 +3090,14 @@
       "code": "Weapon_Pecheng_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Pecheng_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Pecheng_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Pecheng_5_1024.png",
+        "targetPath": "weapon/Weapon_Pecheng_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_Pecheng_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11021": {
       "id": 11021,
@@ -2022,8 +3107,14 @@
       "code": "Weapon_Vepr12_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vepr12_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Vepr12_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Vepr12_4_1024.png",
+        "targetPath": "weapon/Weapon_Vepr12_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Vepr12_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11022": {
       "id": 11022,
@@ -2033,8 +3124,14 @@
       "code": "Weapon_Blade_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Blade_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Blade_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Blade_3_1024.png",
+        "targetPath": "weapon/Weapon_Blade_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Blade_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11023": {
       "id": 11023,
@@ -2044,8 +3141,14 @@
       "code": "Weapon_OTS14_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OTS14_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_OTS14_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_OTS14_4_1024.png",
+        "targetPath": "weapon/Weapon_OTS14_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_OTS14_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11024": {
       "id": 11024,
@@ -2055,8 +3158,14 @@
       "code": "Weapon_Pecheng_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Pecheng_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Pecheng_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Pecheng_3_1024.png",
+        "targetPath": "weapon/Weapon_Pecheng_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_Pecheng_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11026": {
       "id": 11026,
@@ -2066,8 +3175,14 @@
       "code": "Weapon_Pecheng_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Pecheng_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_Pecheng_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_Pecheng_4_1024.png",
+        "targetPath": "weapon/Weapon_Pecheng_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_Pecheng_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11030": {
       "id": 11030,
@@ -2078,8 +3193,13 @@
       "server": "haoplay",
       "aliases": [],
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_ROBINSONXCR_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-07-12T11:52:10.207Z"
+      "assetPath": "weapon/Weapon_ROBINSONXCR_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_ROBINSONXCR_3_1024.png",
+        "targetPath": "weapon/Weapon_ROBINSONXCR_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_ROBINSONXCR_3_1024.png",
+        "source": "mcc-wiki"
+      }
     },
     "11031": {
       "id": 11031,
@@ -2089,8 +3209,14 @@
       "code": "Weapon_ROBINSONXCR_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_ROBINSONXCR_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_ROBINSONXCR_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_ROBINSONXCR_4_1024.png",
+        "targetPath": "weapon/Weapon_ROBINSONXCR_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_ROBINSONXCR_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11036": {
       "id": 11036,
@@ -2100,8 +3226,14 @@
       "code": "Weapon_AK-Alfa_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK-Alfa_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AK-Alfa_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK-Alfa_3_1024.png",
+        "targetPath": "weapon/Weapon_AK-Alfa_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_AK-Alfa_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11037": {
       "id": 11037,
@@ -2111,8 +3243,14 @@
       "code": "Weapon_AK-Alfa_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK-Alfa_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AK-Alfa_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK-Alfa_4_1024.png",
+        "targetPath": "weapon/Weapon_AK-Alfa_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_AK-Alfa_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11038": {
       "id": 11038,
@@ -2122,8 +3260,14 @@
       "code": "Weapon_AK-Alfa_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK-Alfa_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_AK-Alfa_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_AK-Alfa_5_1024.png",
+        "targetPath": "weapon/Weapon_AK-Alfa_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_AK-Alfa_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11039": {
       "id": 11039,
@@ -2133,8 +3277,14 @@
       "code": "Weapon_MP7_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP7_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_MP7_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP7_3_1024.png",
+        "targetPath": "weapon/Weapon_MP7_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_MP7_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11040": {
       "id": 11040,
@@ -2144,8 +3294,14 @@
       "code": "Weapon_MP7_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP7_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_MP7_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_MP7_4_1024.png",
+        "targetPath": "weapon/Weapon_MP7_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_MP7_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11042": {
       "id": 11042,
@@ -2155,8 +3311,14 @@
       "code": "Weapon_QBZ-191_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-191_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ-191_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-191_3_1024.png",
+        "targetPath": "weapon/Weapon_QBZ-191_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ-191_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11043": {
       "id": 11043,
@@ -2166,8 +3328,14 @@
       "code": "Weapon_QBZ-191_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-191_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ-191_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-191_4_1024.png",
+        "targetPath": "weapon/Weapon_QBZ-191_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ-191_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11044": {
       "id": 11044,
@@ -2177,8 +3345,14 @@
       "code": "Weapon_QBZ-191_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-191_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ-191_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-191_5_1024.png",
+        "targetPath": "weapon/Weapon_QBZ-191_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ-191_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11045": {
       "id": 11045,
@@ -2188,8 +3362,14 @@
       "code": "Weapon_SPAS-12_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SPAS-12_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_SPAS-12_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SPAS-12_3_1024.png",
+        "targetPath": "weapon/Weapon_SPAS-12_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_SPAS-12_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11046": {
       "id": 11046,
@@ -2199,8 +3379,14 @@
       "code": "Weapon_SPAS-12_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SPAS-12_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_SPAS-12_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SPAS-12_4_1024.png",
+        "targetPath": "weapon/Weapon_SPAS-12_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_SPAS-12_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11047": {
       "id": 11047,
@@ -2210,8 +3396,14 @@
       "code": "Weapon_SPAS-12_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SPAS-12_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_SPAS-12_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_SPAS-12_5_1024.png",
+        "targetPath": "weapon/Weapon_SPAS-12_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_SPAS-12_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11048": {
       "id": 11048,
@@ -2221,8 +3413,14 @@
       "code": "Weapon_M1895_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1895_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1895_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1895_3_1024.png",
+        "targetPath": "weapon/Weapon_M1895_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1895_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11049": {
       "id": 11049,
@@ -2232,8 +3430,14 @@
       "code": "Weapon_M1895_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1895_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_M1895_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_M1895_4_1024.png",
+        "targetPath": "weapon/Weapon_M1895_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_M1895_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11051": {
       "id": 11051,
@@ -2243,8 +3447,14 @@
       "code": "Weapon_QBZ-95_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-95_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ-95_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-95_3_1024.png",
+        "targetPath": "weapon/Weapon_QBZ-95_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ-95_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11052": {
       "id": 11052,
@@ -2254,8 +3464,14 @@
       "code": "Weapon_QBZ-95_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-95_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ-95_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-95_4_1024.png",
+        "targetPath": "weapon/Weapon_QBZ-95_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ-95_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11053": {
       "id": 11053,
@@ -2265,8 +3481,14 @@
       "code": "Weapon_QBZ-95_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-95_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_QBZ-95_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_QBZ-95_5_1024.png",
+        "targetPath": "weapon/Weapon_QBZ-95_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_QBZ-95_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11054": {
       "id": 11054,
@@ -2276,8 +3498,14 @@
       "code": "Weapon_G36_3",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36_3_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G36_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36_3_1024.png",
+        "targetPath": "weapon/Weapon_G36_3_1024.png",
+        "localIcon": "/images/weapon/Weapon_G36_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11055": {
       "id": 11055,
@@ -2287,8 +3515,14 @@
       "code": "Weapon_G36_4",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36_4_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G36_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36_4_1024.png",
+        "targetPath": "weapon/Weapon_G36_4_1024.png",
+        "localIcon": "/images/weapon/Weapon_G36_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     },
     "11056": {
       "id": 11056,
@@ -2298,8 +3532,14 @@
       "code": "Weapon_G36_5",
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36_5_1024.png",
-      "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-06-25T12:38:05.271Z"
+      "assetPath": "weapon/Weapon_G36_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/image/weapon/Weapon_G36_5_1024.png",
+        "targetPath": "weapon/Weapon_G36_5_1024.png",
+        "localIcon": "/images/weapon/Weapon_G36_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": []
     }
   }
 }

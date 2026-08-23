@@ -2,11 +2,18 @@
 import fs from "node:fs/promises";
 
 function parseArgs(argv) {
-  const args = { index: "public/images/resource-index.json", names: "src/i18n-names.json", out: "public/images/resource-index.json", appI18n: undefined };
+  const args = {
+    index: "public/images/resource-index.json",
+    names: "src/i18n-names.json",
+    sources: "src/i18n-name-sources.json",
+    out: "public/images/resource-index.json",
+    appI18n: undefined,
+  };
   for (let i = 0; i < argv.length; i += 1) {
     const a = argv[i];
     if (a === "--index") args.index = argv[++i];
     else if (a === "--names") args.names = argv[++i];
+    else if (a === "--sources") args.sources = argv[++i];
     else if (a === "--out") args.out = argv[++i];
     else if (a === "--app-i18n") args.appI18n = argv[++i];
   }
@@ -17,6 +24,12 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const index = JSON.parse(await fs.readFile(args.index, "utf8"));
   const names = JSON.parse(await fs.readFile(args.names, "utf8"));
+  let sources = {};
+  try {
+    sources = JSON.parse(await fs.readFile(args.sources, "utf8"));
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error;
+  }
 
   let merged = 0;
   for (const [id, entry] of Object.entries(names)) {
@@ -25,6 +38,8 @@ async function main() {
       if (entry.cn) item.cn = entry.cn;
       if (entry.en) item.en = entry.en;
       if (entry.jp) item.jp = entry.jp;
+      if (entry.aliases?.length) item.aliases = entry.aliases;
+      if (sources[id]) item.nameSources = sources[id];
       merged += 1;
     }
   }
@@ -43,6 +58,7 @@ async function main() {
         type: entry.type ?? nextNames[id]?.type,
         en: entry.en ?? nextNames[id]?.en,
         jp: entry.jp ?? nextNames[id]?.jp,
+        aliases: entry.aliases ?? nextNames[id]?.aliases,
       };
     }
     const sortedNames = {};

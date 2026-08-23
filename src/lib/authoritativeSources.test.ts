@@ -1,8 +1,10 @@
 import { describe, expect, it } from "vitest";
 // @ts-expect-error Node parser modules are intentionally shared with the CLI.
-import { parseGfl2BannersHtml, parseGfl2WeaponNames } from "../../scripts/gfl2-banners.mjs";
+import { parseGfl2BannersHtml, parseGfl2CharacterNames, parseGfl2WeaponNames } from "../../scripts/gfl2-banners.mjs";
 // @ts-expect-error Node parser modules are intentionally shared with the CLI.
 import { parseBbsCategoryResponse, parseBbsHandbookResponse } from "../../scripts/exilium-bbs.mjs";
+// @ts-expect-error Node parser modules are intentionally shared with the CLI.
+import { parseMccNameFromHtml } from "../../scripts/mcc-wiki.mjs";
 
 const bannerFixture = [
   '<div class="banner-past character-banner-card overflow-hidden">',
@@ -37,6 +39,20 @@ describe("authoritative source parsers", () => {
       { name: "Banshee's Whisper", sourceUrl: "https://gfl2.help/en/weapons" },
       { name: "MK23", sourceUrl: "https://gfl2.help/en/weapons" },
     ]);
+  });
+
+  it("parses the complete official gfl2.help character list", () => {
+    const html = '<div class="character-item"><h6>Macchiato</h6></div><div class="character-item"><h6>Ullrid</h6></div>';
+
+    expect(parseGfl2CharacterNames(html, "https://gfl2.help/en/characters")).toEqual([
+      { name: "Macchiato", sourceUrl: "https://gfl2.help/en/characters" },
+      { name: "Ullrid", sourceUrl: "https://gfl2.help/en/characters" },
+    ]);
+  });
+
+  it("parses the current MCC title format", () => {
+    expect(parseMccNameFromHtml("<title>琳德 少前2Wiki MccWiki</title>", "doll")).toBe("琳德");
+    expect(parseMccNameFromHtml("<title>武器: MK23 | 少前2Wiki</title>", "weapon")).toBe("MK23");
   });
 
   it("parses BBS handbook category IDs and official Chinese rows", () => {

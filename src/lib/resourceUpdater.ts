@@ -1,4 +1,5 @@
 import type { ResourceIndex, ResourceItem } from "../types";
+import { buildAssetDescriptor } from "./assetMapping";
 
 export type ExiliumEventPayload = {
   notice?: Array<{
@@ -103,13 +104,11 @@ export function extractServerUpdateSignals(server: string, payload: ExiliumEvent
 
 export function buildMccImageUrl(item: ImageBuildInput): string | undefined {
   if (!item.code) return undefined;
-  if (item.type === "doll") {
-    return `https://gf2.mcc.wiki/image/doll/Avatar_Head_${encodeURIComponent(item.code)}.png`;
-  }
-  if (item.type === "weapon") {
-    return `https://gf2.mcc.wiki/image/weapon/${encodeURIComponent(item.code)}_1024.png`;
-  }
-  return undefined;
+  return buildAssetDescriptor({
+    id: 0,
+    type: item.type,
+    code: item.code,
+  })?.sourceUrl;
 }
 
 function objectBodies(text: string): string[] {
