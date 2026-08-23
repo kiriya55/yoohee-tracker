@@ -1,18 +1,25 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
+import { extractWikiruNameRecord } from "./wikiru-names.mjs";
+import { fetchWithRetry } from "./fetch-with-retry.mjs";
+import { parseGfl2BannersHtml, parseGfl2WeaponNames } from "./gfl2-banners.mjs";
+import { parseBbsCategoryResponse, parseBbsHandbookResponse } from "./exilium-bbs.mjs";
+import { mergeAuthoritativeNames } from "./authoritative-names.mjs";
 
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
 const GFL2_HELP_ORIGIN = "https://gfl2.help";
-const DANDEGATE_ORIGIN = "https://www.dandegate.net";
 const WIKIRU_ORIGIN = "https://dollsfrontline2.wikiru.jp";
+const BBS_API_ORIGIN = "https://gf2-bbs-api.exiliumgf.com";
 
 const DEFAULT_INDEX = "public/images/resource-index.json";
 const DEFAULT_EXISTING_I18N = "src/i18n.json";
 const DEFAULT_OUT = "src/i18n-names.json";
+const DEFAULT_SOURCES_OUT = "src/i18n-name-sources.json";
+const DEFAULT_REPORT_OUT = "output/name-update-report.json";
 
-const WIKIRU_CHARACTER_PAGE = `${WIKIRU_ORIGIN}/?cmd=read&page=%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E4%B8%80%E8%A6%A7`;
-const WIKIRU_WEAPON_PAGE = `${WIKIRU_ORIGIN}/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7`;
+const WIKIRU_CHARACTER_PAGE = WIKIRU_ORIGIN + "/?%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E4%B8%80%E8%A6%A7%28%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E7%89%88%29";
+const WIKIRU_WEAPON_PAGE = WIKIRU_ORIGIN + "/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7";
 
 const MANUAL_EN_OVERRIDES = {
   Clukay: "Klukai",
@@ -24,8 +31,14 @@ const MANUAL_EN_OVERRIDES = {
   YooHee: "Yoohee",
 };
 
-const MANUAL_DANDEGATE_SLUGS = {
-  Mosinnagant: "mosin-nagant",
+const WIKIRU_RECOVERY_HINTS = {
+  BastiSSR: "バスティ",
+  DusevnyjSSR: "ドゥシェーヴヌイ",
+  KseniaSR: "クシーニヤ",
+  LittaraSR: "リッタラ",
+  PapashaSSR: "ペーペーシャ",
+  PeriSSR: "ペリー",
+  VectorSSR: "ヴェクター",
 };
 
 function parseArgs(argv) {
@@ -33,31 +46,33 @@ function parseArgs(argv) {
     index: DEFAULT_INDEX,
     existingI18n: DEFAULT_EXISTING_I18N,
     out: DEFAULT_OUT,
+    sourcesOut: DEFAULT_SOURCES_OUT,
+    reportOut: DEFAULT_REPORT_OUT,
+    mode: "normal",
     concurrency: 8,
     timeoutMs: 15000,
     retries: 2,
-    sources: new Set(["mcc", "gfl2help", "dandegate", "wikiru"]),
+    proxyUrl: undefined,
+    sources: new Set(["mcc", "gfl2help", "wikiru"]),
   };
   for (let i = 0; i < argv.length; i += 1) {
-    const a = argv[i];
-    if (a === "--index") args.index = argv[++i];
-    else if (a === "--existing-i18n") args.existingI18n = argv[++i];
-    else if (a === "--out") args.out = argv[++i];
-    else if (a === "--concurrency") args.concurrency = Math.max(1, Number(argv[++i]) || 8);
-    else if (a === "--timeout-ms") args.timeoutMs = Math.max(1000, Number(argv[++i]) || 15000);
-    else if (a === "--retries") args.retries = Math.max(0, Number(argv[++i]) || 2);
-    else if (a === "--sources") args.sources = new Set(String(argv[++i]).split(",").map((s) => s.trim()).filter(Boolean));
-    else if (a === "--help" || a === "-h") {
-      console.log(`Usage: node scripts/fetch-i18n-names.mjs [options]
-
-Options:
-  --index <file>          Resource index JSON. Default: ${DEFAULT_INDEX}
-  --existing-i18n <file>  Existing app i18n JSON used as a safe seed. Default: ${DEFAULT_EXISTING_I18N}
-  --out <file>            Output i18n names JSON. Default: ${DEFAULT_OUT}
-  --sources <list>        Comma-separated sources: mcc,gfl2help,dandegate,wikiru
-  --concurrency <n>       Parallel fetches. Default: 8
-  --timeout-ms <ms>       Per-request timeout. Default: 15000
-`);
+    const value = argv[i];
+    if (value === "--index") args.index = argv[++i];
+    else if (value === "--existing-i18n") args.existingI18n = argv[++i];
+    else if (value === "--out") args.out = argv[++i];
+    else if (value === "--sources-out") args.sourcesOut = argv[++i];
+    else if (value === "--report-out") args.reportOut = argv[++i];
+    else if (value === "--mode") args.mode = argv[++i] === "bootstrap" ? "bootstrap" : "normal";
+    else if (value === "--concurrency") args.concurrency = Math.max(1, Number(argv[++i]) || 8);
+    else if (value === "--timeout-ms") args.timeoutMs = Math.max(1000, Number(argv[++i]) || 15000);
+    else if (value === "--retries") args.retries = Math.max(0, Number(argv[++i]) || 2);
+    else if (value === "--proxy-url") args.proxyUrl = argv[++i];
+    else if (value === "--sources") args.sources = new Set(String(argv[++i]).split(",").map((s) => s.trim()).filter(Boolean));
+    else if (value === "--help" || value === "-h") {
+      console.log("Usage: node scripts/fetch-i18n-names.mjs [options]");
+      console.log("  --mode normal|bootstrap");
+      console.log("  --sources mcc,gfl2help,wikiru,exilium-bbs");
+      console.log("  --proxy-url http://127.0.0.1:7890");
       process.exit(0);
     }
   }
@@ -68,27 +83,28 @@ function isObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
-function validName(value) {
-  if (typeof value !== "string") return undefined;
-  const name = decodeHtml(value).replace(/\s+/g, " ").trim();
-  if (!name || /^\d+$/.test(name)) return undefined;
-  return name;
-}
-
 function decodeHtml(value) {
-  return value
+  return String(value ?? "")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'")
+    .replace(/&#039;|&#39;|&apos;/g, "'")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&nbsp;/g, " ");
 }
 
 function stripTags(value) {
-  return decodeHtml(value.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " "));
+  return decodeHtml(String(value ?? "").replace(/<[^>]+>/g, " "));
+}
+
+function validName(value) {
+  if (typeof value !== "string") return undefined;
+  const name = decodeHtml(value).replace(/\s+/g, " ").trim();
+  return name && !/^\d+$/.test(name) ? name : undefined;
+}
+
+function normalizeName(value) {
+  return String(value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
 }
 
 function cleanDollCode(code) {
@@ -100,24 +116,40 @@ function cleanWeaponCode(code) {
 }
 
 function enFallback(item) {
-  if (item.type === "doll") return MANUAL_EN_OVERRIDES[cleanDollCode(item.code)] ?? cleanDollCode(item.code);
+  if (item.type === "doll") {
+    const base = cleanDollCode(item.code);
+    return MANUAL_EN_OVERRIDES[base] ?? base;
+  }
   if (item.type === "weapon") {
-    const code = cleanWeaponCode(item.code);
-    if (!code) return undefined;
-    return item.rarity === 3 ? `Retired ${code}` : code;
+    const base = cleanWeaponCode(item.code);
+    return item.rarity === 3 ? "Retired " + base : base;
   }
   return undefined;
 }
 
-function dandegateSlugFor(item) {
-  const base = cleanDollCode(item.code);
-  const name = MANUAL_EN_OVERRIDES[base] ?? base;
-  if (MANUAL_DANDEGATE_SLUGS[base]) return MANUAL_DANDEGATE_SLUGS[base];
-  return name
-    .replace(/([a-z])([A-Z])/g, "$1-$2")
-    .replace(/[^A-Za-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .toLowerCase();
+function candidateKeys(item, entry) {
+  return [
+    entry?.en,
+    entry?.cn,
+    item.en,
+    item.cn,
+    enFallback(item),
+    item.type === "doll" ? cleanDollCode(item.code) : cleanWeaponCode(item.code),
+  ].map(normalizeName).filter(Boolean);
+}
+
+function matchesName(item, entry, value) {
+  const normalized = normalizeName(value);
+  return normalized && candidateKeys(item, entry).includes(normalized);
+}
+
+function wikiruDetailLinks(html) {
+  const links = new Set();
+  for (const match of String(html ?? "").matchAll(/<div\b[^>]*class="[^"]*\bcharacter\b[^"]*"[^>]*>[\s\S]*?<a\b[^>]*href="([^"]+)"/gi)) {
+    const href = decodeHtml(match[1]);
+    if (href.includes("?")) links.add(new URL(href, WIKIRU_ORIGIN + "/").href);
+  }
+  return [...links];
 }
 
 async function readJsonIfExists(file) {
@@ -129,20 +161,47 @@ async function readJsonIfExists(file) {
   }
 }
 
-async function fetchText(url, timeoutMs, retries) {
-  for (let attempt = 0; attempt <= retries; attempt += 1) {
-    try {
-      const response = await fetch(url, {
-        headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
-        signal: AbortSignal.timeout(timeoutMs),
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return await response.text();
-    } catch (error) {
-      if (attempt === retries) throw error;
-    }
+async function fetchText(url, args) {
+  const response = await fetchWithRetry(url, {
+    proxyUrl: args.proxyUrl,
+    attempts: args.retries + 1,
+    headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
+    signal: AbortSignal.timeout(args.timeoutMs),
+  });
+  if (!response.ok) throw new Error("GET " + url + " failed: HTTP " + response.status);
+  const text = await response.text();
+  if (/<title>\s*One moment, please/i.test(text) || /cf-chl-/i.test(text)) {
+    throw new Error("source returned a Cloudflare challenge page");
   }
-  return "";
+  return text;
+}
+
+async function fetchJson(url, body, args) {
+  const response = await fetchWithRetry(url, {
+    proxyUrl: args.proxyUrl,
+    attempts: args.retries + 1,
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      "user-agent": "yoohee-tracker-resource-updater/1.0",
+    },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(args.timeoutMs),
+  });
+  if (!response.ok) throw new Error("POST " + url + " failed: HTTP " + response.status);
+  return response.json();
+}
+
+async function runPool(items, concurrency, worker) {
+  let cursor = 0;
+  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, async () => {
+    for (;;) {
+      const index = cursor;
+      cursor += 1;
+      if (index >= items.length) return;
+      await worker(items[index], index);
+    }
+  }));
 }
 
 function extractMccNameFromTitle(title, type) {
@@ -158,51 +217,19 @@ function extractTitle(html) {
   return html.match(/<title>([^<]+)<\/title>/i)?.[1];
 }
 
-function extractDandegateName(html) {
-  const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
-  return h1 ? validName(stripTags(h1).replace(/^#\s*/, "")) : undefined;
-}
-
-function extractVisibleNames(html) {
+function visibleWikiruNames(html) {
   const names = new Set();
-  for (const match of html.matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>/gi)) {
-    const name = validName(stripTags(match[1]));
-    if (name && name.length <= 48) names.add(name);
-  }
-  for (const match of html.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)) {
+  for (const match of String(html ?? "").matchAll(/<(?:a|td)\b[^>]*>([\s\S]*?)<\/(?:a|td)>/gi)) {
     const name = validName(stripTags(match[1]));
     if (name && name.length <= 48) names.add(name);
   }
   return names;
 }
 
-function normalizeName(value) {
-  return String(value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
-}
-
-function applySourceName(entry, field, name, source, changes) {
-  const clean = validName(name);
-  if (!clean) return false;
-  if (entry[field] === clean) return false;
-  if (entry[field] && entry[field] !== clean) {
-    changes.conflicts.push({ id: entry.id, code: entry.code, field, existing: entry[field], incoming: clean, source });
-    return false;
-  }
-  entry[field] = clean;
-  changes.added += 1;
-  return true;
-}
-
-async function runPool(items, concurrency, worker) {
-  let cursor = 0;
-  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, async () => {
-    for (;;) {
-      const idx = cursor;
-      cursor += 1;
-      if (idx >= items.length) return;
-      await worker(items[idx], idx);
-    }
-  }));
+function addCandidate(map, id, value, source, url) {
+  const clean = validName(value);
+  if (!clean || map.has(String(id))) return;
+  map.set(String(id), { value: clean, source, url });
 }
 
 async function main() {
@@ -211,113 +238,177 @@ async function main() {
   const existingI18n = await readJsonIfExists(args.existingI18n);
   const existingNames = isObject(existingI18n?.names) ? existingI18n.names : {};
   const items = Object.values(index.items ?? {}).filter((item) => item?.id && item?.code && item?.type);
-
   const entries = {};
   for (const item of items) {
     const id = String(item.id);
-    const existing = existingNames[id] ?? {};
+    const old = existingNames[id] ?? {};
     entries[id] = {
-      id,
       code: item.code,
       type: item.type,
-      cn: validName(existing.cn) ?? validName(item.cn),
-      en: validName(existing.en) ?? validName(item.en) ?? validName(enFallback(item)),
-      jp: validName(existing.jp) ?? validName(item.jp),
+      cn: validName(old.cn) ?? validName(item.cn),
+      en: validName(old.en) ?? validName(item.en) ?? validName(enFallback(item)),
+      jp: validName(old.jp) ?? validName(item.jp),
     };
   }
 
-  const changes = { added: 0, conflicts: [], failures: [] };
+  const candidates = { cn: new Map(), en: new Map(), jp: new Map() };
+  const failures = [];
 
   if (args.sources.has("mcc")) {
-    const targets = items.map((item) => ({ item, url: `${MCC_ORIGIN}/${item.type}/${encodeURIComponent(item.code)}` }));
-    console.log(`Fetching Chinese names from MCC Wiki (${targets.length} pages)...`);
-    await runPool(targets, args.concurrency, async ({ item, url }, idx) => {
+    await runPool(items, args.concurrency, async (item, itemIndex) => {
+      const url = MCC_ORIGIN + "/" + item.type + "/" + encodeURIComponent(item.code);
       try {
-        const html = await fetchText(url, args.timeoutMs, args.retries);
-        const cn = extractMccNameFromTitle(extractTitle(html) ?? "", item.type);
-        applySourceName(entries[String(item.id)], "cn", cn, "mcc-wiki", changes);
+        const html = await fetchText(url, args);
+        addCandidate(candidates.cn, item.id, extractMccNameFromTitle(extractTitle(html) ?? "", item.type), "mcc-wiki", url);
       } catch (error) {
-        changes.failures.push({ id: item.id, code: item.code, source: "mcc-wiki", error: String(error.message ?? error) });
+        failures.push({ id: item.id, code: item.code, source: "mcc-wiki", error: String(error.message ?? error) });
       }
-      if ((idx + 1) % 30 === 0) console.log(`  MCC progress: ${idx + 1}/${targets.length}`);
-    });
-  }
-
-  if (args.sources.has("dandegate")) {
-    const dolls = items.filter((item) => item.type === "doll");
-    console.log(`Fetching English doll names from Dandegate (${dolls.length} pages)...`);
-    await runPool(dolls, Math.min(args.concurrency, 4), async (item) => {
-      const url = `${DANDEGATE_ORIGIN}/dolls/${dandegateSlugFor(item)}`;
-      try {
-        const html = await fetchText(url, args.timeoutMs, Math.min(args.retries, 1));
-        applySourceName(entries[String(item.id)], "en", extractDandegateName(html), "dandegate", changes);
-      } catch (error) {
-        changes.failures.push({ id: item.id, code: item.code, source: "dandegate", error: String(error.message ?? error) });
-      }
+      if ((itemIndex + 1) % 30 === 0) console.log("  MCC progress: " + (itemIndex + 1) + "/" + items.length);
     });
   }
 
   if (args.sources.has("gfl2help")) {
-    console.log("Checking English names against gfl2.help indexes...");
-    for (const [kind, url] of Object.entries({
-      dolls: `${GFL2_HELP_ORIGIN}/en/characters/t-dolls`,
-      weapons: `${GFL2_HELP_ORIGIN}/en/weapons`,
-    })) {
-      try {
-        const html = await fetchText(url, args.timeoutMs, Math.min(args.retries, 1));
-        const visibleNames = extractVisibleNames(html);
-        for (const item of items.filter((candidate) => (kind === "dolls" ? candidate.type === "doll" : candidate.type === "weapon"))) {
-          const entry = entries[String(item.id)];
-          if (entry.en && [...visibleNames].some((name) => normalizeName(name) === normalizeName(entry.en))) continue;
-          const fallback = enFallback(item);
-          const matched = [...visibleNames].find((name) => normalizeName(name) === normalizeName(fallback));
-          if (matched) applySourceName(entry, "en", matched, "gfl2.help", changes);
-        }
-      } catch (error) {
-        changes.failures.push({ source: `gfl2.help:${kind}`, error: String(error.message ?? error) });
+    const bannersUrl = GFL2_HELP_ORIGIN + "/en/banners";
+    const weaponsUrl = GFL2_HELP_ORIGIN + "/en/weapons";
+    try {
+      const bannerNames = parseGfl2BannersHtml(await fetchText(bannersUrl, args), bannersUrl)
+        .flatMap((banner) => banner.characterNames);
+      for (const item of items.filter((candidate) => candidate.type === "doll")) {
+        const entry = entries[String(item.id)];
+        const match = bannerNames.find((name) => matchesName(item, entry, name));
+        if (match) addCandidate(candidates.en, item.id, match, "gfl2.help", bannersUrl);
       }
+    } catch (error) {
+      failures.push({ source: "gfl2.help:banners", error: String(error.message ?? error) });
+    }
+    try {
+      const weaponNames = parseGfl2WeaponNames(await fetchText(weaponsUrl, args), weaponsUrl);
+      for (const item of items.filter((candidate) => candidate.type === "weapon")) {
+        const entry = entries[String(item.id)];
+        const match = weaponNames.find((candidate) => matchesName(item, entry, candidate.name));
+        if (match) addCandidate(candidates.en, item.id, match.name, "gfl2.help-weapons", weaponsUrl);
+      }
+    } catch (error) {
+      failures.push({ source: "gfl2.help:weapons", error: String(error.message ?? error) });
     }
   }
 
   if (args.sources.has("wikiru")) {
-    console.log("Checking Japanese names against wikiru indexes...");
-    for (const [kind, url] of Object.entries({ dolls: WIKIRU_CHARACTER_PAGE, weapons: WIKIRU_WEAPON_PAGE })) {
-      try {
-        const html = await fetchText(url, args.timeoutMs, args.retries);
-        const visibleNames = extractVisibleNames(html);
-        for (const item of items.filter((candidate) => (kind === "dolls" ? candidate.type === "doll" : candidate.type === "weapon"))) {
-          const entry = entries[String(item.id)];
-          if (entry.jp && [...visibleNames].some((name) => name === entry.jp)) continue;
-          if (item.jp && visibleNames.has(item.jp)) applySourceName(entry, "jp", item.jp, "wikiru", changes);
+    if (args.mode === "bootstrap") {
+      for (const item of items.filter((candidate) => candidate.type === "doll")) {
+        const recoveryName = WIKIRU_RECOVERY_HINTS[item.code];
+        if (recoveryName) {
+          addCandidate(candidates.jp, item.id, recoveryName, "wikiru-recovery", WIKIRU_ORIGIN + "/?" + encodeURIComponent(recoveryName));
         }
-      } catch (error) {
-        changes.failures.push({ source: `wikiru:${kind}`, error: String(error.message ?? error) });
       }
     }
+    let listParsed = false;
+    try {
+      const indexHtml = await fetchText(WIKIRU_CHARACTER_PAGE, args);
+      const detailUrls = wikiruDetailLinks(indexHtml);
+      await runPool(detailUrls, Math.min(args.concurrency, 6), async (url) => {
+        try {
+          const detail = extractWikiruNameRecord(await fetchText(url, args));
+          if (!detail) return;
+          const matches = items.filter((item) => item.type === "doll" && matchesName(item, entries[String(item.id)], detail.en ?? detail.cn));
+          if (matches.length === 1) addCandidate(candidates.jp, matches[0].id, detail.jp, "wikiru-detail", url);
+        } catch (error) {
+          failures.push({ source: "wikiru:doll-detail", url, error: String(error.message ?? error) });
+        }
+      });
+      listParsed = true;
+      console.log("  wikiru doll details: " + detailUrls.length + " linked");
+    } catch (error) {
+      console.log("  wikiru doll list unavailable; trying direct detail pages");
+    }
+
+    if (!listParsed) {
+      const directTargets = items
+        .filter((item) => item.type === "doll")
+        .map((item) => {
+          const entry = entries[String(item.id)];
+          const pageName = entry.jp || (args.mode === "bootstrap" ? WIKIRU_RECOVERY_HINTS[item.code] : undefined);
+          return pageName ? { item, pageName } : undefined;
+        })
+        .filter(Boolean);
+      await runPool(directTargets, Math.min(args.concurrency, 6), async ({ item, pageName }) => {
+        const url = WIKIRU_ORIGIN + "/?" + encodeURIComponent(pageName);
+        try {
+          const detail = extractWikiruNameRecord(await fetchText(url, args));
+          if (detail?.jp) addCandidate(candidates.jp, item.id, detail.jp, "wikiru-detail", url);
+        } catch (error) {
+          failures.push({ source: "wikiru:doll-direct", id: item.id, code: item.code, url, error: String(error.message ?? error) });
+        }
+      });
+      console.log("  wikiru direct details: " + directTargets.length + " attempted");
+    }
+
+    try {
+      const weaponHtml = await fetchText(WIKIRU_WEAPON_PAGE, args);
+      const visibleNames = visibleWikiruNames(weaponHtml);
+      for (const item of items.filter((candidate) => candidate.type === "weapon")) {
+        const current = entries[String(item.id)]?.jp ?? item.jp;
+        if (current && visibleNames.has(current)) {
+          addCandidate(candidates.jp, item.id, current, "wikiru", WIKIRU_WEAPON_PAGE);
+        }
+      }
+    } catch (error) {
+      failures.push({ source: "wikiru:weapon-index", error: String(error.message ?? error) });
+    }
   }
 
-  const sorted = {};
-  for (const key of Object.keys(entries).sort((a, b) => Number(a) - Number(b))) {
-    const { id: _id, ...entry } = entries[key];
-    sorted[key] = Object.fromEntries(Object.entries(entry).filter(([, value]) => value !== undefined));
+  if (args.mode === "bootstrap" && args.sources.has("exilium-bbs")) {
+    try {
+      const categoryUrl = BBS_API_ORIGIN + "/wiki/category";
+      const category = parseBbsCategoryResponse(await fetchJson(categoryUrl, {}, args));
+      if (!category) throw new Error("missing handbook category IDs");
+      const [dolls, weapons] = await Promise.all([
+        fetchJson(BBS_API_ORIGIN + "/wiki/handbook", { type: category.dollCategoryId, limit: 1000 }, args),
+        fetchJson(BBS_API_ORIGIN + "/wiki/handbook", { type: category.weaponCategoryId, limit: 1000 }, args),
+      ]);
+      for (const row of parseBbsHandbookResponse(dolls, "doll", categoryUrl).concat(parseBbsHandbookResponse(weapons, "weapon", categoryUrl))) {
+        if (!candidates.cn.has(String(row.id))) {
+          addCandidate(candidates.cn, row.id, row.cn, "exilium-bbs-bootstrap", row.sourceUrl);
+        }
+      }
+    } catch (error) {
+      failures.push({ source: "exilium-bbs-bootstrap", error: String(error.message ?? error) });
+    }
   }
 
+  const merged = mergeAuthoritativeNames(entries, candidates, { mode: args.mode, failures });
+  for (const [id, aliases] of Object.entries(merged.aliases)) {
+    merged.names[id].aliases = aliases;
+  }
+
+  const sortedNames = {};
+  const sortedSources = {};
+  for (const id of Object.keys(merged.names).sort((a, b) => Number(a) - Number(b))) {
+    sortedNames[id] = Object.fromEntries(Object.entries(merged.names[id]).filter(([, value]) => value !== undefined));
+    if (merged.sources[id]) sortedSources[id] = merged.sources[id];
+  }
+
+  const report = {
+    mode: args.mode,
+    counts: {
+      items: items.length,
+      added: merged.changes.added,
+      overwritten: merged.changes.overwritten,
+      ignored: merged.changes.ignored,
+      missing: merged.missing.length,
+      failures: merged.failures.length,
+    },
+    missing: merged.missing,
+    failures: merged.failures,
+  };
   await fs.mkdir(path.dirname(args.out), { recursive: true });
-  await fs.writeFile(args.out, `${JSON.stringify(sorted, null, 2)}\n`, "utf8");
-  console.log(`Wrote ${Object.keys(sorted).length} i18n name entries to ${args.out}`);
-  console.log(`Added missing fields: ${changes.added}`);
-  if (changes.conflicts.length) {
-    console.log(`Conflicts kept existing values: ${changes.conflicts.length}`);
-    for (const conflict of changes.conflicts.slice(0, 20)) {
-      console.log(`  ${conflict.id} ${conflict.code} ${conflict.field}: existing="${conflict.existing}" incoming="${conflict.incoming}" source=${conflict.source}`);
-    }
-  }
-  if (changes.failures.length) {
-    console.log(`Source fetch failures: ${changes.failures.length}`);
-    for (const failure of changes.failures.slice(0, 20)) {
-      console.log(`  ${failure.source} ${failure.id ?? ""} ${failure.code ?? ""}: ${failure.error}`);
-    }
-  }
+  await fs.mkdir(path.dirname(args.sourcesOut), { recursive: true });
+  await fs.mkdir(path.dirname(args.reportOut), { recursive: true });
+  await fs.writeFile(args.out, JSON.stringify(sortedNames, null, 2) + "\n", "utf8");
+  await fs.writeFile(args.sourcesOut, JSON.stringify(sortedSources, null, 2) + "\n", "utf8");
+  await fs.writeFile(args.reportOut, JSON.stringify(report, null, 2) + "\n", "utf8");
+  console.log("Wrote " + Object.keys(sortedNames).length + " authoritative name entries to " + args.out);
+  console.log("Name changes: added=" + report.counts.added + ", overwritten=" + report.counts.overwritten + ", missing=" + report.counts.missing + ", failures=" + report.counts.failures);
 }
 
 main().catch((error) => {
