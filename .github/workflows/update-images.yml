@@ -63,7 +63,7 @@ jobs:
             --concurrency 16 --timeout-ms 30000
 
       - name: Fetch i18n names from community sources
-        if: steps.check-banners.outputs.should_update == 'true'
+        if: success()
         run: |
           node scripts/fetch-i18n-names.mjs \
             --index public/images/resource-index.json \
@@ -73,7 +73,7 @@ jobs:
             --concurrency 8 --timeout-ms 20000
 
       - name: Merge i18n names into resource indexes
-        if: steps.check-banners.outputs.should_update == 'true'
+        if: success()
         run: |
           node scripts/merge-i18n-names.mjs \
             --index public/images/resource-index.json \
@@ -82,7 +82,7 @@ jobs:
             --app-i18n src/i18n.json
 
       - name: Commit changes
-        if: steps.check-banners.outputs.should_update == 'true'
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
