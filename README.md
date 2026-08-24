@@ -80,7 +80,7 @@ node scripts/download-images.mjs --index public/images/resource-index.json --out
 校验资源索引中的图片链接：
 
 ```powershell
-npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --concurrency 24 --timeout-ms 15000
+npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --concurrency 24 --timeout-ms 15000 --proxy-url http://127.0.0.1:7890
 ```
 
 ### 自动更新
@@ -89,7 +89,7 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 
 - 手动触发：在 GitHub Actions 页面运行 workflow，可传入 `servers`，默认 `dw-cn,haoplay`。
 - 定时触发：每天 UTC 11:00 运行一次。
-- 定时任务会检查 Exilium 国服/国际服资源目录、卡池起止时间和 timeset hash；资源、名称或 timeset 任一变化都可以触发提交。
+- 定时任务会同步 Exilium BBS/MCC 的完整人形与武器目录、Dandegate 缺失头像、权威名称和卡池起止时间；不依赖当前卡池是否变化。
 - 手动触发或缺少现有索引文件时会强制更新。
 
 触发更新后会同步维护：
@@ -101,9 +101,19 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 - `src/i18n-name-sources.json`
 - `src/i18n.json` 中的 `names`
 
-i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文为 wikiru 详情页，英文人形/卡池为 gfl2.help banners 和同站 characters，英文武器为同站 weapons。MCC 页面标题、wikiru 日文括号读音和 gfl2.help HTML 实体都会在解析阶段规范化；权威值会覆盖旧值，旧拼写只保留为 aliases。Exilium BBS 和 wikiru recovery 仅用于正式部署前的 bootstrap，不进入普通 Action 来源。
+i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文为 wikiru 详情页，英文优先使用 gfl2.help banners，历史缺失时才使用同站 characters/weapons 补漏。资源目录使用 BBS handbook 的 ID 与 MCC Wiki 的 code/中文名进行全量对齐；Exilium BBS 不再只是 bootstrap 来源，而是完整目录来源。
 
-名称抓取和合并步骤在每次定时或手动 Action 中运行，不依赖图片资源是否变化。外部站点本地调试可加 `--proxy-url http://127.0.0.1:7890`；Action 不传代理。当前 R2 上传和小程序远程索引发布暂未接入。
+名称抓取、图片查漏补缺和合并步骤在每次定时或手动 Action 中运行，不依赖卡池变化。外部站点本地调试可加 --proxy-url http://127.0.0.1:7890；Action 使用直接网络。人形头像默认转换为 128×128 PNG，Lind 资产保持 frozen。Action 成功生成索引后会将 `public/images/resource-index.json` 作为 `miniprogram-resource-index` artifact 保存，并在 `sync_r2` 开启时把 251 项图片和索引上传到 Cloudflare R2，索引最后上传以避免发布半成品目录。
+
+启用 R2 上传需要在仓库 Settings → Secrets and variables → Actions 中配置：
+
+- `R2_ACCOUNT_ID`
+- `R2_BUCKET_NAME`
+- `R2_ACCESS_KEY_ID`
+- `R2_SECRET_ACCESS_KEY`
+- `R2_PUBLIC_BASE_URL`（例如 `https://assets.yoohee.chukogals.top`）
+
+定时 Action 默认启用 R2；手动触发时可将 `sync_r2` 设为 `false` 仅生成 GitHub 资源和 artifact。小程序继续保留 `yoohee-tools` 内置索引作为远程请求失败时的本地兜底。
 
 本地也可以手动运行：
 

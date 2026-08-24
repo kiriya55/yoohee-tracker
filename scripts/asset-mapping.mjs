@@ -15,8 +15,11 @@ export function buildAssetDescriptor(type, code) {
   if (!folder) return undefined;
   const targetFile = override?.targetFile ?? (type === "doll" ? "Avatar_Head_" + code + ".png" : code + "_1024.png");
   const targetPath = folder + "/" + targetFile;
+  const defaultSourceUrl = type === "weapon"
+    ? MCC_ORIGIN + "/static/image/weapon/" + encodeURIComponent(override?.sourceFile ?? targetFile)
+    : MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(override?.sourceFile ?? targetFile);
   return {
-    sourceUrl: override?.sourceUrl ?? MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(override?.sourceFile ?? targetFile),
+    sourceUrl: override?.sourceUrl ?? defaultSourceUrl,
     targetPath,
     localIcon: "/images/" + targetPath,
     source: override?.source ?? "mcc-wiki",

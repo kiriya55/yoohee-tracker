@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
-import { extractWikiruNameRecord } from "./wikiru-names.mjs";
+import { extractWikiruNameRecord, isWikiruUnavailablePage, parseWikiruCharacterDetailLinks } from "./wikiru-names.mjs";
 import { fetchWithRetry } from "./fetch-with-retry.mjs";
 import { parseGfl2BannersHtml, parseGfl2CharacterNames, parseGfl2WeaponNames } from "./gfl2-banners.mjs";
 import { parseBbsCategoryResponse, parseBbsHandbookResponse } from "./exilium-bbs.mjs";
-import { mergeAuthoritativeNames } from "./authoritative-names.mjs";
+import { mergeAuthoritativeNames, preserveExistingNameFields } from "./authoritative-names.mjs";
 import { parseMccNameFromHtml } from "./mcc-wiki.mjs";
 
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
@@ -29,17 +29,23 @@ const MANUAL_EN_OVERRIDES = {
   Macqiato: "Macchiato",
   Mishty: "Mechty",
   Mosinnagant: "Mosin-Nagant",
+  OTs14: "OTs-14",
+  NemesisGnosis: "Nemesis Gnosis",
   YooHee: "Yoohee",
 };
 
 const WIKIRU_RECOVERY_HINTS = {
   BastiSSR: "バスティ",
+  CheyanneSSR: "シャイアン",
   DusevnyjSSR: "ドゥシェーヴヌイ",
   KseniaSR: "クシーニヤ",
   LittaraSR: "リッタラ",
+  NemesisGnosisSSR: "ネメシス・グノーシス",
+  OTs14SSR: "OTs-14",
   PapashaSSR: "ペーペーシャ",
   PeriSSR: "ペリー",
   VectorSSR: "ヴェクター",
+  AsteriaSSR: "アステリア",
 };
 
 const WIKIRU_WEAPON_RECOVERY_HINTS = {
@@ -53,6 +59,7 @@ function parseArgs(argv) {
   const args = {
     index: DEFAULT_INDEX,
     existingI18n: DEFAULT_EXISTING_I18N,
+    existingSources: DEFAULT_SOURCES_OUT,
     out: DEFAULT_OUT,
     sourcesOut: DEFAULT_SOURCES_OUT,
     reportOut: DEFAULT_REPORT_OUT,
@@ -67,6 +74,7 @@ function parseArgs(argv) {
     const value = argv[i];
     if (value === "--index") args.index = argv[++i];
     else if (value === "--existing-i18n") args.existingI18n = argv[++i];
+    else if (value === "--existing-sources") args.existingSources = argv[++i];
     else if (value === "--out") args.out = argv[++i];
     else if (value === "--sources-out") args.sourcesOut = argv[++i];
     else if (value === "--report-out") args.reportOut = argv[++i];
@@ -151,15 +159,6 @@ function matchesName(item, entry, value) {
   return normalized && candidateKeys(item, entry).includes(normalized);
 }
 
-function wikiruDetailLinks(html) {
-  const links = new Set();
-  for (const match of String(html ?? "").matchAll(/<div\b[^>]*class="[^"]*\bcharacter\b[^"]*"[^>]*>[\s\S]*?<a\b[^>]*href="([^"]+)"/gi)) {
-    const href = decodeHtml(match[1]);
-    if (href.includes("?")) links.add(new URL(href, WIKIRU_ORIGIN + "/").href);
-  }
-  return [...links];
-}
-
 async function readJsonIfExists(file) {
   try {
     return JSON.parse(await fs.readFile(file, "utf8"));
@@ -173,13 +172,16 @@ async function fetchText(url, args) {
   const response = await fetchWithRetry(url, {
     proxyUrl: args.proxyUrl,
     attempts: args.retries + 1,
-    headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
+    headers: {
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36",
+      accept: "text/html,application/xhtml+xml",
+    },
     signal: AbortSignal.timeout(args.timeoutMs),
   });
   if (!response.ok) throw new Error("GET " + url + " failed: HTTP " + response.status);
   const text = await response.text();
-  if (/<title>\s*One moment, please/i.test(text) || /cf-chl-/i.test(text)) {
-    throw new Error("source returned a Cloudflare challenge page");
+  if (isWikiruUnavailablePage(text)) {
+    throw new Error("source returned an unavailable or challenge page");
   }
   return text;
 }
@@ -231,19 +233,25 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const index = JSON.parse(await fs.readFile(args.index, "utf8"));
   const existingI18n = await readJsonIfExists(args.existingI18n);
+  const existingSources = await readJsonIfExists(args.existingSources);
   const existingNames = isObject(existingI18n?.names) ? existingI18n.names : {};
   const items = Object.values(index.items ?? {}).filter((item) => item?.id && item?.code && item?.type);
   const entries = {};
   for (const item of items) {
     const id = String(item.id);
     const old = existingNames[id] ?? {};
-    entries[id] = {
+    const fallbackEn = validName(enFallback(item));
+    const oldEn = validName(old.en);
+    const canonicalEn = oldEn && (!fallbackEn || normalizeName(oldEn) !== normalizeName(fallbackEn))
+      ? oldEn
+      : fallbackEn ?? validName(item.en);
+    entries[id] = preserveExistingNameFields({
       code: item.code,
       type: item.type,
       cn: validName(old.cn) ?? validName(item.cn),
-      en: validName(old.en) ?? validName(item.en) ?? validName(enFallback(item)),
+      en: canonicalEn,
       jp: validName(old.jp) ?? validName(item.jp),
-    };
+    }, old, existingSources?.[id]);
   }
 
   const candidates = { cn: new Map(), en: new Map(), jp: new Map() };
@@ -309,11 +317,11 @@ async function main() {
         }
       }
     }
-    let listParsed = false;
     try {
       const indexHtml = await fetchText(WIKIRU_CHARACTER_PAGE, args);
-      const detailUrls = wikiruDetailLinks(indexHtml);
-      await runPool(detailUrls, Math.min(args.concurrency, 6), async (url) => {
+      const detailLinks = parseWikiruCharacterDetailLinks(indexHtml, WIKIRU_ORIGIN + "/");
+      if (!detailLinks.length) throw new Error("Wikiru character list contained no detail links");
+      await runPool(detailLinks, 1, async ({ url }) => {
         try {
           const detail = extractWikiruNameRecord(await fetchText(url, args));
           if (!detail) return;
@@ -323,32 +331,29 @@ async function main() {
           failures.push({ source: "wikiru:doll-detail", url, error: String(error.message ?? error) });
         }
       });
-      listParsed = true;
-      console.log("  wikiru doll details: " + detailUrls.length + " linked");
+      console.log("  wikiru doll details: " + detailLinks.length + " linked");
     } catch (error) {
       console.log("  wikiru doll list unavailable; trying direct detail pages");
     }
 
-    if (!listParsed) {
-      const directTargets = items
-        .filter((item) => item.type === "doll")
-        .map((item) => {
-          const entry = entries[String(item.id)];
-          const pageName = entry.jp || (args.mode === "bootstrap" ? WIKIRU_RECOVERY_HINTS[item.code] : undefined);
-          return pageName ? { item, pageName } : undefined;
-        })
-        .filter(Boolean);
-      await runPool(directTargets, Math.min(args.concurrency, 6), async ({ item, pageName }) => {
-        const url = WIKIRU_ORIGIN + "/?" + encodeURIComponent(pageName);
-        try {
-          const detail = extractWikiruNameRecord(await fetchText(url, args));
-          if (detail?.jp) addCandidate(candidates.jp, item.id, detail.jp, "wikiru-detail", url);
-        } catch (error) {
-          failures.push({ source: "wikiru:doll-direct", id: item.id, code: item.code, url, error: String(error.message ?? error) });
-        }
-      });
-      console.log("  wikiru direct details: " + directTargets.length + " attempted");
-    }
+    const directTargets = items
+      .filter((item) => item.type === "doll" && !candidates.jp.has(String(item.id)))
+      .map((item) => {
+        const entry = entries[String(item.id)];
+        const pageName = entry.jp || WIKIRU_RECOVERY_HINTS[item.code];
+        return pageName ? { item, pageName } : undefined;
+      })
+      .filter(Boolean);
+    await runPool(directTargets, 1, async ({ item, pageName }) => {
+      const url = WIKIRU_ORIGIN + "/?" + encodeURIComponent(pageName);
+      try {
+        const detail = extractWikiruNameRecord(await fetchText(url, args));
+        if (detail?.jp) addCandidate(candidates.jp, item.id, detail.jp, "wikiru-detail", url);
+      } catch (error) {
+        failures.push({ source: "wikiru:doll-direct", id: item.id, code: item.code, url, error: String(error.message ?? error) });
+      }
+    });
+    console.log("  wikiru direct details: " + directTargets.length + " attempted");
 
     try {
       const weaponHtml = await fetchText(WIKIRU_WEAPON_PAGE, args);
@@ -405,6 +410,13 @@ async function main() {
   }
 
   const merged = mergeAuthoritativeNames(entries, candidates, { mode: args.mode, failures });
+  for (const [id, fields] of Object.entries(existingSources ?? {})) {
+    for (const [field, source] of Object.entries(fields ?? {})) {
+      if (merged.sources[id]?.[field] || source?.value !== merged.names[id]?.[field]) continue;
+      merged.sources[id] = merged.sources[id] ?? {};
+      merged.sources[id][field] = source;
+    }
+  }
   for (const [id, aliases] of Object.entries(merged.aliases)) {
     merged.names[id].aliases = aliases;
   }

@@ -9,8 +9,6 @@ export function resourceIdentity(item) {
     Number(item?.id),
     String(item?.type ?? ""),
     String(item?.code ?? ""),
-    String(item?.iconUrl ?? ""),
-    String(item?.assetPath ?? ""),
   ]);
 }
 

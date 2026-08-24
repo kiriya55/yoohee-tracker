@@ -678,7 +678,10 @@
       "cn": "绯",
       "type": "doll",
       "en": "Faye",
-      "jp": "フェイ"
+      "jp": "緋",
+      "aliases": [
+        "フェイ"
+      ]
     },
     "1044": {
       "code": "VectorSSR",
@@ -812,6 +815,13 @@
       "en": "Lewis",
       "jp": "ルイス"
     },
+    "1063": {
+      "code": "WelrodSSR",
+      "cn": "维尔德",
+      "type": "doll",
+      "en": "Welrod",
+      "jp": "ウェルロッド"
+    },
     "1064": {
       "code": "FlorenceSSR",
       "cn": "芙洛伦",
@@ -854,12 +864,94 @@
       "en": "Loreley",
       "jp": "ローレライ"
     },
+    "1070": {
+      "code": "CheyanneSSR",
+      "cn": "夏安",
+      "type": "doll",
+      "en": "Cheyanne",
+      "jp": "シャイアン"
+    },
     "1071": {
       "code": "BastiSSR",
       "cn": "贝丝蒂",
       "type": "doll",
       "en": "Basti",
       "jp": "バスティ"
+    },
+    "1072": {
+      "code": "LiushihSSR",
+      "cn": "刘莳",
+      "type": "doll",
+      "en": "Liushih",
+      "jp": "劉蒔"
+    },
+    "1073": {
+      "code": "SextansSSR",
+      "cn": "六分仪",
+      "type": "doll",
+      "en": "Sextans",
+      "jp": "セクスタンス"
+    },
+    "1074": {
+      "code": "OTs14SSR",
+      "cn": "OTs-14",
+      "type": "doll",
+      "en": "OTs-14",
+      "jp": "OTs-14"
+    },
+    "1075": {
+      "code": "NemesisGnosisSSR",
+      "cn": "纳美西丝·衍光",
+      "type": "doll",
+      "en": "Nemesis Gnosis",
+      "jp": "ネメシス・グノーシス"
+    },
+    "1076": {
+      "code": "SoppoSSR",
+      "cn": "索普",
+      "type": "doll",
+      "en": "Soppo",
+      "jp": "ソップ"
+    },
+    "1077": {
+      "code": "MitylSSR",
+      "cn": "米蒂尔",
+      "type": "doll",
+      "en": "Mityl",
+      "jp": "ミティール"
+    },
+    "1078": {
+      "code": "FaelynnSSR",
+      "cn": "芙铃",
+      "type": "doll",
+      "en": "Faelynn",
+      "jp": "フェアリン"
+    },
+    "1079": {
+      "code": "KoledaSSR",
+      "cn": "克莱妲",
+      "type": "doll",
+      "en": "Koleda",
+      "jp": "コレダ"
+    },
+    "1080": {
+      "code": "AsteriaSSR",
+      "cn": "阿斯缇亚",
+      "type": "doll",
+      "en": "Asteria",
+      "jp": "アステリア"
+    },
+    "1081": {
+      "code": "EaglettaSSR",
+      "cn": "伊格蕾塔",
+      "type": "doll",
+      "en": "Eagletta"
+    },
+    "10001": {
+      "code": "Weapon_BpHRssr001_5",
+      "cn": "喧闹恶灵",
+      "type": "weapon",
+      "en": "BpHRssr001"
     },
     "10002": {
       "code": "Weapon_BpSMGssr001_5",
@@ -917,7 +1009,7 @@
       "code": "Weapon_UMP9_4",
       "cn": "通用冲锋枪9",
       "type": "weapon",
-      "en": "UMP 9",
+      "en": "UMP9",
       "jp": "UMP9",
       "aliases": [
         "UMP9"
@@ -927,10 +1019,10 @@
       "code": "Weapon_UMP9_5",
       "cn": "幼狮",
       "type": "weapon",
-      "en": "UMP 9",
+      "en": "UMP9",
       "jp": "小獅子",
       "aliases": [
-        "Young Lion"
+        "UMP9"
       ]
     },
     "10231": {
@@ -1009,14 +1101,14 @@
       "code": "Weapon_QBZ97_3",
       "cn": "旧式九七式",
       "type": "weapon",
-      "en": "Retired QBZ-97",
+      "en": "Retired QBZ97",
       "jp": "旧式97式"
     },
     "10352": {
       "code": "Weapon_QBZ97_4",
       "cn": "九七式",
       "type": "weapon",
-      "en": "QBZ-97",
+      "en": "QBZ97",
       "jp": "97式"
     },
     "10353": {
@@ -1110,8 +1202,11 @@
       "code": "Weapon_PPSh41_4",
       "cn": "波波沙冲锋枪",
       "type": "weapon",
-      "en": "PPSh-41",
-      "jp": "PPSh-41"
+      "en": "PPSh41",
+      "jp": "PPSh-41",
+      "aliases": [
+        "PPSh41"
+      ]
     },
     "10403": {
       "code": "Weapon_PPSh41_5",
@@ -1148,20 +1243,20 @@
       "code": "Weapon_G36KKSK_4",
       "cn": "格威尔36-斯佩凯芙特",
       "type": "weapon",
-      "en": "G36K-KSK",
+      "en": "G36KKSK",
       "jp": "StG36-シュペッカフォルテ",
       "aliases": [
-        "G36K SpecOps"
+        "G36KKSK"
       ]
     },
     "10423": {
       "code": "Weapon_G36KKSK_5",
       "cn": "阿格莱亚",
       "type": "weapon",
-      "en": "G36K-KSK",
+      "en": "G36KKSK",
       "jp": "アグライア",
       "aliases": [
-        "Aglaia"
+        "G36KKSK"
       ]
     },
     "10431": {
@@ -1264,14 +1359,14 @@
       "code": "Weapon_HAWK12_3",
       "cn": "旧式九七式霰",
       "type": "weapon",
-      "en": "Retired HAWK 12",
+      "en": "Retired HAWK12",
       "jp": "旧式97式ショットガン"
     },
     "10482": {
       "code": "Weapon_HAWK12_4",
       "cn": "九七式霰",
       "type": "weapon",
-      "en": "HAWK 12",
+      "en": "HAWK12",
       "jp": "97式ショットガン"
     },
     "10483": {
@@ -1316,17 +1411,20 @@
       "code": "Weapon_CSLS06_4",
       "cn": "长风零六",
       "type": "weapon",
-      "en": "CS/LS06",
-      "jp": "06式"
+      "en": "CSLS06",
+      "jp": "06式",
+      "aliases": [
+        "CSLS06"
+      ]
     },
     "10503": {
       "code": "Weapon_CSLS06_5",
       "cn": "不留行",
       "type": "weapon",
-      "en": "CS/LS06",
+      "en": "CSLS06",
       "jp": "風来坊",
       "aliases": [
-        "No Trace"
+        "CSLS06"
       ]
     },
     "10511": {
@@ -1442,17 +1540,20 @@
       "code": "Weapon_VSK94_4",
       "cn": "维斯卡94",
       "type": "weapon",
-      "en": "VSK-94",
-      "jp": "VSK-94"
+      "en": "VSK94",
+      "jp": "VSK-94",
+      "aliases": [
+        "VSK94"
+      ]
     },
     "10553": {
       "code": "Weapon_VSK94_5",
       "cn": "护梦银翼",
       "type": "weapon",
-      "en": "VSK-94",
+      "en": "VSK94",
       "jp": "夢の翼",
       "aliases": [
-        "Dream Protecting Silver Wing"
+        "VSK94"
       ]
     },
     "10561": {
@@ -1540,14 +1641,14 @@
       "code": "Weapon_AA12_3",
       "cn": "旧式艾奇逊12自动霰弹枪",
       "type": "weapon",
-      "en": "Retired AA-12",
+      "en": "Retired AA12",
       "jp": "旧式AA-12"
     },
     "10592": {
       "code": "Weapon_AA12_4",
       "cn": "艾奇逊12自动霰弹枪",
       "type": "weapon",
-      "en": "AA-12",
+      "en": "AA12",
       "jp": "AA-12"
     },
     "10593": {
@@ -1613,31 +1714,52 @@
       "code": "Weapon_Lewisgun_4",
       "cn": "刘易斯轻机枪",
       "type": "weapon",
-      "en": "Lewis Gun",
-      "jp": "ルイスマシンガン"
+      "en": "Lewisgun",
+      "jp": "ルイスマシンガン",
+      "aliases": [
+        "Lewisgun"
+      ]
     },
     "10623": {
       "code": "Weapon_Lewisgun_5",
       "cn": "玩具匠",
       "type": "weapon",
-      "en": "Lewis Gun",
+      "en": "Lewisgun",
       "jp": "おもちゃ職人",
       "aliases": [
-        "Toymaker"
+        "Lewisgun"
       ]
+    },
+    "10631": {
+      "code": "Weapon_Welrodmk2_3",
+      "cn": "旧式马克二型栓动手枪",
+      "type": "weapon",
+      "en": "Welrodmk2"
+    },
+    "10632": {
+      "code": "Weapon_Welrodmk2_4",
+      "cn": "马克二型栓动手枪",
+      "type": "weapon",
+      "en": "Welrodmk2"
+    },
+    "10633": {
+      "code": "Weapon_Welrodmk2_5",
+      "cn": "缄默制裁",
+      "type": "weapon",
+      "en": "Welrodmk2"
     },
     "10641": {
       "code": "Weapon_PA15_3",
       "cn": "旧式15型自动手枪",
       "type": "weapon",
-      "en": "Retired PA-15",
+      "en": "Retired PA15",
       "jp": "旧式PA-15"
     },
     "10642": {
       "code": "Weapon_PA15_4",
       "cn": "15型自动手枪",
       "type": "weapon",
-      "en": "PA-15",
+      "en": "PA15",
       "jp": "PA-15"
     },
     "10643": {
@@ -1651,14 +1773,14 @@
       "code": "Weapon_AN94_3",
       "cn": "旧式尼科诺夫突击步枪94",
       "type": "weapon",
-      "en": "Retired AN-94",
+      "en": "Retired AN94",
       "jp": "旧式ニコノフ94"
     },
     "10652": {
       "code": "Weapon_AN94_4",
       "cn": "尼科诺夫突击步枪94",
       "type": "weapon",
-      "en": "AN-94",
+      "en": "AN94",
       "jp": "ニコノフ94"
     },
     "10653": {
@@ -1672,14 +1794,14 @@
       "code": "Weapon_AK15_3",
       "cn": "旧式卡拉什尼科夫突击步枪15",
       "type": "weapon",
-      "en": "Retired AK-15",
+      "en": "Retired AK15",
       "jp": "旧式カラシニコフ15"
     },
     "10662": {
       "code": "Weapon_AK15_4",
       "cn": "卡拉什尼科夫突击步枪15",
       "type": "weapon",
-      "en": "AK-15",
+      "en": "AK15",
       "jp": "カラシニコフ15"
     },
     "10663": {
@@ -1693,14 +1815,14 @@
       "code": "Weapon_DP12_3",
       "cn": "旧式12型双管霰弹枪",
       "type": "weapon",
-      "en": "Retired DP-12",
+      "en": "Retired DP12",
       "jp": "旧式12ゲージ二連ショットガン"
     },
     "10672": {
       "code": "Weapon_DP12_4",
       "cn": "12型双管霰弹枪",
       "type": "weapon",
-      "en": "DP-12",
+      "en": "DP12",
       "jp": "12ゲージ二連ショットガン"
     },
     "10673": {
@@ -1735,14 +1857,14 @@
       "code": "Weapon_DSR50_3",
       "cn": "旧式因戈尔夫50",
       "type": "weapon",
-      "en": "Retired DSR-50",
+      "en": "Retired DSR50",
       "jp": "旧式DSR-50"
     },
     "10692": {
       "code": "Weapon_DSR50_4",
       "cn": "因戈尔夫50",
       "type": "weapon",
-      "en": "DSR-50",
+      "en": "DSR50",
       "jp": "DSR-50"
     },
     "10693": {
@@ -1751,6 +1873,24 @@
       "type": "weapon",
       "en": "Nighttide Nocturne",
       "jp": "潮涌夜曲"
+    },
+    "10701": {
+      "code": "Weapon_M200_3",
+      "cn": "旧式干预200",
+      "type": "weapon",
+      "en": "M200"
+    },
+    "10702": {
+      "code": "Weapon_M200_4",
+      "cn": "干预200",
+      "type": "weapon",
+      "en": "M200"
+    },
+    "10703": {
+      "code": "Weapon_M200_5",
+      "cn": "夜行豆蔻",
+      "type": "weapon",
+      "en": "M200"
     },
     "10711": {
       "code": "Weapon_MK23_3",
@@ -1773,6 +1913,174 @@
       "en": "MK23",
       "jp": "MK23"
     },
+    "10721": {
+      "code": "Weapon_Liushih_3",
+      "cn": "旧式刘氏步枪",
+      "type": "weapon",
+      "en": "Liushih"
+    },
+    "10722": {
+      "code": "Weapon_Liushih_4",
+      "cn": "刘氏步枪",
+      "type": "weapon",
+      "en": "Liushih"
+    },
+    "10723": {
+      "code": "Weapon_Liushih_5",
+      "cn": "绝影",
+      "type": "weapon",
+      "en": "Liushih"
+    },
+    "10731": {
+      "code": "Weapon_Sextans_3",
+      "cn": "旧式夜蛇",
+      "type": "weapon",
+      "en": "Sextans"
+    },
+    "10732": {
+      "code": "Weapon_Sextans_4",
+      "cn": "夜蛇",
+      "type": "weapon",
+      "en": "Sextans"
+    },
+    "10733": {
+      "code": "Weapon_Sextans_5",
+      "cn": "暮色蔷薇",
+      "type": "weapon",
+      "en": "Sextans"
+    },
+    "10741": {
+      "code": "Weapon_BlackOTs14_3",
+      "cn": "旧式闪电-3",
+      "type": "weapon",
+      "en": "BlackOTs14"
+    },
+    "10742": {
+      "code": "Weapon_BlackOTs14_4",
+      "cn": "闪电-3",
+      "type": "weapon",
+      "en": "BlackOTs14"
+    },
+    "10743": {
+      "code": "Weapon_BlackOTs14_5",
+      "cn": "卡庇托林",
+      "type": "weapon",
+      "en": "BlackOTs14"
+    },
+    "10753": {
+      "code": "Weapon_NemesisGnosis_5",
+      "cn": "西比尔",
+      "type": "weapon",
+      "en": "NemesisGnosis"
+    },
+    "10761": {
+      "code": "Weapon_Soppo_3",
+      "cn": "旧式特殊模组战术步枪",
+      "type": "weapon",
+      "en": "Soppo"
+    },
+    "10762": {
+      "code": "Weapon_Soppo_4",
+      "cn": "特殊模组战术步枪",
+      "type": "weapon",
+      "en": "Soppo"
+    },
+    "10763": {
+      "code": "Weapon_Soppo_5",
+      "cn": "碎穹嚎歌",
+      "type": "weapon",
+      "en": "Soppo"
+    },
+    "10771": {
+      "code": "Weapon_Mityl_3",
+      "cn": "旧式90型单兵自卫武器",
+      "type": "weapon",
+      "en": "Mityl"
+    },
+    "10772": {
+      "code": "Weapon_Mityl_4",
+      "cn": "90型单兵自卫武器",
+      "type": "weapon",
+      "en": "Mityl"
+    },
+    "10773": {
+      "code": "Weapon_Mityl_5",
+      "cn": "绒鼠新星",
+      "type": "weapon",
+      "en": "Mityl"
+    },
+    "10781": {
+      "code": "Weapon_Faelynn_3",
+      "cn": "旧式格威尔41",
+      "type": "weapon",
+      "en": "Faelynn"
+    },
+    "10782": {
+      "code": "Weapon_Faelynn_4",
+      "cn": "格威尔41",
+      "type": "weapon",
+      "en": "Faelynn"
+    },
+    "10783": {
+      "code": "Weapon_Faelynn_5",
+      "cn": "森牙戾兽",
+      "type": "weapon",
+      "en": "Faelynn"
+    },
+    "10791": {
+      "code": "Weapon_Koleda_3",
+      "cn": "旧式12型突击步枪",
+      "type": "weapon",
+      "en": "Koleda"
+    },
+    "10792": {
+      "code": "Weapon_Koleda_4",
+      "cn": "12型突击步枪",
+      "type": "weapon",
+      "en": "Koleda"
+    },
+    "10793": {
+      "code": "Weapon_Koleda_5",
+      "cn": "切尔诺伯格",
+      "type": "weapon",
+      "en": "Koleda"
+    },
+    "10801": {
+      "code": "Weapon_Asteria_3",
+      "cn": "旧式阿玛莱特15型自动步枪",
+      "type": "weapon",
+      "en": "Asteria"
+    },
+    "10802": {
+      "code": "Weapon_Asteria_4",
+      "cn": "阿玛莱特15型自动步枪",
+      "type": "weapon",
+      "en": "Asteria"
+    },
+    "10803": {
+      "code": "Weapon_Asteria_5",
+      "cn": "忏悔罗盘",
+      "type": "weapon",
+      "en": "Asteria"
+    },
+    "10811": {
+      "code": "Weapon_Eagletta_3",
+      "cn": "旧式沙漠之鹰",
+      "type": "weapon",
+      "en": "Eagletta"
+    },
+    "10812": {
+      "code": "Weapon_Eagletta_4",
+      "cn": "沙漠之鹰",
+      "type": "weapon",
+      "en": "Eagletta"
+    },
+    "10813": {
+      "code": "Weapon_Eagletta_5",
+      "cn": "银翼匹丝缇",
+      "type": "weapon",
+      "en": "Eagletta"
+    },
     "11007": {
       "code": "Weapon_Blade_4",
       "cn": "野兔",
@@ -1791,7 +2099,7 @@
       "code": "Weapon_OM50_3",
       "cn": "旧式复仇女神",
       "type": "weapon",
-      "en": "Retired OM 50",
+      "en": "Retired OM50",
       "jp": "旧式OM 50"
     },
     "11010": {
@@ -1809,7 +2117,7 @@
       "code": "Weapon_OM50_4",
       "cn": "复仇女神",
       "type": "weapon",
-      "en": "OM 50",
+      "en": "OM50",
       "jp": "OM 50"
     },
     "11015": {
@@ -1851,8 +2159,11 @@
       "code": "Weapon_Vepr12_4",
       "cn": "莫洛12",
       "type": "weapon",
-      "en": "Vepr-12",
-      "jp": "Vepr-12"
+      "en": "Vepr12",
+      "jp": "Vepr-12",
+      "aliases": [
+        "Vepr12"
+      ]
     },
     "11022": {
       "code": "Weapon_Blade_3",
@@ -1865,10 +2176,10 @@
       "code": "Weapon_OTS14_4",
       "cn": "格洛利娅",
       "type": "weapon",
-      "en": "OTs-14",
+      "en": "OTS14",
       "jp": "グローザ",
       "aliases": [
-        "Groza"
+        "OTS14"
       ]
     },
     "11024": {
@@ -1889,14 +2200,14 @@
       "code": "Weapon_ROBINSONXCR_3",
       "cn": "旧式罗宾逊先进步枪",
       "type": "weapon",
-      "en": "Retired Robinson XCR",
+      "en": "Retired ROBINSONXCR",
       "jp": "旧式ロビンソンXCR"
     },
     "11031": {
       "code": "Weapon_ROBINSONXCR_4",
       "cn": "罗宾逊先进步枪",
       "type": "weapon",
-      "en": "Robinson XCR",
+      "en": "ROBINSONXCR",
       "jp": "ロビンソンXCR"
     },
     "11036": {

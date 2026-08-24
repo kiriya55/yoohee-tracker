@@ -20,6 +20,14 @@ describe("asset mapping", () => {
     expect(assetPathFor(item)).toBe("weapon/Weapon_MK23_5_1024.png");
   });
 
+  it("uses the current MCC static image path for weapon downloads", () => {
+    const item: ResourceItem = { id: 10713, type: "weapon", code: "Weapon_MK23_5" };
+
+    expect(buildAssetDescriptor(item)?.sourceUrl).toBe(
+      "https://gf2.mcc.wiki/static/image/weapon/Weapon_MK23_5_1024.png",
+    );
+  });
+
   it("downloads Lind from Dandegate and publishes the Head filename", () => {
     const item: ResourceItem = { id: 1059, type: "doll", code: "LindSSR" };
 

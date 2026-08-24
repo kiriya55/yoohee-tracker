@@ -1,25 +1,19 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
-import vm from "node:vm";
 import { fetchWithRetry } from "./fetch-with-retry.mjs";
-import { buildMccImageUrl, findResourceCatalogChanges } from "./resource-catalog.mjs";
-import { buildAssetDescriptor } from "./asset-mapping.mjs";
+import { findResourceCatalogChanges } from "./resource-catalog.mjs";
 import { computeTimesetHash, mergeServerResourceIndexes, normalizeTimesets } from "./timeset.mjs";
+import { fetchCompleteCatalog } from "./catalog-sources.mjs";
+import { buildGfl2Timesets, parseGfl2BannersHtml } from "./gfl2-banners.mjs";
 
 const EXILIUM_ORIGIN = "https://exilium.xyz";
-const MCC_ORIGIN = "https://gf2.mcc.wiki";
-const RESOURCE_MODULES = {
-  dolls: 16845,
-  weapons: 22822,
-};
 
 function parseArgs(argv) {
   const args = {
     servers: ["dw-cn", "haoplay"],
     outDir: ".",
     existing: undefined,
-    chunksDir: undefined,
     probeImages: false,
     probeConcurrency: 16,
     probeTimeoutMs: 10000,
@@ -33,7 +27,6 @@ function parseArgs(argv) {
     if (arg === "--server" || arg === "--servers") args.servers = argv[++index].split(",").map((value) => value.trim()).filter(Boolean);
     else if (arg === "--out-dir") args.outDir = argv[++index];
     else if (arg === "--existing") args.existing = argv[++index];
-    else if (arg === "--chunks-dir") args.chunksDir = argv[++index];
     else if (arg === "--probe-images") args.probeImages = true;
     else if (arg === "--probe-concurrency") args.probeConcurrency = Math.max(1, Number(argv[++index]) || 16);
     else if (arg === "--probe-timeout-ms") args.probeTimeoutMs = Math.max(1000, Number(argv[++index]) || 10000);
@@ -56,7 +49,6 @@ Options:
   --server, --servers <list>   Comma-separated exilium server codes. Default: dw-cn,haoplay
   --out-dir <dir>              Output directory. Default: current directory
   --existing <file>            Existing gf2-resource-index JSON to merge
-  --chunks-dir <dir>           Read already downloaded exilium chunks from a directory
   --probe-images               HEAD-check generated MCC image URLs
   --probe-concurrency <n>      Parallel image probes. Default: 16
   --probe-timeout-ms <ms>      Per-image probe timeout. Default: 10000
@@ -132,10 +124,6 @@ function extractSignals(server, payload) {
   };
 }
 
-function codeToName(code) {
-  return code.replace(/S{1,2}R$/i, "").replace(/_5$|_4$|_3$|_2$/, "");
-}
-
 async function fetchJson(url, options = {}) {
   const response = await fetchWithRetry(url, options);
   if (!response.ok) throw new Error(`GET ${url} failed: ${response.status} ${response.statusText}`);
@@ -146,128 +134,6 @@ async function fetchText(url, options = {}) {
   const response = await fetchWithRetry(url, options);
   if (!response.ok) throw new Error(`GET ${url} failed: ${response.status} ${response.statusText}`);
   return response.text();
-}
-
-async function loadChunkTexts(chunksDir, options = {}) {
-  if (chunksDir) {
-    const entries = await fs.readdir(chunksDir, { withFileTypes: true });
-    const chunks = [];
-    for (const entry of entries) {
-      if (entry.isFile() && entry.name.endsWith(".js")) {
-        chunks.push(await fs.readFile(path.join(chunksDir, entry.name), "utf8"));
-      }
-    }
-    return chunks;
-  }
-
-  const home = await fetchText(EXILIUM_ORIGIN, options);
-  const urls = unique([...home.matchAll(/(?:src|href)="([^"]+\.js)"/g)].map((match) => new URL(match[1], EXILIUM_ORIGIN).href));
-  const chunks = [];
-  for (const url of urls) {
-    const text = await fetchText(url, options);
-    if (text.includes("dolls/Avatar_Head_") || text.includes("weapons/") || text.includes("RESOURCE_MODULE_MARKER_NEVER")) {
-      chunks.push(text);
-    }
-  }
-  return chunks;
-}
-
-function captureWebpackModules(chunkTexts) {
-  const modules = {};
-  const context = {
-    self: {
-      webpackChunk_N_E: [],
-    },
-    console,
-    setInterval: () => 0,
-    clearInterval: () => undefined,
-    window: {
-      setInterval: () => 0,
-      clearInterval: () => undefined,
-    },
-  };
-  context.self.webpackChunk_N_E.push = (payload) => {
-    Object.assign(modules, payload[1] ?? {});
-  };
-
-  for (const text of chunkTexts) {
-    vm.runInNewContext(text, context, { timeout: 5000 });
-  }
-  return modules;
-}
-
-function executeWebpackModule(modules, id) {
-  const fn = modules[id];
-  if (typeof fn !== "function") return undefined;
-  const exports = {};
-  const module = { exports };
-  const fakeRequire = (requestId) => {
-    if (requestId === 99575) return { s: (value) => value };
-    if (requestId === 49867) return { Y: (value) => String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-") };
-    return {};
-  };
-  fakeRequire.d = (target, definitions) => {
-    for (const [key, getter] of Object.entries(definitions)) {
-      Object.defineProperty(target, key, { enumerable: true, get: getter });
-    }
-  };
-  fn(module, exports, fakeRequire);
-  return module.exports;
-}
-
-function normalizeDoll(raw, server, generatedAt) {
-  const code = raw.avatar_name ?? raw.avatar;
-  if (!raw.id || !code) return undefined;
-  const iconUrl = buildMccImageUrl("doll", code);
-  const asset = buildAssetDescriptor("doll", code);
-  const rawName = raw.name ? String(raw.name) : undefined;
-  return {
-    id: Number(raw.id),
-    name: rawName && !/^\d+$/.test(rawName) ? rawName : codeToName(code),
-    type: "doll",
-    rarity: Number.isFinite(Number(raw.rarity)) ? Number(raw.rarity) : undefined,
-    code,
-    server,
-    iconUrl,
-    imageSource: "mcc-wiki",
-    assetPath: asset?.targetPath,
-    assetSource: asset,
-    verifiedAt: generatedAt,
-  };
-}
-
-function normalizeWeapon(raw, server, generatedAt) {
-  const code = raw.imageCode;
-  if (!raw.id || !code) return undefined;
-  const iconUrl = buildMccImageUrl("weapon", code);
-  const asset = buildAssetDescriptor("weapon", code);
-  const rawName = raw.name ? String(raw.name) : undefined;
-  return {
-    id: Number(raw.id),
-    name: rawName && !/^\d+$/.test(rawName) ? rawName : codeToName(code),
-    type: "weapon",
-    rarity: Number.isFinite(Number(raw.rarity)) ? Number(raw.rarity) : undefined,
-    code,
-    server,
-    iconUrl,
-    imageSource: "mcc-wiki",
-    assetPath: asset?.targetPath,
-    assetSource: asset,
-    verifiedAt: generatedAt,
-  };
-}
-
-function extractResourcesFromChunks(chunkTexts, server, generatedAt) {
-  const modules = captureWebpackModules(chunkTexts);
-  const dollExports = executeWebpackModule(modules, RESOURCE_MODULES.dolls);
-  const weaponExports = executeWebpackModule(modules, RESOURCE_MODULES.weapons);
-  const dolls = Array.isArray(dollExports?.n3) ? dollExports.n3 : [];
-  const weapons = Array.isArray(weaponExports?.g) ? weaponExports.g : [];
-
-  return [
-    ...dolls.map((item) => normalizeDoll(item, server, generatedAt)).filter(Boolean),
-    ...weapons.map((item) => normalizeWeapon(item, server, generatedAt)).filter(Boolean),
-  ];
 }
 
 async function probeItems(items, options) {
@@ -311,7 +177,11 @@ function mergeIndex(existing, incomingItems, metadata) {
           ...incoming,
           name: current.name || incoming.name,
           icon: current.icon || incoming.icon,
-          iconUrl: current.iconUrl || incoming.iconUrl,
+          iconUrl: current.type === "weapon" ? incoming.iconUrl : current.iconUrl || incoming.iconUrl,
+          localIcon: current.localIcon || incoming.localIcon,
+          assetPath: current.assetPath || incoming.assetPath,
+          assetSource: current.type === "weapon" ? incoming.assetSource : current.assetSource || incoming.assetSource,
+          imageSource: current.imageSource || incoming.imageSource,
           aliases: unique([...(current.aliases ?? []), ...(incoming.aliases ?? [])]),
         }
       : incoming;
@@ -339,8 +209,24 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const generatedAt = new Date().toISOString();
   const existing = await readExisting(args.existing);
-  const chunkTexts = await loadChunkTexts(args.chunksDir, { proxyUrl: args.proxyUrl });
-  if (!chunkTexts.length) throw new Error("No exilium chunks were loaded.");
+  const completeCatalog = await fetchCompleteCatalog({
+    proxyUrl: args.proxyUrl,
+    existingItems: existing?.items ?? {},
+  });
+  if (completeCatalog.conflicts.length || completeCatalog.missing.length) {
+    throw new Error("Complete catalog could not be joined: " + JSON.stringify({
+      conflicts: completeCatalog.conflicts,
+      missing: completeCatalog.missing,
+    }));
+  }
+  const catalogItems = Object.values(completeCatalog.items);
+  let gfl2Cards = [];
+  try {
+    const bannersUrl = "https://gfl2.help/en/banners";
+    gfl2Cards = parseGfl2BannersHtml(await fetchText(bannersUrl, { proxyUrl: args.proxyUrl }), bannersUrl);
+  } catch (error) {
+    console.warn("gfl2.help banner warning: " + String(error.message ?? error));
+  }
 
   if (args.checkOnly) {
     if (!existing || !existing.items) {
@@ -352,8 +238,8 @@ async function main() {
       const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`, { proxyUrl: args.proxyUrl });
       incomingIndexes.push({
         servers: [server],
-        items: Object.fromEntries(extractResourcesFromChunks(chunkTexts, server, generatedAt).map((item) => [String(item.id), item])),
-        timesets: normalizeTimesets(server, events),
+        items: Object.fromEntries(catalogItems.map((item) => [String(item.id), { ...item, server, verifiedAt: generatedAt }])),
+        timesets: normalizeTimesets(server, events).concat(buildGfl2Timesets(gfl2Cards, catalogItems, server)),
       });
     }
     const incoming = mergeServerResourceIndexes(incomingIndexes);
@@ -383,14 +269,13 @@ async function main() {
   for (const server of args.servers) {
     const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`, { proxyUrl: args.proxyUrl });
     const signals = extractSignals(server, events);
-    const catalogItems = extractResourcesFromChunks(chunkTexts, server, generatedAt);
-    let updatedItems = catalogItems;
+    let updatedItems = catalogItems.map((item) => ({ ...item, server, verifiedAt: generatedAt }));
     if (args.probeImages) updatedItems = await probeItems(updatedItems, { concurrency: args.probeConcurrency, timeoutMs: args.probeTimeoutMs });
     const index = mergeIndex(existing, updatedItems, {
       generatedAt,
       servers: [server],
       updateSignals: { [server]: signals },
-      timesets: normalizeTimesets(server, events),
+      timesets: normalizeTimesets(server, events).concat(buildGfl2Timesets(gfl2Cards, catalogItems, server)),
     });
     serverIndexes.push(index);
     const outPath = path.join(args.outDir, `gf2-resource-index.${server}.json`);

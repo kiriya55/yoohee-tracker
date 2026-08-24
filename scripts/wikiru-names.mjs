@@ -22,6 +22,38 @@ function cleanJapaneseName(value) {
   return cleanLine(value).replace(/\s*[（(][^）)]*[）)]\s*$/u, "").trim();
 }
 
+export function parseWikiruCharacterDetailLinks(html, origin) {
+  const links = [];
+  const seen = new Set();
+  const pattern = /<div\b[^>]*\bclass\s*=\s*(["'])[^"']*\bcharacter\b[^"']*\1[^>]*>[\s\S]*?<a\b[^>]*\bhref\s*=\s*(["'])([^"']+)\2/giu;
+  for (const match of String(html ?? "").matchAll(pattern)) {
+    const href = decodeHtml(match[3]);
+    let parsed;
+    try {
+      parsed = new URL(href, origin);
+    } catch {
+      continue;
+    }
+    const rawPageName = parsed.search.startsWith("?") ? parsed.search.slice(1) : "";
+    if (!rawPageName || rawPageName.includes("=") || rawPageName.startsWith("cmd")) continue;
+    let pageName;
+    try {
+      pageName = decodeURIComponent(rawPageName.replace(/\+/g, " "));
+    } catch {
+      pageName = rawPageName;
+    }
+    if (!pageName || seen.has(parsed.href)) continue;
+    seen.add(parsed.href);
+    links.push({ pageName, url: parsed.href });
+  }
+  return links;
+}
+
+export function isWikiruUnavailablePage(html) {
+  const title = String(html ?? "").match(/<title\b[^>]*>([\s\S]*?)<\/title>/iu)?.[1] ?? "";
+  return /runtime error|one moment, please|cf-chl-/iu.test(title + "\n" + String(html ?? "").slice(0, 2048));
+}
+
 export function extractWikiruNameRecord(html) {
   const row = String(html ?? "").match(
     /<th\b[^>]*>\s*名前\s*<\/th>\s*<td\b[^>]*>(?<value>[\s\S]*?)<\/td>/iu,

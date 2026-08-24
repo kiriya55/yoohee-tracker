@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 // @ts-expect-error The merge policy is shared by the Node CLI.
-import { mergeAuthoritativeNames, validateAuthoritativeNames } from "../../scripts/authoritative-names.mjs";
+import { mergeAuthoritativeNames, preserveExistingNameFields, validateAuthoritativeNames } from "../../scripts/authoritative-names.mjs";
 
 function baseEntries() {
   return {
@@ -24,6 +24,14 @@ function baseEntries() {
 }
 
 describe("authoritative name merge", () => {
+  it("preserves a previously sourced field when a refresh has no candidate", () => {
+    expect(preserveExistingNameFields(
+      { code: "CheyanneSSR", type: "doll", cn: "夏安", en: "Cheyanne" },
+      {},
+      { jp: { value: "シャイアン", source: "wikiru-detail", url: "wikiru://シャイアン" } },
+    )).toMatchObject({ jp: "シャイアン" });
+  });
+
   it("lets the authoritative candidate replace an old value and records the alias", () => {
     const result = mergeAuthoritativeNames(baseEntries(), {
       cn: new Map([["1059", { value: "琳德", source: "mcc-wiki", url: "mcc://LindSSR" }]]),

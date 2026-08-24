@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 // @ts-expect-error Node parser modules are intentionally shared with the CLI.
-import { parseGfl2BannersHtml, parseGfl2CharacterNames, parseGfl2WeaponNames } from "../../scripts/gfl2-banners.mjs";
+import { buildGfl2Timesets, parseGfl2BannersHtml, parseGfl2CharacterNames, parseGfl2WeaponNames } from "../../scripts/gfl2-banners.mjs";
 // @ts-expect-error Node parser modules are intentionally shared with the CLI.
 import { parseBbsCategoryResponse, parseBbsHandbookResponse } from "../../scripts/exilium-bbs.mjs";
 // @ts-expect-error Node parser modules are intentionally shared with the CLI.
@@ -30,6 +30,21 @@ describe("authoritative source parsers", () => {
         characterNames: ["Basti", "Liushih", "Cheyanne"],
       },
     ]);
+  });
+
+  it("links historical banner names to complete catalog IDs", () => {
+    const cards = parseGfl2BannersHtml(bannerFixture, "https://gfl2.help/en/banners");
+    const timesets = buildGfl2Timesets(cards, [
+      { id: 1072, type: "doll", code: "LiushihSSR", en: "Liushih" },
+      { id: 1070, type: "doll", code: "CheyanneSSR", en: "Cheyanne" },
+    ], "haoplay");
+
+    expect(timesets[0]).toMatchObject({
+      server: "haoplay",
+      poolType: 3,
+      upItemIds: [1070, 1072],
+      source: "gfl2.help",
+    });
   });
 
   it("parses visible gfl2.help weapon names and decodes entities", () => {

@@ -54,7 +54,7 @@ describe("resources", () => {
       aliases: ["Loreley"],
     });
     expect(getResourceImageUrl(index, 1069)).toBe("https://gf2.mcc.wiki/image/doll/Avatar_Head_LoreleySSR.png");
-    expect(getResourceImageUrl(index, 10693)).toBe("https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_5_1024.png");
+    expect(getResourceImageUrl(index, 10693)).toBe("https://gf2.mcc.wiki/static/image/weapon/Weapon_DSR50_5_1024.png");
   });
 
   it("infers rarity for newly missing procurement items", () => {

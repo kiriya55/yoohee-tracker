@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
+import { fetchWithRetry } from "./fetch-with-retry.mjs";
 import { buildAssetDescriptor } from "./asset-mapping.mjs";
+import { fetchDandegateAssetSources, selectDandegateSyncTargets } from "./dandegate-assets.mjs";
+import { convertDollToPng } from "./image-assets.mjs";
 
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
 const DEFAULT_INDEX = "examples/gf2-resource-index.haoplay.json";
@@ -16,6 +19,7 @@ function parseArgs(argv) {
     retries: 2,
     force: false,
     dryRun: false,
+    proxyUrl: undefined,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
@@ -26,6 +30,7 @@ function parseArgs(argv) {
     else if (arg === "--retries") args.retries = Math.max(0, Number(argv[++i]) || 2);
     else if (arg === "--force") args.force = true;
     else if (arg === "--dry-run") args.dryRun = true;
+    else if (arg === "--proxy-url") args.proxyUrl = argv[++i];
     else if (arg === "--help" || arg === "-h") {
       printHelp();
       process.exit(0);
@@ -89,12 +94,20 @@ function localPublicPath(item) {
   return undefined;
 }
 
-async function downloadWithRetry(url, dest, timeoutMs, retries) {
+async function downloadWithRetry(url, dest, timeoutMs, retries, item, proxyUrl) {
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {
-      const response = await fetch(url, { signal: AbortSignal.timeout(timeoutMs) });
+      const response = await fetchWithRetry(url, {
+        proxyUrl,
+        attempts: 1,
+        headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
+        signal: AbortSignal.timeout(timeoutMs),
+      });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const buffer = Buffer.from(await response.arrayBuffer());
+      const sourceBuffer = Buffer.from(await response.arrayBuffer());
+      const buffer = item.type === "doll"
+        ? await convertDollToPng(sourceBuffer, item.assetSource?.transform)
+        : sourceBuffer;
       await fs.mkdir(path.dirname(dest), { recursive: true });
       await fs.writeFile(dest, buffer);
       return buffer.length;
@@ -108,9 +121,25 @@ async function main() {
   const args = parseArgs(process.argv.slice(2));
   const index = JSON.parse(await fs.readFile(args.index, "utf8"));
   const items = Object.values(index.items ?? {});
+  if (!args.dryRun) {
+    const dandegate = await fetchDandegateAssetSources(selectDandegateSyncTargets(items), { proxyUrl: args.proxyUrl });
+    for (const update of dandegate.updates) {
+      const item = index.items[String(update.id)];
+      if (!item || item.assetSource?.frozen) continue;
+      item.assetSource = update.assetSource;
+      item.iconUrl = update.assetSource.sourceUrl;
+      item.imageSource = update.assetSource.source;
+      item.assetPath = update.assetSource.targetPath;
+      item.localIcon = update.assetSource.localIcon;
+    }
+    if (dandegate.failures.length) {
+      throw new Error("Dandegate assets unresolved: " + JSON.stringify(dandegate.failures));
+    }
+  }
+  const updatedItems = Object.values(index.items ?? {});
   const targets = [];
   const frozenMissing = [];
-  for (const item of items) {
+  for (const item of updatedItems) {
     const dest = localPathForItem(item, args.outDir);
     const asset = buildAssetDescriptor(item.type, item.code);
     if (asset?.frozen) {
@@ -146,7 +175,7 @@ async function main() {
       if (idx >= targets.length) return;
       const { item, dest, sourceUrl } = targets[idx];
       try {
-        const size = await downloadWithRetry(sourceUrl, dest, args.timeoutMs, args.retries);
+        const size = await downloadWithRetry(sourceUrl, dest, args.timeoutMs, args.retries, item, args.proxyUrl);
         ok += 1;
         if (ok % 20 === 0 || idx < 3) console.log(`  [${ok}/${targets.length}] ${path.basename(dest)} (${size} bytes)`);
       } catch (error) {
@@ -173,20 +202,21 @@ async function main() {
       item.localIcon = pub;
       if (asset) {
         item.assetPath = asset.targetPath;
-        item.assetSource = asset;
+        if (!item.assetSource) item.assetSource = asset;
       }
     }
     else delete item.localIcon;
   }
   const outIndexPath = path.join(args.outDir, "resource-index.json");
   await fs.mkdir(args.outDir, { recursive: true });
-  await fs.writeFile(outIndexPath, `${JSON.stringify(updated, null, 2)}\n`, "utf8");
-  console.log(`Wrote updated index with localIcon fields to ${outIndexPath}`);
+ await fs.writeFile(outIndexPath, `${JSON.stringify(updated, null, 2)}\n`, "utf8");
+ console.log(`Wrote updated index with localIcon fields to ${outIndexPath}`);
+  if (failures.length) process.exitCode = 1;
 }
 
 function buildFallbackUrl(item) {
   if (item.type === "doll" && item.code) return `${MCC_ORIGIN}/image/doll/Avatar_Head_${encodeURIComponent(item.code)}.png`;
-  if (item.type === "weapon" && item.code) return `${MCC_ORIGIN}/image/weapon/${encodeURIComponent(item.code)}_1024.png`;
+  if (item.type === "weapon" && item.code) return `${MCC_ORIGIN}/static/image/weapon/${encodeURIComponent(item.code)}_1024.png`;
   return undefined;
 }
 

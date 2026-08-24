@@ -21,7 +21,7 @@ describe("resource catalog", () => {
     expect(resourceIdentity({ ...doll, name: "changed", server: "darkwinter" })).toBe(resourceIdentity(doll));
   });
 
-  it("detects additions and changed image identities", () => {
+  it("detects additions and changed stable identities", () => {
     const existing = { "1071": doll };
 
     expect(findResourceCatalogChanges(existing, [doll])).toEqual({ added: [], changed: [], hasChanges: false });
@@ -38,8 +38,12 @@ describe("resource catalog", () => {
     expect(findResourceCatalogChanges({ "1071": doll }, [])).toEqual({ added: [], changed: [], hasChanges: false });
   });
 
-  it("selects only added and changed items for probing", () => {
-    const changed = { ...doll, iconUrl: "https://example.test/Basti-v2.png" };
+  it("ignores image source changes in stable identity checks", () => {
+    expect(resourceIdentity({ ...doll, iconUrl: "https://example.test/Basti-v2.png" })).toBe(resourceIdentity(doll));
+  });
+
+  it("selects only added and changed catalog items", () => {
+    const changed = { ...doll, code: "BastiV2SSR" };
     const added = { id: 1072, type: "doll", code: "NewSSR", iconUrl: "https://example.test/New.png" };
 
     expect(selectResourceCatalogUpdates({ "1071": doll }, [changed, added])).toEqual([changed, added]);

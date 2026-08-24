@@ -18,6 +18,16 @@ function cleanName(value) {
   return name;
 }
 
+export function preserveExistingNameFields(entry, existingNames = {}, existingSources = {}) {
+  const next = { ...entry };
+  for (const field of FIELDS) {
+    if (cleanName(next[field])) continue;
+    const value = cleanName(existingNames?.[field]) ?? cleanName(existingSources?.[field]?.value);
+    if (value) next[field] = value;
+  }
+  return next;
+}
+
 function isAllowedSource(field, source, mode) {
   if (NORMAL_SOURCES[field]?.has(source)) return true;
   return mode === "bootstrap" && BOOTSTRAP_SOURCES.has(source);

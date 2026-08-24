@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 // @ts-expect-error Node-only CLI helper has no application TypeScript declaration.
-import { extractWikiruNameRecord } from "../../scripts/wikiru-names.mjs";
+import { extractWikiruNameRecord, isWikiruUnavailablePage, parseWikiruCharacterDetailLinks } from "../../scripts/wikiru-names.mjs";
 
 describe("wikiru detail name parser", () => {
   it("extracts Japanese, English, and Chinese names from Basti's profile row", () => {
@@ -44,5 +44,32 @@ describe("wikiru detail name parser", () => {
 
   it("returns undefined when the profile does not contain a name row", () => {
     expect(extractWikiruNameRecord("<table><tr><th>レアリティ</th><td>SSR</td></tr></table>")).toBeUndefined();
+  });
+
+  it("extracts character detail links from the filter-table page", () => {
+    const html = `
+      <div class="flex-box character" data-国内実装="済">
+        <a href="./?シャイアン"><img src="avatar.png"><br>シャイアン</a>
+      </div>
+      <div class="character flex-box">
+        <a href="https://dollsfrontline2.wikiru.jp/?ネメシス・グノーシス">ネメシス・グノーシス</a>
+      </div>
+    `;
+
+    expect(parseWikiruCharacterDetailLinks(html, "https://dollsfrontline2.wikiru.jp/")).toEqual([
+      {
+        pageName: "シャイアン",
+        url: "https://dollsfrontline2.wikiru.jp/?%E3%82%B7%E3%83%A3%E3%82%A4%E3%82%A2%E3%83%B3",
+      },
+      {
+        pageName: "ネメシス・グノーシス",
+        url: "https://dollsfrontline2.wikiru.jp/?%E3%83%8D%E3%83%A1%E3%82%B7%E3%82%B9%E3%83%BB%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9",
+      },
+    ]);
+  });
+
+  it("marks Wikiru runtime-error pages as unavailable", () => {
+    expect(isWikiruUnavailablePage("<html><title>Runtime error - Wikiru</title></html>")).toBe(true);
+    expect(isWikiruUnavailablePage("<html><title>シャイアン - Wikiru</title></html>")).toBe(false);
   });
 });

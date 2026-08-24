@@ -44,7 +44,11 @@ export function buildAssetDescriptor(item: ResourceItem): AssetDescriptor | unde
   const sourceFile = override?.sourceFile ?? targetPath.split("/").pop();
   const folder = item.type === "doll" ? "doll" : "weapon";
   const sourceUrl = override?.sourceUrl
-    ?? (sourceFile ? MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(sourceFile) : undefined);
+    ?? (sourceFile
+      ? (item.type === "weapon"
+        ? MCC_ORIGIN + "/static/image/weapon/" + encodeURIComponent(sourceFile)
+        : MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(sourceFile))
+      : undefined);
   if (!sourceUrl) return undefined;
   return {
     sourceUrl,

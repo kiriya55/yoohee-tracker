@@ -6,3 +6,6 @@ output/
 .env.local
 docs/
 docs/superpowers/
+docs/superpowers/plans
+docs/superpowers/specs
+

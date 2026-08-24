@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
+import { fetchWithRetry } from "./fetch-with-retry.mjs";
 
 function option(name, fallback) {
   const index = process.argv.indexOf(name);
@@ -9,6 +10,7 @@ function option(name, fallback) {
 const file = process.argv.find((arg, index) => index > 1 && !arg.startsWith("--") && !process.argv[index - 1]?.startsWith("--"));
 const concurrency = Math.max(1, Number(option("--concurrency", "16")) || 16);
 const timeoutMs = Math.max(1000, Number(option("--timeout-ms", "10000")) || 10000);
+const proxyUrl = option("--proxy-url", undefined);
 
 if (!file || process.argv.includes("--help") || process.argv.includes("-h")) {
   console.log(`Usage: node scripts/check-resource-images.mjs <gf2-resource-index.json> [options]
@@ -16,8 +18,9 @@ if (!file || process.argv.includes("--help") || process.argv.includes("-h")) {
 Options:
   --concurrency <n>   Parallel HEAD requests. Default: 16
   --timeout-ms <ms>   Per-request timeout. Default: 10000
+  --proxy-url <url>   HTTP proxy for local debugging, e.g. http://127.0.0.1:7890
 `);
-  process.exit(file ? 0 : 1);
+  process.exit(process.argv.includes("--help") || process.argv.includes("-h") ? 0 : 1);
 }
 
 const index = JSON.parse(await fs.readFile(file, "utf8"));
@@ -25,7 +28,14 @@ const items = Object.values(index.items ?? {}).filter((item) => item.iconUrl);
 async function checkItem(item) {
   try {
     const signal = AbortSignal.timeout(timeoutMs);
-    const response = await fetch(item.iconUrl, { method: "HEAD", signal });
+    const response = await fetchWithRetry(item.iconUrl, {
+      proxyUrl,
+      attempts: 3,
+      delayMs: 250,
+      method: "HEAD",
+      headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
+      signal,
+    });
     if (response.ok) {
       return { ok: true };
     }

@@ -68,6 +68,42 @@ export function parseGfl2BannersHtml(html, sourceUrl) {
   return cards;
 }
 
+function nameKey(value) {
+  return String(value ?? "").replace(/S{1,2}R$/i, "").replace(/[^a-z0-9]/gi, "").toLowerCase();
+}
+
+export function buildGfl2Timesets(cards, items, server) {
+  const dolls = (items ?? []).filter((item) => item?.type === "doll" && item?.id);
+  const result = [];
+  for (const card of cards ?? []) {
+    const upItemIds = [];
+    for (const name of card.characterNames ?? []) {
+      const key = nameKey(name);
+      const matches = dolls.filter((item) => [
+        item.en,
+        item.code,
+        item.name,
+        item.cn,
+        ...(item.aliases ?? []),
+      ].some((candidate) => nameKey(candidate) === key));
+      if (matches.length === 1) upItemIds.push(Number(matches[0].id));
+    }
+    const startTime = new Date(card.startDate + "T00:00:00.000Z").toISOString();
+    const endTime = new Date(card.endDate + "T23:59:59.999Z").toISOString();
+    result.push({
+      key: String(server) + ":gfl2:" + card.startDate + ":" + card.endDate + ":" + (card.characterNames ?? []).map(nameKey).join(","),
+      server: String(server),
+      poolType: 3,
+      name: (card.characterNames ?? []).join(" / ") + " Is Rate Up!",
+      startTime,
+      endTime,
+      upItemIds: [...new Set(upItemIds)].sort((a, b) => a - b),
+      source: "gfl2.help",
+    });
+  }
+  return result;
+}
+
 export function parseGfl2WeaponNames(html, sourceUrl) {
   const names = [];
   for (const match of String(html ?? "").matchAll(/<h6[^>]*>([\s\S]*?)<\/h6>/gi)) {

@@ -60,7 +60,7 @@ it("does not publish localIcon when an image download fails", () => {
     );
     const generated = JSON.parse(String(readFileSync(path.join(outDir, "resource-index.json"))));
 
-    expect(result.status).toBe(0);
+    expect(result.status).toBe(1);
     expect(generated.items["1059"].localIcon).toBeUndefined();
   } finally {
     rmSync(root, { recursive: true, force: true });

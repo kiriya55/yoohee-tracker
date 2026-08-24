@@ -92,7 +92,7 @@ describe("resourceUpdater", () => {
         rarity: 5,
         code: "Weapon_DSR50_5",
         server: "haoplay",
-        iconUrl: "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_5_1024.png",
+      iconUrl: "https://gf2.mcc.wiki/static/image/weapon/Weapon_DSR50_5_1024.png",
         imageSource: "mcc-wiki",
       },
       {
@@ -102,7 +102,7 @@ describe("resourceUpdater", () => {
         rarity: 5,
         code: "Weapon_SteyrTMP_5",
         server: "haoplay",
-        iconUrl: "https://gf2.mcc.wiki/image/weapon/Weapon_SteyrTMP_5_1024.png",
+      iconUrl: "https://gf2.mcc.wiki/static/image/weapon/Weapon_SteyrTMP_5_1024.png",
         imageSource: "mcc-wiki",
       },
     ]);
@@ -113,7 +113,7 @@ describe("resourceUpdater", () => {
       "https://gf2.mcc.wiki/image/doll/Avatar_Head_LoreleySSR.png",
     );
     expect(buildMccImageUrl({ type: "weapon", code: "Weapon_DSR50_5" })).toBe(
-      "https://gf2.mcc.wiki/image/weapon/Weapon_DSR50_5_1024.png",
+      "https://gf2.mcc.wiki/static/image/weapon/Weapon_DSR50_5_1024.png",
     );
   });
 

@@ -9,6 +9,9 @@
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1",
     "resources:update": "node scripts/update-resource-index.mjs",
+    "resources:sync": "node scripts/update-resource-index.mjs",
+    "resources:sync-r2": "node scripts/sync-miniprogram-resources.mjs",
+    "resources:download-images": "node scripts/download-images.mjs",
     "resources:check-images": "node scripts/check-resource-images.mjs",
     "i18n:fetch-names": "node scripts/fetch-i18n-names.mjs",
     "i18n:merge-names": "node scripts/merge-i18n-names.mjs",
@@ -16,13 +19,16 @@
     "i18n:validate-authoritative": "node scripts/validate-authoritative-names.mjs --strict"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.894.0",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sharp": "^0.34.5",
     "sql.js": "^1.14.1",
     "undici": "^6.28.0"
   },
   "devDependencies": {
+    "@types/node": "^24.3.0",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^6.0.3",

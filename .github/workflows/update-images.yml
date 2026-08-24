@@ -7,6 +7,11 @@ on:
         description: "Comma-separated server codes"
         required: false
         default: "dw-cn,haoplay"
+      sync_r2:
+        description: "Upload generated mini-program images and index to R2"
+        required: false
+        default: true
+        type: boolean
   schedule:
     - cron: "0 11 * * *"
 
@@ -18,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SERVERS: ${{ github.event.inputs.servers || 'dw-cn,haoplay' }}
+      SYNC_R2: ${{ github.event_name == 'schedule' || github.event.inputs.sync_r2 != 'false' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,17 +39,16 @@ jobs:
         run: |
           INDEX_FILE="examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$INDEX_FILE" ]; then
-            if node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only --check-timesets; then
-              echo "Resource catalog changes detected, proceeding with update."
-              echo "should_update=true" >> $GITHUB_OUTPUT
-            else
-              echo "No resource catalog changes detected, skipping update."
-              echo "should_update=false" >> $GITHUB_OUTPUT
-            fi
+            set +e
+            node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only --check-timesets
+            status=$?
+            set -e
+            if [ "$status" -gt 1 ]; then exit "$status"; fi
+            echo "Catalog/timeset check completed; running full sync for names and missing assets."
           else
-            echo "Forcing update (manual dispatch or missing existing index)."
-            echo "should_update=true" >> $GITHUB_OUTPUT
+            echo "Forcing full sync (manual dispatch or missing existing index)."
           fi
+          echo "should_update=true" >> $GITHUB_OUTPUT
 
       - name: Update resource index
         if: steps.check-banners.outputs.should_update == 'true'
@@ -51,14 +56,19 @@ jobs:
           node scripts/update-resource-index.mjs \
             --servers "$SERVERS" \
             --out-dir examples \
-            --existing examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json \
+            --existing public/images/resource-index.json \
             --probe-images --probe-concurrency 24 --probe-timeout-ms 20000
+
+      - name: Promote the synced catalog
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: |
+          cp "examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json" public/images/resource-index.json
 
       - name: Download images
         if: steps.check-banners.outputs.should_update == 'true'
         run: |
           node scripts/download-images.mjs \
-            --index examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json \
+            --index public/images/resource-index.json \
             --out-dir public/images \
             --concurrency 16 --timeout-ms 30000
 
@@ -71,6 +81,7 @@ jobs:
             --existing-i18n src/i18n.json \
             --out src/i18n-names.json \
             --sources-out src/i18n-name-sources.json \
+            --report-out output/name-update-report.json \
             --sources mcc,gfl2help,wikiru \
             --concurrency 8 --timeout-ms 20000
 
@@ -83,6 +94,47 @@ jobs:
             --sources src/i18n-name-sources.json \
             --out public/images/resource-index.json \
             --app-i18n src/i18n.json
+
+      - name: Upload generated mini-program index artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: miniprogram-resource-index
+          path: public/images/resource-index.json
+          if-no-files-found: error
+
+      - name: Validate generated names
+        if: success()
+        run: npm run i18n:validate-authoritative
+
+      - name: Run tests and build
+        if: success()
+        run: |
+          npm test
+          npm run build
+
+      - name: Upload mini-program resources to R2
+        if: success() && env.SYNC_R2 == 'true'
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+        run: |
+          node scripts/sync-miniprogram-resources.mjs \
+            --index public/images/resource-index.json \
+            --image-root public/images \
+            --artifact-path output/miniprogram-resource-artifact/miniprogram-resource-index.json \
+            --public-base-url "$R2_PUBLIC_BASE_URL"
+
+      - name: Upload sync report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-sync-report
+          path: output/name-update-report.json
+          if-no-files-found: ignore
 
       - name: Commit changes
         if: success()

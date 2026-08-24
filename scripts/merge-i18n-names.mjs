@@ -39,7 +39,7 @@ async function main() {
       if (entry.en) item.en = entry.en;
       if (entry.jp) item.jp = entry.jp;
       if (entry.aliases?.length) item.aliases = entry.aliases;
-      if (sources[id]) item.nameSources = sources[id];
+      if (sources[id]) item.nameSources = { ...(item.nameSources ?? {}), ...sources[id] };
       merged += 1;
     }
   }
