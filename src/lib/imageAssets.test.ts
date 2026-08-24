@@ -22,4 +22,30 @@ describe("local image asset conversion", () => {
     expect(metadata.height).toBe(128);
     expect(metadata.channels).toBe(4);
   });
+
+  it("scales the Lind reference crop for smaller Dandegate sources", async () => {
+    const input = await sharp({
+      create: {
+        width: 256,
+        height: 256,
+        channels: 4,
+        background: { r: 0, g: 255, b: 0, alpha: 1 },
+      },
+    }).webp().toBuffer();
+
+    const output = await convertDollToPng(input, {
+      crop: {
+        left: 36,
+        top: 0,
+        width: 440,
+        height: 440,
+        referenceWidth: 512,
+        referenceHeight: 512,
+      },
+    });
+    const metadata = await sharp(output).metadata();
+
+    expect(metadata.width).toBe(128);
+    expect(metadata.height).toBe(128);
+  });
 });

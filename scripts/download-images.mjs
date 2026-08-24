@@ -18,6 +18,7 @@ function parseArgs(argv) {
     timeoutMs: 20000,
     retries: 2,
     force: false,
+    forceDolls: false,
     dryRun: false,
     proxyUrl: undefined,
   };
@@ -29,6 +30,7 @@ function parseArgs(argv) {
     else if (arg === "--timeout-ms") args.timeoutMs = Math.max(1000, Number(argv[++i]) || 20000);
     else if (arg === "--retries") args.retries = Math.max(0, Number(argv[++i]) || 2);
     else if (arg === "--force") args.force = true;
+    else if (arg === "--force-dolls") args.forceDolls = true;
     else if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--proxy-url") args.proxyUrl = argv[++i];
     else if (arg === "--help" || arg === "-h") {
@@ -49,6 +51,7 @@ Options:
   --timeout-ms <ms>       Per-image timeout. Default: 20000
   --retries <n>           Retries on failure. Default: 2
   --force                 Download and overwrite existing local images
+  --force-dolls           Reprocess existing doll images, leaving weapons untouched
   --dry-run               List targets without downloading
 `);
 }
@@ -122,7 +125,10 @@ async function main() {
   const index = JSON.parse(await fs.readFile(args.index, "utf8"));
   const items = Object.values(index.items ?? {});
   if (!args.dryRun) {
-    const dandegate = await fetchDandegateAssetSources(selectDandegateSyncTargets(items), { proxyUrl: args.proxyUrl });
+    const dandegate = await fetchDandegateAssetSources(
+      selectDandegateSyncTargets(items, { refresh: args.forceDolls }),
+      { proxyUrl: args.proxyUrl },
+    );
     for (const update of dandegate.updates) {
       const item = index.items[String(update.id)];
       if (!item || item.assetSource?.frozen) continue;
@@ -148,7 +154,8 @@ async function main() {
     }
     const sourceUrl = item.assetSource?.sourceUrl ?? asset?.sourceUrl ?? item.iconUrl ?? buildFallbackUrl(item);
     if (!dest || !sourceUrl) continue;
-    if (!args.force && await fileExists(dest)) continue;
+    const shouldForce = args.force || (args.forceDolls && item.type === "doll");
+    if (!shouldForce && await fileExists(dest)) continue;
     targets.push({ item, dest, sourceUrl });
   }
 

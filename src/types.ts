@@ -95,6 +95,19 @@ export type ResourceItem = {
     targetPath: string;
     source: string;
     frozen?: boolean;
+    transform?: {
+      format?: string;
+      width?: number;
+      height?: number;
+      crop?: {
+        left: number;
+        top: number;
+        width: number;
+        height: number;
+        referenceWidth?: number;
+        referenceHeight?: number;
+      };
+    };
   };
   nameSources?: Record<string, {
     value: string;

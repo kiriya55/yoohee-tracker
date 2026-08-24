@@ -68,7 +68,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Krolik"
       },
@@ -118,7 +126,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Nemesis"
       },
@@ -168,7 +184,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Colphne"
       },
@@ -218,7 +242,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Lenna"
       },
@@ -268,7 +300,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Vepley"
       },
@@ -318,7 +358,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Groza"
       },
@@ -368,7 +416,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Peritya"
       },
@@ -418,7 +474,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Sharkry"
       },
@@ -468,7 +532,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Dushevnaya"
       },
@@ -518,7 +590,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Cheeta"
       },
@@ -568,7 +648,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Tololo"
       },
@@ -618,7 +706,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Nagant"
       },
@@ -669,7 +765,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Qiongjiu"
       },
@@ -718,7 +822,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Centaureissi"
       },
@@ -768,7 +880,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Sabrina"
       },
@@ -818,7 +938,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Daiyan"
       },
@@ -868,7 +996,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Mosin-Nagant"
       },
@@ -918,7 +1054,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Makiatto"
       },
@@ -958,7 +1102,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Jiangyu"
       },
@@ -1008,7 +1160,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Ksenia"
       },
@@ -1058,7 +1218,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Ullrid"
       },
@@ -1108,7 +1276,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Littara"
       },
@@ -1158,7 +1334,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Suomi"
       },
@@ -1208,7 +1392,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Papasha"
       },
@@ -1258,7 +1450,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Lotta"
       },
@@ -1308,7 +1508,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Andoris"
       },
@@ -1358,7 +1566,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Faye"
       },
@@ -1410,7 +1626,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Vector"
       },
@@ -1460,7 +1684,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Belka"
       },
@@ -1500,7 +1732,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Springfield"
       },
@@ -1550,7 +1790,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Qiuhua"
       },
@@ -1600,7 +1848,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Harpsy"
       },
@@ -1650,7 +1906,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Zhaohui"
       },
@@ -1700,7 +1964,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Mechty"
       },
@@ -1750,7 +2022,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Klukai"
       },
@@ -1800,7 +2080,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Peri"
       },
@@ -1850,7 +2138,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Yoohee"
       },
@@ -1900,7 +2196,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Nikketa"
       },
@@ -1950,7 +2254,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Leva"
       },
@@ -2000,7 +2312,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Robella"
       },
@@ -2050,7 +2370,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Lainie"
       },
@@ -2144,7 +2472,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Phaetusa"
       },
@@ -2194,7 +2530,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Balthilde"
       },
@@ -2244,7 +2588,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Lewis"
       },
@@ -2292,7 +2644,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Welrod"
       },
@@ -2338,7 +2698,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Florence"
       },
@@ -2388,7 +2756,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Alva"
       },
@@ -2438,7 +2814,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Voymastina"
       },
@@ -2488,7 +2872,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Helen"
       },
@@ -2538,7 +2930,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Sakura"
       },
@@ -2588,7 +2988,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Loreley"
       },
@@ -2636,7 +3044,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Cheyanne"
       },
@@ -2693,7 +3109,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Basti"
       },
@@ -2735,7 +3159,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Liushih"
       },
@@ -2784,7 +3216,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Sextans"
       },
@@ -2833,7 +3273,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/OTs-14"
       },
@@ -2877,7 +3325,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Nemesis%20Gnosis"
       },
@@ -2921,7 +3377,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Soppo"
       },
@@ -2965,7 +3429,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Mityl"
       },
@@ -3009,7 +3481,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Faelynn"
       },
@@ -3053,7 +3533,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Koleda"
       },
@@ -3097,7 +3585,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Asteria"
       },
@@ -3143,7 +3639,15 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
         },
         "sourcePage": "https://dandegate.net/dolls/Eagletta"
       },

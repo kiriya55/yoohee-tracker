@@ -70,7 +70,7 @@ jobs:
           node scripts/download-images.mjs \
             --index public/images/resource-index.json \
             --out-dir public/images \
-            --concurrency 16 --timeout-ms 30000
+            --concurrency 16 --timeout-ms 30000 --force-dolls
 
       - name: Fetch i18n names from community sources
         if: success()

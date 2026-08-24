@@ -3,6 +3,13 @@ import { parseDandegateAvatarHtml } from "./catalog-sources.mjs";
 
 const DANDegate_ORIGIN = "https://dandegate.net";
 
+const DANDEGATE_DOLL_TRANSFORM = {
+  format: "png",
+  width: 128,
+  height: 128,
+  crop: { left: 36, top: 0, width: 440, height: 440, referenceWidth: 512, referenceHeight: 512 },
+};
+
 const PAGE_ALIASES = new Map([
   ["Biyoca", "Belka"],
   ["Charolic", "Krolik"],
@@ -52,17 +59,18 @@ export function buildDandegateAssetSource(code, avatarUrl, pageUrl) {
     targetPath: "doll/Avatar_Head_" + code + ".png",
     localIcon: "/images/doll/Avatar_Head_" + code + ".png",
     source: "dandegate",
-    transform: { format: "png", width: 128, height: 128 },
+    transform: DANDEGATE_DOLL_TRANSFORM,
     sourcePage: pageUrl,
   };
 }
 
-export function selectDandegateSyncTargets(items = []) {
+export function selectDandegateSyncTargets(items = [], options = {}) {
+  const refresh = options.refresh === true;
   return items.filter((item) => (
     item?.type === "doll"
     && item.code
     && item.assetSource?.frozen !== true
-    && item.assetSource?.source !== "dandegate"
+    && (refresh || item.assetSource?.source !== "dandegate")
   ));
 }
 

@@ -36,6 +36,43 @@ it("plans only missing images unless force is requested", () => {
   }
 });
 
+it("can reprocess existing doll images without redownloading weapons", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "gf2-images-force-dolls-"));
+  try {
+    const outDir = path.join(root, "images");
+    const indexPath = path.join(root, "resource-index.json");
+    const existingDoll = path.join(outDir, "doll", "Avatar_Head_BastiSSR.png");
+    const existingWeapon = path.join(outDir, "weapon", "Weapon_Test_5_1024.png");
+    mkdirSync(path.dirname(existingDoll), { recursive: true });
+    mkdirSync(path.dirname(existingWeapon), { recursive: true });
+    writeFileSync(existingDoll, "existing");
+    writeFileSync(existingWeapon, "existing");
+    writeFileSync(
+      indexPath,
+      JSON.stringify({
+        items: {
+          "1071": { id: 1071, type: "doll", code: "BastiSSR", iconUrl: "https://example.test/Basti.png" },
+          "10001": { id: 10001, type: "weapon", code: "Weapon_Test_5", iconUrl: "https://example.test/Test.png" },
+        },
+      }),
+    );
+
+    const script = path.resolve("scripts/download-images.mjs");
+    const result = spawnSync(
+      process.execPath,
+      [script, "--index", indexPath, "--out-dir", outDir, "--force-dolls", "--dry-run"],
+      { encoding: "utf8" },
+    );
+
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain("Found 1 images to download");
+    expect(result.stdout).toContain("Avatar_Head_BastiSSR.png");
+    expect(result.stdout).not.toContain("Weapon_Test_5_1024.png");
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 it("does not publish localIcon when an image download fails", () => {
   const root = mkdtempSync(path.join(tmpdir(), "gf2-images-failed-"));
   try {
