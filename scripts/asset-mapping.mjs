@@ -20,5 +20,6 @@ export function buildAssetDescriptor(type, code) {
     targetPath,
     localIcon: "/images/" + targetPath,
     source: override?.source ?? "mcc-wiki",
+    ...(override?.frozen ? { frozen: true } : {}),
   };
 }

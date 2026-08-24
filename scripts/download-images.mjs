@@ -109,13 +109,22 @@ async function main() {
   const index = JSON.parse(await fs.readFile(args.index, "utf8"));
   const items = Object.values(index.items ?? {});
   const targets = [];
+  const frozenMissing = [];
   for (const item of items) {
     const dest = localPathForItem(item, args.outDir);
     const asset = buildAssetDescriptor(item.type, item.code);
+    if (asset?.frozen) {
+      if (!dest || !await fileExists(dest)) frozenMissing.push({ id: item.id, dest });
+      continue;
+    }
     const sourceUrl = item.assetSource?.sourceUrl ?? asset?.sourceUrl ?? item.iconUrl ?? buildFallbackUrl(item);
     if (!dest || !sourceUrl) continue;
     if (!args.force && await fileExists(dest)) continue;
     targets.push({ item, dest, sourceUrl });
+  }
+
+  if (frozenMissing.length) {
+    throw new Error("Frozen image assets are missing locally: " + frozenMissing.map((item) => `${item.id} (${item.dest ?? "unknown path"})`).join(", "));
   }
 
   console.log(`Found ${targets.length} images to download into ${args.outDir}`);

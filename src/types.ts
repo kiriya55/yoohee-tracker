@@ -94,6 +94,7 @@ export type ResourceItem = {
     sourceUrl: string;
     targetPath: string;
     source: string;
+    frozen?: boolean;
   };
   nameSources?: Record<string, {
     value: string;

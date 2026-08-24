@@ -8,6 +8,7 @@ export type AssetDescriptor = {
   targetPath: string;
   localIcon: string;
   source: string;
+  frozen?: boolean;
 };
 
 type AssetOverride = {
@@ -15,6 +16,7 @@ type AssetOverride = {
   sourceUrl?: string;
   targetFile: string;
   source?: string;
+  frozen?: boolean;
 };
 
 function overrideFor(item: ResourceItem): AssetOverride | undefined {
@@ -49,5 +51,6 @@ export function buildAssetDescriptor(item: ResourceItem): AssetDescriptor | unde
     targetPath,
     localIcon: "/images/" + targetPath,
     source: override?.source ?? "mcc-wiki",
+    ...(override?.frozen ? { frozen: true } : {}),
   };
 }

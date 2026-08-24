@@ -28,6 +28,7 @@ describe("asset mapping", () => {
       targetPath: "doll/Avatar_Head_LindSSR.png",
       localIcon: "/images/doll/Avatar_Head_LindSSR.png",
       source: "dandegate",
+      frozen: true,
     });
   });
 });
