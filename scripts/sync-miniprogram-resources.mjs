@@ -168,19 +168,65 @@ export async function uploadPlan(plan, { client, bucket }) {
   };
 }
 
-async function verifyPublicIndex(publicBaseUrl, expectedIndex) {
-  if (!publicBaseUrl) return;
-  const base = publicBaseUrl.endsWith("/") ? publicBaseUrl : `${publicBaseUrl}/`;
-  const response = await fetch(new URL(INDEX_KEY, base), {
-    cache: "no-store",
-    headers: { "cache-control": "no-cache" },
-  });
-  if (!response.ok) throw new Error(`Public R2 index verification failed: HTTP ${response.status}`);
-  const actual = await response.json();
-  const actualCount = isObject(actual.items) ? Object.keys(actual.items).length : 0;
-  if (actual.format !== expectedIndex.format || actualCount !== Object.keys(expectedIndex.items).length) {
-    throw new Error(`Public R2 index verification failed: expected ${Object.keys(expectedIndex.items).length} items, got ${actualCount}`);
+export function buildPublicIndexUrl(publicBaseUrl, cacheBust = Date.now()) {
+  const base = new URL(String(publicBaseUrl));
+  base.search = "";
+  base.hash = "";
+  const indexSuffix = `/${INDEX_KEY}`;
+  if (base.pathname.endsWith(indexSuffix)) {
+    base.pathname = base.pathname.slice(0, -INDEX_KEY.length);
+  } else if (!base.pathname.endsWith("/")) {
+    base.pathname += "/";
   }
+
+  const url = new URL(INDEX_KEY, base);
+  url.searchParams.set("_r2_verify", String(cacheBust));
+  return url.href;
+}
+
+function isRetryablePublicStatus(status) {
+  return status === 403 || status === 404 || status === 408 || status === 425 || status === 429 || status >= 500;
+}
+
+function wait(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
+export async function verifyPublicIndex(publicBaseUrl, expectedIndex, options = {}) {
+  if (!publicBaseUrl) return;
+
+  const attempts = Math.max(1, Number(options.attempts) || 5);
+  const parsedRetryDelayMs = Number(options.retryDelayMs);
+  const retryDelayMs = Number.isFinite(parsedRetryDelayMs) ? Math.max(0, parsedRetryDelayMs) : 2000;
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const now = options.now ?? (() => Date.now());
+  const expectedCount = Object.keys(expectedIndex.items).length;
+  let lastFailure = "unknown response";
+
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const url = buildPublicIndexUrl(publicBaseUrl, Number(now()) + attempt);
+    try {
+      const response = await fetchImpl(url, {
+        cache: "no-store",
+        headers: { "cache-control": "no-cache" },
+      });
+      if (response.ok) {
+        const actual = await response.json();
+        const actualCount = isObject(actual.items) ? Object.keys(actual.items).length : 0;
+        if (actual.format === expectedIndex.format && actualCount === expectedCount) return;
+        lastFailure = `expected ${expectedCount} items, got ${actualCount}`;
+      } else {
+        lastFailure = `HTTP ${response.status}`;
+        if (!isRetryablePublicStatus(response.status)) break;
+      }
+    } catch (error) {
+      lastFailure = error instanceof Error ? error.message : String(error);
+    }
+
+    if (attempt + 1 < attempts) await wait(retryDelayMs * (2 ** attempt));
+  }
+
+  throw new Error(`Public R2 index verification failed after ${attempts} attempts: ${lastFailure}`);
 }
 
 async function main() {

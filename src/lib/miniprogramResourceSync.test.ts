@@ -1,9 +1,15 @@
+// @ts-nocheck Node-only integration tests import the ESM uploader directly.
 import { describe, expect, it } from "vitest";
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-// @ts-expect-error This test imports the Node ESM uploader directly.
-import { buildUploadPlan, uploadPlan, validateCatalog } from "../../scripts/sync-miniprogram-resources.mjs";
+import {
+  buildPublicIndexUrl,
+  buildUploadPlan,
+  uploadPlan,
+  validateCatalog,
+  verifyPublicIndex,
+} from "../../scripts/sync-miniprogram-resources.mjs";
 
 async function makeFixture() {
   const imageRoot = await fs.mkdtemp(path.join(os.tmpdir(), "gf2-r2-sync-"));
@@ -38,6 +44,43 @@ function fixtureIndex() {
 }
 
 describe("mini-program R2 resource sync", () => {
+  it("normalizes a base or full index URL and adds a cache-busting verifier query", () => {
+    expect(buildPublicIndexUrl("https://assets.example.test", 123)).toBe(
+      "https://assets.example.test/miniprogram-resource-index.json?_r2_verify=123",
+    );
+    expect(buildPublicIndexUrl("https://assets.example.test/miniprogram-resource-index.json", 123)).toBe(
+      "https://assets.example.test/miniprogram-resource-index.json?_r2_verify=123",
+    );
+  });
+
+  it("retries a transient public 403 before accepting the uploaded index", async () => {
+    const responses = [
+      new Response("Access denied", { status: 403 }),
+      new Response(JSON.stringify({ format: "gf2-resource-index", items: { "1": {} } }), {
+        status: 200,
+        headers: { "content-type": "application/json" },
+      }),
+    ];
+    const urls: string[] = [];
+
+    await expect(verifyPublicIndex(
+      "https://assets.example.test",
+      { format: "gf2-resource-index", items: { "1": {} } },
+      {
+        attempts: 2,
+        retryDelayMs: 0,
+        now: () => 100,
+        fetchImpl: async (url) => {
+          urls.push(String(url));
+          return responses.shift();
+        },
+      },
+    )).resolves.toBeUndefined();
+
+    expect(urls).toHaveLength(2);
+    expect(urls[0]).not.toBe(urls[1]);
+  });
+
   it("validates every catalog image before creating an upload plan", async () => {
     const imageRoot = await makeFixture();
     const index = fixtureIndex();

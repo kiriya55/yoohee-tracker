@@ -122,6 +122,11 @@ i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文
 - `R2_SECRET_ACCESS_KEY`
 - `R2_PUBLIC_BASE_URL`
 
+`R2_PUBLIC_BASE_URL` should be the public R2 custom domain or public bucket base, for example
+`https://assets.yoohee.chukogals.top`. The uploader also accepts the full
+`.../miniprogram-resource-index.json` URL and normalizes it. The post-upload check
+uses cache-busting and retries transient 403/404/5xx responses.
+
 定时 Action 默认启用 R2；手动触发时可将 `sync_r2` 设为 `false` 仅生成 GitHub 资源和 artifact。
 
 本地也可以手动运行：
