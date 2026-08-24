@@ -11,9 +11,9 @@ const doll = {
 };
 
 describe("resource catalog", () => {
-  it("uses the Wiki bust image for Lind because the generic head image is missing", () => {
+  it("uses the Dandegate Lind source and the canonical Head target", () => {
     expect(buildMccImageUrl("doll", "LindSSR")).toBe(
-      "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+      "https://cdn.dandegate.net/dolls/lind/249a546c1bc34c6e201a3fb17c6b06fac85329929019d67fd8e3ef44c2c871b0.webp",
     );
   });
 

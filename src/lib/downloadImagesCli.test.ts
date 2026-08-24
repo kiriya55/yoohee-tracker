@@ -47,7 +47,7 @@ it("does not publish localIcon when an image download fails", () => {
         format: "gf2-resource-index",
         version: 1,
         items: {
-          "1059": { id: 1059, type: "doll", code: "LindSSR", iconUrl: "http://127.0.0.1:9/missing.png" },
+          "1059": { id: 1059, type: "item", code: "Missing", iconUrl: "http://127.0.0.1:9/missing.png" },
         },
       }),
     );

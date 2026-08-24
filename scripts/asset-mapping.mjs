@@ -14,12 +14,11 @@ export function buildAssetDescriptor(type, code) {
   const folder = type === "doll" ? "doll" : type === "weapon" ? "weapon" : undefined;
   if (!folder) return undefined;
   const targetFile = override?.targetFile ?? (type === "doll" ? "Avatar_Head_" + code + ".png" : code + "_1024.png");
-  const sourceFile = override?.sourceFile ?? targetFile;
   const targetPath = folder + "/" + targetFile;
   return {
-    sourceUrl: MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(sourceFile),
+    sourceUrl: override?.sourceUrl ?? MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(override?.sourceFile ?? targetFile),
     targetPath,
     localIcon: "/images/" + targetPath,
-    source: "mcc-wiki",
+    source: override?.source ?? "mcc-wiki",
   };
 }

@@ -11,8 +11,10 @@ export type AssetDescriptor = {
 };
 
 type AssetOverride = {
-  sourceFile: string;
+  sourceFile?: string;
+  sourceUrl?: string;
   targetFile: string;
+  source?: string;
 };
 
 function overrideFor(item: ResourceItem): AssetOverride | undefined {
@@ -38,13 +40,14 @@ export function buildAssetDescriptor(item: ResourceItem): AssetDescriptor | unde
   if (!targetPath) return undefined;
   const override = overrideFor(item);
   const sourceFile = override?.sourceFile ?? targetPath.split("/").pop();
-  if (!sourceFile) return undefined;
   const folder = item.type === "doll" ? "doll" : "weapon";
-  const sourceUrl = MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(sourceFile);
+  const sourceUrl = override?.sourceUrl
+    ?? (sourceFile ? MCC_ORIGIN + "/image/" + folder + "/" + encodeURIComponent(sourceFile) : undefined);
+  if (!sourceUrl) return undefined;
   return {
     sourceUrl,
     targetPath,
     localIcon: "/images/" + targetPath,
-    source: "mcc-wiki",
+    source: override?.source ?? "mcc-wiki",
   };
 }

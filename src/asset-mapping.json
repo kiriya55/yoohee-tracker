@@ -1,8 +1,9 @@
 {
   "overrides": {
     "doll:LindSSR": {
-      "sourceFile": "Avatar_Bust_LindSSR.png",
-      "targetFile": "Avatar_Head_LindSSR.png"
+      "sourceUrl": "https://cdn.dandegate.net/dolls/lind/249a546c1bc34c6e201a3fb17c6b06fac85329929019d67fd8e3ef44c2c871b0.webp",
+      "targetFile": "Avatar_Head_LindSSR.png",
+      "source": "dandegate"
     }
   }
 }

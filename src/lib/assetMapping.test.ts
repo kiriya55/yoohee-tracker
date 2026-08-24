@@ -20,14 +20,14 @@ describe("asset mapping", () => {
     expect(assetPathFor(item)).toBe("weapon/Weapon_MK23_5_1024.png");
   });
 
-  it("downloads Lind from Bust but publishes the old Head filename", () => {
+  it("downloads Lind from Dandegate and publishes the Head filename", () => {
     const item: ResourceItem = { id: 1059, type: "doll", code: "LindSSR" };
 
     expect(buildAssetDescriptor(item)).toEqual({
-      sourceUrl: "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+      sourceUrl: "https://cdn.dandegate.net/dolls/lind/249a546c1bc34c6e201a3fb17c6b06fac85329929019d67fd8e3ef44c2c871b0.webp",
       targetPath: "doll/Avatar_Head_LindSSR.png",
       localIcon: "/images/doll/Avatar_Head_LindSSR.png",
-      source: "mcc-wiki",
+      source: "dandegate",
     });
   });
 });

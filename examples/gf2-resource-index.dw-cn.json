@@ -920,14 +920,14 @@
       "rarity": 5,
       "code": "LindSSR",
       "server": "haoplay",
-      "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+      "iconUrl": "https://cdn.dandegate.net/dolls/lind/249a546c1bc34c6e201a3fb17c6b06fac85329929019d67fd8e3ef44c2c871b0.webp",
       "aliases": [],
       "assetPath": "doll/Avatar_Head_LindSSR.png",
       "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Bust_LindSSR.png",
+        "sourceUrl": "https://cdn.dandegate.net/dolls/lind/249a546c1bc34c6e201a3fb17c6b06fac85329929019d67fd8e3ef44c2c871b0.webp",
         "targetPath": "doll/Avatar_Head_LindSSR.png",
         "localIcon": "/images/doll/Avatar_Head_LindSSR.png",
-        "source": "mcc-wiki"
+        "source": "dandegate"
       },
       "servers": [
         "dw-cn",
