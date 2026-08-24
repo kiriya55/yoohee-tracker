@@ -3069,15 +3069,7 @@
         "transform": {
           "format": "png",
           "width": 128,
-          "height": 128,
-          "crop": {
-            "left": 36,
-            "top": 0,
-            "width": 440,
-            "height": 440,
-            "referenceWidth": 512,
-            "referenceHeight": 512
-          }
+          "height": 128
         },
         "sourcePage": "https://dandegate.net/dolls/Eagletta"
       },

@@ -10,6 +10,8 @@ const DANDEGATE_DOLL_TRANSFORM = {
   crop: { left: 36, top: 0, width: 440, height: 440, referenceWidth: 512, referenceHeight: 512 },
 };
 
+const DANDEGATE_NO_CROP_CODES = new Set(["EaglettaSSR"]);
+
 const PAGE_ALIASES = new Map([
   ["Biyoca", "Belka"],
   ["Charolic", "Krolik"],
@@ -59,7 +61,9 @@ export function buildDandegateAssetSource(code, avatarUrl, pageUrl) {
     targetPath: "doll/Avatar_Head_" + code + ".png",
     localIcon: "/images/doll/Avatar_Head_" + code + ".png",
     source: "dandegate",
-    transform: DANDEGATE_DOLL_TRANSFORM,
+    transform: DANDEGATE_NO_CROP_CODES.has(code)
+      ? { format: "png", width: 128, height: 128 }
+      : DANDEGATE_DOLL_TRANSFORM,
     sourcePage: pageUrl,
   };
 }

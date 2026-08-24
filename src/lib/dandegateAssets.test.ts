@@ -32,4 +32,12 @@ describe("Dandegate doll asset sources", () => {
     expect(selectDandegateSyncTargets([existing], { refresh: true })).toEqual([existing]);
     expect(selectDandegateSyncTargets([existing])).toEqual([]);
   });
+
+  it("keeps the already head-aligned Eagletta avatar uncropped", () => {
+    expect(buildDandegateAssetSource(
+      "EaglettaSSR",
+      "https://cdn.dandegate.net/dolls/eagletta/avatar.webp",
+      "https://dandegate.net/dolls/Eagletta",
+    )?.transform).toEqual({ format: "png", width: 128, height: 128 });
+  });
 });
