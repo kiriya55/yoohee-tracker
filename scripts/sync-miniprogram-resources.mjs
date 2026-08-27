@@ -193,7 +193,7 @@ function wait(milliseconds) {
 }
 
 export async function verifyPublicIndex(publicBaseUrl, expectedIndex, options = {}) {
-  if (!publicBaseUrl) return;
+  if (!publicBaseUrl) return { verified: false, skipped: true, reason: "R2_PUBLIC_BASE_URL is not configured" };
 
   const attempts = Math.max(1, Number(options.attempts) || 5);
   const parsedRetryDelayMs = Number(options.retryDelayMs);
@@ -213,7 +213,9 @@ export async function verifyPublicIndex(publicBaseUrl, expectedIndex, options = 
       if (response.ok) {
         const actual = await response.json();
         const actualCount = isObject(actual.items) ? Object.keys(actual.items).length : 0;
-        if (actual.format === expectedIndex.format && actualCount === expectedCount) return;
+        if (actual.format === expectedIndex.format && actualCount === expectedCount) {
+          return { verified: true, attempts: attempt + 1 };
+        }
         lastFailure = `expected ${expectedCount} items, got ${actualCount}`;
       } else {
         lastFailure = `HTTP ${response.status}`;
@@ -226,7 +228,9 @@ export async function verifyPublicIndex(publicBaseUrl, expectedIndex, options = 
     if (attempt + 1 < attempts) await wait(retryDelayMs * (2 ** attempt));
   }
 
-  throw new Error(`Public R2 index verification failed after ${attempts} attempts: ${lastFailure}`);
+  const warning = `::warning::Public R2 index verification unavailable after ${attempts} attempts (${lastFailure}); S3 upload and HEAD verification succeeded, so the sync will continue.`;
+  (options.warn ?? console.warn)(warning);
+  return { verified: false, attempts, reason: lastFailure };
 }
 
 async function main() {

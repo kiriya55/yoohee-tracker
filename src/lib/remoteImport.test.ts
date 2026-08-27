@@ -76,4 +76,33 @@ Authorization: token`);
       { uid: "123456", server: "haoplay", poolType: 4, poolId: 196001, itemId: 10713, timestamp: 1782374017 },
     ]);
   });
+
+  it("uses a captured credential while keeping fetch and pagination in the Tracker", async () => {
+    const fetchImpl = vi.fn().mockResolvedValue(
+      new Response(JSON.stringify({ code: 0, data: { list: [{ pool_id: 118001, item: 1069, time: 1782373017 }], next: "" } })),
+    );
+    const result = await fetchRemoteGachaRecords({
+      uid: "123456",
+      server: "",
+      endpoint: "https://example.invalid/list",
+      headersText: "Authorization: stale-manual-value",
+      credential: {
+        format: "gfl2-capture-credential",
+        version: 1,
+        serverId: "haoplay-asia",
+        endpoint: "https://gf2-gacha-record-asia.haoplay.com/list?game_channel_id=10001",
+        authorization: "Bearer captured-value",
+        capturedAt: "2026-08-27T00:00:00.000Z",
+      },
+      poolTypes: [3],
+      fetchImpl,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(result.records[0]).toMatchObject({ uid: "123456", server: "haoplay", poolType: 3, itemId: 1069 });
+    expect(fetchImpl).toHaveBeenCalledWith(
+      "https://gf2-gacha-record-asia.haoplay.com/list?game_channel_id=10001",
+      expect.objectContaining({ headers: expect.objectContaining({ Authorization: "Bearer captured-value" }) }),
+    );
+  });
 });

@@ -9,3 +9,6 @@ docs/superpowers/
 docs/superpowers/plans
 docs/superpowers/specs
 
+tools/gfl2-capture-agent/DESIGN.md
+tools/gfl2-capture-agent/IMPLEMENTATION-PLAN.md
+tools/gfl2-capture-agent/test/

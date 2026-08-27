@@ -11,30 +11,47 @@ function toNumber(value: unknown): number {
   return Number.isFinite(n) ? n : 0;
 }
 
+function toFiniteNumber(value: unknown): number | undefined {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : undefined;
+}
+
 function normalizeServer(server: unknown): string | undefined {
   if (typeof server !== "string") return undefined;
   if (server === "hao-asia" || server === "hao-jp" || server === "hao-kr" || server === "hao-intl") return "haoplay";
-  if (server === "dw-cn" || server === "dw-us") return "darkwinter";
+  if (server === "dw-cn") return "cn";
+  if (server === "dw-us") return "darkwinter";
   return server === "tw" ? "haoplay" : server;
 }
 
-function draftFromLoose(record: AnyObject, source: SourceKind, sourceOrder: number): GachaRecordDraft | undefined {
-  const poolType = record.poolType ?? record.pool_type ?? record.type_id;
-  const poolId = record.poolId ?? record.pool_id;
-  const itemId = record.itemId ?? record.item_id ?? record.item;
-  const timestamp = record.timestamp ?? record.time;
+type DraftDefaults = {
+  uid?: string;
+  server?: string;
+  poolType?: number;
+};
+
+function draftFromLoose(record: AnyObject, source: SourceKind, sourceOrder: number, defaults: DraftDefaults = {}): GachaRecordDraft | undefined {
+  const poolType = toFiniteNumber(record.poolType ?? record.pool_type ?? record.type_id ?? record.typeId ?? defaults.poolType);
+  const poolId = toFiniteNumber(record.poolId ?? record.pool_id);
+  const itemId = toFiniteNumber(record.itemId ?? record.item_id ?? record.item);
+  const timestamp = toFiniteNumber(record.timestamp ?? record.time ?? record.created_at ?? record.createdAt);
   if (poolType === undefined || poolId === undefined || itemId === undefined || timestamp === undefined) return undefined;
 
+  const rawUid = record.uid ?? record.user_id ?? record.role_id ?? record.player_id ?? defaults.uid;
+  const rawServer = record.server ?? record.server_id ?? record.exiliumServer ?? record.elmoServer ?? defaults.server;
+  const rawRarity = record.rarity ?? record.quality ?? record.rank;
+  const rawPullNumber = record.pullNumber ?? record.pull_number ?? record.item_num;
+
   return {
-    uid: record.uid !== undefined ? String(record.uid) : undefined,
-    server: normalizeServer(record.server) ?? normalizeServer(record.exiliumServer) ?? normalizeServer(record.elmoServer),
-    poolType: toNumber(poolType),
-    poolId: toNumber(poolId),
-    itemId: toNumber(itemId),
-    timestamp: toNumber(timestamp),
-    rarity: record.rarity === undefined ? undefined : toNumber(record.rarity),
-    pullNumber: record.pullNumber === undefined && record.pull_number === undefined ? undefined : toNumber(record.pullNumber ?? record.pull_number),
-    itemName: typeof record.itemName === "string" ? record.itemName : undefined,
+    uid: rawUid === undefined ? undefined : String(rawUid),
+    server: normalizeServer(rawServer),
+    poolType,
+    poolId,
+    itemId,
+    timestamp,
+    rarity: rawRarity === undefined ? undefined : toNumber(rawRarity),
+    pullNumber: rawPullNumber === undefined ? undefined : toNumber(rawPullNumber),
+    itemName: typeof record.itemName === "string" ? record.itemName : typeof record.item_name === "string" ? record.item_name : undefined,
     source: typeof record.source === "string" ? record.source : source,
     sourceOrder,
   };
@@ -58,6 +75,42 @@ function parsePortableJson(json: AnyObject): ImportResult | undefined {
       .filter((record): record is GachaRecordDraft => Boolean(record)),
     errors: [],
   };
+}
+
+function parseRecordCollection(json: AnyObject, format = "record-list"): ImportResult | undefined {
+  if (!Array.isArray(json.records)) return undefined;
+  const defaults: DraftDefaults = {
+    uid: json.uid === undefined ? undefined : String(json.uid),
+    server: normalizeServer(json.server) ?? normalizeServer(json.exiliumServer),
+  };
+  const records = json.records
+    .map((record, index) => (isObject(record) ? draftFromLoose(record, "portable-export", index, defaults) : undefined))
+    .filter((record): record is GachaRecordDraft => Boolean(record));
+  if (records.length === 0 && json.records.length > 0) return undefined;
+  return { ok: true, format, records, errors: [] };
+}
+
+function parseRecordArray(json: unknown): ImportResult | undefined {
+  if (!Array.isArray(json)) return undefined;
+  const records = json
+    .map((record, index) => (isObject(record) ? draftFromLoose(record, "portable-export", index) : undefined))
+    .filter((record): record is GachaRecordDraft => Boolean(record));
+  if (records.length === 0) return undefined;
+  return { ok: true, format: "record-list", records, errors: [] };
+}
+
+function parseOfficialApiResponse(json: AnyObject): ImportResult | undefined {
+  const data = isObject(json.data) ? json.data : undefined;
+  if (json.code !== 0 || !data || !Array.isArray(data.list)) return undefined;
+  const records = data.list
+    .map((record, index) => (isObject(record) ? draftFromLoose(record, "uid-headers-fetch", index, {
+      uid: json.uid === undefined ? undefined : String(json.uid),
+      server: normalizeServer(json.server),
+      poolType: toFiniteNumber(json.poolType ?? json.pool_type ?? json.type_id),
+    }) : undefined))
+    .filter((record): record is GachaRecordDraft => Boolean(record));
+  if (records.length === 0) return undefined;
+  return { ok: true, format: "official-api-response", records, errors: [] };
 }
 
 function parseMergedNormalized(json: AnyObject): ImportResult | undefined {
@@ -135,6 +188,10 @@ function parseGfl2HelpPullHistory(json: AnyObject): ImportResult | undefined {
   return { ok: true, format: "gfl2-help", records, errors: [] };
 }
 
+function isResourceIndex(json: unknown): boolean {
+  return isObject(json) && json.format === "gf2-resource-index" && isObject(json.items);
+}
+
 function extractJsonObjects(text: string): unknown[] {
   const objects: unknown[] = [];
   for (let i = 0; i < text.length; i += 1) {
@@ -166,8 +223,25 @@ function extractJsonObjects(text: string): unknown[] {
 
 export function parseImportText(text: string, fileName?: string): ImportResult {
   const json = parseJson(text);
+  if (isResourceIndex(json)) {
+    return {
+      ok: false,
+      fileName,
+      format: "gf2-resource-index",
+      records: [],
+      errors: [{ key: "resourceIndexNotRecordData" }],
+    };
+  }
+  const arrayResult = parseRecordArray(json);
+  if (arrayResult) return { ...arrayResult, fileName };
+
   if (isObject(json)) {
-    const parsed = parsePortableJson(json) ?? parseMergedNormalized(json) ?? parseExiliumDecrypted(json) ?? parseGfl2HelpPullHistory(json);
+    const parsed = parsePortableJson(json)
+      ?? parseMergedNormalized(json)
+      ?? parseExiliumDecrypted(json)
+      ?? parseOfficialApiResponse(json)
+      ?? parseGfl2HelpPullHistory(json)
+      ?? parseRecordCollection(json);
     if (parsed) return { ...parsed, fileName };
   }
 

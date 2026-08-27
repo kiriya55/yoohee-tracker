@@ -1,7 +1,7 @@
 export type Locale = "zh" | "en" | "jp";
 
 export type MessageKey =
-  | "unknownImportFormat" | "elmoEmpty" | "sqliteUnknownSchema" | "sqliteMissingColumns"
+  | "unknownImportFormat" | "resourceIndexNotRecordData" | "elmoEmpty" | "sqliteUnknownSchema" | "sqliteMissingColumns"
   | "sqliteEmpty" | "sqliteReadFailed" | "remoteMissingUid" | "remoteMissingUrl"
   | "remoteMissingAuthorization" | "remoteInvalidJson" | "remoteApiError"
   | "remoteNetworkFailed" | "remoteFetchFailed" | "remoteEmpty";
@@ -15,6 +15,7 @@ export type LocalizedMessage = {
 const messages: Record<Locale, Record<MessageKey, string>> = {
   zh: {
     unknownImportFormat: "无法识别文件格式。文件导入支持本工具导出的 JSON、ElmoBeacon 数据库 .db、gf2gacha 数据库 .db。",
+    resourceIndexNotRecordData: "这是资源索引 JSON，不是抽卡记录。请直接选择它作为资源索引，或改选抽卡记录导出文件。",
     elmoEmpty: "ElmoBeacon.db 中没有 record 记录。", sqliteUnknownSchema: "这不是可识别的 SQLite 数据库：缺少受支持的记录表。",
     sqliteMissingColumns: "表 {table} 缺少关键列，需要包含 pool_type、pool_id、item_id、timestamp。", sqliteEmpty: "SQLite 表 {table} 中没有记录。",
     sqliteReadFailed: "读取 SQLite 数据库失败：", remoteMissingUid: "请填写 UID。", remoteMissingUrl: "请填写抽卡记录 URL，或粘贴完整 Fiddler 请求。",
@@ -23,6 +24,7 @@ const messages: Record<Locale, Record<MessageKey, string>> = {
   },
   en: {
     unknownImportFormat: "Unrecognized file format. Import supports tracker JSON exports, ElmoBeacon .db, and gf2gacha .db files.",
+    resourceIndexNotRecordData: "This is a resource index JSON, not gacha records. Load it as a resource index or choose a record export instead.",
     elmoEmpty: "ElmoBeacon.db contains no record entries.", sqliteUnknownSchema: "Unrecognized SQLite database: no supported record table was found.",
     sqliteMissingColumns: "Table {table} is missing required columns: pool_type, pool_id, item_id, and timestamp.", sqliteEmpty: "SQLite table {table} contains no records.",
     sqliteReadFailed: "Failed to read SQLite database: ", remoteMissingUid: "Enter a UID.", remoteMissingUrl: "Enter the gacha history URL or paste a complete Fiddler request.",
@@ -31,6 +33,7 @@ const messages: Record<Locale, Record<MessageKey, string>> = {
   },
   jp: {
     unknownImportFormat: "認識できないファイル形式です。Tracker の JSON、ElmoBeacon .db、gf2gacha .db を読み込めます。",
+    resourceIndexNotRecordData: "これはガチャ履歴ではなくリソースインデックス JSON です。リソースインデックスとして読み込むか、履歴のエクスポートを選択してください。",
     elmoEmpty: "ElmoBeacon.db に record レコードがありません。", sqliteUnknownSchema: "認識できない SQLite データベースです。対応するレコードテーブルがありません。",
     sqliteMissingColumns: "テーブル {table} に必須列 pool_type、pool_id、item_id、timestamp がありません。", sqliteEmpty: "SQLite テーブル {table} にレコードがありません。",
     sqliteReadFailed: "SQLite データベースの読み込みに失敗しました：", remoteMissingUid: "UIDを入力してください。", remoteMissingUrl: "ガチャ履歴 URL を入力するか、Fiddler リクエスト全体を貼り付けてください。",

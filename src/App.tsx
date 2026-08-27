@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useMemo, useState, useCallback, useRef } from "react";
 import {
   ChevronsLeft,
   ChevronLeft,
@@ -7,6 +7,8 @@ import {
   Columns3,
   CloudDownload,
   ClipboardList,
+  CircleAlert,
+  CircleCheck,
   Database,
   Download,
   Eraser,
@@ -14,6 +16,7 @@ import {
   FilePlus2,
   LockKeyhole,
   Plus,
+  RefreshCw,
   Save,
   Search,
   Upload,
@@ -28,15 +31,22 @@ import { exportPortable, mergeRecords } from "./lib/normalize";
 import { describeOffRate, isOffRatePermanent } from "./lib/poolRules";
 import { filterHighRarityEntries, paginate } from "./lib/presentation";
 import { defaultEndpointForServer, fetchRemoteGachaRecords, parseFiddlerRequest, REMOTE_POOL_TYPES, REMOTE_SERVERS, serverOptionForId } from "./lib/remoteImport";
+import { claimLocalCaptureCredential, claimLocalCaptureGrant, parseCaptureCredential } from "./lib/captureCredential";
+import type { CaptureCredential } from "./lib/captureCredential";
+import { fetchCaptureAgentStatus, normalizeUid, readRememberedUid, rememberUid } from "./lib/captureAgent";
+import type { CaptureAgentStatus } from "./lib/captureAgent";
+import { parseCapturePairingMessage, requestLocalPairing } from "./lib/capturePairing";
 import { enrichRecords, getResourceImageUrl, getDisplayName, loadDefaultResourceIndex, loadResourceIndex, parseResourceIndexText, saveResourceIndex } from "./lib/resources";
 import { computeGachaStats, formatDate, mergePoolsByType, pityColor, poolTypeLabel, computeCommanderProfile } from "./lib/stats";
 import { formatPoolSchedule, getPoolDetailTitle, resolvePoolSchedule } from "./lib/poolSchedule";
 import type { ResourceIndex } from "./types";
 import type { RemoteServerId } from "./lib/remoteImport";
 import { localizeMessage } from "./lib/i18n";
+import { downloadJson } from "./lib/download";
 
 import i18nData from "./i18n.json";
 const TRANSLATIONS = i18nData.ui;
+const trackerIcon = new URL("../examples/icon.jpg", import.meta.url).href;
 
 function getPoolTypeKey(poolType: number): keyof typeof TRANSLATIONS.zh {
   if (poolType === 1) return "poolType1";
@@ -183,16 +193,6 @@ function annotatePity(records: GachaRecord[]): RecentRecord[] {
     .sort((a, b) => b.timestamp - a.timestamp || b.orderInSecond - a.orderInSecond);
 }
 
-function downloadJson(name: string, value: unknown) {
-  const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = name;
-  link.click();
-  URL.revokeObjectURL(url);
-}
-
 function PaginationControls({
   page,
   pageCount,
@@ -311,80 +311,400 @@ function ManualForm({ onAdd, t }: { onAdd: (record: GachaRecordDraft) => void; t
 }
 
 function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) => void; t: (key: any) => string }) {
-  const [uid, setUid] = useState("");
+  const [uid, setUid] = useState(() => readRememberedUid());
   const [serverId, setServerId] = useState<RemoteServerId>("haoplay-asia");
   const [endpoint, setEndpoint] = useState(defaultEndpointForServer("haoplay-asia"));
   const [requestText, setRequestText] = useState("");
+  const [captureAgentUrl, setCaptureAgentUrl] = useState("http://127.0.0.1:17890");
+  const [pairingCode, setPairingCode] = useState("");
+  const [captureCredential, setCaptureCredential] = useState<CaptureCredential>();
+  const [captureGrantToken, setCaptureGrantToken] = useState("");
+  const [pairingState, setPairingState] = useState("");
+  const [pairingPending, setPairingPending] = useState(false);
+  const [importMethod, setImportMethod] = useState<"capture" | "fiddler">("capture");
+  const [captureMessage, setCaptureMessage] = useState("");
+  const [captureAgentStatus, setCaptureAgentStatus] = useState<CaptureAgentStatus>();
+  const [captureAgentStatusError, setCaptureAgentStatusError] = useState("");
+  const [checkingAgent, setCheckingAgent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const pairingPopupRef = useRef<Window | null>(null);
+  const autoClaimInFlightRef = useRef(false);
+
+  function updateUid(value: string) {
+    setUid(value);
+    rememberUid(value);
+  }
 
   function selectServer(nextServerId: RemoteServerId) {
+    setCaptureCredential(undefined);
     setServerId(nextServerId);
     setEndpoint(defaultEndpointForServer(nextServerId));
+  }
+
+  function captureAgentErrorText(error: unknown): string {
+    const message = error instanceof Error ? error.message : String(error);
+    if (message === "local capture agent is unavailable") return t("captureAgentUnavailable");
+    if (message === "local capture credential is not available") return t("captureCredentialNotReady");
+    if (message === "local pairing origin is not allowed") return t("capturePairingOriginNotAllowed");
+    if (message.includes("loopback") || message.includes("URL is invalid") || message.includes("HTTP or HTTPS")) {
+      return t("captureAgentUrlInvalid");
+    }
+    if (message.includes("status request failed") || message.includes("pairing request failed")) return t("captureAgentStatusFailed");
+    return t("captureCredentialInvalid");
+  }
+
+  async function checkCaptureAgent(silent = false) {
+    if (!silent) setCheckingAgent(true);
+    try {
+      const status = await fetchCaptureAgentStatus(captureAgentUrl);
+      setCaptureAgentStatus(status);
+      setCaptureAgentStatusError("");
+    } catch (error) {
+      setCaptureAgentStatus(undefined);
+      setCaptureAgentStatusError(captureAgentErrorText(error));
+    } finally {
+      if (!silent) setCheckingAgent(false);
+    }
+  }
+
+  function applyCaptureCredential(credential: CaptureCredential) {
+    setImportMethod("capture");
+    setCaptureCredential(credential);
+    setServerId(credential.serverId);
+    setEndpoint(credential.endpoint);
+    setRequestText("");
+    if (credential.uid) updateUid(credential.uid);
+  }
+
+  useEffect(() => {
+    if (!pairingState) return;
+    const handleMessage = (event: MessageEvent) => {
+      if (pairingPopupRef.current && event.source !== pairingPopupRef.current) return;
+      let expectedOrigin: string;
+      try {
+        expectedOrigin = new URL(captureAgentUrl).origin;
+      } catch {
+        return;
+      }
+      const grantToken = parseCapturePairingMessage(event.data, pairingState, event.origin, expectedOrigin);
+      if (!grantToken) return;
+      setCaptureGrantToken(grantToken);
+      setPairingState("");
+      setPairingPending(false);
+      setCaptureMessage(t("capturePairingApproved"));
+      pairingPopupRef.current?.close();
+      pairingPopupRef.current = null;
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [captureAgentUrl, pairingState, t]);
+
+  useEffect(() => {
+    if (!pairingCode.trim() && !captureGrantToken) {
+      setCaptureAgentStatus(undefined);
+      setCaptureAgentStatusError("");
+      return;
+    }
+
+    let active = true;
+    const refresh = async () => {
+      try {
+        const status = await fetchCaptureAgentStatus(captureAgentUrl);
+        if (!active) return;
+        setCaptureAgentStatus(status);
+        setCaptureAgentStatusError("");
+        if (captureGrantToken && status.credential.available && !autoClaimInFlightRef.current) {
+          autoClaimInFlightRef.current = true;
+          try {
+            const credential = await claimLocalCaptureGrant(captureAgentUrl, captureGrantToken);
+            if (!active) return;
+            applyCaptureCredential(credential);
+            setCaptureGrantToken("");
+            setCaptureMessage(t("captureCredentialLoaded"));
+          } catch (error) {
+            if (active) setCaptureMessage(captureAgentErrorText(error));
+          } finally {
+            autoClaimInFlightRef.current = false;
+          }
+        }
+      } catch (error) {
+        if (!active) return;
+        setCaptureAgentStatus(undefined);
+        setCaptureAgentStatusError(captureAgentErrorText(error));
+      }
+    };
+    void refresh();
+    const timer = window.setInterval(() => void refresh(), 2000);
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+    };
+  }, [captureAgentUrl, captureGrantToken, pairingCode, t]);
+
+  async function startLocalPairing() {
+    const popup = window.open("about:blank", "gfl2-capture-pairing", "popup,width=440,height=560");
+    if (!popup) {
+      setCaptureMessage(t("capturePairingPopupBlocked"));
+      return;
+    }
+    const state = typeof crypto.randomUUID === "function"
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    pairingPopupRef.current = popup;
+    setPairingState(state);
+    setPairingPending(true);
+    setCaptureMessage("");
+    try {
+      const pairing = await requestLocalPairing(captureAgentUrl, state);
+      if (pairing.state !== state) throw new Error("local capture agent returned an invalid pairing response");
+      popup.location.href = pairing.approvalUrl;
+    } catch (error) {
+      popup.close();
+      pairingPopupRef.current = null;
+      setPairingState("");
+      setPairingPending(false);
+      setCaptureMessage(captureAgentErrorText(error));
+    }
+  }
+
+  async function connectCaptureAgent() {
+    setImportMethod("capture");
+    setLoading(true);
+    setCaptureMessage("");
+    try {
+      const credential = await claimLocalCaptureCredential(captureAgentUrl, pairingCode);
+      applyCaptureCredential(credential);
+      setCaptureMessage(t("captureCredentialLoaded"));
+    } catch (error) {
+      setCaptureMessage(captureAgentErrorText(error));
+      setCaptureCredential(undefined);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function importCaptureCredential(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    setLoading(true);
+    setCaptureMessage("");
+    try {
+      const credential = parseCaptureCredential(JSON.parse(await file.text()) as unknown);
+      applyCaptureCredential(credential);
+      setCaptureMessage(t("captureCredentialLoaded"));
+    } catch {
+      setCaptureMessage(t("captureCredentialInvalid"));
+      setCaptureCredential(undefined);
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
     setLoading(true);
-    const parsed = parseFiddlerRequest(requestText);
-    const activeServer = serverOptionForId(parsed.serverId ?? serverId);
-    const result = await fetchRemoteGachaRecords({
-      uid,
-      server: activeServer.server,
-      endpoint,
-      headersText: requestText,
-      poolTypes: REMOTE_POOL_TYPES,
-    });
-    onResult({ ...result, fileName: `${activeServer.label} ${t("serverPullFileNameSuffix")}` });
-    if (parsed.serverId && parsed.serverId !== serverId) selectServer(parsed.serverId);
-    setLoading(false);
+    try {
+      const credential = importMethod === "capture" ? captureCredential : undefined;
+      const parsed = importMethod === "fiddler" ? parseFiddlerRequest(requestText) : undefined;
+      if (importMethod === "capture" && !credential) {
+        setCaptureMessage(t("captureCredentialNotReady"));
+        return;
+      }
+      const activeServer = serverOptionForId(credential?.serverId ?? parsed?.serverId ?? serverId);
+      const result = await fetchRemoteGachaRecords({
+        uid,
+        server: activeServer.server,
+        endpoint: credential?.endpoint ?? endpoint,
+        headersText: importMethod === "fiddler" ? requestText : undefined,
+        credential,
+        poolTypes: REMOTE_POOL_TYPES,
+      });
+      onResult({ ...result, fileName: `${activeServer.label} ${t("serverPullFileNameSuffix")}` });
+      if (parsed?.serverId && parsed.serverId !== serverId) selectServer(parsed.serverId);
+      setCaptureCredential(undefined);
+      setCaptureGrantToken("");
+      setPairingCode("");
+      setCaptureAgentStatus(undefined);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
     <form className="remote-import-form" onSubmit={submit}>
-      <div className="server-tabs">
-        {REMOTE_SERVERS.map((server) => (
-          <button
-            key={server.id}
-            type="button"
-            className={serverId === server.id ? "active" : ""}
-            onClick={() => selectServer(server.id)}
-          >
-            {server.label}
+      <div className="remote-method-tabs" role="tablist" aria-label={t("remoteMethodLabel")}>
+        <button type="button" role="tab" aria-selected={importMethod === "capture"} className={importMethod === "capture" ? "active" : ""} onClick={() => setImportMethod("capture")}>
+          {t("captureAgentTitle")}
+        </button>
+        <button type="button" role="tab" aria-selected={importMethod === "fiddler"} className={importMethod === "fiddler" ? "active" : ""} onClick={() => setImportMethod("fiddler")}>
+          {t("fiddlerMethodTitle")}
+        </button>
+      </div>
+
+      {importMethod === "capture" ? (
+        <>
+          <div className="capture-agent-panel">
+            <div className="capture-agent-heading">
+              <strong>{t("captureAgentTitle")}</strong>
+              <button
+                className="icon-button"
+                type="button"
+                onClick={() => void checkCaptureAgent()}
+                disabled={loading || checkingAgent}
+                title={t("captureAgentCheckStatus")}
+                aria-label={t("captureAgentCheckStatus")}
+              >
+                <RefreshCw size={15} className={checkingAgent ? "spin" : undefined} />
+              </button>
+            </div>
+            <p className="remote-note">{t("captureAgentHelp")}</p>
+            <details className="capture-agent-help">
+              <summary><CircleCheck size={15} />{t("captureAgentHowTo")}</summary>
+              <ol>
+                <li>{t("captureAgentStepStart")}</li>
+                <li>{t("captureAgentStepGame")}</li>
+                <li>{t("captureAgentStepCheck")}</li>
+                <li>{t("captureAgentStepConnect")}</li>
+                <li>{t("captureAgentStepFetch")}</li>
+              </ol>
+            </details>
+            <div className={`capture-agent-status capture-agent-status-${captureAgentStatus?.phase ?? "unknown"}`} aria-live="polite">
+              {captureAgentStatus?.phase === "captured" ? <CircleCheck size={17} /> : <CircleAlert size={17} />}
+              <div>
+                <strong>
+                  {t("captureAgentStatusLabel")}：{captureAgentStatus ? t(`captureAgentPhase${captureAgentStatus.phase[0].toUpperCase()}${captureAgentStatus.phase.slice(1)}`) : t("captureAgentStatusUnknown")}
+                </strong>
+                {captureAgentStatus?.credential.available && (
+                  <p>
+                    {captureAgentStatus.credential.serverId ?? t("unknown")} · {captureAgentStatus.credential.uidAvailable ? t("captureAgentUidDetected") : t("captureAgentUidMissing")}
+                  </p>
+                )}
+                {!captureAgentStatus && captureAgentStatusError && <p>{captureAgentStatusError}</p>}
+              </div>
+            </div>
+            <div className="capture-agent-actions">
+              <button className="primary" type="button" onClick={() => void startLocalPairing()} disabled={loading || pairingPending || Boolean(captureGrantToken) || Boolean(captureCredential)}>
+                <LockKeyhole size={16} />
+                {pairingPending ? t("capturePairingWaiting") : t("capturePairingConnect")}
+              </button>
+              {captureGrantToken && <span className="field-status">{t("capturePairingConnected")}</span>}
+            </div>
+            <details className="capture-agent-help capture-agent-fallback">
+              <summary>{t("capturePairingFallback")}</summary>
+              <div className="remote-grid">
+                <label>
+                  {t("captureAgentUrlLabel")}
+                  <input value={captureAgentUrl} onChange={(event) => setCaptureAgentUrl(event.target.value)} />
+                </label>
+                <label>
+                  {t("capturePairingCodeLabel")}
+                  <input value={pairingCode} onChange={(event) => setPairingCode(event.target.value)} autoComplete="off" />
+                </label>
+              </div>
+              <div className="capture-agent-actions">
+                <button type="button" onClick={connectCaptureAgent} disabled={loading || !pairingCode.trim()}>
+                  <LockKeyhole size={16} />
+                  {t("captureAgentConnect")}
+                </button>
+                <label className="capture-agent-file">
+                  <Upload size={16} />
+                  {t("captureCredentialFile")}
+                  <input type="file" accept=".json,.gfl2cred.json,application/json" onChange={importCaptureCredential} disabled={loading} />
+                </label>
+              </div>
+            </details>
+            {captureMessage && <p className="remote-note">{captureMessage}</p>}
+            <p className="capture-agent-warning">{t("captureCredentialWarning")}</p>
+          </div>
+          <div className="remote-grid">
+            <label>
+              <span className="field-label-row">
+                <span>{t("uidLabel")}</span>
+                {captureAgentStatus?.credential.uidAvailable && <span className="field-status">{t("captureAgentUidDetected")}</span>}
+              </span>
+              <input required inputMode="numeric" value={uid} onChange={(event) => updateUid(event.target.value)} />
+            </label>
+            <div className="capture-ready-note">
+              <strong>{captureCredential ? t("captureCredentialLoaded") : t("capturePairingExplain")}</strong>
+            </div>
+          </div>
+          <button className="primary wide" type="submit" disabled={loading || !captureCredential}>
+            <CloudDownload size={16} />
+            {loading ? t("fetching") : t("fetchAndPreview")}
           </button>
-        ))}
-      </div>
-      <div className="remote-grid">
-        <label>
-          {t("uidLabel")}
-          <input required value={uid} onChange={(event) => setUid(event.target.value)} />
-        </label>
-        <label>
-          {t("remoteUrlLabel")}
-          <input required value={endpoint} onChange={(event) => setEndpoint(event.target.value)} />
-        </label>
-      </div>
-      <label>
-        {t("fiddlerRequestPlaceholder")}
-        <textarea
-          required
-          rows={9}
-          value={requestText}
-          onChange={(event) => {
-            const text = event.target.value;
-            setRequestText(text);
-            const parsed = parseFiddlerRequest(text);
-            if (parsed.endpoint) setEndpoint(parsed.endpoint);
-            if (parsed.serverId) setServerId(parsed.serverId);
-          }}
-        />
-      </label>
-      <p className="remote-note">
-        {t("pullExplainText")}
-      </p>
-      <button className="primary wide" type="submit" disabled={loading}>
-        <CloudDownload size={16} />
-        {loading ? t("fetching") : t("fetchAndPreview")}
-      </button>
+        </>
+      ) : (
+        <div className="fiddler-panel">
+          <div className="capture-agent-heading">
+            <strong>{t("fiddlerMethodTitle")}</strong>
+          </div>
+          <p className="remote-note">{t("fiddlerTip")}</p>
+          <div className="server-tabs">
+            {REMOTE_SERVERS.map((server) => (
+              <button
+                key={server.id}
+                type="button"
+                className={serverId === server.id ? "active" : ""}
+                onClick={() => selectServer(server.id)}
+              >
+                {server.label}
+              </button>
+            ))}
+          </div>
+          <div className="remote-grid">
+            <label>
+              <span className="field-label-row"><span>{t("uidLabel")}</span></span>
+              <input required inputMode="numeric" value={uid} onChange={(event) => updateUid(event.target.value)} />
+            </label>
+            <label>
+              {t("remoteUrlLabel")}
+              <input required value={endpoint} onChange={(event) => setEndpoint(event.target.value)} />
+            </label>
+          </div>
+          <label>
+            {t("fiddlerRequestPlaceholder")}
+            <textarea
+              required
+              rows={8}
+              value={requestText}
+              onChange={(event) => {
+                const text = event.target.value;
+                setRequestText(text);
+                const parsed = parseFiddlerRequest(text);
+                if (parsed.endpoint) setEndpoint(parsed.endpoint);
+                if (parsed.serverId) setServerId(parsed.serverId);
+              }}
+            />
+          </label>
+          <details className="fiddler-guide">
+            <summary>{t("fiddlerGuideSummary")}</summary>
+            <div className="fiddler-guide-content">
+              <ol>
+                <li>{t("fiddlerDownloadBeforeName")}<strong>Fiddler Classic</strong>{t("fiddlerDownloadBeforeLink")}<a href="https://downloads.getfiddler.com/fiddler-classic/FiddlerSetup.5.0.20253.3311-latest.exe" target="_blank" rel="noreferrer">{t("fiddlerOfficialDirectLink")}</a>{t("fiddlerDownloadAfterLink")}</li>
+                <li>{t("fiddlerConfigure")}
+                  <ul>
+                    <li>{t("fiddlerStepDecrypt")}</li>
+                    <li>{t("fiddlerStepCert")}</li>
+                    <li>{t("fiddlerStepTraffic")}</li>
+                    <li>{t("fiddlerStepRestart")}</li>
+                  </ul>
+                </li>
+                <li>{t("fiddlerStartGame")}</li>
+                <li>{t("fiddlerRecruitStep")}</li>
+                <li>{t("fiddlerSessionStep")}</li>
+                <li>{t("fiddlerCopyStep")}</li>
+                <li>{t("fiddlerPasteStep")}</li>
+              </ol>
+            </div>
+          </details>
+          <p className="remote-note">{t("pullExplainText")}</p>
+          <button className="primary wide" type="submit" disabled={loading}>
+            <CloudDownload size={16} />
+            {loading ? t("fetching") : t("fetchAndPreview")}
+          </button>
+        </div>
+      )}
     </form>
   );
 }
@@ -642,8 +962,13 @@ export default function App() {
     <main className="app-shell">
       <header className="topbar">
         <div>
-          <p className="eyebrow">{t("subtitle")}</p>
-          <h1>{t("title")}</h1>
+          <div className="brand-lockup">
+            <img className="brand-icon" src={trackerIcon} alt="" aria-hidden="true" />
+            <div>
+              <p className="eyebrow">{t("subtitle")}</p>
+              <h1>{t("title")}</h1>
+            </div>
+          </div>
         </div>
         <div className="toolbar">
           <button
@@ -729,7 +1054,7 @@ export default function App() {
             </p>
             {importResult ? (
               <div className="preview-box">
-                <p>
+                <p className="import-file-name" title={importResult.fileName}>
                   <b>{importResult.fileName}</b>
                 </p>
                 <dl>
@@ -822,41 +1147,7 @@ export default function App() {
               <div className="remote-page-layout">
                 <div className="remote-page-copy">
                   <h3>{t("syncFromOfficialApi")}</h3>
-                  <p>
-                    {t("fiddlerTip")}
-                  </p>
-                  <div className="migration-guide">
-                    <h4>{t("officialGuideTitle")}</h4>
-                    <ol>
-                      <li>
-                        <>{t("fiddlerDownloadBeforeName")}<strong>Fiddler Classic</strong>{t("fiddlerDownloadBeforeLink")}<a href="https://downloads.getfiddler.com/fiddler-classic/FiddlerSetup.5.0.20253.3311-latest.exe" target="_blank" rel="noreferrer">{t("fiddlerOfficialDirectLink")}</a>{t("fiddlerDownloadAfterLink")}</>
-                      </li>
-                      <li>
-                        {t("fiddlerConfigure")}
-                        <ul>
-                          <li>{t("fiddlerStepDecrypt")}</li>
-                          <li>{t("fiddlerStepCert")}</li>
-                          <li>{t("fiddlerStepTraffic")}</li>
-                          <li>{t("fiddlerStepRestart")}</li>
-                        </ul>
-                      </li>
-                      <li>
-                        {t("fiddlerStartGame")}
-                      </li>
-                      <li>
-                        {t("fiddlerRecruitStep")}
-                      </li>
-                      <li>
-                        {t("fiddlerSessionStep")}
-                      </li>
-                      <li>
-                        {t("fiddlerCopyStep")}
-                      </li>
-                      <li>
-                        {t("fiddlerPasteStep")}
-                      </li>
-                    </ol>
-                  </div>
+                  <p>{t("serverPullHelp")}</p>
                 </div>
                 <RemoteImportForm onResult={handleRemoteResult} t={t} />
               </div>

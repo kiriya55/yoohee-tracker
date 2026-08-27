@@ -20,7 +20,7 @@
 - 本地优先：记录保存在浏览器本地，无需注册账号或部署后端。
 - 多来源导入：支持本工具导出的 JSON、exilium.xyz 网站解密备份、gfl2.help 导出 JSON、ElmoBeacon / gf2gacha SQLite 数据库。
 - 网页端 exilium.xyz 网站备份解密：可直接选择 exilium.xyz 网站加密备份 JSON，网页端调用该网站解密接口后进入导入预览，也可下载解密后的 JSON。
-- 服务器记录同步：支持粘贴 Fiddler 请求或手动填写 URL / Headers，拉取游戏服务器抽卡记录。
+- 服务器记录同步：支持一键连接本地捕获助手，也保留 Fiddler 手动抓包方式，拉取游戏服务器抽卡记录。
 - 合并去重：按时间、同秒顺序、卡池和物品信息合并多批次记录。
 - 抽卡统计：提供卡池统计、当前保底、高稀有记录、UP / 歪卡分析等视图。
 - 资源索引：支持本地化人形与武器图标资源，适合离线部署或静态站点托管。
@@ -62,9 +62,13 @@ node scripts/decrypt-exilium-backup.mjs .\你的加密备份.json .\exilium-decr
 
 点击“文件导入”，选择 gfl2.help 导出的 `gfl2help-pull-history-*.json`、或 ElmoBeacon 的 `ElmoBeacon.db` 文件、或 `gf2gacha` 的 `database.db` 文件，或其他兼容的 `.db` / `.sqlite` 文件。工具会解析文件并进入同一套导入预览流程。
 
+记录 JSON 的便携格式为 `gf2-local-tracker`。网页端和小程序还兼容无格式标识的 `records` 数组、原始记录数组、官方 `/list` 接口响应、gfl2.help 历史 JSON，以及网页端解密后的记录结构；字段会统一识别 `poolType` / `pool_type` / `type_id`、`poolId` / `pool_id`、`itemId` / `item`、`timestamp` / `time` 等别名。这样同一份网页端导出可以直接导入小程序，来自小程序或其他工具的记录 JSON 也可以回到网页端合并。
+
+`miniprogram-resource-index.json` 是图片和名称资源索引，不是抽卡记录。网页端文件导入会自动识别并载入它；小程序启动时会从 R2 自动获取并缓存它，因此不应把资源索引选择到“导入抽卡记录”入口。
+
 ### 从游戏服务器记录接口同步
 
-点击顶部“服务器拉取”，按页面中的 Fiddler 指引复制游戏客户端的抽卡记录请求。同步结果同样会先进入预览，不会直接覆盖本地记录。
+点击顶部“服务器拉取”，按页面中的指引拉取游戏客户端的抽卡记录请求。同步结果同样会先进入预览，不会直接覆盖本地记录。
 
 ## 资源与图片同步
 
@@ -104,7 +108,9 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 - `src/i18n-name-sources.json`
 - `src/i18n.json` 中的 `names`
 
-i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文为 wikiru 详情页，英文优先使用 gfl2.help banners，历史缺失时才使用同站 characters/weapons 补漏。资源目录使用 BBS handbook 的 ID 与 MCC Wiki 的 code/中文名进行全量对齐；Exilium BBS 不再只是 bootstrap 来源，而是完整目录来源。
+i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文为 [wikiru 详情页](https://dollsfrontline2.wikiru.jp/)，英文优先使用 [gfl2.help](https://gfl2.help/en/banners)，历史缺失时使用同站 characters/weapons 补漏。
+
+资源目录使用 [BBS handbook](https://gf2-bbs.exiliumgf.com/wiki/category) 的 ID 与 MCC Wiki 的 code/中文名进行全量对齐；[Exilium BBS](https://gf2-bbs.exiliumgf.com/wiki/) 作为完整目录和信息来源。
 
 名称抓取、图片查漏补缺和合并步骤在每次定时或手动 Action 中运行，不依赖卡池变化。
 
@@ -122,12 +128,30 @@ i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文
 - `R2_SECRET_ACCESS_KEY`
 - `R2_PUBLIC_BASE_URL`
 
-`R2_PUBLIC_BASE_URL` should be the public R2 custom domain or public bucket base, for example
-`https://assets.yoohee.chukogals.top`. The uploader also accepts the full
-`.../miniprogram-resource-index.json` URL and normalizes it. The post-upload check
-uses cache-busting and retries transient 403/404/5xx responses.
+`R2_PUBLIC_BASE_URL` 应该是公共 R2 自定义域名或公共存储桶的根地址，例如 `https://assets.yoohee.chukogals.top`。
+
+上传器也接受完整的 `.../miniprogram-resource-index.json` URL 并进行规范化处理。上传后检查会使用缓存失效机制，并重试临时的 403、404 和 5xx 响应。
 
 定时 Action 默认启用 R2；手动触发时可将 `sync_r2` 设为 `false` 仅生成 GitHub 资源和 artifact。
+
+### GFL2 本地捕获助手
+
+服务器拉取页面支持使用独立的 [GFL2 Local Capture Agent](./tools/gfl2-capture-agent/README.md)：助手只负责在本机捕获一次官方抽卡请求并生成临时凭据，Tracker 仍直接访问官方接口、执行分页与导入预览。原有 Fiddler 完整请求导入方式继续保留。
+
+#### 使用方法
+
+1. 双击项目根目录的 `start-gfl2-capture-agent.cmd`，保持窗口运行。
+2. 打开游戏中的“招募 → 访问详情 → 访问记录”，等待记录表出现。
+3. 在 Tracker 的“服务器拉取”中点击“允许本地助手连接”，再在弹出的本机窗口点击“允许本次连接”。
+4. 等待页面显示已捕获，确认 UID 和新增记录后点击“抓取并预览”。
+
+如果本地网络需要代理，可以在命令行运行：
+
+```powershell
+.\start-gfl2-capture-agent.cmd --upstream http://127.0.0.1:7890
+```
+
+浏览器无法打开本地确认窗口时，展开页面中的“备用方式”，输入助手窗口显示的一次性配对码；更完整的证书、代理恢复和安全说明见工具目录的 README。
 
 本地也可以手动运行：
 
@@ -158,7 +182,7 @@ npm run build
 
 <p align="center">
 <img src="https://github.com/kiriya55/yoohee-tracker/blob/main/examples/wechat-microprogram.jpg" alt="Yoohee-tracker WX Micro-program Icon" width="128">
-  <h1 align="center">幼熙助手微信小程序</h1>
+  <h4 align="center">幼熙助手微信小程序</h4>
 </p>
 
 ## 欢迎贡献
@@ -178,7 +202,7 @@ npm run build
 ## 致谢
 
 - 感谢 exilium.xyz 网站提供的抽卡记录与备份能力，gfl2.help 提供的抓包、记录同步参考与轻量导出格式。
-- 感谢 [ElmoBeacon](https://github.com/MatchaCabin/ElmoBeacon)、[gf2gacha](https://github.com/MatchaCabin/gf2gacha) 等项目对数据抓取相关的贡献。
+- 感谢 [ElmoBeacon](https://github.com/MatchaCabin/ElmoBeacon)、[gf2gacha](https://github.com/MatchaCabin/gf2gacha) 等项目对数据抓取相关的参考。
 - 感谢 https://dandegate.net/ 的图像数据，https://gf2.mcc.wiki/ 提供的中文名称；http://gfl2.help/ 提供的英文名称；https://dollsfrontline2.wikiru.jp/ 提供的日文名称
 - 感谢所有提交资源、翻译、测试反馈和问题报告的玩家。
 

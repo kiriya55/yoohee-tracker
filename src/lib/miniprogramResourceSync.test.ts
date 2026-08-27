@@ -75,10 +75,35 @@ describe("mini-program R2 resource sync", () => {
           return responses.shift();
         },
       },
-    )).resolves.toBeUndefined();
+    )).resolves.toMatchObject({
+      verified: true,
+      attempts: 2,
+    });
 
     expect(urls).toHaveLength(2);
     expect(urls[0]).not.toBe(urls[1]);
+  });
+
+  it("does not fail the R2 sync when the public index stays inaccessible", async () => {
+    const responses = [
+      new Response("Access denied", { status: 403 }),
+      new Response("Access denied", { status: 403 }),
+    ];
+
+    await expect(verifyPublicIndex(
+      "https://assets.example.test",
+      { format: "gf2-resource-index", items: { "1": {} } },
+      {
+        attempts: 2,
+        retryDelayMs: 0,
+        now: () => 100,
+        fetchImpl: async () => responses.shift(),
+        warn: () => {},
+      },
+    )).resolves.toMatchObject({
+      verified: false,
+      reason: "HTTP 403",
+    });
   });
 
   it("validates every catalog image before creating an upload plan", async () => {

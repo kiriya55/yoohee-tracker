@@ -175,6 +175,23 @@ input:focus, select:focus, textarea:focus, button:focus-visible, .file-button:fo
   border-bottom: 1px solid var(--border);
 }
 
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand-icon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: var(--bg-card);
+}
+
 .eyebrow {
   margin: 0 0 4px;
   color: var(--accent);
@@ -357,6 +374,21 @@ input:focus, select:focus, textarea:focus, button:focus-visible, .file-button:fo
   margin: 0;
 }
 
+.import-file-name {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.import-file-name b {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: inherit;
+}
+
 dl {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -402,6 +434,28 @@ dd {
   gap: 10px;
 }
 
+.remote-method-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+}
+
+.remote-method-tabs button {
+  min-height: 38px;
+  padding: 0 12px;
+  color: var(--text-secondary);
+}
+
+.remote-method-tabs button.active {
+  border-color: hsla(38, 92%, 56%, 0.5);
+  background: hsla(38, 92%, 56%, 0.1);
+  color: var(--accent);
+}
+
 .remote-import-form label,
 .remote-type-list label {
   display: grid;
@@ -438,6 +492,210 @@ dd {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.8rem;
+}
+
+.capture-agent-panel {
+  display: grid;
+  gap: 8px;
+  border: 1px solid hsla(38, 92%, 56%, 0.35);
+  border-radius: var(--radius);
+  background: hsla(38, 92%, 56%, 0.04);
+  padding: 12px;
+}
+
+.capture-agent-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.capture-agent-heading .icon-button {
+  color: var(--accent);
+}
+
+.capture-agent-help {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: hsla(222, 32%, 12%, 0.45);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.capture-agent-help summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px 10px;
+  color: var(--text-primary);
+  font-weight: 600;
+  list-style: none;
+}
+
+.capture-agent-help summary::-webkit-details-marker {
+  display: none;
+}
+
+.capture-agent-help ol {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0 12px 10px 30px;
+}
+
+.capture-agent-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.capture-agent-status svg {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+}
+
+.capture-agent-status strong {
+  display: block;
+}
+
+.capture-agent-status p {
+  margin: 3px 0 0;
+}
+
+.capture-agent-status-captured {
+  border-color: hsla(152, 62%, 46%, 0.45);
+  background: hsla(152, 62%, 38%, 0.08);
+}
+
+.capture-agent-status-captured svg {
+  color: var(--success);
+}
+
+.capture-agent-status-error,
+.capture-agent-status-unknown {
+  border-color: hsla(0, 72%, 60%, 0.35);
+}
+
+.capture-agent-status-error svg,
+.capture-agent-status-unknown svg {
+  color: var(--error);
+}
+
+.field-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.field-status {
+  color: var(--success);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.spin {
+  animation: capture-agent-spin 0.9s linear infinite;
+}
+
+@keyframes capture-agent-spin {
+  to { transform: rotate(360deg); }
+}
+
+.capture-agent-panel strong {
+  color: var(--text-primary);
+  font-size: 0.86rem;
+}
+
+.capture-agent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.capture-agent-actions button,
+.capture-agent-file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.capture-agent-file {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.capture-agent-file input {
+  display: none;
+}
+
+.capture-agent-warning {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.capture-ready-note {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 10px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.capture-agent-fallback {
+  background: transparent;
+}
+
+.fiddler-panel {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+}
+
+.fiddler-guide {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: hsla(222, 32%, 12%, 0.45);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.fiddler-guide summary {
+  cursor: pointer;
+  padding: 9px 10px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.fiddler-guide-content {
+  max-height: 280px;
+  overflow: auto;
+  padding: 0 12px 10px 30px;
+}
+
+.fiddler-guide-content ol,
+.fiddler-guide-content ul {
+  margin-top: 0;
 }
 
 .remote-page-section {
@@ -1310,6 +1568,11 @@ tr:hover td {
 @media (max-width: 760px) {
   .app-shell {
     padding: 12px;
+  }
+  .brand-icon {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
   }
   .topbar, .section-title.with-action {
     grid-template-columns: 1fr;

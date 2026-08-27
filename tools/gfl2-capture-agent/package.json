@@ -1,0 +1,26 @@
+{
+  "name": "gfl2-capture-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc -p tsconfig.json",
+    "prestart": "npm run build",
+    "start": "node dist/src/cli.js",
+    "dev": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "mockttp": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.9"
+  }
+}

@@ -1,4 +1,5 @@
 import type { GachaRecordDraft, ImportResult } from "../types";
+import type { CaptureCredential } from "./captureCredential";
 
 type FetchLike = (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
 
@@ -14,8 +15,9 @@ export type RemoteServerOption = {
 type RemoteFetchOptions = {
   uid: string;
   server: string;
-  endpoint: string;
-  headersText: string;
+  endpoint?: string;
+  headersText?: string;
+  credential?: CaptureCredential;
   poolTypes?: number[];
   fetchImpl?: FetchLike;
 };
@@ -174,9 +176,14 @@ function normalizeListItem(item: unknown, uid: string, server: string, poolType:
 }
 
 export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Promise<ImportResult> {
-  const parsedRequest = parseFiddlerRequest(options.headersText);
-  const headers = parsedRequest.headers ?? parseHeaderText(options.headersText);
-  const endpoint = parsedRequest.endpoint ?? options.endpoint.trim();
+  const parsedRequest = options.credential ? undefined : parseFiddlerRequest(options.headersText ?? "");
+  const headers = options.credential
+    ? { Authorization: options.credential.authorization }
+    : parsedRequest?.headers ?? parseHeaderText(options.headersText ?? "");
+  const endpoint = options.credential?.endpoint ?? parsedRequest?.endpoint ?? options.endpoint?.trim() ?? "";
+  const server = options.credential
+    ? serverOptionForId(options.credential.serverId).server
+    : options.server.trim() || "haoplay";
   const poolTypes = options.poolTypes ?? REMOTE_POOL_TYPES;
   if (!options.uid.trim()) return { ok: false, format: "uid-headers-fetch", records: [], errors: [{ key: "remoteMissingUid" }] };
   if (!endpoint) return { ok: false, format: "uid-headers-fetch", records: [], errors: [{ key: "remoteMissingUrl" }] };
@@ -201,7 +208,7 @@ export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Prom
         const data = isObject(json.data) ? json.data : {};
         const list = Array.isArray(data.list) ? data.list : [];
         for (const item of list) {
-          const draft = normalizeListItem(item, options.uid.trim(), options.server.trim() || "haoplay", poolType, records.length);
+          const draft = normalizeListItem(item, options.uid.trim(), server, poolType, records.length);
           if (draft) records.push(draft);
         }
         next = typeof data.next === "string" ? data.next : "";
