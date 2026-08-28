@@ -186,10 +186,7 @@
     "type": "doll",
     "cn": "绯",
     "en": "Faye",
-    "jp": "緋",
-    "aliases": [
-      "フェイ"
-    ]
+    "jp": "緋"
   },
   "1044": {
     "code": "VectorSSR",
@@ -508,15 +505,21 @@
     "code": "Weapon_UMP9_4",
     "type": "weapon",
     "cn": "通用冲锋枪9",
-    "en": "UMP9",
-    "jp": "UMP9"
+    "en": "UMP 9",
+    "jp": "UMP9",
+    "aliases": [
+      "UMP9"
+    ]
   },
   "10133": {
     "code": "Weapon_UMP9_5",
     "type": "weapon",
     "cn": "幼狮",
-    "en": "UMP9",
-    "jp": "小獅子"
+    "en": "UMP 9",
+    "jp": "小獅子",
+    "aliases": [
+      "UMP9"
+    ]
   },
   "10231": {
     "code": "Weapon_KSVK_3",
@@ -683,8 +686,11 @@
     "code": "Weapon_PPSh41_4",
     "type": "weapon",
     "cn": "波波沙冲锋枪",
-    "en": "PPSh41",
-    "jp": "PPSh-41"
+    "en": "PPSh-41",
+    "jp": "PPSh-41",
+    "aliases": [
+      "PPSh41"
+    ]
   },
   "10403": {
     "code": "Weapon_PPSh41_5",
@@ -718,15 +724,21 @@
     "code": "Weapon_G36KKSK_4",
     "type": "weapon",
     "cn": "格威尔36-斯佩凯芙特",
-    "en": "G36KKSK",
-    "jp": "StG36-シュペッカフォルテ"
+    "en": "G36K-KSK",
+    "jp": "StG36-シュペッカフォルテ",
+    "aliases": [
+      "G36KKSK"
+    ]
   },
   "10423": {
     "code": "Weapon_G36KKSK_5",
     "type": "weapon",
     "cn": "阿格莱亚",
-    "en": "G36KKSK",
-    "jp": "アグライア"
+    "en": "G36K-KSK",
+    "jp": "アグライア",
+    "aliases": [
+      "G36KKSK"
+    ]
   },
   "10431": {
     "code": "Weapon_CZ75_3",
@@ -865,15 +877,21 @@
     "code": "Weapon_CSLS06_4",
     "type": "weapon",
     "cn": "长风零六",
-    "en": "CSLS06",
-    "jp": "06式"
+    "en": "CS/LS06",
+    "jp": "06式",
+    "aliases": [
+      "CSLS06"
+    ]
   },
   "10503": {
     "code": "Weapon_CSLS06_5",
     "type": "weapon",
     "cn": "不留行",
-    "en": "CSLS06",
-    "jp": "風来坊"
+    "en": "CS/LS06",
+    "jp": "風来坊",
+    "aliases": [
+      "CSLS06"
+    ]
   },
   "10511": {
     "code": "Weapon_G11_3",
@@ -970,15 +988,21 @@
     "code": "Weapon_VSK94_4",
     "type": "weapon",
     "cn": "维斯卡94",
-    "en": "VSK94",
-    "jp": "VSK-94"
+    "en": "VSK-94",
+    "jp": "VSK-94",
+    "aliases": [
+      "VSK94"
+    ]
   },
   "10553": {
     "code": "Weapon_VSK94_5",
     "type": "weapon",
     "cn": "护梦银翼",
-    "en": "VSK94",
-    "jp": "夢の翼"
+    "en": "VSK-94",
+    "jp": "夢の翼",
+    "aliases": [
+      "VSK94"
+    ]
   },
   "10561": {
     "code": "Weapon_UMP45_3",
@@ -1117,15 +1141,21 @@
     "code": "Weapon_Lewisgun_4",
     "type": "weapon",
     "cn": "刘易斯轻机枪",
-    "en": "Lewisgun",
-    "jp": "ルイスマシンガン"
+    "en": "Lewis Gun",
+    "jp": "ルイスマシンガン",
+    "aliases": [
+      "Lewisgun"
+    ]
   },
   "10623": {
     "code": "Weapon_Lewisgun_5",
     "type": "weapon",
     "cn": "玩具匠",
-    "en": "Lewisgun",
-    "jp": "おもちゃ職人"
+    "en": "Lewis Gun",
+    "jp": "おもちゃ職人",
+    "aliases": [
+      "Lewisgun"
+    ]
   },
   "10631": {
     "code": "Weapon_Welrodmk2_3",
@@ -1545,8 +1575,11 @@
     "code": "Weapon_Vepr12_4",
     "type": "weapon",
     "cn": "莫洛12",
-    "en": "Vepr12",
-    "jp": "Vepr-12"
+    "en": "Vepr-12",
+    "jp": "Vepr-12",
+    "aliases": [
+      "Vepr12"
+    ]
   },
   "11022": {
     "code": "Weapon_Blade_3",
@@ -1559,8 +1592,11 @@
     "code": "Weapon_OTS14_4",
     "type": "weapon",
     "cn": "格洛利娅",
-    "en": "OTS14",
-    "jp": "グローザ"
+    "en": "OTs-14",
+    "jp": "グローザ",
+    "aliases": [
+      "OTS14"
+    ]
   },
   "11024": {
     "code": "Weapon_Pecheng_3",

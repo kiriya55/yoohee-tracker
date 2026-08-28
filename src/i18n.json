@@ -1135,7 +1135,7 @@
       "code": "Weapon_UMP9_4",
       "cn": "通用冲锋枪9",
       "type": "weapon",
-      "en": "UMP9",
+      "en": "UMP 9",
       "jp": "UMP9",
       "aliases": [
         "UMP9"
@@ -1145,7 +1145,7 @@
       "code": "Weapon_UMP9_5",
       "cn": "幼狮",
       "type": "weapon",
-      "en": "UMP9",
+      "en": "UMP 9",
       "jp": "小獅子",
       "aliases": [
         "UMP9"
@@ -1328,7 +1328,7 @@
       "code": "Weapon_PPSh41_4",
       "cn": "波波沙冲锋枪",
       "type": "weapon",
-      "en": "PPSh41",
+      "en": "PPSh-41",
       "jp": "PPSh-41",
       "aliases": [
         "PPSh41"
@@ -1369,7 +1369,7 @@
       "code": "Weapon_G36KKSK_4",
       "cn": "格威尔36-斯佩凯芙特",
       "type": "weapon",
-      "en": "G36KKSK",
+      "en": "G36K-KSK",
       "jp": "StG36-シュペッカフォルテ",
       "aliases": [
         "G36KKSK"
@@ -1379,7 +1379,7 @@
       "code": "Weapon_G36KKSK_5",
       "cn": "阿格莱亚",
       "type": "weapon",
-      "en": "G36KKSK",
+      "en": "G36K-KSK",
       "jp": "アグライア",
       "aliases": [
         "G36KKSK"
@@ -1537,7 +1537,7 @@
       "code": "Weapon_CSLS06_4",
       "cn": "长风零六",
       "type": "weapon",
-      "en": "CSLS06",
+      "en": "CS/LS06",
       "jp": "06式",
       "aliases": [
         "CSLS06"
@@ -1547,7 +1547,7 @@
       "code": "Weapon_CSLS06_5",
       "cn": "不留行",
       "type": "weapon",
-      "en": "CSLS06",
+      "en": "CS/LS06",
       "jp": "風来坊",
       "aliases": [
         "CSLS06"
@@ -1666,7 +1666,7 @@
       "code": "Weapon_VSK94_4",
       "cn": "维斯卡94",
       "type": "weapon",
-      "en": "VSK94",
+      "en": "VSK-94",
       "jp": "VSK-94",
       "aliases": [
         "VSK94"
@@ -1676,7 +1676,7 @@
       "code": "Weapon_VSK94_5",
       "cn": "护梦银翼",
       "type": "weapon",
-      "en": "VSK94",
+      "en": "VSK-94",
       "jp": "夢の翼",
       "aliases": [
         "VSK94"
@@ -1840,7 +1840,7 @@
       "code": "Weapon_Lewisgun_4",
       "cn": "刘易斯轻机枪",
       "type": "weapon",
-      "en": "Lewisgun",
+      "en": "Lewis Gun",
       "jp": "ルイスマシンガン",
       "aliases": [
         "Lewisgun"
@@ -1850,7 +1850,7 @@
       "code": "Weapon_Lewisgun_5",
       "cn": "玩具匠",
       "type": "weapon",
-      "en": "Lewisgun",
+      "en": "Lewis Gun",
       "jp": "おもちゃ職人",
       "aliases": [
         "Lewisgun"
@@ -2285,7 +2285,7 @@
       "code": "Weapon_Vepr12_4",
       "cn": "莫洛12",
       "type": "weapon",
-      "en": "Vepr12",
+      "en": "Vepr-12",
       "jp": "Vepr-12",
       "aliases": [
         "Vepr12"
@@ -2302,7 +2302,7 @@
       "code": "Weapon_OTS14_4",
       "cn": "格洛利娅",
       "type": "weapon",
-      "en": "OTS14",
+      "en": "OTs-14",
       "jp": "グローザ",
       "aliases": [
         "OTS14"
