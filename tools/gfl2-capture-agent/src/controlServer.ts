@@ -82,7 +82,7 @@ function writeHtml(response: ServerResponse, status: number, body: string): void
   response.statusCode = status;
   response.setHeader("Content-Type", "text/html; charset=utf-8");
   response.setHeader("Cache-Control", "no-store");
-  response.setHeader("Content-Security-Policy", "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'self'");
+  response.setHeader("Content-Security-Policy", "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'self'");
   response.end(body);
 }
 

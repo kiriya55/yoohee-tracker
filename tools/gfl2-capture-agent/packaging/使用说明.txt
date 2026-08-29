@@ -1,0 +1,32 @@
+GFL2 本地捕获助手 · 快速使用说明
+================================
+
+【使用前准备】
+1. 需要已安装 Node.js 20 或更高版本：https://nodejs.org/ （下载 LTS 版本即可）
+2. 完整解压本压缩包（不要在压缩软件内直接双击运行，要先解压到一个文件夹）。
+
+【开始使用】
+1. 双击「启动gfl2捕获助手.cmd」。
+2. 首次运行会提示安装一个临时抓包证书，在窗口里输入 y 然后回车同意。
+   （这是为了让助手能识别游戏的抽卡记录请求；助手关闭后会自动删除该证书。）
+3. 窗口保持打开，按网页里的引导操作：打开游戏「招募 → 详情 → 访问记录」。
+4. 助手抓到请求后，回到网页点「允许本地助手连接」，在弹出的小窗口点「允许本次连接」。
+5. UID 需要手动填写：游戏主界面点左下角齿轮（设置）→「玩家名片」页可查看/复制 UID。
+6. 导入完成后，直接关闭助手的黑色窗口即可，系统代理和证书会自动还原。
+
+【常见问题】
+- 网页显示“无法连接本地捕获助手”：确认本助手窗口还开着，且没被防火墙拦截。
+- 游戏网络异常：正常关闭助手窗口即可恢复；若直接结束进程导致代理没还原，
+  重新双击启动脚本再正常关闭一次，它会自动还原系统代理。
+- 高级选项（如经过 Clash 等上游代理）：可在命令行运行
+  node agent\dist\src\cli.js --upstream http://127.0.0.1:7890
+
+------------------------------------------------------------
+GFL2 Local Capture Agent · Quick Start
+================================
+
+Requires Node.js 20+ (https://nodejs.org/, LTS). Extract the whole zip first.
+Double-click Start-GFL2-Capture-Agent.cmd, press y to accept the temporary
+capture certificate on first run, keep the window open, then open the in-game
+Recruitment history and follow the website guide. Close the window when done;
+the proxy and certificate are restored automatically.

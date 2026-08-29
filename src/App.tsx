@@ -9,11 +9,13 @@ import {
   ClipboardList,
   CircleAlert,
   CircleCheck,
+  CircleDashed,
   Database,
   Download,
   Eraser,
   Filter,
   FilePlus2,
+  Github,
   LockKeyhole,
   Plus,
   RefreshCw,
@@ -46,7 +48,9 @@ import { downloadJson } from "./lib/download";
 
 import i18nData from "./i18n.json";
 const TRANSLATIONS = i18nData.ui;
-const trackerIcon = new URL("../examples/icon.jpg", import.meta.url).href;
+const trackerIcon = new URL("/apple-touch-icon.png", import.meta.url).href;
+const GITHUB_REPO_URL = "https://github.com/kiriya55/yoohee-tracker";
+const CAPTURE_AGENT_DOWNLOAD_URL = "https://assets.yoohee.chukogals.top/gfl2-capture-agent-windows.zip";
 
 function getPoolTypeKey(poolType: number): keyof typeof TRANSLATIONS.zh {
   if (poolType === 1) return "poolType1";
@@ -400,11 +404,7 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
   }, [captureAgentUrl, pairingState, t]);
 
   useEffect(() => {
-    if (!pairingCode.trim() && !captureGrantToken) {
-      setCaptureAgentStatus(undefined);
-      setCaptureAgentStatusError("");
-      return;
-    }
+    if (importMethod !== "capture") return;
 
     let active = true;
     const refresh = async () => {
@@ -439,7 +439,7 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
       active = false;
       window.clearInterval(timer);
     };
-  }, [captureAgentUrl, captureGrantToken, pairingCode, t]);
+  }, [captureAgentUrl, captureGrantToken, importMethod, t]);
 
   async function startLocalPairing() {
     const popup = window.open("about:blank", "gfl2-capture-pairing", "popup,width=440,height=560");
@@ -547,6 +547,16 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
           <div className="capture-agent-panel">
             <div className="capture-agent-heading">
               <strong>{t("captureAgentTitle")}</strong>
+              <a
+                className="capture-agent-download"
+                href={CAPTURE_AGENT_DOWNLOAD_URL}
+                target="_blank"
+                rel="noreferrer"
+                title={t("captureAgentDownloadTooltip")}
+              >
+                <Download size={15} />
+                {t("captureAgentDownload")}
+              </a>
               <button
                 className="icon-button"
                 type="button"
@@ -569,11 +579,19 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
                 <li>{t("captureAgentStepFetch")}</li>
               </ol>
             </details>
-            <div className={`capture-agent-status capture-agent-status-${captureAgentStatus?.phase ?? "unknown"}`} aria-live="polite">
-              {captureAgentStatus?.phase === "captured" ? <CircleCheck size={17} /> : <CircleAlert size={17} />}
+            <div className={`capture-agent-status capture-agent-status-${captureAgentStatus?.phase ?? (captureAgentStatusError ? "error" : "unknown")}`} aria-live="polite">
+              {captureAgentStatus?.phase === "captured"
+                ? <CircleCheck size={17} />
+                : captureAgentStatus
+                  ? <CircleAlert size={17} />
+                  : <CircleDashed size={17} />}
               <div>
                 <strong>
-                  {t("captureAgentStatusLabel")}：{captureAgentStatus ? t(`captureAgentPhase${captureAgentStatus.phase[0].toUpperCase()}${captureAgentStatus.phase.slice(1)}`) : t("captureAgentStatusUnknown")}
+                  {t("captureAgentStatusLabel")}：{captureAgentStatus
+                    ? t(`captureAgentPhase${captureAgentStatus.phase[0].toUpperCase()}${captureAgentStatus.phase.slice(1)}`)
+                    : captureAgentStatusError
+                      ? t("captureAgentStatusFailed")
+                      : t("captureAgentStatusUnknown")}
                 </strong>
                 {captureAgentStatus?.credential.available && (
                   <p>
@@ -629,6 +647,9 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
               <strong>{captureCredential ? t("captureCredentialLoaded") : t("capturePairingExplain")}</strong>
             </div>
           </div>
+          {captureAgentStatus && !captureAgentStatus.credential.uidAvailable && (
+            <p className="capture-uid-hint">{t("captureAgentUidHint")}</p>
+          )}
           <button className="primary wide" type="submit" disabled={loading || !captureCredential}>
             <CloudDownload size={16} />
             {loading ? t("fetching") : t("fetchAndPreview")}
@@ -662,6 +683,7 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
               <input required value={endpoint} onChange={(event) => setEndpoint(event.target.value)} />
             </label>
           </div>
+          <p className="capture-uid-hint">{t("captureAgentUidHowTo")}</p>
           <label>
             {t("fiddlerRequestPlaceholder")}
             <textarea
@@ -703,6 +725,21 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
             <CloudDownload size={16} />
             {loading ? t("fetching") : t("fetchAndPreview")}
           </button>
+        </div>
+      )}
+
+      {loading && (
+        <div className="fetch-overlay" role="alert" aria-live="assertive">
+          <div className="fetch-overlay-card">
+            <video className="fetch-overlay-anim" autoPlay loop muted playsInline width={128} height={128} preload="auto">
+              <source src="/k2-action.webm" type="video/webm" />
+            </video>
+            <h2>{t("fetchOverlayTitle")}</h2>
+            <p>{t("fetchOverlayHint")}</p>
+            <span className="fetch-overlay-dots" aria-hidden="true">
+              <span /><span /><span />
+            </span>
+          </div>
         </div>
       )}
     </form>
@@ -1000,6 +1037,16 @@ export default function App() {
             <Eraser size={16} />
             {t("clear")}
           </button>
+          <a
+            className="github-link icon-button"
+            href={GITHUB_REPO_URL}
+            target="_blank"
+            rel="noreferrer"
+            title={t("githubRepoTooltip")}
+            aria-label={t("githubRepoTooltip")}
+          >
+            <Github size={18} />
+          </a>
           <select
             className="locale-select"
             value={locale}

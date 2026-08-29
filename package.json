@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1",
+    "agent:pack": "node scripts/pack-capture-agent.mjs",
     "resources:update": "node scripts/update-resource-index.mjs",
     "resources:sync": "node scripts/update-resource-index.mjs",
     "resources:sync-r2": "node scripts/sync-miniprogram-resources.mjs",

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/kiriya55/yoohee-tracker/blob/main/examples/icon.jpg" alt="Yoohee-tracker Icon" width="128">
+<img src="https://github.com/kiriya55/yoohee-tracker/blob/main/public/icon-512.png" alt="Yoohee-tracker Icon" width="128">
   <h1 align="center">幼熙助手（Yoohee Tracker）</h1>
   <p align="center">
     一个本地优先的《少女前线 2：追放》抽卡记录分析器！
@@ -62,6 +62,8 @@ node scripts/decrypt-exilium-backup.mjs .\你的加密备份.json .\exilium-decr
 
 点击“文件导入”，选择 gfl2.help 导出的 `gfl2help-pull-history-*.json`、或 ElmoBeacon 的 `ElmoBeacon.db` 文件、或 `gf2gacha` 的 `database.db` 文件，或其他兼容的 `.db` / `.sqlite` 文件。工具会解析文件并进入同一套导入预览流程。
 
+### 导入小程序的R2备份json
+
 记录 JSON 的便携格式为 `gf2-local-tracker`。网页端和小程序还兼容无格式标识的 `records` 数组、原始记录数组、官方 `/list` 接口响应、gfl2.help 历史 JSON，以及网页端解密后的记录结构；字段会统一识别 `poolType` / `pool_type` / `type_id`、`poolId` / `pool_id`、`itemId` / `item`、`timestamp` / `time` 等别名。这样同一份网页端导出可以直接导入小程序，来自小程序或其他工具的记录 JSON 也可以回到网页端合并。
 
 `miniprogram-resource-index.json` 是图片和名称资源索引，不是抽卡记录。网页端文件导入会自动识别并载入它；小程序启动时会从 R2 自动获取并缓存它，因此不应把资源索引选择到“导入抽卡记录”入口。
@@ -108,7 +110,7 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 - `src/i18n-name-sources.json`
 - `src/i18n.json` 中的 `names`
 
-i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文为 [wikiru 详情页](https://dollsfrontline2.wikiru.jp/)，英文优先使用 [gfl2.help](https://gfl2.help/en/banners)，历史缺失时使用同站 characters/weapons 补漏。
+i18n 名称按语言使用单一日常权威来源：中文为 [MCC Wiki](https://gf2.mcc.wiki/)，日文为 [wikiru 详情页](https://dollsfrontline2.wikiru.jp/)，英文优先使用 [gfl2.help](https://gfl2.help/en/banners)，历史缺失时使用同站 characters/weapons 补漏。
 
 资源目录使用 [BBS handbook](https://gf2-bbs.exiliumgf.com/wiki/category) 的 ID 与 MCC Wiki 的 code/中文名进行全量对齐；[Exilium BBS](https://gf2-bbs.exiliumgf.com/wiki/) 作为完整目录和信息来源。
 
@@ -128,7 +130,7 @@ i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文
 - `R2_SECRET_ACCESS_KEY`
 - `R2_PUBLIC_BASE_URL`
 
-`R2_PUBLIC_BASE_URL` 应该是公共 R2 自定义域名或公共存储桶的根地址，例如 `https://assets.yoohee.chukogals.top`。
+`R2_PUBLIC_BASE_URL` 应该是公共 R2 自定义域名或公共存储桶的根地址，示例页面托管在 `https://assets.yoohee.chukogals.top`。
 
 上传器也接受完整的 `.../miniprogram-resource-index.json` URL 并进行规范化处理。上传后检查会使用缓存失效机制，并重试临时的 403、404 和 5xx 响应。
 
@@ -136,14 +138,31 @@ i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文
 
 ### GFL2 本地捕获助手
 
-服务器拉取页面支持使用独立的 [GFL2 Local Capture Agent](./tools/gfl2-capture-agent/README.md)：助手只负责在本机捕获一次官方抽卡请求并生成临时凭据，Tracker 仍直接访问官方接口、执行分页与导入预览。原有 Fiddler 完整请求导入方式继续保留。
+服务器拉取页面支持使用独立的 [GFL2 Local Capture Agent](./tools/gfl2-capture-agent/README.md)：助手只负责在本机捕获一次官方抽卡请求并生成临时凭据，Tracker 仍直接访问官方接口、执行分页与导入预览。原有 Fiddler 完整请求导入方式继续保留。您可在 Release 页找到最新版本已打包的捕获助手。
 
 #### 使用方法
 
+您可以下载[已打包的捕获助手](https://github.com/kiriya55/yoohee-tracker/releases/download/local/gfl2-capture-agent-windows.zip)，使用方法如下：
+
+1. 双击「启动gfl2捕获助手.cmd」。
+2. 首次运行会提示安装一个临时抓包证书，在窗口里输入 y 然后回车同意。
+   （这是为了让助手能识别游戏的抽卡记录请求；助手关闭后会自动删除该证书。）
+3. 窗口保持打开，按网页里的引导操作：打开游戏「招募 → 详情 → 访问记录」。
+4. 助手抓到请求后，回到网页点「允许本地助手连接」，在弹出的小窗口点「允许本次连接」。
+5. UID 需要手动填写：游戏主界面点左下角齿轮（设置）→「玩家名片」页可查看/复制 UID。
+6. 导入完成后，直接关闭助手的黑色窗口即可，系统代理和证书会自动还原。
+
+您也可以在[R2分流](https://assets.yoohee.chukogals.top/gfl2-capture-agent-windows.zip)或[蓝奏云分流](https://minyami.lanzoum.com/irxtp459fiwj)下载该助手。
+
+如果您将项目 clone 至本地，也可使用以下方法运行：
+
 1. 双击项目根目录的 `start-gfl2-capture-agent.cmd`，保持窗口运行。
-2. 打开游戏中的“招募 → 访问详情 → 访问记录”，等待记录表出现。
-3. 在 Tracker 的“服务器拉取”中点击“允许本地助手连接”，再在弹出的本机窗口点击“允许本次连接”。
-4. 等待页面显示已捕获，确认 UID 和新增记录后点击“抓取并预览”。
+2. 首次运行会提示安装一个临时抓包证书，在窗口里输入 y 然后回车同意。
+   （这是为了让助手能识别游戏的抽卡记录请求；助手关闭后会自动删除该证书。）
+3. 窗口保持打开，按网页里的引导操作：打开游戏「招募 → 详情 → 访问记录」。
+4. 助手抓到请求后，回到网页点「允许本地助手连接」，在弹出的小窗口点「允许本次连接」。
+5. UID 需要手动填写：游戏主界面点左下角齿轮（设置）→「玩家名片」页可查看/复制 UID。
+6. 导入完成后，直接关闭助手的黑色窗口即可，系统代理和证书会自动还原。
 
 如果本地网络需要代理，可以在命令行运行：
 
@@ -151,7 +170,7 @@ i18n 名称按语言使用单一日常权威来源：中文为 MCC Wiki，日文
 .\start-gfl2-capture-agent.cmd --upstream http://127.0.0.1:7890
 ```
 
-浏览器无法打开本地确认窗口时，展开页面中的“备用方式”，输入助手窗口显示的一次性配对码；更完整的证书、代理恢复和安全说明见工具目录的 README。
+浏览器无法打开本地确认窗口时，展开页面中的“备用方式”，输入助手窗口显示的一次性配对码；更完整的证书、代理恢复和安全说明见[工具目录的 README](https://github.com/kiriya55/yoohee-tracker/blob/main/tools/gfl2-capture-agent/README.md)。
 
 本地也可以手动运行：
 
@@ -181,7 +200,7 @@ npm run build
 微信小程序已正式上线，欢迎体验，需要通过R2同步游戏资料的朋友请联系b站“雾雾的百宝箱”私信获得同步密码。
 
 <p align="center">
-<img src="https://github.com/kiriya55/yoohee-tracker/blob/main/examples/wechat-microprogram.jpg" alt="Yoohee-tracker WX Micro-program Icon" width="128">
+<img src="https://github.com/kiriya55/yoohee-tracker/blob/main/public/wechat-microprogram.jpg" alt="Yoohee-tracker WX Micro-program Icon" width="128">
   <h4 align="center">幼熙助手微信小程序</h4>
 </p>
 
