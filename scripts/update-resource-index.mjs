@@ -6,6 +6,7 @@ import { findResourceCatalogChanges } from "./resource-catalog.mjs";
 import { computeTimesetHash, mergeServerResourceIndexes, normalizeTimesets } from "./timeset.mjs";
 import { fetchCompleteCatalog } from "./catalog-sources.mjs";
 import { buildGfl2Timesets, parseGfl2BannersHtml } from "./gfl2-banners.mjs";
+import { mergeIndex as stableMergeIndex, combinedIndexChanged } from "./resource-index-stability.mjs";
 
 const EXILIUM_ORIGIN = "https://exilium.xyz";
 
@@ -167,38 +168,8 @@ async function probeItems(items, options) {
   return probed;
 }
 
-function mergeIndex(existing, incomingItems, metadata) {
-  const items = { ...(existing?.items ?? {}) };
-  for (const incoming of incomingItems) {
-    const current = items[String(incoming.id)];
-    items[String(incoming.id)] = current
-      ? {
-          ...current,
-          ...incoming,
-          name: current.name || incoming.name,
-          icon: current.icon || incoming.icon,
-          iconUrl: current.type === "weapon" ? incoming.iconUrl : current.iconUrl || incoming.iconUrl,
-          localIcon: current.localIcon || incoming.localIcon,
-          assetPath: current.assetPath || incoming.assetPath,
-          assetSource: current.type === "weapon" ? incoming.assetSource : current.assetSource || incoming.assetSource,
-          imageSource: current.imageSource || incoming.imageSource,
-          aliases: unique([...(current.aliases ?? []), ...(incoming.aliases ?? [])]),
-        }
-      : incoming;
-  }
-  return {
-    format: "gf2-resource-index",
-    version: Math.max(existing?.version ?? 1, 1),
-    source: "exilium-events-and-mcc-wiki",
-    generatedAt: metadata.generatedAt,
-    servers: metadata.servers,
-    updateSignals: metadata.updateSignals,
-    timesets: metadata.timesets,
-    timesetHash: metadata.timesetHash,
-    items,
-    pools: existing?.pools,
-  };
-}
+// mergeIndex (timestamp-stable catalog merge) and combinedIndexChanged live in
+// resource-index-stability.mjs so they can be unit-tested without network I/O.
 
 async function readExisting(file) {
   if (!file) return undefined;
@@ -271,11 +242,13 @@ async function main() {
     const signals = extractSignals(server, events);
     let updatedItems = catalogItems.map((item) => ({ ...item, server, verifiedAt: generatedAt }));
     if (args.probeImages) updatedItems = await probeItems(updatedItems, { concurrency: args.probeConcurrency, timeoutMs: args.probeTimeoutMs });
-    const index = mergeIndex(existing, updatedItems, {
+    const timesets = normalizeTimesets(server, events).concat(buildGfl2Timesets(gfl2Cards, catalogItems, server));
+    const { index } = stableMergeIndex(existing, updatedItems, {
       generatedAt,
       servers: [server],
       updateSignals: { [server]: signals },
-      timesets: normalizeTimesets(server, events).concat(buildGfl2Timesets(gfl2Cards, catalogItems, server)),
+      timesets,
+      timesetHash: computeTimesetHash(timesets),
     });
     serverIndexes.push(index);
     const outPath = path.join(args.outDir, `gf2-resource-index.${server}.json`);
@@ -287,11 +260,18 @@ async function main() {
   }
 
   const combined = mergeServerResourceIndexes(serverIndexes);
-  combined.generatedAt = generatedAt;
   combined.timesetHash = computeTimesetHash(combined.timesets);
+  // Keep the catalog's generation time stable across routine syncs: only stamp
+  // it with this run's time when the catalog, event timesets, or update signals
+  // for the synced servers actually differ from the previous index.
+  const combinedChanged = combinedIndexChanged(existing, combined, args.servers);
+  combined.generatedAt = combinedChanged ? generatedAt : existing?.generatedAt ?? generatedAt;
   const combinedPath = path.join(args.outDir, `gf2-resource-index.${args.servers[0] ?? "haoplay"}.json`);
   await fs.writeFile(combinedPath, `${JSON.stringify(combined, null, 2)}\n`, "utf8");
   console.log(`combined: wrote ${Object.keys(combined.items).length} items for ${combined.servers.join(", ")} to ${combinedPath}`);
+  console.log(combinedChanged
+    ? `combined: catalog/timeset/signals changed -> generatedAt ${combined.generatedAt}`
+    : "combined: no catalog/timeset/signals change -> kept previous generatedAt");
 }
 
 main().catch((error) => {

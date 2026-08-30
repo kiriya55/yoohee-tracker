@@ -42,7 +42,7 @@ import { enrichRecords, getResourceImageUrl, getDisplayName, loadDefaultResource
 import { computeGachaStats, formatDate, mergePoolsByType, pityColor, poolTypeLabel, computeCommanderProfile } from "./lib/stats";
 import { formatPoolSchedule, getPoolDetailTitle, resolvePoolSchedule } from "./lib/poolSchedule";
 import type { ResourceIndex } from "./types";
-import type { RemoteServerId } from "./lib/remoteImport";
+import type { RemoteServerId, RemotePoolProgress } from "./lib/remoteImport";
 import { localizeMessage } from "./lib/i18n";
 import { downloadJson } from "./lib/download";
 
@@ -331,6 +331,7 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
   const [captureAgentStatusError, setCaptureAgentStatusError] = useState("");
   const [checkingAgent, setCheckingAgent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [poolProgress, setPoolProgress] = useState<Record<number, RemotePoolProgress>>({});
   const pairingPopupRef = useRef<Window | null>(null);
   const autoClaimInFlightRef = useRef(false);
 
@@ -422,7 +423,21 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
             setCaptureGrantToken("");
             setCaptureMessage(t("captureCredentialLoaded"));
           } catch (error) {
-            if (active) setCaptureMessage(captureAgentErrorText(error));
+            if (!active) return;
+            const message = error instanceof Error ? error.message : String(error);
+            // A rejected/unknown grant means the agent restarted (grants live only in its
+            // memory) or the credential was consumed. The stale token must be dropped,
+            // otherwise the connect/fetch buttons stay disabled forever.
+            const grantInvalid = message.includes("rejected the credential claim")
+              || message.includes("pairing grant")
+              || message.includes("credential is not available");
+            if (grantInvalid) {
+              setCaptureGrantToken("");
+              setCaptureCredential(undefined);
+              setCaptureMessage(t("captureGrantExpired"));
+            } else {
+              setCaptureMessage(captureAgentErrorText(error));
+            }
           } finally {
             autoClaimInFlightRef.current = false;
           }
@@ -504,6 +519,7 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
   async function submit(event: React.FormEvent) {
     event.preventDefault();
     setLoading(true);
+    setPoolProgress({});
     try {
       const credential = importMethod === "capture" ? captureCredential : undefined;
       const parsed = importMethod === "fiddler" ? parseFiddlerRequest(requestText) : undefined;
@@ -519,6 +535,7 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
         headersText: importMethod === "fiddler" ? requestText : undefined,
         credential,
         poolTypes: REMOTE_POOL_TYPES,
+        onPoolProgress: (p) => setPoolProgress((prev) => ({ ...prev, [p.poolType]: p })),
       });
       onResult({ ...result, fileName: `${activeServer.label} ${t("serverPullFileNameSuffix")}` });
       if (parsed?.serverId && parsed.serverId !== serverId) selectServer(parsed.serverId);
@@ -736,9 +753,19 @@ function RemoteImportForm({ onResult, t }: { onResult: (result: ImportResult) =>
             </video>
             <h2>{t("fetchOverlayTitle")}</h2>
             <p>{t("fetchOverlayHint")}</p>
-            <span className="fetch-overlay-dots" aria-hidden="true">
-              <span /><span /><span />
-            </span>
+            <ul className="fetch-overlay-progress">
+              {[3, 4, 1, 6, 7].map((poolType) => {
+                const p = poolProgress[poolType];
+                return (
+                  <li key={poolType} className={p?.done ? "done" : p ? "active" : ""}>
+                    <span className="pool-name">{t(getPoolTypeKey(poolType))}</span>
+                    {p
+                      ? <span className="pool-page">{p.done ? "✓" : t("fetchOverlayPage").replace("{page}", String(p.page))}</span>
+                      : <span className="pool-page pending">…</span>}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       )}

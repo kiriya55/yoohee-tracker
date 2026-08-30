@@ -20,6 +20,14 @@ type RemoteFetchOptions = {
   credential?: CaptureCredential;
   poolTypes?: number[];
   fetchImpl?: FetchLike;
+  onPoolProgress?: (progress: RemotePoolProgress) => void;
+};
+
+export type RemotePoolProgress = {
+  poolType: number;
+  page: number;
+  records: number;
+  done: boolean;
 };
 
 type BuildRequestOptions = {
@@ -197,6 +205,7 @@ export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Prom
   try {
     await Promise.all(poolTypes.map(async (poolType) => {
       let next = "";
+      let page = 0;
       do {
         const request = buildGachaRequest({ endpoint, headers: browserSafeHeaders(headers), poolType, next });
         const response = await fetchImpl(request.url, request.init);
@@ -211,7 +220,9 @@ export async function fetchRemoteGachaRecords(options: RemoteFetchOptions): Prom
           const draft = normalizeListItem(item, options.uid.trim(), server, poolType, records.length);
           if (draft) records.push(draft);
         }
+        page += 1;
         next = typeof data.next === "string" ? data.next : "";
+        options.onPoolProgress?.({ poolType, page, records: records.length, done: !next });
       } while (next);
     }));
   } catch (error) {

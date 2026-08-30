@@ -38,17 +38,43 @@ jobs:
         id: check-banners
         run: |
           INDEX_FILE="examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
+          {
+            echo "# Resource sync"
+            echo ""
+            echo "- Event: ${{ github.event_name }}"
+            echo "- Servers: $SERVERS"
+          } >> "$GITHUB_STEP_SUMMARY"
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$INDEX_FILE" ]; then
             set +e
             node scripts/update-resource-index.mjs --existing "$INDEX_FILE" --servers "$SERVERS" --check-only --check-timesets
             status=$?
             set -e
             if [ "$status" -gt 1 ]; then exit "$status"; fi
-            echo "Catalog/timeset check completed; running full sync for names and missing assets."
+            if [ "$status" -eq 0 ]; then
+              echo "should_update=true" >> "$GITHUB_OUTPUT"
+              {
+                echo ""
+                echo "## :new: Resource changes detected"
+                echo "Catalog, event timesets, or rate-up signals changed — running the full sync (images, i18n names, R2)."
+              } >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "should_update=false" >> "$GITHUB_OUTPUT"
+              {
+                echo ""
+                echo "## :white_check_mark: No resource changes"
+                echo "Catalog, event timesets, and rate-up signals are unchanged. Skipped image sync, i18n refresh, R2 upload and the auto-commit."
+              } >> "$GITHUB_STEP_SUMMARY"
+              echo "Catalog and timesets unchanged; skipping full sync."
+            fi
           else
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+            {
+              echo ""
+              echo "## :arrows_counterclockwise: Full sync (manual dispatch)"
+              echo "Manual workflow dispatch — running the full sync regardless of change detection."
+            } >> "$GITHUB_STEP_SUMMARY"
             echo "Forcing full sync (manual dispatch or missing existing index)."
           fi
-          echo "should_update=true" >> $GITHUB_OUTPUT
 
       - name: Update resource index
         if: steps.check-banners.outputs.should_update == 'true'
@@ -73,7 +99,7 @@ jobs:
             --concurrency 16 --timeout-ms 30000 --force-dolls
 
       - name: Fetch i18n names from community sources
-        if: success()
+        if: success() && steps.check-banners.outputs.should_update == 'true'
         run: |
           node scripts/fetch-i18n-names.mjs \
             --mode normal \
@@ -86,7 +112,7 @@ jobs:
             --concurrency 8 --timeout-ms 20000
 
       - name: Merge i18n names into resource indexes
-        if: success()
+        if: success() && steps.check-banners.outputs.should_update == 'true'
         run: |
           node scripts/merge-i18n-names.mjs \
             --index public/images/resource-index.json \
@@ -96,7 +122,7 @@ jobs:
             --app-i18n src/i18n.json
 
       - name: Upload generated mini-program index artifact
-        if: success()
+        if: success() && steps.check-banners.outputs.should_update == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: miniprogram-resource-index
@@ -104,7 +130,7 @@ jobs:
           if-no-files-found: error
 
       - name: Validate generated names
-        if: success()
+        if: success() && steps.check-banners.outputs.should_update == 'true'
         run: npm run i18n:validate-authoritative
 
       - name: Run tests and build
@@ -114,7 +140,7 @@ jobs:
           npm run build
 
       - name: Upload mini-program resources to R2
-        if: success() && env.SYNC_R2 == 'true'
+        if: success() && env.SYNC_R2 == 'true' && steps.check-banners.outputs.should_update == 'true'
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
@@ -137,14 +163,34 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit changes
-        if: success()
+        if: success() && steps.check-banners.outputs.should_update == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Rebase our generated changes onto the latest remote tip so the push
+          # never fails as non-fast-forward when main moved while this run was
+          # in progress (e.g. a force-push or a new commit during the run).
+          git fetch origin "$GITHUB_REF_NAME"
+          # --mixed points HEAD at the remote tip and resets the index, but
+          # leaves our freshly generated files in the working tree. We then
+          # re-stage only the generated paths, so unrelated remote changes are
+          # kept as-is and never reverted by this commit.
+          git reset --mixed "origin/$GITHUB_REF_NAME"
           git add examples/ public/images/ src/i18n-names.json src/i18n-name-sources.json src/i18n.json
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "Synced but generated content is identical to what is already committed; nothing to push."
+            {
+              echo ""
+              echo "## :heavy_minus_sign: Nothing to commit"
+              echo "Sync ran, but the generated files are byte-identical to the committed ones (no timestamp churn) — no commit was created."
+            } >> "$GITHUB_STEP_SUMMARY"
           else
             git commit -m "chore: update resource images and i18n names ($SERVERS)"
             git push
+            {
+              echo ""
+              echo "## :white_check_mark: Update committed and pushed"
+              echo "- Commit: \`$(git rev-parse --short HEAD)\`"
+              echo "- Message: \`chore: update resource images and i18n names ($SERVERS)\`"
+            } >> "$GITHUB_STEP_SUMMARY"
           fi
