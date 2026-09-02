@@ -256,9 +256,15 @@ async function main() {
     },
   });
   const result = await uploadPlan(plan, { client, bucket: R2_BUCKET_NAME });
-  await verifyPublicIndex(args.publicBaseUrl, index);
+  const publicVerification = await verifyPublicIndex(args.publicBaseUrl, index);
   console.log(`Uploaded and HEAD-verified ${result.imageCount} images, then ${INDEX_KEY}`);
-  if (args.publicBaseUrl) console.log(`Public R2 index verified at ${args.publicBaseUrl}/${INDEX_KEY}`);
+  if (publicVerification.verified) {
+    console.log(`Public R2 index verified at ${args.publicBaseUrl}/${INDEX_KEY}`);
+  } else if (publicVerification.skipped) {
+    console.log(`Public R2 index verification skipped: ${publicVerification.reason}`);
+  } else {
+    console.log(`Public R2 index verification unavailable: ${publicVerification.reason}`);
+  }
 }
 
 const invokedPath = process.argv[1] ? path.resolve(process.argv[1]) : "";

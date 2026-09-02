@@ -176,7 +176,7 @@ async function fetchText(url, args) {
       "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36",
       accept: "text/html,application/xhtml+xml",
     },
-    signal: AbortSignal.timeout(args.timeoutMs),
+    signalFactory: () => AbortSignal.timeout(args.timeoutMs),
   });
   if (!response.ok) throw new Error("GET " + url + " failed: HTTP " + response.status);
   const text = await response.text();
@@ -196,7 +196,7 @@ async function fetchJson(url, body, args) {
       "user-agent": "yoohee-tracker-resource-updater/1.0",
     },
     body: JSON.stringify(body),
-    signal: AbortSignal.timeout(args.timeoutMs),
+    signalFactory: () => AbortSignal.timeout(args.timeoutMs),
   });
   if (!response.ok) throw new Error("POST " + url + " failed: HTTP " + response.status);
   return response.json();

@@ -78,18 +78,36 @@ export function selectDandegateSyncTargets(items = [], options = {}) {
   ));
 }
 
+export function classifyDandegateFailure(failure = {}) {
+  const reason = String(failure.reason ?? failure.error ?? "");
+  if (reason === "page_missing" || reason === "avatar_missing" || /^HTTP (404|410)\b/i.test(reason)) {
+    return "source_pending";
+  }
+  if (/^HTTP (408|425|429|5\d\d)\b/i.test(reason) || /timed? ?out|ETIMEDOUT|ECONN|failed after \d+ attempts/i.test(reason)) {
+    return "transient_error";
+  }
+  return "hard_failure";
+}
+
 export async function fetchDandegateAssetSources(items, options = {}) {
   const proxyUrl = options.proxyUrl;
+  const targets = (items ?? []).filter((item) => item.type === "doll" && item.code && !item.assetSource?.frozen);
+  if (!targets.length) return { updates: [], failures: [], pages: [] };
+
+  const attempts = Math.max(1, Number(options.attempts) || 4);
+  const timeoutMs = Math.max(1000, Number(options.timeoutMs) || 20000);
   const sitemapUrl = DANDegate_ORIGIN + "/sitemap.xml";
   const sitemapResponse = await fetchWithRetry(sitemapUrl, {
     proxyUrl,
+    fetchImpl: options.fetchImpl,
+    attempts,
+    signalFactory: () => AbortSignal.timeout(timeoutMs),
     headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
   });
   if (!sitemapResponse.ok) throw new Error("Dandegate sitemap failed: HTTP " + sitemapResponse.status);
   const pages = parseDandegateSitemap(await sitemapResponse.text());
   const result = [];
   const failures = [];
-  const targets = (items ?? []).filter((item) => item.type === "doll" && item.code && !item.assetSource?.frozen);
   let cursor = 0;
   const workerCount = Math.max(1, Math.min(Number(options.concurrency) || 6, targets.length || 1));
 
@@ -100,20 +118,32 @@ export async function fetchDandegateAssetSources(items, options = {}) {
       const item = targets[index];
       const pageUrl = findDandegatePage(item.code, pages);
       if (!pageUrl) {
-        failures.push({ id: item.id, code: item.code, error: "No Dandegate doll page in sitemap" });
+        failures.push({ id: item.id, code: item.code, reason: "page_missing", kind: "source_pending" });
         continue;
       }
       try {
         const response = await fetchWithRetry(pageUrl + "/skills", {
           proxyUrl,
+          fetchImpl: options.fetchImpl,
+          attempts,
+          signalFactory: () => AbortSignal.timeout(timeoutMs),
           headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
         });
-        if (!response.ok) throw new Error("HTTP " + response.status);
+        if (!response.ok) {
+          const reason = "HTTP " + response.status;
+          const kind = classifyDandegateFailure({ reason });
+          failures.push({ id: item.id, code: item.code, pageUrl, reason, kind });
+          continue;
+        }
         const avatar = parseDandegateAvatarHtml(await response.text(), pageUrl + "/skills");
-        if (!avatar) throw new Error("avatarUrl missing");
+        if (!avatar) {
+          failures.push({ id: item.id, code: item.code, pageUrl, reason: "avatar_missing", kind: "source_pending" });
+          continue;
+        }
         result.push({ id: item.id, assetSource: buildDandegateAssetSource(item.code, avatar.avatarUrl, pageUrl) });
       } catch (error) {
-        failures.push({ id: item.id, code: item.code, pageUrl, error: String(error.message ?? error) });
+        const reason = String(error.message ?? error);
+        failures.push({ id: item.id, code: item.code, pageUrl, reason, kind: classifyDandegateFailure({ reason }) });
       }
     }
   }

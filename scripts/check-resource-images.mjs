@@ -27,14 +27,13 @@ const index = JSON.parse(await fs.readFile(file, "utf8"));
 const items = Object.values(index.items ?? {}).filter((item) => item.iconUrl);
 async function checkItem(item) {
   try {
-    const signal = AbortSignal.timeout(timeoutMs);
     const response = await fetchWithRetry(item.iconUrl, {
       proxyUrl,
       attempts: 3,
       delayMs: 250,
       method: "HEAD",
       headers: { "user-agent": "yoohee-tracker-resource-updater/1.0" },
-      signal,
+      signalFactory: () => AbortSignal.timeout(timeoutMs),
     });
     if (response.ok) {
       return { ok: true };

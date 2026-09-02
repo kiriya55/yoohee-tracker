@@ -148,10 +148,23 @@ async function probeItems(items, options) {
       return;
     }
     try {
-      const response = await fetch(item.iconUrl, { method: "HEAD", signal: AbortSignal.timeout(options.timeoutMs) });
-      probed[index] = response.ok ? item : { ...item, iconUrl: undefined, imageSource: undefined, verifiedAt: undefined };
-    } catch {
-      probed[index] = { ...item, iconUrl: undefined, imageSource: undefined, verifiedAt: undefined };
+      const response = await fetchWithRetry(item.iconUrl, {
+        method: "HEAD",
+        proxyUrl: options.proxyUrl,
+        attempts: 4,
+        signalFactory: () => AbortSignal.timeout(options.timeoutMs),
+      });
+      if (response.ok) {
+        probed[index] = item;
+      } else if (response.status === 404 || response.status === 410) {
+        probed[index] = { ...item, iconUrl: undefined, imageSource: undefined, verifiedAt: undefined };
+      } else {
+        console.warn(`Image probe temporarily unavailable for ${item.iconUrl}: HTTP ${response.status}; preserving the existing source.`);
+        probed[index] = item;
+      }
+    } catch (error) {
+      console.warn(`Image probe failed for ${item.iconUrl}; preserving the existing source: ${String(error.message ?? error)}`);
+      probed[index] = item;
     }
   }
 
@@ -241,7 +254,11 @@ async function main() {
     const events = await fetchJson(`${EXILIUM_ORIGIN}/api/event?server=${encodeURIComponent(server)}`, { proxyUrl: args.proxyUrl });
     const signals = extractSignals(server, events);
     let updatedItems = catalogItems.map((item) => ({ ...item, server, verifiedAt: generatedAt }));
-    if (args.probeImages) updatedItems = await probeItems(updatedItems, { concurrency: args.probeConcurrency, timeoutMs: args.probeTimeoutMs });
+    if (args.probeImages) updatedItems = await probeItems(updatedItems, {
+      concurrency: args.probeConcurrency,
+      timeoutMs: args.probeTimeoutMs,
+      proxyUrl: args.proxyUrl,
+    });
     const timesets = normalizeTimesets(server, events).concat(buildGfl2Timesets(gfl2Cards, catalogItems, server));
     const { index } = stableMergeIndex(existing, updatedItems, {
       generatedAt,

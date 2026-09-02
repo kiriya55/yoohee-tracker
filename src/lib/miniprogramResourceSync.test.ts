@@ -157,15 +157,25 @@ describe("mini-program R2 resource sync", () => {
     expect(workflow).toContain("R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}");
     expect(workflow).toContain("R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}");
     expect(workflow).toContain("sync_r2:");
+    expect(workflow).toContain("concurrency:");
+    expect(workflow).toContain("cancel-in-progress: false");
+    expect(workflow).toContain("timeout-minutes: 25");
+    expect(workflow).toContain("actions/checkout@v5");
+    expect(workflow).toContain("actions/setup-node@v5");
+    expect(workflow).toContain('node-version: "22"');
+    expect(workflow).toContain("if: always()");
+    expect(workflow).toContain("output/download-report.json");
+    expect(workflow).toContain("refresh_dolls:");
+    expect(workflow).not.toContain("--force-dolls\n");
     expect(workflow.indexOf("npm run build")).toBeLessThan(workflow.indexOf("Upload mini-program resources to R2"));
     expect(workflow).not.toContain("echo $R2_SECRET_ACCESS_KEY");
   });
 
-  it("covers the current 251-item generated catalog", async () => {
+  it("covers the current generated catalog without hard-coding its size", async () => {
     const index = JSON.parse(await fs.readFile("public/images/resource-index.json", "utf8"));
-    await expect(validateCatalog(index, "public/images")).resolves.toMatchObject({
-      itemCount: 251,
-      imageCount: 251,
-    });
+    const validation = await validateCatalog(index, "public/images");
+    expect(validation.itemCount).toBe(Object.keys(index.items).length);
+    expect(validation.imageCount).toBeGreaterThan(0);
+    expect(validation.imageCount).toBeLessThanOrEqual(validation.itemCount);
   });
 });

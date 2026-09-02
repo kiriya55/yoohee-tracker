@@ -1,5 +1,5 @@
 // @ts-nocheck Node-only CLI integration test; the application tsconfig intentionally excludes Node types.
-import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
@@ -90,15 +90,49 @@ it("does not publish localIcon when an image download fails", () => {
     );
 
     const script = path.resolve("scripts/download-images.mjs");
+    const reportPath = path.join(root, "download-report.json");
     const result = spawnSync(
       process.execPath,
-      [script, "--index", indexPath, "--out-dir", outDir, "--timeout-ms", "1000", "--retries", "1"],
+      [script, "--index", indexPath, "--out-dir", outDir, "--report-out", reportPath, "--timeout-ms", "1000", "--retries", "1"],
       { encoding: "utf8" },
     );
     const generated = JSON.parse(String(readFileSync(path.join(outDir, "resource-index.json"))));
+    const report = JSON.parse(String(readFileSync(reportPath)));
 
     expect(result.status).toBe(1);
     expect(generated.items["1059"].localIcon).toBeUndefined();
+    expect(report).toMatchObject({ status: "hard_failure", counts: { failed: 1 } });
+    expect(report.failures[0]).toMatchObject({ id: 1059, kind: "transient_error", attempts: 2 });
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+it("keeps an existing image intact when a forced replacement fails", () => {
+  const root = mkdtempSync(path.join(tmpdir(), "gf2-images-atomic-"));
+  try {
+    const outDir = path.join(root, "images");
+    const indexPath = path.join(root, "resource-index.json");
+    const oldImage = path.join(outDir, "missing.png");
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(oldImage, "old-image");
+    writeFileSync(indexPath, JSON.stringify({
+      format: "gf2-resource-index",
+      version: 1,
+      items: { "1059": { id: 1059, type: "item", code: "Missing", iconUrl: "http://127.0.0.1:9/missing.png" } },
+    }));
+
+    const script = path.resolve("scripts/download-images.mjs");
+    const reportPath = path.join(root, "download-report.json");
+    const result = spawnSync(
+      process.execPath,
+      [script, "--index", indexPath, "--out-dir", outDir, "--force", "--report-out", reportPath, "--timeout-ms", "1000", "--retries", "0"],
+      { encoding: "utf8" },
+    );
+
+    expect(result.status).toBe(1);
+    expect(readFileSync(oldImage, "utf8")).toBe("old-image");
+    expect(readdirSync(outDir).filter((name) => name.includes(".tmp-"))).toEqual([]);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

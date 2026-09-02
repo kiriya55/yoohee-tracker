@@ -12,8 +12,17 @@ on:
         required: false
         default: true
         type: boolean
+      refresh_dolls:
+        description: "Refresh existing Dandegate doll images (normally only missing images are downloaded)"
+        required: false
+        default: false
+        type: boolean
   schedule:
-    - cron: "0 11 * * *"
+    - cron: "17 11 * * *"
+
+concurrency:
+  group: resource-sync-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -21,18 +30,31 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     env:
       SERVERS: ${{ github.event.inputs.servers || 'dw-cn,haoplay' }}
       SYNC_R2: ${{ github.event_name == 'schedule' || github.event.inputs.sync_r2 != 'false' }}
+      REFRESH_DOLLS: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_dolls || false }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
 
       - run: npm ci
+
+      - name: Initialize sync diagnostics
+        run: |
+          mkdir -p output
+          cat > output/resource-sync-report.json <<'EOF'
+          {
+            "schemaVersion": 1,
+            "status": "workflow_started",
+            "stages": {}
+          }
+          EOF
 
       - name: Check for resource catalog changes
         id: check-banners
@@ -85,21 +107,49 @@ jobs:
             --existing public/images/resource-index.json \
             --probe-images --probe-concurrency 24 --probe-timeout-ms 20000
 
+      - name: Snapshot published resource index
+        if: steps.check-banners.outputs.should_update == 'true'
+        run: cp public/images/resource-index.json output/previous-resource-index.json
+
       - name: Promote the synced catalog
         if: steps.check-banners.outputs.should_update == 'true'
         run: |
           cp "examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json" public/images/resource-index.json
 
       - name: Download images
+        id: download-images
         if: steps.check-banners.outputs.should_update == 'true'
         run: |
-          node scripts/download-images.mjs \
+          set +e
+          args=(
             --index public/images/resource-index.json \
             --out-dir public/images \
-            --concurrency 16 --timeout-ms 30000 --force-dolls
+            --concurrency 8 --timeout-ms 30000 --retries 3 \
+            --dandegate-concurrency 4 \
+            --report-out output/download-report.json
+          )
+          if [ "$REFRESH_DOLLS" = "true" ]; then args+=(--force-dolls); fi
+          node scripts/download-images.mjs "${args[@]}"
+          status=$?
+          set -e
+          if [ "$status" -eq 2 ]; then
+            echo "source_pending=true" >> "$GITHUB_OUTPUT"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Some upstream image sources are not published yet; keeping the previous production index."
+            cp output/previous-resource-index.json public/images/resource-index.json
+            exit "$status"
+          elif [ "$status" -eq 0 ]; then
+            echo "source_pending=false" >> "$GITHUB_OUTPUT"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "source_pending=false" >> "$GITHUB_OUTPUT"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            cp output/previous-resource-index.json public/images/resource-index.json
+            exit "$status"
+          fi
 
       - name: Fetch i18n names from community sources
-        if: success() && steps.check-banners.outputs.should_update == 'true'
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         run: |
           node scripts/fetch-i18n-names.mjs \
             --mode normal \
@@ -112,7 +162,7 @@ jobs:
             --concurrency 8 --timeout-ms 20000
 
       - name: Merge i18n names into resource indexes
-        if: success() && steps.check-banners.outputs.should_update == 'true'
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         run: |
           node scripts/merge-i18n-names.mjs \
             --index public/images/resource-index.json \
@@ -122,7 +172,7 @@ jobs:
             --app-i18n src/i18n.json
 
       - name: Upload generated mini-program index artifact
-        if: success() && steps.check-banners.outputs.should_update == 'true'
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: miniprogram-resource-index
@@ -130,17 +180,27 @@ jobs:
           if-no-files-found: error
 
       - name: Validate generated names
-        if: success() && steps.check-banners.outputs.should_update == 'true'
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         run: npm run i18n:validate-authoritative
 
       - name: Run tests and build
-        if: success()
+        if: success() && (steps.check-banners.outputs.should_update != 'true' || steps.download-images.outputs.ready == 'true')
         run: |
           npm test
           npm run build
 
+      - name: Verify branch baseline before publish
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
+        run: |
+          git fetch origin "$GITHUB_REF_NAME"
+          remote_sha="$(git rev-parse "origin/$GITHUB_REF_NAME")"
+          if [ "$remote_sha" != "$GITHUB_SHA" ]; then
+            echo "::error::Remote $GITHUB_REF_NAME moved from $GITHUB_SHA to $remote_sha; refusing to publish a stale candidate."
+            exit 1
+          fi
+
       - name: Upload mini-program resources to R2
-        if: success() && env.SYNC_R2 == 'true' && steps.check-banners.outputs.should_update == 'true'
+        if: success() && env.SYNC_R2 == 'true' && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
@@ -155,27 +215,30 @@ jobs:
             --public-base-url "$R2_PUBLIC_BASE_URL"
 
       - name: Upload sync report
-        if: failure()
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: resource-sync-report
-          path: output/name-update-report.json
+          path: |
+            output/
+            examples/gf2-resource-index.*.json
           if-no-files-found: ignore
+          retention-days: 30
 
       - name: Commit changes
-        if: success() && steps.check-banners.outputs.should_update == 'true'
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Rebase our generated changes onto the latest remote tip so the push
-          # never fails as non-fast-forward when main moved while this run was
-          # in progress (e.g. a force-push or a new commit during the run).
+          # Never transplant generated files from an old checkout onto a newer
+          # branch tip. If main moved while this run was in progress, fail safe
+          # and let a fresh run regenerate the candidate from the new baseline.
           git fetch origin "$GITHUB_REF_NAME"
-          # --mixed points HEAD at the remote tip and resets the index, but
-          # leaves our freshly generated files in the working tree. We then
-          # re-stage only the generated paths, so unrelated remote changes are
-          # kept as-is and never reverted by this commit.
-          git reset --mixed "origin/$GITHUB_REF_NAME"
+          remote_sha="$(git rev-parse "origin/$GITHUB_REF_NAME")"
+          if [ "$remote_sha" != "$GITHUB_SHA" ]; then
+            echo "::error::Remote $GITHUB_REF_NAME moved from $GITHUB_SHA to $remote_sha; refusing to publish a stale candidate."
+            exit 1
+          fi
           git add examples/ public/images/ src/i18n-names.json src/i18n-name-sources.json src/i18n.json
           if git diff --staged --quiet; then
             echo "Synced but generated content is identical to what is already committed; nothing to push."
@@ -186,7 +249,10 @@ jobs:
             } >> "$GITHUB_STEP_SUMMARY"
           else
             git commit -m "chore: update resource images and i18n names ($SERVERS)"
-            git push
+            if ! git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo "::error::The branch changed during publish; rerun the resource sync from the new tip."
+              exit 1
+            fi
             {
               echo ""
               echo "## :white_check_mark: Update committed and pushed"

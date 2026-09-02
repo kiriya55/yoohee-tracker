@@ -96,10 +96,12 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 
 仓库包含 `Update Resource Images` GitHub Action：
 
-- 手动触发：在 GitHub Actions 页面运行 workflow，可传入 `servers`，默认 `dw-cn,haoplay`。
-- 定时触发：每天 UTC 11:00 运行一次。
+- 手动触发：在 GitHub Actions 页面运行 workflow，可传入 `servers`，默认 `dw-cn,haoplay`；只有需要重刷已有头像时才打开 `refresh_dolls`。
+- 定时触发：每天 UTC 11:17 运行一次；同一分支同时只允许一个同步任务发布。
 - 定时任务会同步 Exilium BBS/MCC 的完整人形与武器目录、Dandegate 缺失头像、权威名称和卡池起止时间；不依赖当前卡池是否变化。
 - 手动触发或缺少现有索引文件时会强制更新。
+- 上游新资源尚未发布头像时会标记为 `source_pending`，保留上一版生产索引，并在 `resource-sync-report` artifact 中记录待处理资源。
+- 图片下载只对缺失文件执行；网络异常和 HTTP 408/425/429/5xx 会退避重试，下载完成后会先校验图片再原子替换旧文件。
 
 触发更新后会同步维护：
 
@@ -132,7 +134,7 @@ i18n 名称按语言使用单一日常权威来源：中文为 [MCC Wiki](https:
 
 `R2_PUBLIC_BASE_URL` 应该是公共 R2 自定义域名或公共存储桶的根地址，示例页面托管在 `https://assets.yoohee.chukogals.top`。
 
-上传器也接受完整的 `.../miniprogram-resource-index.json` URL 并进行规范化处理。上传后检查会使用缓存失效机制，并重试临时的 403、404 和 5xx 响应。
+上传器也接受完整的 `.../miniprogram-resource-index.json` URL 并进行规范化处理。上传后检查会使用缓存失效机制，并重试临时的 403、404 和 5xx 响应；公网校验不可用时只报告 `unavailable`，不会误报为已验证。
 
 定时 Action 默认启用 R2；手动触发时可将 `sync_r2` 设为 `false` 仅生成 GitHub 资源和 artifact。
 
