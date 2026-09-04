@@ -59,7 +59,7 @@ jobs:
       - name: Check for resource catalog changes
         id: check-banners
         run: |
-          INDEX_FILE="examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
+          INDEX_FILE="public/images/resource-index.json"
           {
             echo "# Resource sync"
             echo ""
@@ -76,8 +76,8 @@ jobs:
               echo "should_update=true" >> "$GITHUB_OUTPUT"
               {
                 echo ""
-                echo "## :new: Resource changes detected"
-                echo "Catalog, event timesets, or rate-up signals changed — running the full sync (images, i18n names, R2)."
+                echo "## :arrows_counterclockwise: Resource sync required"
+                echo "Catalog, event timesets, rate-up signals, or a pending avatar requires refresh — running the full sync."
               } >> "$GITHUB_STEP_SUMMARY"
             else
               echo "should_update=false" >> "$GITHUB_OUTPUT"
@@ -133,6 +133,8 @@ jobs:
           status=$?
           set -e
           if [ "$status" -eq 2 ]; then
+            # A pending source without a safe remote fallback still blocks the
+            # candidate, so keep the last published index intact.
             echo "source_pending=true" >> "$GITHUB_OUTPUT"
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "::warning::Some upstream image sources are not published yet; keeping the previous production index."
@@ -141,6 +143,21 @@ jobs:
           elif [ "$status" -eq 0 ]; then
             echo "source_pending=false" >> "$GITHUB_OUTPUT"
             echo "ready=true" >> "$GITHUB_OUTPUT"
+            node -e '
+              const fs = require("node:fs");
+              const report = JSON.parse(fs.readFileSync("output/download-report.json", "utf8"));
+              const skipped = report.avatarPending ?? [];
+              if (!skipped.length) process.exit(0);
+              const lines = [
+                "",
+                "## :hourglass_flowing_sand: Doll avatars waiting on upstream publication",
+                "These dolls are temporarily using their verified remote thumbnail. Their head avatars will be retried by scheduled syncs:",
+                "",
+                ...skipped.map((entry) => `- ${entry.code} (id ${entry.id}): ${entry.reason}${entry.pageUrl ? ` — ${entry.pageUrl}` : ""}`),
+              ];
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
+              console.log(`Doll avatars temporarily using remote fallbacks: ${skipped.map((entry) => entry.code).join(", ")}`);
+            '
           else
             echo "source_pending=false" >> "$GITHUB_OUTPUT"
             echo "ready=false" >> "$GITHUB_OUTPUT"
@@ -171,9 +188,13 @@ jobs:
             --out public/images/resource-index.json \
             --app-i18n src/i18n.json
 
+      - name: Persist final combined resource index
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
+        run: cp public/images/resource-index.json "examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
+
       - name: Upload generated mini-program index artifact
         if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: miniprogram-resource-index
           path: public/images/resource-index.json
@@ -216,7 +237,7 @@ jobs:
 
       - name: Upload sync report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: resource-sync-report
           path: |

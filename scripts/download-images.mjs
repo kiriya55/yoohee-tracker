@@ -11,6 +11,12 @@ import {
   selectDandegateSyncTargets,
 } from "./dandegate-assets.mjs";
 import { convertDollToPng } from "./image-assets.mjs";
+import {
+  canMarkAvatarPending,
+  clearAvatarPendingMarker,
+  isAvatarPendingItem,
+  markAvatarPending,
+} from "./avatar-pending.mjs";
 
 const MCC_ORIGIN = "https://gf2.mcc.wiki";
 const DEFAULT_INDEX = "examples/gf2-resource-index.haoplay.json";
@@ -151,8 +157,9 @@ function initialReport(args) {
     generatedAt: new Date().toISOString(),
     status: "running",
     input: { index: args.index, outDir: args.outDir },
-    counts: { catalogItems: 0, targets: 0, downloaded: 0, pending: 0, failed: 0 },
+    counts: { catalogItems: 0, targets: 0, downloaded: 0, pending: 0, avatarPending: 0, failed: 0 },
     pending: [],
+    avatarPending: [],
     failures: [],
     stages: {},
   };
@@ -179,10 +186,15 @@ async function main() {
             attempts: Math.max(1, args.retries + 1),
           },
         );
+        const pendingCount = dandegate.failures.filter((failure) => (
+          (failure.kind ?? classifyDandegateFailure(failure)) === "source_pending"
+        )).length;
+        const hardFailureCount = dandegate.failures.length - pendingCount;
         report.stages.dandegate = {
-          status: dandegate.failures.length ? "degraded" : "success",
+          status: hardFailureCount ? "hard_failure" : pendingCount ? "avatar_pending" : "success",
           updated: dandegate.updates.length,
-          failures: dandegate.failures.length,
+          failures: hardFailureCount,
+          pending: pendingCount,
         };
       } catch (error) {
         report.stages.dandegate = { status: "hard_failure", error: String(error.message ?? error) };
@@ -199,16 +211,38 @@ async function main() {
         item.imageSource = update.assetSource.source;
         item.assetPath = update.assetSource.targetPath;
         item.localIcon = update.assetSource.localIcon;
+        clearAvatarPendingMarker(item);
+      }
+
+      const pending = dandegate.failures.filter((failure) => (
+        (failure.kind ?? classifyDandegateFailure(failure)) === "source_pending"
+      ));
+      const dandegateHardFailures = dandegate.failures.filter((failure) => !pending.includes(failure));
+      report.failures.push(...dandegateHardFailures);
+      const markedAt = new Date().toISOString();
+      for (const failure of pending) {
+        const item = index.items[String(failure.id)];
+        if (canMarkAvatarPending(item)) {
+          markAvatarPending(item, failure, markedAt);
+          report.avatarPending.push({
+            id: failure.id,
+            code: failure.code,
+            reason: failure.reason,
+            pageUrl: failure.pageUrl,
+            fallbackUrl: item.iconUrl,
+          });
+        } else {
+          report.pending.push(failure);
+        }
+      }
+      report.counts.avatarPending = report.avatarPending.length;
+      if (report.avatarPending.length) {
+        console.log(`Doll avatars temporarily using remote fallbacks: ${report.avatarPending.map((failure) => failure.code).join(", ")}`);
       }
     }
 
-    const pending = dandegate.failures.filter((failure) => (
-      (failure.kind ?? classifyDandegateFailure(failure)) === "source_pending"
-    ));
-    const dandegateHardFailures = dandegate.failures.filter((failure) => !pending.includes(failure));
-    report.pending.push(...pending);
-    report.failures.push(...dandegateHardFailures);
-    const pendingIds = new Set(pending.map((failure) => String(failure.id)));
+    const pendingIds = new Set(report.pending.map((failure) => String(failure.id)));
+    const avatarPendingIds = new Set(report.avatarPending.map((failure) => String(failure.id)));
     const updatedItems = Object.values(index.items ?? {});
     const targets = [];
     const frozenMissing = [];
@@ -219,6 +253,7 @@ async function main() {
         if (!dest || !await fileExists(dest)) frozenMissing.push({ id: item.id, dest });
         continue;
       }
+      if (avatarPendingIds.has(String(item.id))) continue;
       if (pendingIds.has(String(item.id)) && (!dest || !await fileExists(dest))) continue;
       const sourceUrl = item.assetSource?.sourceUrl ?? asset?.sourceUrl ?? item.iconUrl ?? buildFallbackUrl(item);
       if (!dest || !sourceUrl) continue;
@@ -293,6 +328,10 @@ async function main() {
 
     const updated = { ...index };
     for (const item of Object.values(updated.items ?? {})) {
+      if (isAvatarPendingItem(item)) {
+        delete item.localIcon;
+        continue;
+      }
       const asset = buildAssetDescriptor(item.type, item.code);
       const pub = localPublicPath(item);
       const dest = localPathForItem(item, args.outDir);
@@ -310,6 +349,7 @@ async function main() {
 
     if (report.failures.length) report.status = "hard_failure";
     else if (report.pending.length) report.status = "source_pending";
+    else if (report.avatarPending.length) report.status = "avatar_pending";
     else report.status = "success";
     await writeJsonAtomic(args.reportOut, report);
     if (report.status === "hard_failure") process.exitCode = 1;

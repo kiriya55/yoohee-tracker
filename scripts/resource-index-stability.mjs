@@ -22,6 +22,12 @@ export function sameJson(left, right) {
   return JSON.stringify(left ?? {}) === JSON.stringify(right ?? {});
 }
 
+export function findAvatarPendingIds(index) {
+  return Object.values(index?.items ?? {})
+    .filter((item) => item?.type === "doll" && item?.code && item?.avatarPending === true)
+    .map((item) => String(item.id));
+}
+
 // Merge freshly fetched catalog items into an existing index.
 // Returns the merged index plus metadata describing what changed.
 export function mergeIndex(existing, incomingItems, metadata) {

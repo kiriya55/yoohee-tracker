@@ -100,7 +100,7 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 - 定时触发：每天 UTC 11:17 运行一次；同一分支同时只允许一个同步任务发布。
 - 定时任务会同步 Exilium BBS/MCC 的完整人形与武器目录、Dandegate 缺失头像、权威名称和卡池起止时间；不依赖当前卡池是否变化。
 - 手动触发或缺少现有索引文件时会强制更新。
-- 上游新资源尚未发布头像时会标记为 `source_pending`，保留上一版生产索引，并在 `resource-sync-report` artifact 中记录待处理资源。
+- 上游尚未发布人形头像、但 MCC 已有可用缩略图时，会标记为 `avatarPending` 并先用远程缩略图发布；定时同步会持续复查，头像上线后自动下载并清除标记。没有安全回退图的 `source_pending` 仍会保留上一版生产索引。
 - 图片下载只对缺失文件执行；网络异常和 HTTP 408/425/429/5xx 会退避重试，下载完成后会先校验图片再原子替换旧文件。
 
 触发更新后会同步维护：

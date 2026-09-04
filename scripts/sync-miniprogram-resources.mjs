@@ -7,6 +7,10 @@ import {
   PutObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
+import {
+  hasSafeRemoteAvatarFallback,
+  isAvatarPendingMarker,
+} from "./avatar-pending.mjs";
 
 const INDEX_KEY = "miniprogram-resource-index.json";
 const DEFAULT_MIN_ITEMS = 251;
@@ -55,6 +59,10 @@ function isObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
+export function isAvatarPending(item) {
+  return isObject(item) && isAvatarPendingMarker(item);
+}
+
 function imageKeyForItem(item) {
   const localIcon = String(item?.localIcon ?? "");
   if (!localIcon.startsWith("/images/")) {
@@ -90,10 +98,21 @@ export async function validateCatalog(index, imageRoot, { minItems = DEFAULT_MIN
     throw new Error("Invalid resource index: expected gf2-resource-index with an items object");
   }
 
-  const items = Object.values(index.items);
-  if (items.length < minItems) {
-    throw new Error(`Resource index has ${items.length} items; expected at least ${minItems}`);
+  const allItems = Object.values(index.items);
+  if (allItems.length < minItems) {
+    throw new Error(`Resource index has ${allItems.length} items; expected at least ${minItems}`);
   }
+
+  const avatarPendingItems = allItems.filter(isAvatarPending);
+  for (const item of avatarPendingItems) {
+    if (item.localIcon) {
+      throw new Error(`Pending doll ${item.id} must not publish a localIcon`);
+    }
+    if (!hasSafeRemoteAvatarFallback(item)) {
+      throw new Error(`Pending doll ${item.id} has no safe remote iconUrl fallback`);
+    }
+  }
+  const items = allItems.filter((item) => !isAvatarPending(item));
 
   const assets = [];
   const seenKeys = new Set();
@@ -114,7 +133,9 @@ export async function validateCatalog(index, imageRoot, { minItems = DEFAULT_MIN
   }
 
   return {
-    itemCount: items.length,
+    itemCount: allItems.length,
+    publishedItemCount: items.length,
+    skippedAvatarPending: avatarPendingItems.length,
     imageCount: assets.length,
     assets: assets.sort((left, right) => left.key.localeCompare(right.key)),
   };

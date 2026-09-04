@@ -6,7 +6,11 @@ import { findResourceCatalogChanges } from "./resource-catalog.mjs";
 import { computeTimesetHash, mergeServerResourceIndexes, normalizeTimesets } from "./timeset.mjs";
 import { fetchCompleteCatalog } from "./catalog-sources.mjs";
 import { buildGfl2Timesets, parseGfl2BannersHtml } from "./gfl2-banners.mjs";
-import { mergeIndex as stableMergeIndex, combinedIndexChanged } from "./resource-index-stability.mjs";
+import {
+  mergeIndex as stableMergeIndex,
+  combinedIndexChanged,
+  findAvatarPendingIds,
+} from "./resource-index-stability.mjs";
 
 const EXILIUM_ORIGIN = "https://exilium.xyz";
 
@@ -231,6 +235,7 @@ async function main() {
     const existingTimesetHash = computeTimesetHash(existing.timesets);
     const incomingTimesetHash = computeTimesetHash(incoming.timesets);
     const timesetChanged = args.checkTimesets && existingTimesetHash !== incomingTimesetHash;
+    const avatarPendingIds = findAvatarPendingIds(existing);
     console.log(`Catalog check: ${changes.added.length} added, ${changes.changed.length} changed.`);
     if (changes.added.length) console.log(`  added: ${changes.added.join(", ")}`);
     if (changes.changed.length) console.log(`  changed: ${changes.changed.join(", ")}`);
@@ -239,9 +244,10 @@ async function main() {
     } else {
       console.log("Timeset check: skipped (pass --check-timesets to include event schedules).");
     }
+    console.log(`Pending avatar check: ${avatarPendingIds.length}${avatarPendingIds.length ? ` (${avatarPendingIds.join(", ")})` : ""}.`);
 
-    if (changes.hasChanges || timesetChanged) {
-      console.log("Status check: Resource catalog or timeset changed. Exiting with 0.");
+    if (changes.hasChanges || timesetChanged || avatarPendingIds.length) {
+      console.log("Status check: Resource catalog, timeset, or pending avatar requires a sync. Exiting with 0.");
       process.exit(0);
     }
     console.log("Status check: Resource catalog and timeset unchanged. Exiting with 1.");

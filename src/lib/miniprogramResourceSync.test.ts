@@ -119,6 +119,63 @@ describe("mini-program R2 resource sync", () => {
     await expect(validateCatalog(index, imageRoot, { minItems: 2 })).rejects.toThrow(/missing/i);
   });
 
+  it("publishes a marked doll with its remote fallback but skips its absent head image", async () => {
+    const imageRoot = await makeFixture();
+    const index = fixtureIndex();
+    index.items["9002"] = {
+      id: 9002,
+      type: "doll",
+      code: "PendingSSR",
+      avatarPending: true,
+      avatarPendingReason: "avatar_missing",
+      iconUrl: "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_PendingSSR.png",
+    };
+
+    const validation = await validateCatalog(index, imageRoot, { minItems: 2 });
+    expect(validation).toMatchObject({
+      itemCount: 3,
+      publishedItemCount: 2,
+      skippedAvatarPending: 1,
+      imageCount: 2,
+    });
+
+    const artifactPath = path.join(imageRoot, "artifact", "miniprogram-resource-index.json");
+    const plan = await buildUploadPlan(index, imageRoot, artifactPath, { minItems: 2 });
+    expect(plan.objects.map((object) => object.key)).toEqual([
+      "doll/Avatar_Head_TestSSR.png",
+      "weapon/Weapon_Test_5_1024.png",
+      "miniprogram-resource-index.json",
+    ]);
+    const artifact = JSON.parse(await fs.readFile(artifactPath, "utf8"));
+    expect(artifact.items["9002"]).toMatchObject({
+      avatarPending: true,
+      iconUrl: "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_PendingSSR.png",
+    });
+    expect(artifact.items["9002"].localIcon).toBeUndefined();
+  });
+
+  it("rejects malformed pending markers instead of bypassing image validation", async () => {
+    const imageRoot = await makeFixture();
+    const noFallback = fixtureIndex();
+    noFallback.items["9002"] = {
+      id: 9002,
+      type: "doll",
+      code: "PendingSSR",
+      avatarPending: true,
+    };
+    await expect(validateCatalog(noFallback, imageRoot, { minItems: 2 })).rejects.toThrow(/remote iconUrl fallback/i);
+
+    const weapon = fixtureIndex();
+    weapon.items["19002"] = {
+      id: 19002,
+      type: "weapon",
+      code: "Weapon_Pending_5",
+      avatarPending: true,
+      iconUrl: "https://example.test/weapon.png",
+    };
+    await expect(validateCatalog(weapon, imageRoot, { minItems: 2 })).rejects.toThrow(/no \/images localIcon/i);
+  });
+
   it("creates an artifact copy and uploads images before the index", async () => {
     const imageRoot = await makeFixture();
     const artifactPath = path.join(imageRoot, "artifact", "miniprogram-resource-index.json");
@@ -165,6 +222,9 @@ describe("mini-program R2 resource sync", () => {
     expect(workflow).toContain('node-version: "22"');
     expect(workflow).toContain("if: always()");
     expect(workflow).toContain("output/download-report.json");
+    expect(workflow).toContain("actions/upload-artifact@v6");
+    expect(workflow).toContain('INDEX_FILE="public/images/resource-index.json"');
+    expect(workflow).toContain("Doll avatars waiting on upstream publication");
     expect(workflow).toContain("refresh_dolls:");
     expect(workflow).not.toContain("--force-dolls\n");
     expect(workflow.indexOf("npm run build")).toBeLessThan(workflow.indexOf("Upload mini-program resources to R2"));

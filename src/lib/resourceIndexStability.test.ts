@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 // @ts-expect-error The timestamp-stability helper is shared with the Node CLI.
-import { mergeIndex, combinedIndexChanged, catalogSignature } from "../../scripts/resource-index-stability.mjs";
+import { mergeIndex, combinedIndexChanged, catalogSignature, findAvatarPendingIds } from "../../scripts/resource-index-stability.mjs";
 // @ts-expect-error The deterministic timeset helper is shared with the Node CLI.
 import { computeTimesetHash } from "../../scripts/timeset.mjs";
 
@@ -53,6 +53,16 @@ function existingIndex() {
 }
 
 describe("resource index timestamp stability", () => {
+  it("selects only marked dolls for scheduled avatar rechecks", () => {
+    expect(findAvatarPendingIds({
+      items: {
+        "1082": { id: 1082, type: "doll", code: "CeciliaSSR", avatarPending: true },
+        "10821": { id: 10821, type: "weapon", code: "Weapon_Cecilia_3", avatarPending: true },
+        "1083": { id: 1083, type: "doll", code: "ReadySSR" },
+      },
+    })).toEqual(["1082"]);
+  });
+
   it("keeps verifiedAt and generatedAt when the catalog is unchanged", () => {
     const existing = existingIndex();
     const { index, hasSubstantiveChange } = mergeIndex(existing, [catalogItem()], {

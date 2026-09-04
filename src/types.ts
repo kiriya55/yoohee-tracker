@@ -89,6 +89,14 @@ export type ResourceItem = {
   icon?: string;
   iconUrl?: string;
   localIcon?: string;
+  /**
+   * The upstream head avatar is not published yet. While set, localIcon is
+   * absent and iconUrl is the verified remote thumbnail fallback.
+   */
+  avatarPending?: boolean;
+  avatarPendingReason?: string;
+  avatarPendingPageUrl?: string;
+  avatarPendingSince?: string;
   assetPath?: string;
   assetSource?: {
     sourceUrl: string;

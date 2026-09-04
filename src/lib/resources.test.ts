@@ -3,6 +3,32 @@ import { enrichRecords, getResourceImageUrl, parseResourceIndexText, getDisplayN
 import { normalizeRecords } from "./normalize";
 
 describe("resources", () => {
+  it("preserves avatar-pending metadata and uses the remote thumbnail fallback", () => {
+    const index = parseResourceIndexText(JSON.stringify({
+      format: "gf2-resource-index",
+      items: {
+        "1082": {
+          id: 1082,
+          type: "doll",
+          code: "CeciliaSSR",
+          iconUrl: "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_CeciliaSSR.png",
+          avatarPending: true,
+          avatarPendingReason: "avatar_missing",
+          avatarPendingSince: "2026-09-03T11:20:00.000Z",
+        },
+      },
+    }));
+
+    expect(index?.items["1082"]).toMatchObject({
+      avatarPending: true,
+      avatarPendingReason: "avatar_missing",
+      avatarPendingSince: "2026-09-03T11:20:00.000Z",
+    });
+    expect(getResourceImageUrl(index, 1082)).toBe(
+      "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_CeciliaSSR.png",
+    );
+  });
+
   it("parses resource index and enriches records", () => {
     const index = parseResourceIndexText(
       JSON.stringify({
