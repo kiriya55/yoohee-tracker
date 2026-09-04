@@ -36,7 +36,9 @@
         588,
         589,
         587,
-        567,
+        585,
+        584,
+        583,
         565,
         521,
         467,
@@ -102,11 +104,21 @@
         "cn": {
           "value": "克罗丽科",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/CharolicSR"
+        },
+        "en": {
+          "value": "Krolik",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "キャロリック",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AD%E3%83%A3%E3%83%AD%E3%83%AA%E3%83%83%E3%82%AF"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1008": {
       "id": 1008,
@@ -150,11 +162,21 @@
         "cn": {
           "value": "纳美西丝",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/NemesisSR"
+        },
+        "en": {
+          "value": "Nemesis",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ネメシス",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8D%E3%83%A1%E3%82%B7%E3%82%B9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1009": {
       "id": 1009,
@@ -198,11 +220,21 @@
         "cn": {
           "value": "寇尔芙",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/ColphneSR"
+        },
+        "en": {
+          "value": "Colphne",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "コルフェン",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B3%E3%83%AB%E3%83%95%E3%82%A7%E3%83%B3"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1013": {
       "id": 1013,
@@ -246,11 +278,21 @@
         "cn": {
           "value": "莱娜",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LennaSSR"
+        },
+        "en": {
+          "value": "Lenna",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "レナ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AC%E3%83%8A"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1015": {
       "id": 1015,
@@ -294,11 +336,21 @@
         "cn": {
           "value": "维普蕾",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/VepleySSR"
+        },
+        "en": {
+          "value": "Vepley",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ヴェプリー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A7%E3%83%97%E3%83%AA%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1017": {
       "id": 1017,
@@ -342,11 +394,21 @@
         "cn": {
           "value": "闪电",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/GrozaSR"
+        },
+        "en": {
+          "value": "Groza",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "グローザ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B0%E3%83%AD%E3%83%BC%E3%82%B6"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1021": {
       "id": 1021,
@@ -390,11 +452,21 @@
         "cn": {
           "value": "佩里缇亚",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/PerityaSSR"
+        },
+        "en": {
+          "value": "Peritya",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ペリティア",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1022": {
       "id": 1022,
@@ -438,11 +510,21 @@
         "cn": {
           "value": "夏克里",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SharkrySR"
+        },
+        "en": {
+          "value": "Sharkry",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "シャークリー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1023": {
       "id": 1023,
@@ -486,11 +568,21 @@
         "cn": {
           "value": "杜莎妮",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/DusevnyjSSR"
+        },
+        "en": {
+          "value": "Dushevnaya",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ドゥシェーヴヌイ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%89%E3%82%A5%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%B4%E3%83%8C%E3%82%A4"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1024": {
       "id": 1024,
@@ -534,11 +626,21 @@
         "cn": {
           "value": "奇塔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/CheetaSR"
+        },
+        "en": {
+          "value": "Cheeta",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "チータ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%81%E3%83%BC%E3%82%BF"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1025": {
       "id": 1025,
@@ -582,11 +684,21 @@
         "cn": {
           "value": "托洛洛",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/TololoSSR"
+        },
+        "en": {
+          "value": "Tololo",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "トロロ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%88%E3%83%AD%E3%83%AD"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1026": {
       "id": 1026,
@@ -630,11 +742,21 @@
         "cn": {
           "value": "纳甘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/NagantSR"
+        },
+        "en": {
+          "value": "Nagant",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ナガン",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8A%E3%82%AC%E3%83%B3"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1027": {
       "id": 1027,
@@ -678,11 +800,21 @@
         "cn": {
           "value": "琼玖",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/QiongjiuSSR"
+        },
+        "en": {
+          "value": "Qiongjiu",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "瓊玖",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E7%93%8A%E7%8E%96"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1028": {
       "id": 1028,
@@ -726,11 +858,21 @@
         "cn": {
           "value": "桑朵莱希",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/CentaureissiSSR"
+        },
+        "en": {
+          "value": "Centaureissi",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "センタウレイシー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A6%E3%83%AC%E3%82%A4%E3%82%B7%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1029": {
       "id": 1029,
@@ -774,11 +916,21 @@
         "cn": {
           "value": "塞布丽娜",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SabrinaSSR"
+        },
+        "en": {
+          "value": "Sabrina",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "サブリナ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B5%E3%83%96%E3%83%AA%E3%83%8A"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1032": {
       "id": 1032,
@@ -822,11 +974,21 @@
         "cn": {
           "value": "黛烟",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/DaiyanSSR"
+        },
+        "en": {
+          "value": "Daiyan",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "黛煙",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E9%BB%9B%E7%85%99"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1033": {
       "id": 1033,
@@ -870,11 +1032,21 @@
         "cn": {
           "value": "莫辛纳甘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/MosinnagantSSR"
+        },
+        "en": {
+          "value": "Mosin-Nagant",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "モシン・ナガン",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%A2%E3%82%B7%E3%83%B3%E3%83%BB%E3%83%8A%E3%82%AC%E3%83%B3"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1034": {
       "id": 1034,
@@ -918,11 +1090,16 @@
         "cn": {
           "value": "玛绮朵",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/MacqiatoSSR"
+        },
+        "jp": {
+          "value": "マキアート",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9E%E3%82%AD%E3%82%A2%E3%83%BC%E3%83%88"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1035": {
       "id": 1035,
@@ -966,11 +1143,21 @@
         "cn": {
           "value": "绛雨",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/JiangyuSSR"
+        },
+        "en": {
+          "value": "Jiangyu",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "絳雨",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E7%B5%B3%E9%9B%A8"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1036": {
       "id": 1036,
@@ -1014,11 +1201,21 @@
         "cn": {
           "value": "科谢尼娅",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/KseniaSR"
+        },
+        "en": {
+          "value": "Ksenia",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "クシーニヤ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%8B%E3%83%A4"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1037": {
       "id": 1037,
@@ -1062,11 +1259,21 @@
         "cn": {
           "value": "乌尔丽德",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/UllridSSR"
+        },
+        "en": {
+          "value": "Ullrid",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ウルリド",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A6%E3%83%AB%E3%83%AA%E3%83%89"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1038": {
       "id": 1038,
@@ -1110,11 +1317,21 @@
         "cn": {
           "value": "莉塔拉",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LittaraSR"
+        },
+        "en": {
+          "value": "Littara",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "リッタラ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AA%E3%83%83%E3%82%BF%E3%83%A9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1039": {
       "id": 1039,
@@ -1158,11 +1375,21 @@
         "cn": {
           "value": "索米",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SuomiSSR"
+        },
+        "en": {
+          "value": "Suomi",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "スオミ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B9%E3%82%AA%E3%83%9F"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1040": {
       "id": 1040,
@@ -1206,11 +1433,21 @@
         "cn": {
           "value": "波波沙",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/PapashaSSR"
+        },
+        "en": {
+          "value": "Papasha",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ペーペーシャ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B7%E3%83%A3"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1041": {
       "id": 1041,
@@ -1254,11 +1491,21 @@
         "cn": {
           "value": "洛塔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LottaSR"
+        },
+        "en": {
+          "value": "Lotta",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ロッタ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AD%E3%83%83%E3%82%BF"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1042": {
       "id": 1042,
@@ -1302,11 +1549,21 @@
         "cn": {
           "value": "安朵丝",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/AndorisSSR"
+        },
+        "en": {
+          "value": "Andoris",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "アンドリス",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%82%B9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1043": {
       "id": 1043,
@@ -1352,11 +1609,21 @@
         "cn": {
           "value": "绯",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/FayeSSR"
+        },
+        "en": {
+          "value": "Faye",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "緋",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E7%B7%8B"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1044": {
       "id": 1044,
@@ -1400,11 +1667,21 @@
         "cn": {
           "value": "维克托",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/VectorSSR"
+        },
+        "en": {
+          "value": "Vector",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ヴェクター",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A7%E3%82%AF%E3%82%BF%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1045": {
       "id": 1045,
@@ -1448,11 +1725,11 @@
         "cn": {
           "value": "比悠卡",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/BiyocaSSR"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1047": {
       "id": 1047,
@@ -1496,11 +1773,21 @@
         "cn": {
           "value": "春田",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SpringfieldSSR"
+        },
+        "en": {
+          "value": "Springfield",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "スプリングフィールド",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1048": {
       "id": 1048,
@@ -1544,11 +1831,21 @@
         "cn": {
           "value": "秋桦",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/QiuhuaSSR"
+        },
+        "en": {
+          "value": "Qiuhua",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "秋樺",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E7%A7%8B%E6%A8%BA"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1049": {
       "id": 1049,
@@ -1592,11 +1889,21 @@
         "cn": {
           "value": "哈卜茜",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/HarpsySSR"
+        },
+        "en": {
+          "value": "Harpsy",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "ハープシー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8F%E3%83%BC%E3%83%97%E3%82%B7%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1050": {
       "id": 1050,
@@ -1640,11 +1947,21 @@
         "cn": {
           "value": "朝晖",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/ZhaohuiSSR"
+        },
+        "en": {
+          "value": "Zhaohui",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "朝暉",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E6%9C%9D%E6%9A%89"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1051": {
       "id": 1051,
@@ -1688,11 +2005,21 @@
         "cn": {
           "value": "米什缇",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/MishtySSR"
+        },
+        "en": {
+          "value": "Mechty",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ミシュティ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9F%E3%82%B7%E3%83%A5%E3%83%86%E3%82%A3"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1052": {
       "id": 1052,
@@ -1736,11 +2063,21 @@
         "cn": {
           "value": "可露凯",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/ClukaySSR"
+        },
+        "en": {
+          "value": "Klukai",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "クルカイ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AF%E3%83%AB%E3%82%AB%E3%82%A4"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1053": {
       "id": 1053,
@@ -1784,11 +2121,21 @@
         "cn": {
           "value": "佩莉",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/PeriSSR"
+        },
+        "en": {
+          "value": "Peri",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ペリー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9A%E3%83%AA%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1054": {
       "id": 1054,
@@ -1832,11 +2179,21 @@
         "cn": {
           "value": "幼熙",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/YooHeeSSR"
+        },
+        "en": {
+          "value": "Yoohee",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "幼熙",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E5%B9%BC%E7%86%99"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1055": {
       "id": 1055,
@@ -1880,11 +2237,21 @@
         "cn": {
           "value": "妮基塔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/NikketaSSR"
+        },
+        "en": {
+          "value": "Nikketa",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ニキータ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8B%E3%82%AD%E3%83%BC%E3%82%BF"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1056": {
       "id": 1056,
@@ -1928,11 +2295,21 @@
         "cn": {
           "value": "莱娅",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LevaSSR"
+        },
+        "en": {
+          "value": "Leva",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "リヴァ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AA%E3%83%B4%E3%82%A1"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1057": {
       "id": 1057,
@@ -1976,11 +2353,21 @@
         "cn": {
           "value": "洛贝拉",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/RobellaSSR"
+        },
+        "en": {
+          "value": "Robella",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ロベラ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AD%E3%83%99%E3%83%A9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1058": {
       "id": 1058,
@@ -2024,11 +2411,21 @@
         "cn": {
           "value": "莱妮",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LeneSSR"
+        },
+        "en": {
+          "value": "Lainie",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "レイニー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AC%E3%82%A4%E3%83%8B%E3%83%BC"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1059": {
       "id": 1059,
@@ -2059,10 +2456,20 @@
         "cn": {
           "value": "琳德",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LindSSR"
+        },
+        "en": {
+          "value": "Lind",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "リンド",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AA%E3%83%B3%E3%83%89"
         }
       },
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1060": {
       "id": 1060,
@@ -2106,11 +2513,21 @@
         "cn": {
           "value": "翡图萨",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/PhaetusaSSR"
+        },
+        "en": {
+          "value": "Phaetusa",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "パエトゥーサ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%91%E3%82%A8%E3%83%88%E3%82%A5%E3%83%BC%E3%82%B5"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1061": {
       "id": 1061,
@@ -2154,11 +2571,21 @@
         "cn": {
           "value": "巴希达",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/BalthildeSSR"
+        },
+        "en": {
+          "value": "Balthilde",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
+        "jp": {
+          "value": "バチルダ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%90%E3%83%81%E3%83%AB%E3%83%80"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1062": {
       "id": 1062,
@@ -2202,11 +2629,21 @@
         "cn": {
           "value": "刘易斯",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LewisSSR"
+        },
+        "en": {
+          "value": "Lewis",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ルイス",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AB%E3%82%A4%E3%82%B9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1063": {
       "id": 1063,
@@ -2241,7 +2678,12 @@
         "cn": {
           "value": "维尔德",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/WelrodSSR"
+        },
+        "jp": {
+          "value": "ウェルロッド",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A6%E3%82%A7%E3%83%AB%E3%83%AD%E3%83%83%E3%83%89"
         }
       },
       "server": "haoplay",
@@ -2252,7 +2694,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/welrod/e00e71c83c0757d3f88bdf5a7fccf2f0a78f4d65ae50fc47fddd080769f59ac8.webp",
       "imageSource": "dandegate",
       "en": "Welrod",
-      "verifiedAt": "2026-08-30T13:26:44.977Z",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
       "jp": "ウェルロッド"
     },
     "1064": {
@@ -2297,11 +2739,21 @@
         "cn": {
           "value": "芙洛伦",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/FlorenceSSR"
+        },
+        "en": {
+          "value": "Florence",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "フローレンス",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%95%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1065": {
       "id": 1065,
@@ -2345,11 +2797,21 @@
         "cn": {
           "value": "埃芙",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/AlvaSSR"
+        },
+        "en": {
+          "value": "Alva",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "アルヴァ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A2%E3%83%AB%E3%83%B4%E3%82%A1"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1066": {
       "id": 1066,
@@ -2393,11 +2855,21 @@
         "cn": {
           "value": "威玛西娜",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/VoymastinaSSR"
+        },
+        "en": {
+          "value": "Voymastina",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ヴォイマスティナ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%B4%E3%82%A9%E3%82%A4%E3%83%9E%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8A"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1067": {
       "id": 1067,
@@ -2441,11 +2913,21 @@
         "cn": {
           "value": "海伦",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/HelenSSR"
+        },
+        "en": {
+          "value": "Helen",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ヘレン",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%98%E3%83%AC%E3%83%B3"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1068": {
       "id": 1068,
@@ -2489,11 +2971,21 @@
         "cn": {
           "value": "樱花",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SakuraSSR"
+        },
+        "en": {
+          "value": "Sakura",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "サクラ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B5%E3%82%AF%E3%83%A9"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1069": {
       "id": 1069,
@@ -2537,11 +3029,21 @@
         "cn": {
           "value": "罗蕾莱",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LoreleySSR"
+        },
+        "en": {
+          "value": "Loreley",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "ローレライ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%A9%E3%82%A4"
         }
       },
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1070": {
       "id": 1070,
@@ -2576,7 +3078,17 @@
         "cn": {
           "value": "夏安",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/CheyanneSSR"
+        },
+        "en": {
+          "value": "Cheyanne",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "シャイアン",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B7%E3%83%A3%E3%82%A4%E3%82%A2%E3%83%B3"
         }
       },
       "server": "haoplay",
@@ -2587,7 +3099,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/cheyanne/c468b8636e61a93c4dd1e1749b9324e939b918a75c85ee9b60cffa4322e8b3df.webp",
       "imageSource": "dandegate",
       "en": "Cheyanne",
-      "verifiedAt": "2026-08-30T13:26:44.977Z",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
       "jp": "シャイアン"
     },
     "1071": {
@@ -2631,12 +3143,22 @@
         "cn": {
           "value": "贝丝蒂",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/BastiSSR"
+        },
+        "en": {
+          "value": "Basti",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "バスティ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%90%E3%82%B9%E3%83%86%E3%82%A3"
         }
       },
       "aliases": [],
       "imageSource": "dandegate",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1072": {
       "id": 1072,
@@ -2671,7 +3193,17 @@
         "cn": {
           "value": "刘莳",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/LiushihSSR"
+        },
+        "en": {
+          "value": "Liushih",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "劉蒔",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E5%8A%89%E8%92%94"
         }
       },
       "server": "haoplay",
@@ -2683,7 +3215,7 @@
       "imageSource": "dandegate",
       "en": "Liushih",
       "jp": "劉蒔",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1073": {
       "id": 1073,
@@ -2718,7 +3250,17 @@
         "cn": {
           "value": "六分仪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SextansSSR"
+        },
+        "en": {
+          "value": "Sextans",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "セクスタンス",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BB%E3%82%AF%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9"
         }
       },
       "server": "haoplay",
@@ -2730,7 +3272,7 @@
       "imageSource": "dandegate",
       "en": "Sextans",
       "jp": "セクスタンス",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1074": {
       "id": 1074,
@@ -2765,7 +3307,17 @@
         "cn": {
           "value": "OTs-14",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/OTs14SSR"
+        },
+        "en": {
+          "value": "OTs-14",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
+        "jp": {
+          "value": "OTs-14",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?OTs-14"
         }
       },
       "server": "haoplay",
@@ -2776,7 +3328,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/ots-14/000d18d15e33f0080cd3df9939ba980fd5590e2a09ddcb818266c48c3dd28783.webp",
       "imageSource": "dandegate",
       "en": "OTs-14",
-      "verifiedAt": "2026-08-30T13:26:44.977Z",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
       "jp": "OTs-14"
     },
     "1075": {
@@ -2812,7 +3364,12 @@
         "cn": {
           "value": "纳美西丝·衍光",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/NemesisGnosisSSR"
+        },
+        "jp": {
+          "value": "ネメシス・グノーシス",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%8D%E3%83%A1%E3%82%B7%E3%82%B9%E3%83%BB%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9"
         }
       },
       "server": "haoplay",
@@ -2823,7 +3380,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/nemesis-gnosis/b2a116df60146e142a6f60682c1f0fefc625d1dcee2058880f017b41e7dce18c.webp",
       "imageSource": "dandegate",
       "en": "Nemesis Gnosis",
-      "verifiedAt": "2026-08-30T13:26:44.977Z",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
       "jp": "ネメシス・グノーシス"
     },
     "1076": {
@@ -2859,7 +3416,12 @@
         "cn": {
           "value": "索普",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/SoppoSSR"
+        },
+        "jp": {
+          "value": "ソップ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BD%E3%83%83%E3%83%97"
         }
       },
       "server": "haoplay",
@@ -2871,7 +3433,7 @@
       "imageSource": "dandegate",
       "en": "Soppo",
       "jp": "ソップ",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1077": {
       "id": 1077,
@@ -2906,7 +3468,12 @@
         "cn": {
           "value": "米蒂尔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/MitylSSR"
+        },
+        "jp": {
+          "value": "ミティール",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%9F%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB"
         }
       },
       "server": "haoplay",
@@ -2918,7 +3485,7 @@
       "imageSource": "dandegate",
       "en": "Mityl",
       "jp": "ミティール",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1078": {
       "id": 1078,
@@ -2953,7 +3520,12 @@
         "cn": {
           "value": "芙铃",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/FaelynnSSR"
+        },
+        "jp": {
+          "value": "フェアリン",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%95%E3%82%A7%E3%82%A2%E3%83%AA%E3%83%B3"
         }
       },
       "server": "haoplay",
@@ -2965,7 +3537,7 @@
       "imageSource": "dandegate",
       "en": "Faelynn",
       "jp": "フェアリン",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1079": {
       "id": 1079,
@@ -3000,7 +3572,12 @@
         "cn": {
           "value": "克莱妲",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/KoledaSSR"
+        },
+        "jp": {
+          "value": "コレダ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B3%E3%83%AC%E3%83%80"
         }
       },
       "server": "haoplay",
@@ -3012,7 +3589,7 @@
       "imageSource": "dandegate",
       "en": "Koleda",
       "jp": "コレダ",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "1080": {
       "id": 1080,
@@ -3047,7 +3624,12 @@
         "cn": {
           "value": "阿斯缇亚",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/AsteriaSSR"
+        },
+        "jp": {
+          "value": "アステリア",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A2%E3%82%B9%E3%83%86%E3%83%AA%E3%82%A2"
         }
       },
       "server": "haoplay",
@@ -3058,7 +3640,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/asteria/8ee2a80e5b45bdca052a64e7d1e430392c8810f763aaa2393e79d42ebd61d07b.webp",
       "imageSource": "dandegate",
       "en": "Asteria",
-      "verifiedAt": "2026-08-30T13:26:44.977Z",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
       "jp": "アステリア"
     },
     "1081": {
@@ -3088,16 +3670,74 @@
         "cn": {
           "value": "伊格蕾塔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/doll"
+          "url": "https://gf2.mcc.wiki/doll/EaglettaSSR"
+        },
+        "jp": {
+          "value": "イグレッタ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A4%E3%82%B0%E3%83%AC%E3%83%83%E3%82%BF"
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-08-30T13:26:44.977Z",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
       "servers": [
         "dw-cn",
         "haoplay"
       ],
-      "en": "Eagletta"
+      "en": "Eagletta",
+      "jp": "イグレッタ"
+    },
+    "1082": {
+      "id": 1082,
+      "type": "doll",
+      "name": "Cecilia",
+      "cn": "希丽雅",
+      "code": "CeciliaSSR",
+      "iconUrl": "https://cdn.dandegate.net/dolls/cecilia/f8f2776c81d79c28c625921f2e59ff65a038f0b38cb6e43b70d7a92a86ee854a.webp",
+      "imageSource": "dandegate",
+      "assetPath": "doll/Avatar_Head_CeciliaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://cdn.dandegate.net/dolls/cecilia/f8f2776c81d79c28c625921f2e59ff65a038f0b38cb6e43b70d7a92a86ee854a.webp",
+        "targetPath": "doll/Avatar_Head_CeciliaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_CeciliaSSR.png",
+        "source": "dandegate",
+        "transform": {
+          "format": "png",
+          "width": 128,
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
+        },
+        "sourcePage": "https://dandegate.net/dolls/Cecilia"
+      },
+      "localIcon": "/images/doll/Avatar_Head_CeciliaSSR.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "希丽雅",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/doll/CeciliaSSR"
+        },
+        "jp": {
+          "value": "セシリア",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BB%E3%82%B7%E3%83%AA%E3%82%A2"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Cecilia",
+      "jp": "セシリア"
     },
     "10001": {
       "id": 10001,
@@ -3116,7 +3756,7 @@
         "cn": {
           "value": "喧闹恶灵",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpHRssr001_5"
         }
       },
       "server": "haoplay",
@@ -3155,11 +3795,16 @@
         "cn": {
           "value": "绝密手稿",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpSMGssr001_5"
+        },
+        "en": {
+          "value": "Classified Manuscript",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10003": {
       "id": 10003,
@@ -3187,11 +3832,21 @@
         "cn": {
           "value": "阿尔克纳",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpRFssr001_5"
+        },
+        "en": {
+          "value": "Arcana",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "アルカナ",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10004": {
       "id": 10004,
@@ -3219,11 +3874,11 @@
         "cn": {
           "value": "盖尔诺",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpARssr001_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10005": {
       "id": 10005,
@@ -3251,11 +3906,11 @@
         "cn": {
           "value": "王冠鹿角兔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpKnifessr001_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10006": {
       "id": 10006,
@@ -3283,11 +3938,16 @@
         "cn": {
           "value": "妙尔尼尔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpMGssr001_5"
+        },
+        "jp": {
+          "value": "ミョルニル",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10007": {
       "id": 10007,
@@ -3315,11 +3975,11 @@
         "cn": {
           "value": "远行游鸽",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BpSGssr001_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10131": {
       "id": 10131,
@@ -3347,11 +4007,16 @@
         "cn": {
           "value": "旧式通用冲锋枪9",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP9_3"
+        },
+        "en": {
+          "value": "UMP 9",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10132": {
       "id": 10132,
@@ -3381,11 +4046,16 @@
         "cn": {
           "value": "通用冲锋枪9",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP9_4"
+        },
+        "en": {
+          "value": "UMP 9",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10133": {
       "id": 10133,
@@ -3415,11 +4085,16 @@
         "cn": {
           "value": "幼狮",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP9_5"
+        },
+        "en": {
+          "value": "UMP 9",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10231": {
       "id": 10231,
@@ -3447,11 +4122,16 @@
         "cn": {
           "value": "旧式科夫罗夫",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_KSVK_3"
+        },
+        "en": {
+          "value": "KSVK",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10232": {
       "id": 10232,
@@ -3479,11 +4159,16 @@
         "cn": {
           "value": "科夫罗夫",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_KSVK_4"
+        },
+        "en": {
+          "value": "KSVK",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10233": {
       "id": 10233,
@@ -3511,11 +4196,16 @@
         "cn": {
           "value": "传颂之诗",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_KSVK_5"
+        },
+        "en": {
+          "value": "KSVK",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10331": {
       "id": 10331,
@@ -3543,11 +4233,16 @@
         "cn": {
           "value": "旧式莫辛-纳甘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1891_3"
+        },
+        "jp": {
+          "value": "M1891",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10332": {
       "id": 10332,
@@ -3575,11 +4270,16 @@
         "cn": {
           "value": "莫辛-纳甘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1891_4"
+        },
+        "jp": {
+          "value": "M1891",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10333": {
       "id": 10333,
@@ -3607,11 +4307,16 @@
         "cn": {
           "value": "斯摩希克",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1891_5"
+        },
+        "jp": {
+          "value": "ミエティエリ",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10341": {
       "id": 10341,
@@ -3639,11 +4344,11 @@
         "cn": {
           "value": "旧式瓦尔特2000",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_WA2000_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10342": {
       "id": 10342,
@@ -3671,11 +4376,11 @@
         "cn": {
           "value": "瓦尔特2000",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_WA2000_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10343": {
       "id": 10343,
@@ -3703,11 +4408,11 @@
         "cn": {
           "value": "苦涩焦糖",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_WA2000_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10351": {
       "id": 10351,
@@ -3735,11 +4440,11 @@
         "cn": {
           "value": "旧式九七式",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ97_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10352": {
       "id": 10352,
@@ -3767,11 +4472,11 @@
         "cn": {
           "value": "九七式",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ97_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10353": {
       "id": 10353,
@@ -3799,11 +4504,16 @@
         "cn": {
           "value": "跃虎",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ97_5"
+        },
+        "en": {
+          "value": "Leaping Tiger",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10361": {
       "id": 10361,
@@ -3831,11 +4541,11 @@
         "cn": {
           "value": "旧式斯捷奇金",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_APS_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10362": {
       "id": 10362,
@@ -3863,11 +4573,21 @@
         "cn": {
           "value": "斯捷奇金",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_APS_4"
+        },
+        "en": {
+          "value": "Stechkin",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "スチェッキン",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10371": {
       "id": 10371,
@@ -3895,11 +4615,11 @@
         "cn": {
           "value": "旧式羽锋",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Ullr_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10372": {
       "id": 10372,
@@ -3927,11 +4647,11 @@
         "cn": {
           "value": "羽锋",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Ullr_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10373": {
       "id": 10373,
@@ -3959,11 +4679,11 @@
         "cn": {
           "value": "流羽白英",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Ullr_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10381": {
       "id": 10381,
@@ -3991,11 +4711,11 @@
         "cn": {
           "value": "旧式加利尔轻机枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Galil_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10382": {
       "id": 10382,
@@ -4023,11 +4743,11 @@
         "cn": {
           "value": "加利尔轻机枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Galil_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10391": {
       "id": 10391,
@@ -4055,11 +4775,11 @@
         "cn": {
           "value": "旧式索米",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1931_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10392": {
       "id": 10392,
@@ -4087,11 +4807,21 @@
         "cn": {
           "value": "索米",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1931_4"
+        },
+        "en": {
+          "value": "Suomi",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "スオミ",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10393": {
       "id": 10393,
@@ -4119,11 +4849,11 @@
         "cn": {
           "value": "未言使命",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1931_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10401": {
       "id": 10401,
@@ -4151,11 +4881,16 @@
         "cn": {
           "value": "旧式波波沙冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_PPSh41_3"
+        },
+        "en": {
+          "value": "PPSh-41",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10402": {
       "id": 10402,
@@ -4185,11 +4920,16 @@
         "cn": {
           "value": "波波沙冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_PPSh41_4"
+        },
+        "en": {
+          "value": "PPSh-41",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10403": {
       "id": 10403,
@@ -4217,11 +4957,16 @@
         "cn": {
           "value": "斯瓦罗格",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_PPSh41_5"
+        },
+        "en": {
+          "value": "Svarog",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10411": {
       "id": 10411,
@@ -4249,11 +4994,11 @@
         "cn": {
           "value": "旧式超级90",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10412": {
       "id": 10412,
@@ -4281,11 +5026,11 @@
         "cn": {
           "value": "超级90",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10421": {
       "id": 10421,
@@ -4313,11 +5058,16 @@
         "cn": {
           "value": "旧式格威尔36-斯佩凯芙特",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36KKSK_3"
+        },
+        "en": {
+          "value": "G36K-KSK",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10422": {
       "id": 10422,
@@ -4347,11 +5097,16 @@
         "cn": {
           "value": "格威尔36-斯佩凯芙特",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36KKSK_4"
+        },
+        "en": {
+          "value": "G36K-KSK",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10423": {
       "id": 10423,
@@ -4381,11 +5136,16 @@
         "cn": {
           "value": "阿格莱亚",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36KKSK_5"
+        },
+        "en": {
+          "value": "G36K-KSK",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10431": {
       "id": 10431,
@@ -4413,11 +5173,16 @@
         "cn": {
           "value": "旧式斯柯达75",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_CZ75_3"
+        },
+        "en": {
+          "value": "CZ75",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10432": {
       "id": 10432,
@@ -4445,11 +5210,16 @@
         "cn": {
           "value": "斯柯达75",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_CZ75_4"
+        },
+        "en": {
+          "value": "CZ75",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10433": {
       "id": 10433,
@@ -4477,11 +5247,16 @@
         "cn": {
           "value": "赫斯提亚",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_CZ75_5"
+        },
+        "en": {
+          "value": "Hestia",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10441": {
       "id": 10441,
@@ -4509,11 +5284,11 @@
         "cn": {
           "value": "旧式短剑",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vector_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10442": {
       "id": 10442,
@@ -4541,11 +5316,11 @@
         "cn": {
           "value": "短剑",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vector_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10443": {
       "id": 10443,
@@ -4573,11 +5348,16 @@
         "cn": {
           "value": "报丧轻语",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vector_5"
+        },
+        "en": {
+          "value": "Banshee's Whisper",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10451": {
       "id": 10451,
@@ -4605,11 +5385,11 @@
         "cn": {
           "value": "旧式格威尔28",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G28_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10452": {
       "id": 10452,
@@ -4637,11 +5417,11 @@
         "cn": {
           "value": "格威尔28",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G28_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10453": {
       "id": 10453,
@@ -4669,11 +5449,11 @@
         "cn": {
           "value": "林野精灵",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G28_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10471": {
       "id": 10471,
@@ -4701,11 +5481,16 @@
         "cn": {
           "value": "旧式斯普林菲尔德",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1903_3"
+        },
+        "en": {
+          "value": "M1903",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10472": {
       "id": 10472,
@@ -4733,11 +5518,21 @@
         "cn": {
           "value": "斯普林菲尔德",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1903_4"
+        },
+        "en": {
+          "value": "M1903",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "スプリングフィールド",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10473": {
       "id": 10473,
@@ -4765,11 +5560,16 @@
         "cn": {
           "value": "信仰棘光",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1903_5"
+        },
+        "en": {
+          "value": "M1903",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10481": {
       "id": 10481,
@@ -4797,11 +5597,11 @@
         "cn": {
           "value": "旧式九七式霰",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_HAWK12_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10482": {
       "id": 10482,
@@ -4829,11 +5629,11 @@
         "cn": {
           "value": "九七式霰",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_HAWK12_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10483": {
       "id": 10483,
@@ -4861,11 +5661,11 @@
         "cn": {
           "value": "逐光",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_HAWK12_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10491": {
       "id": 10491,
@@ -4893,11 +5693,11 @@
         "cn": {
           "value": "旧式施泰尔冲锋手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_SteyrTMP_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10492": {
       "id": 10492,
@@ -4925,11 +5725,16 @@
         "cn": {
           "value": "施泰尔冲锋手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_SteyrTMP_4"
+        },
+        "en": {
+          "value": "TMP",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10493": {
       "id": 10493,
@@ -4957,11 +5762,16 @@
         "cn": {
           "value": "二律背反",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_SteyrTMP_5"
+        },
+        "en": {
+          "value": "Antinomy",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10501": {
       "id": 10501,
@@ -4989,11 +5799,16 @@
         "cn": {
           "value": "旧式长风零六",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_CSLS06_3"
+        },
+        "en": {
+          "value": "CS/LS06",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10502": {
       "id": 10502,
@@ -5023,11 +5838,16 @@
         "cn": {
           "value": "长风零六",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_CSLS06_4"
+        },
+        "en": {
+          "value": "CS/LS06",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10503": {
       "id": 10503,
@@ -5057,11 +5877,16 @@
         "cn": {
           "value": "不留行",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_CSLS06_5"
+        },
+        "en": {
+          "value": "CS/LS06",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10511": {
       "id": 10511,
@@ -5089,11 +5914,16 @@
         "cn": {
           "value": "旧式无壳弹步枪11",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G11_3"
+        },
+        "en": {
+          "value": "G11",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10512": {
       "id": 10512,
@@ -5121,11 +5951,16 @@
         "cn": {
           "value": "无壳弹步枪11",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G11_4"
+        },
+        "en": {
+          "value": "G11",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10513": {
       "id": 10513,
@@ -5153,11 +5988,16 @@
         "cn": {
           "value": "白日梦",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G11_5"
+        },
+        "en": {
+          "value": "Daydream",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10521": {
       "id": 10521,
@@ -5185,11 +6025,11 @@
         "cn": {
           "value": "旧式黑克勒科赫416",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_HK416_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10522": {
       "id": 10522,
@@ -5217,11 +6057,11 @@
         "cn": {
           "value": "黑克勒科赫416",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_HK416_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10523": {
       "id": 10523,
@@ -5249,11 +6089,11 @@
         "cn": {
           "value": "斯库拉",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_HK416_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10531": {
       "id": 10531,
@@ -5281,11 +6121,16 @@
         "cn": {
           "value": "旧式五号九毫米冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP5_3"
+        },
+        "en": {
+          "value": "MP5",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10532": {
       "id": 10532,
@@ -5313,11 +6158,16 @@
         "cn": {
           "value": "五号九毫米冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP5_4"
+        },
+        "en": {
+          "value": "MP5",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10533": {
       "id": 10533,
@@ -5345,11 +6195,16 @@
         "cn": {
           "value": "厄梅尼塔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP5_5"
+        },
+        "en": {
+          "value": "MP5",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10541": {
       "id": 10541,
@@ -5377,11 +6232,16 @@
         "cn": {
           "value": "旧式卡宾刻2型",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_K2_3"
+        },
+        "en": {
+          "value": "K2",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10542": {
       "id": 10542,
@@ -5409,11 +6269,16 @@
         "cn": {
           "value": "卡宾刻2型",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_K2_4"
+        },
+        "en": {
+          "value": "K2",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10543": {
       "id": 10543,
@@ -5441,11 +6306,16 @@
         "cn": {
           "value": "流光花火",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_K2_5"
+        },
+        "en": {
+          "value": "K2",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10551": {
       "id": 10551,
@@ -5473,11 +6343,16 @@
         "cn": {
           "value": "旧式维斯卡94",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_VSK94_3"
+        },
+        "en": {
+          "value": "VSK-94",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10552": {
       "id": 10552,
@@ -5507,11 +6382,16 @@
         "cn": {
           "value": "维斯卡94",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_VSK94_4"
+        },
+        "en": {
+          "value": "VSK-94",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10553": {
       "id": 10553,
@@ -5541,11 +6421,16 @@
         "cn": {
           "value": "护梦银翼",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_VSK94_5"
+        },
+        "en": {
+          "value": "VSK-94",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10561": {
       "id": 10561,
@@ -5573,11 +6458,16 @@
         "cn": {
           "value": "旧式通用冲锋枪45",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP45_3"
+        },
+        "en": {
+          "value": "UMP45",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10562": {
       "id": 10562,
@@ -5605,11 +6495,16 @@
         "cn": {
           "value": "通用冲锋枪45",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP45_4"
+        },
+        "en": {
+          "value": "UMP45",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10563": {
       "id": 10563,
@@ -5637,11 +6532,16 @@
         "cn": {
           "value": "狡狐",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP45_5"
+        },
+        "en": {
+          "value": "UMP45",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10571": {
       "id": 10571,
@@ -5669,11 +6569,16 @@
         "cn": {
           "value": "旧式柯尔特635型冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_RO635_3"
+        },
+        "en": {
+          "value": "RO635",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10572": {
       "id": 10572,
@@ -5701,11 +6606,16 @@
         "cn": {
           "value": "柯尔特635型冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_RO635_4"
+        },
+        "en": {
+          "value": "RO635",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10573": {
       "id": 10573,
@@ -5733,11 +6643,16 @@
         "cn": {
           "value": "流浪者赞歌",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_RO635_5"
+        },
+        "en": {
+          "value": "RO635",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10581": {
       "id": 10581,
@@ -5765,11 +6680,16 @@
         "cn": {
           "value": "旧式通用冲锋枪40",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP40_3"
+        },
+        "en": {
+          "value": "UMP40",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10582": {
       "id": 10582,
@@ -5797,11 +6717,16 @@
         "cn": {
           "value": "通用冲锋枪40",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP40_4"
+        },
+        "en": {
+          "value": "UMP40",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10583": {
       "id": 10583,
@@ -5829,11 +6754,16 @@
         "cn": {
           "value": "骄阳构想",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_UMP40_5"
+        },
+        "en": {
+          "value": "UMP40",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10591": {
       "id": 10591,
@@ -5861,11 +6791,11 @@
         "cn": {
           "value": "旧式艾奇逊12自动霰弹枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AA12_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10592": {
       "id": 10592,
@@ -5893,11 +6823,11 @@
         "cn": {
           "value": "艾奇逊12自动霰弹枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AA12_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10593": {
       "id": 10593,
@@ -5925,11 +6855,11 @@
         "cn": {
           "value": "刺棘法则",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AA12_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10601": {
       "id": 10601,
@@ -5957,11 +6887,11 @@
         "cn": {
           "value": "旧式灰棘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Phaetusa_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10602": {
       "id": 10602,
@@ -5989,11 +6919,11 @@
         "cn": {
           "value": "灰棘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Phaetusa_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10603": {
       "id": 10603,
@@ -6021,11 +6951,11 @@
         "cn": {
           "value": "因果律理",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Phaetusa_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10611": {
       "id": 10611,
@@ -6053,11 +6983,11 @@
         "cn": {
           "value": "旧式拉赫蒂26型轻机枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M26_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10612": {
       "id": 10612,
@@ -6085,11 +7015,11 @@
         "cn": {
           "value": "拉赫蒂26型轻机枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M26_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10613": {
       "id": 10613,
@@ -6117,11 +7047,11 @@
         "cn": {
           "value": "尼奥尔德",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M26_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10621": {
       "id": 10621,
@@ -6149,11 +7079,16 @@
         "cn": {
           "value": "旧式刘易斯轻机枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Lewisgun_3"
+        },
+        "en": {
+          "value": "Lewis Gun",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10622": {
       "id": 10622,
@@ -6183,11 +7118,16 @@
         "cn": {
           "value": "刘易斯轻机枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Lewisgun_4"
+        },
+        "en": {
+          "value": "Lewis Gun",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10623": {
       "id": 10623,
@@ -6217,11 +7157,16 @@
         "cn": {
           "value": "玩具匠",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Lewisgun_5"
+        },
+        "en": {
+          "value": "Lewis Gun",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10631": {
       "id": 10631,
@@ -6240,7 +7185,7 @@
         "cn": {
           "value": "旧式马克二型栓动手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Welrodmk2_3"
         }
       },
       "server": "haoplay",
@@ -6272,7 +7217,7 @@
         "cn": {
           "value": "马克二型栓动手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Welrodmk2_4"
         }
       },
       "server": "haoplay",
@@ -6302,7 +7247,7 @@
         "cn": {
           "value": "缄默制裁",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Welrodmk2_5"
         }
       },
       "server": "haoplay",
@@ -6339,11 +7284,11 @@
         "cn": {
           "value": "旧式15型自动手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_PA15_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10642": {
       "id": 10642,
@@ -6371,11 +7316,11 @@
         "cn": {
           "value": "15型自动手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_PA15_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10643": {
       "id": 10643,
@@ -6403,11 +7348,16 @@
         "cn": {
           "value": "伊阿索",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_PA15_5"
+        },
+        "en": {
+          "value": "Iaso",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10651": {
       "id": 10651,
@@ -6435,11 +7385,11 @@
         "cn": {
           "value": "旧式尼科诺夫突击步枪94",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AN94_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10652": {
       "id": 10652,
@@ -6467,11 +7417,11 @@
         "cn": {
           "value": "尼科诺夫突击步枪94",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AN94_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10653": {
       "id": 10653,
@@ -6499,11 +7449,16 @@
         "cn": {
           "value": "6P33",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AN94_5"
+        },
+        "en": {
+          "value": "6P33",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10661": {
       "id": 10661,
@@ -6531,11 +7486,11 @@
         "cn": {
           "value": "旧式卡拉什尼科夫突击步枪15",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK15_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10662": {
       "id": 10662,
@@ -6563,11 +7518,11 @@
         "cn": {
           "value": "卡拉什尼科夫突击步枪15",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK15_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10663": {
       "id": 10663,
@@ -6595,11 +7550,16 @@
         "cn": {
           "value": "6P71",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK15_5"
+        },
+        "en": {
+          "value": "6P71",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10671": {
       "id": 10671,
@@ -6627,11 +7587,11 @@
         "cn": {
           "value": "旧式12型双管霰弹枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_DP12_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10672": {
       "id": 10672,
@@ -6659,11 +7619,11 @@
         "cn": {
           "value": "12型双管霰弹枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_DP12_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10673": {
       "id": 10673,
@@ -6691,11 +7651,11 @@
         "cn": {
           "value": "谧语永护",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_DP12_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10681": {
       "id": 10681,
@@ -6723,11 +7683,11 @@
         "cn": {
           "value": "旧式樱花冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sakura_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10682": {
       "id": 10682,
@@ -6755,11 +7715,11 @@
         "cn": {
           "value": "樱花冲锋枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sakura_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10683": {
       "id": 10683,
@@ -6787,11 +7747,16 @@
         "cn": {
           "value": "绯红契约",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sakura_5"
+        },
+        "en": {
+          "value": "Crimson Covenant",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10691": {
       "id": 10691,
@@ -6819,11 +7784,11 @@
         "cn": {
           "value": "旧式因戈尔夫50",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_DSR50_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10692": {
       "id": 10692,
@@ -6851,11 +7816,11 @@
         "cn": {
           "value": "因戈尔夫50",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_DSR50_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10693": {
       "id": 10693,
@@ -6883,11 +7848,16 @@
         "cn": {
           "value": "潮涌夜曲",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_DSR50_5"
+        },
+        "en": {
+          "value": "Nighttide Nocturne",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10701": {
       "id": 10701,
@@ -6906,7 +7876,7 @@
         "cn": {
           "value": "旧式干预200",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M200_3"
         }
       },
       "server": "haoplay",
@@ -6936,7 +7906,7 @@
         "cn": {
           "value": "干预200",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M200_4"
         }
       },
       "server": "haoplay",
@@ -6966,7 +7936,7 @@
         "cn": {
           "value": "夜行豆蔻",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M200_5"
         }
       },
       "server": "haoplay",
@@ -7004,12 +7974,12 @@
         "cn": {
           "value": "旧式马克23进攻型手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MK23_3"
         }
       },
       "aliases": [],
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10712": {
       "id": 10712,
@@ -7037,11 +8007,11 @@
         "cn": {
           "value": "马克23进攻型手枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MK23_4"
         }
       },
       "aliases": [],
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10713": {
       "id": 10713,
@@ -7069,11 +8039,11 @@
         "cn": {
           "value": "告死礼赞",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MK23_5"
         }
       },
       "aliases": [],
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "10721": {
       "id": 10721,
@@ -7092,7 +8062,7 @@
         "cn": {
           "value": "旧式刘氏步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Liushih_3"
         }
       },
       "server": "haoplay",
@@ -7124,7 +8094,7 @@
         "cn": {
           "value": "刘氏步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Liushih_4"
         }
       },
       "server": "haoplay",
@@ -7152,7 +8122,7 @@
         "cn": {
           "value": "绝影",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Liushih_5"
         }
       },
       "server": "haoplay",
@@ -7182,7 +8152,7 @@
         "cn": {
           "value": "旧式夜蛇",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sextans_3"
         }
       },
       "server": "haoplay",
@@ -7212,7 +8182,7 @@
         "cn": {
           "value": "夜蛇",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sextans_4"
         }
       },
       "server": "haoplay",
@@ -7242,7 +8212,7 @@
         "cn": {
           "value": "暮色蔷薇",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Sextans_5"
         }
       },
       "server": "haoplay",
@@ -7272,7 +8242,7 @@
         "cn": {
           "value": "旧式闪电-3",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BlackOTs14_3"
         }
       },
       "server": "haoplay",
@@ -7302,7 +8272,7 @@
         "cn": {
           "value": "闪电-3",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BlackOTs14_4"
         }
       },
       "server": "haoplay",
@@ -7332,7 +8302,7 @@
         "cn": {
           "value": "卡庇托林",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_BlackOTs14_5"
         }
       },
       "server": "haoplay",
@@ -7362,7 +8332,7 @@
         "cn": {
           "value": "西比尔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_NemesisGnosis_5"
         }
       },
       "server": "haoplay",
@@ -7392,7 +8362,7 @@
         "cn": {
           "value": "旧式特殊模组战术步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Soppo_3"
         }
       },
       "server": "haoplay",
@@ -7424,7 +8394,7 @@
         "cn": {
           "value": "特殊模组战术步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Soppo_4"
         }
       },
       "server": "haoplay",
@@ -7454,7 +8424,7 @@
         "cn": {
           "value": "碎穹嚎歌",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Soppo_5"
         }
       },
       "server": "haoplay",
@@ -7484,7 +8454,7 @@
         "cn": {
           "value": "旧式90型单兵自卫武器",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Mityl_3"
         }
       },
       "server": "haoplay",
@@ -7514,7 +8484,7 @@
         "cn": {
           "value": "90型单兵自卫武器",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Mityl_4"
         }
       },
       "server": "haoplay",
@@ -7544,7 +8514,7 @@
         "cn": {
           "value": "绒鼠新星",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Mityl_5"
         }
       },
       "server": "haoplay",
@@ -7574,7 +8544,7 @@
         "cn": {
           "value": "旧式格威尔41",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Faelynn_3"
         }
       },
       "server": "haoplay",
@@ -7602,7 +8572,7 @@
         "cn": {
           "value": "格威尔41",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Faelynn_4"
         }
       },
       "server": "haoplay",
@@ -7632,7 +8602,7 @@
         "cn": {
           "value": "森牙戾兽",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Faelynn_5"
         }
       },
       "server": "haoplay",
@@ -7664,7 +8634,7 @@
         "cn": {
           "value": "旧式12型突击步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Koleda_3"
         }
       },
       "server": "haoplay",
@@ -7694,7 +8664,7 @@
         "cn": {
           "value": "12型突击步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Koleda_4"
         }
       },
       "server": "haoplay",
@@ -7722,7 +8692,7 @@
         "cn": {
           "value": "切尔诺伯格",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Koleda_5"
         }
       },
       "server": "haoplay",
@@ -7754,7 +8724,7 @@
         "cn": {
           "value": "旧式阿玛莱特15型自动步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Asteria_3"
         }
       },
       "server": "haoplay",
@@ -7782,7 +8752,7 @@
         "cn": {
           "value": "阿玛莱特15型自动步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Asteria_4"
         }
       },
       "server": "haoplay",
@@ -7812,7 +8782,7 @@
         "cn": {
           "value": "忏悔罗盘",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Asteria_5"
         }
       },
       "server": "haoplay",
@@ -7842,7 +8812,7 @@
         "cn": {
           "value": "旧式沙漠之鹰",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Eagletta_3"
         }
       },
       "server": "haoplay",
@@ -7872,7 +8842,7 @@
         "cn": {
           "value": "沙漠之鹰",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Eagletta_4"
         }
       },
       "server": "haoplay",
@@ -7902,7 +8872,7 @@
         "cn": {
           "value": "银翼匹丝缇",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Eagletta_5"
         }
       },
       "server": "haoplay",
@@ -7914,6 +8884,96 @@
       "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Eagletta_5_1024.png",
       "imageSource": "mcc-wiki",
       "verifiedAt": "2026-08-28T21:17:20.710Z"
+    },
+    "10821": {
+      "id": 10821,
+      "type": "weapon",
+      "name": "Weapon_Cecilia",
+      "cn": "旧式格威尔36-康派科特",
+      "code": "Weapon_Cecilia_3",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Cecilia_3_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Cecilia_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Cecilia_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Cecilia_3_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "旧式格威尔36-康派科特",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_3"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Cecilia"
+    },
+    "10822": {
+      "id": 10822,
+      "type": "weapon",
+      "name": "Weapon_Cecilia",
+      "cn": "格威尔36-康派科特",
+      "code": "Weapon_Cecilia_4",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Cecilia_4_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Cecilia_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Cecilia_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Cecilia_4_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "格威尔36-康派科特",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_4"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Cecilia"
+    },
+    "10823": {
+      "id": 10823,
+      "type": "weapon",
+      "name": "Weapon_Cecilia",
+      "cn": "斯诺特拉",
+      "code": "Weapon_Cecilia_5",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Cecilia_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Cecilia_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Cecilia_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Cecilia_5_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "斯诺特拉",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_5"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-09-04T14:56:40.090Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Cecilia"
     },
     "11007": {
       "id": 11007,
@@ -7941,11 +9001,16 @@
         "cn": {
           "value": "野兔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Blade_4"
+        },
+        "jp": {
+          "value": "刀",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11008": {
       "id": 11008,
@@ -7973,11 +9038,11 @@
         "cn": {
           "value": "旧式金牛座曲线",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_TaurusCurve_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11009": {
       "id": 11009,
@@ -8005,11 +9070,11 @@
         "cn": {
           "value": "旧式复仇女神",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_OM50_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11010": {
       "id": 11010,
@@ -8037,11 +9102,21 @@
         "cn": {
           "value": "旧式格洛利娅",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_OTS14_3"
+        },
+        "en": {
+          "value": "OTs-14",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "OTs-14",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11014": {
       "id": 11014,
@@ -8069,11 +9144,11 @@
         "cn": {
           "value": "复仇女神",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_OM50_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11015": {
       "id": 11015,
@@ -8101,11 +9176,11 @@
         "cn": {
           "value": "金牛座曲线",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_TaurusCurve_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11016": {
       "id": 11016,
@@ -8133,11 +9208,21 @@
         "cn": {
           "value": "猎心者",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vepr12_5"
+        },
+        "en": {
+          "value": "Heart Seeker",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "ハートハンター",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11017": {
       "id": 11017,
@@ -8165,11 +9250,21 @@
         "cn": {
           "value": "旧式莫洛12",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vepr12_3"
+        },
+        "en": {
+          "value": "Vepr-12",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "Vepr-12",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11020": {
       "id": 11020,
@@ -8197,11 +9292,21 @@
         "cn": {
           "value": "光学幻境",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Pecheng_5"
+        },
+        "en": {
+          "value": "Optical Illusion",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "ミラージュ",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11021": {
       "id": 11021,
@@ -8231,11 +9336,21 @@
         "cn": {
           "value": "莫洛12",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Vepr12_4"
+        },
+        "en": {
+          "value": "Vepr-12",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "Vepr-12",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11022": {
       "id": 11022,
@@ -8263,11 +9378,11 @@
         "cn": {
           "value": "旧式野兔",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Blade_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11023": {
       "id": 11023,
@@ -8297,11 +9412,21 @@
         "cn": {
           "value": "格洛利娅",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_OTS14_4"
+        },
+        "en": {
+          "value": "OTs-14",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "グローザ",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11024": {
       "id": 11024,
@@ -8329,11 +9454,11 @@
         "cn": {
           "value": "旧式佩切涅",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Pecheng_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11026": {
       "id": 11026,
@@ -8361,11 +9486,16 @@
         "cn": {
           "value": "佩切涅",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Pecheng_4"
+        },
+        "jp": {
+          "value": "ペチェネグ-SP",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11030": {
       "id": 11030,
@@ -8393,11 +9523,11 @@
         "cn": {
           "value": "旧式罗宾逊先进步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_ROBINSONXCR_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11031": {
       "id": 11031,
@@ -8425,11 +9555,11 @@
         "cn": {
           "value": "罗宾逊先进步枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_ROBINSONXCR_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11036": {
       "id": 11036,
@@ -8457,11 +9587,16 @@
         "cn": {
           "value": "旧式卡拉什-阿尔法",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK-Alfa_3"
+        },
+        "jp": {
+          "value": "AK-Alfa",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11037": {
       "id": 11037,
@@ -8489,11 +9624,16 @@
         "cn": {
           "value": "卡拉什-阿尔法",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK-Alfa_4"
+        },
+        "jp": {
+          "value": "AK-Alfa",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11038": {
       "id": 11038,
@@ -8521,11 +9661,16 @@
         "cn": {
           "value": "游星",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_AK-Alfa_5"
+        },
+        "jp": {
+          "value": "遊星",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11039": {
       "id": 11039,
@@ -8553,11 +9698,11 @@
         "cn": {
           "value": "旧式黑科赫7",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP7_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11040": {
       "id": 11040,
@@ -8585,11 +9730,11 @@
         "cn": {
           "value": "黑科赫7",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_MP7_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11042": {
       "id": 11042,
@@ -8617,11 +9762,16 @@
         "cn": {
           "value": "旧式一九一式",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-191_3"
+        },
+        "en": {
+          "value": "QBZ-191",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11043": {
       "id": 11043,
@@ -8649,11 +9799,21 @@
         "cn": {
           "value": "一九一式",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-191_4"
+        },
+        "en": {
+          "value": "QBZ-191",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "191式",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11044": {
       "id": 11044,
@@ -8681,11 +9841,21 @@
         "cn": {
           "value": "金石奏",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-191_5"
+        },
+        "en": {
+          "value": "QBZ-191",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "金石奏",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11045": {
       "id": 11045,
@@ -8713,11 +9883,16 @@
         "cn": {
           "value": "旧式特殊用途自动型霰弹枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_SPAS-12_3"
+        },
+        "jp": {
+          "value": "S.P.A.S.12",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11046": {
       "id": 11046,
@@ -8745,11 +9920,16 @@
         "cn": {
           "value": "特殊用途自动型霰弹枪",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_SPAS-12_4"
+        },
+        "jp": {
+          "value": "S.P.A.S.12",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11047": {
       "id": 11047,
@@ -8777,11 +9957,21 @@
         "cn": {
           "value": "梅扎露娜",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_SPAS-12_5"
+        },
+        "en": {
+          "value": "Mezzaluna",
+          "source": "gfl2.help-weapons",
+          "url": "https://gfl2.help/en/weapons"
+        },
+        "jp": {
+          "value": "メッツァルーナ",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11048": {
       "id": 11048,
@@ -8809,11 +9999,11 @@
         "cn": {
           "value": "旧式纳甘左轮",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1895_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11049": {
       "id": 11049,
@@ -8841,11 +10031,11 @@
         "cn": {
           "value": "纳甘左轮",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_M1895_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11051": {
       "id": 11051,
@@ -8873,11 +10063,11 @@
         "cn": {
           "value": "旧式九五式",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-95_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11052": {
       "id": 11052,
@@ -8905,11 +10095,11 @@
         "cn": {
           "value": "九五式",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-95_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11053": {
       "id": 11053,
@@ -8937,11 +10127,16 @@
         "cn": {
           "value": "重弦",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_QBZ-95_5"
+        },
+        "jp": {
+          "value": "重弦",
+          "source": "wikiru",
+          "url": "https://dollsfrontline2.wikiru.jp/?cmd=read&page=%E6%AD%A6%E5%99%A8%E4%B8%80%E8%A6%A7"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11054": {
       "id": 11054,
@@ -8969,11 +10164,11 @@
         "cn": {
           "value": "旧式格威尔36",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36_3"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11055": {
       "id": 11055,
@@ -9001,11 +10196,11 @@
         "cn": {
           "value": "格威尔36",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36_4"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     },
     "11056": {
       "id": 11056,
@@ -9033,11 +10228,11 @@
         "cn": {
           "value": "女仆准则",
           "source": "mcc-wiki",
-          "url": "https://gf2.mcc.wiki/weapon"
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_G36_5"
         }
       },
       "imageSource": "mcc-wiki",
-      "verifiedAt": "2026-08-30T13:26:44.977Z"
+      "verifiedAt": "2026-09-04T14:56:40.090Z"
     }
   },
   "timesets": [
@@ -9965,5 +11160,5 @@
     }
   ],
   "timesetHash": "1cee25b2ba3eaeb78472ab53376103b81d49b2e2c3b36198eacb140e43d9a796",
-  "generatedAt": "2026-08-30T13:26:44.977Z"
+  "generatedAt": "2026-09-04T14:56:40.090Z"
 }

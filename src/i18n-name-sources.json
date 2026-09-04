@@ -1025,6 +1025,23 @@
       "value": "伊格蕾塔",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/EaglettaSSR"
+    },
+    "jp": {
+      "value": "イグレッタ",
+      "source": "wikiru-detail",
+      "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A4%E3%82%B0%E3%83%AC%E3%83%83%E3%82%BF"
+    }
+  },
+  "1082": {
+    "cn": {
+      "value": "希丽雅",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/doll/CeciliaSSR"
+    },
+    "jp": {
+      "value": "セシリア",
+      "source": "wikiru-detail",
+      "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BB%E3%82%B7%E3%83%AA%E3%82%A2"
     }
   },
   "10001": {
@@ -2419,6 +2436,27 @@
       "value": "银翼匹丝缇",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/weapon/Weapon_Eagletta_5"
+    }
+  },
+  "10821": {
+    "cn": {
+      "value": "旧式格威尔36-康派科特",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_3"
+    }
+  },
+  "10822": {
+    "cn": {
+      "value": "格威尔36-康派科特",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_4"
+    }
+  },
+  "10823": {
+    "cn": {
+      "value": "斯诺特拉",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_5"
     }
   },
   "11007": {

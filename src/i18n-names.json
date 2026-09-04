@@ -444,7 +444,15 @@
     "code": "EaglettaSSR",
     "type": "doll",
     "cn": "伊格蕾塔",
-    "en": "Eagletta"
+    "en": "Eagletta",
+    "jp": "イグレッタ"
+  },
+  "1082": {
+    "code": "CeciliaSSR",
+    "type": "doll",
+    "cn": "希丽雅",
+    "en": "Cecilia",
+    "jp": "セシリア"
   },
   "10001": {
     "code": "Weapon_BpHRssr001_5",
@@ -1507,6 +1515,24 @@
     "type": "weapon",
     "cn": "银翼匹丝缇",
     "en": "Eagletta"
+  },
+  "10821": {
+    "code": "Weapon_Cecilia_3",
+    "type": "weapon",
+    "cn": "旧式格威尔36-康派科特",
+    "en": "Cecilia"
+  },
+  "10822": {
+    "code": "Weapon_Cecilia_4",
+    "type": "weapon",
+    "cn": "格威尔36-康派科特",
+    "en": "Cecilia"
+  },
+  "10823": {
+    "code": "Weapon_Cecilia_5",
+    "type": "weapon",
+    "cn": "斯诺特拉",
+    "en": "Cecilia"
   },
   "11007": {
     "code": "Weapon_Blade_4",
