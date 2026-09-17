@@ -966,6 +966,11 @@
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/SoppoSSR"
     },
+    "en": {
+      "value": "Soppo",
+      "source": "gfl2.help",
+      "url": "https://gfl2.help/en/banners"
+    },
     "jp": {
       "value": "ソップ",
       "source": "wikiru-detail",
