@@ -1108,6 +1108,20 @@
       "en": "Cecilia",
       "jp": "セシリア"
     },
+    "1083": {
+      "code": "AgentSSR",
+      "cn": "代理人",
+      "type": "doll",
+      "en": "Agent",
+      "jp": "エージェント"
+    },
+    "1084": {
+      "code": "ColphneDoppelgaengerSSR",
+      "cn": "寇尔芙·镜刻",
+      "type": "doll",
+      "en": "ColphneDoppelgaenger",
+      "jp": "コルフェン・ドッペルゲンガー"
+    },
     "10001": {
       "code": "Weapon_BpHRssr001_5",
       "cn": "喧闹恶灵",
@@ -2259,6 +2273,30 @@
       "cn": "斯诺特拉",
       "type": "weapon",
       "en": "Cecilia"
+    },
+    "10831": {
+      "code": "Weapon_Agent_3",
+      "cn": "旧式黑棘",
+      "type": "weapon",
+      "en": "Agent"
+    },
+    "10832": {
+      "code": "Weapon_Agent_4",
+      "cn": "黑棘",
+      "type": "weapon",
+      "en": "Agent"
+    },
+    "10833": {
+      "code": "Weapon_Agent_5",
+      "cn": "恶兆之钥",
+      "type": "weapon",
+      "en": "Agent"
+    },
+    "10843": {
+      "code": "Weapon_ColphneDoppelgaenger_5",
+      "cn": "毕宿五",
+      "type": "weapon",
+      "en": "ColphneDoppelgaenger"
     },
     "11007": {
       "code": "Weapon_Blade_4",

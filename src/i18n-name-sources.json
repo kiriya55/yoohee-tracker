@@ -1049,6 +1049,30 @@
       "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%BB%E3%82%B7%E3%83%AA%E3%82%A2"
     }
   },
+  "1083": {
+    "cn": {
+      "value": "代理人",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/doll/AgentSSR"
+    },
+    "jp": {
+      "value": "エージェント",
+      "source": "wikiru-detail",
+      "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88"
+    }
+  },
+  "1084": {
+    "cn": {
+      "value": "寇尔芙·镜刻",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/doll/ColphneDoppelgaengerSSR"
+    },
+    "jp": {
+      "value": "コルフェン・ドッペルゲンガー",
+      "source": "wikiru-detail",
+      "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B3%E3%83%AB%E3%83%95%E3%82%A7%E3%83%B3%E3%83%BB%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC"
+    }
+  },
   "10001": {
     "cn": {
       "value": "喧闹恶灵",
@@ -2462,6 +2486,34 @@
       "value": "斯诺特拉",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/weapon/Weapon_Cecilia_5"
+    }
+  },
+  "10831": {
+    "cn": {
+      "value": "旧式黑棘",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Agent_3"
+    }
+  },
+  "10832": {
+    "cn": {
+      "value": "黑棘",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Agent_4"
+    }
+  },
+  "10833": {
+    "cn": {
+      "value": "恶兆之钥",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Agent_5"
+    }
+  },
+  "10843": {
+    "cn": {
+      "value": "毕宿五",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_ColphneDoppelgaenger_5"
     }
   },
   "11007": {
