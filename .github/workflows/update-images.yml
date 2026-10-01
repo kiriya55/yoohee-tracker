@@ -261,23 +261,39 @@ jobs:
             exit 1
           fi
           git add examples/ public/images/ src/i18n-names.json src/i18n-name-sources.json src/i18n.json
-          if git diff --staged --quiet; then
-            echo "Synced but generated content is identical to what is already committed; nothing to push."
-            {
-              echo ""
-              echo "## :heavy_minus_sign: Nothing to commit"
-              echo "Sync ran, but the generated files are byte-identical to the committed ones (no timestamp churn) — no commit was created."
-            } >> "$GITHUB_STEP_SUMMARY"
-          else
-            git commit -m "chore: update resource images and i18n names ($SERVERS)"
-            if ! git push origin "HEAD:$GITHUB_REF_NAME"; then
-              echo "::error::The branch changed during publish; rerun the resource sync from the new tip."
+          change_kind="$(node scripts/classify-staged-changes.mjs)"
+          case "$change_kind" in
+            none)
+              echo "Synced but generated content is identical to what is already committed; nothing to push."
+              {
+                echo ""
+                echo "## :heavy_minus_sign: Nothing to commit"
+                echo "Sync ran, but the generated files are byte-identical to the committed ones — no commit was created."
+              } >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            timestamps-only)
+              echo "Only generated verification timestamps changed; skipping the auto-commit."
+              {
+                echo ""
+                echo "## :heavy_minus_sign: No substantive resource changes"
+                echo "Generated indexes changed only in verifiedAt/generatedAt timestamps, so no commit was created."
+              } >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            substantive)
+              git commit -m "chore: update resource images and i18n names ($SERVERS)"
+              if ! git push origin "HEAD:$GITHUB_REF_NAME"; then
+                echo "::error::The branch changed during publish; rerun the resource sync from the new tip."
+                exit 1
+              fi
+              {
+                echo ""
+                echo "## :white_check_mark: Update committed and pushed"
+                echo "- Commit: \`$(git rev-parse --short HEAD)\`"
+                echo "- Message: \`chore: update resource images and i18n names ($SERVERS)\`"
+              } >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            *)
+              echo "::error::Unexpected staged change classification: $change_kind"
               exit 1
-            fi
-            {
-              echo ""
-              echo "## :white_check_mark: Update committed and pushed"
-              echo "- Commit: \`$(git rev-parse --short HEAD)\`"
-              echo "- Message: \`chore: update resource images and i18n names ($SERVERS)\`"
-            } >> "$GITHUB_STEP_SUMMARY"
-          fi
+              ;;
+          esac
