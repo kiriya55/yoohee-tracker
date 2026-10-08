@@ -983,6 +983,11 @@
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/MitylSSR"
     },
+    "en": {
+      "value": "Mityl",
+      "source": "gfl2.help",
+      "url": "https://gfl2.help/en/banners"
+    },
     "jp": {
       "value": "ミティール",
       "source": "wikiru-detail",
