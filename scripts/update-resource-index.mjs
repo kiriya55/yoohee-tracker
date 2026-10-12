@@ -4,6 +4,7 @@ import path from "node:path";
 import { fetchWithRetry } from "./fetch-with-retry.mjs";
 import { findResourceCatalogChanges } from "./resource-catalog.mjs";
 import { computeTimesetHash, mergeServerResourceIndexes, normalizeTimesets } from "./timeset.mjs";
+import { relevantTimesets } from "./resource-change-policy.mjs";
 import { fetchCompleteCatalog } from "./catalog-sources.mjs";
 import { buildGfl2Timesets, parseGfl2BannersHtml } from "./gfl2-banners.mjs";
 import {
@@ -232,8 +233,8 @@ async function main() {
     }
     const incoming = mergeServerResourceIndexes(incomingIndexes);
     const changes = findResourceCatalogChanges(existing.items, Object.values(incoming.items));
-    const existingTimesetHash = computeTimesetHash(existing.timesets);
-    const incomingTimesetHash = computeTimesetHash(incoming.timesets);
+    const existingTimesetHash = computeTimesetHash(relevantTimesets((existing.timesets ?? []).filter((entry) => args.servers.includes(entry.server))));
+    const incomingTimesetHash = computeTimesetHash(relevantTimesets(incoming.timesets));
     const timesetChanged = args.checkTimesets && existingTimesetHash !== incomingTimesetHash;
     const avatarPendingIds = findAvatarPendingIds(existing);
     console.log(`Catalog check: ${changes.added.length} added, ${changes.changed.length} changed.`);

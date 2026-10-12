@@ -98,7 +98,7 @@ npm run resources:check-images -- examples/gf2-resource-index.haoplay.json --con
 
 - 手动触发：在 GitHub Actions 页面运行 workflow，可传入 `servers`，默认 `dw-cn,haoplay`；只有需要重刷已有头像时才打开 `refresh_dolls`。
 - 定时触发：每天 UTC 11:17 运行一次；同一分支同时只允许一个同步任务发布。
-- 定时任务会同步 Exilium BBS/MCC 的完整人形与武器目录、Dandegate 缺失头像、权威名称和卡池起止时间；不依赖当前卡池是否变化。
+- 定时任务先检查完整人形/武器目录、有效卡池排期和待补头像；有变化时才执行图片、名称及 R2 全量同步。诊断公告 ID、可明确识别的插画比赛/服装/普通宣传活动不会单独触发同步，未知类型公告保守保留。
 - 手动触发或缺少现有索引文件时会强制更新。
 - 上游尚未发布人形头像、但 MCC 已有可用缩略图时，会标记为 `avatarPending` 并先用远程缩略图发布；定时同步会持续复查，头像上线后自动下载并清除标记。没有安全回退图的 `source_pending` 仍会保留上一版生产索引。
 - 图片下载只对缺失文件执行；网络异常和 HTTP 408/425/429/5xx 会退避重试，下载完成后会先校验图片再原子替换旧文件。
@@ -116,7 +116,7 @@ i18n 名称按语言使用单一日常权威来源：中文为 [MCC Wiki](https:
 
 资源目录使用 [BBS handbook](https://gf2-bbs.exiliumgf.com/wiki/category) 的 ID 与 MCC Wiki 的 code/中文名进行全量对齐；[Exilium BBS](https://gf2-bbs.exiliumgf.com/wiki/) 作为完整目录和信息来源。
 
-名称抓取、图片查漏补缺和合并步骤在每次定时或手动 Action 中运行，不依赖卡池变化。
+名称抓取、图片查漏补缺和合并步骤在需要更新的定时 Action 或手动 Action 中运行；手动运行可用于补查名称来源。自动提交按资源索引的实际内容判定，忽略校验时间、诊断公告 ID 和上述非抽卡活动；真实卡池、UP 信号、图片及名称变化仍会提交。图片和名称合并完成后，内容未变的条目保留旧校验时间，减少有效更新中的 diff 噪声。
 
 人形头像默认转换为 128×128 PNG。
 

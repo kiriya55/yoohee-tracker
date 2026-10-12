@@ -4,6 +4,7 @@
 // job produces a noisy "update" commit every day.
 
 import { computeTimesetHash } from "./timeset.mjs";
+import { relevantTimesets, relevantSignals } from "./resource-change-policy.mjs";
 
 export const CATALOG_SIGNATURE_KEYS = ["type", "code", "name", "rarity", "iconUrl", "imageSource"];
 
@@ -58,15 +59,15 @@ export function mergeIndex(existing, incomingItems, metadata) {
     }
   }
 
-  const incomingTimesetHash = metadata.timesetHash ?? computeTimesetHash(metadata.timesets);
+  const incomingTimesetHash = computeTimesetHash(relevantTimesets(metadata.timesets));
   const scopedExistingTimesets = (existing?.timesets ?? []).filter((timeset) =>
     metadata.servers.includes(timeset.server),
   );
-  const timesetChanged = incomingTimesetHash !== computeTimesetHash(scopedExistingTimesets);
+  const timesetChanged = incomingTimesetHash !== computeTimesetHash(relevantTimesets(scopedExistingTimesets));
   const scopedExistingSignals = Object.fromEntries(
     Object.entries(existing?.updateSignals ?? {}).filter(([server]) => metadata.servers.includes(server)),
   );
-  const signalsChanged = !sameJson(metadata.updateSignals, scopedExistingSignals);
+  const signalsChanged = !sameJson(relevantSignals(metadata.updateSignals), relevantSignals(scopedExistingSignals));
   const hasSubstantiveChange = catalogChanged || timesetChanged || signalsChanged;
 
   return {
@@ -98,10 +99,10 @@ export function combinedIndexChanged(existing, combined, servers) {
     (item) => catalogSignature(priorItems[String(item.id)]) !== catalogSignature(item),
   );
   const priorTimesets = (existing.timesets ?? []).filter((timeset) => servers.includes(timeset.server));
-  const timesetChanged = combined.timesetHash !== computeTimesetHash(priorTimesets);
+  const timesetChanged = computeTimesetHash(relevantTimesets(combined.timesets)) !== computeTimesetHash(relevantTimesets(priorTimesets));
   const priorSignals = Object.fromEntries(
     Object.entries(existing.updateSignals ?? {}).filter(([server]) => servers.includes(server)),
   );
-  const signalsChanged = !sameJson(combined.updateSignals, priorSignals);
+  const signalsChanged = !sameJson(relevantSignals(combined.updateSignals), relevantSignals(priorSignals));
   return catalogChanged || timesetChanged || signalsChanged;
 }

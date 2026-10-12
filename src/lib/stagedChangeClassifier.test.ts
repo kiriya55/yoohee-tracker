@@ -29,7 +29,7 @@ describe("staged generated change classification", () => {
     writeFileSync(indexPath, `${JSON.stringify(index, null, 2)}\n`);
     execFileSync("git", ["add", "resource-index.json"], { cwd: repository });
 
-    expect(runClassifier(repository)).toMatchObject({ status: 0, output: "timestamps-only" });
+    expect(runClassifier(repository)).toMatchObject({ status: 0, output: "metadata-only" });
   });
 
   it("keeps a real index change meaningful even when timestamps also change", () => {
@@ -42,6 +42,50 @@ describe("staged generated change classification", () => {
     writeFileSync(indexPath, `${JSON.stringify(index, null, 2)}\n`);
     execFileSync("git", ["add", "resource-index.json"], { cwd: repository });
 
+    expect(runClassifier(repository)).toMatchObject({ status: 0, output: "substantive" });
+  });
+
+  it("ignores notice IDs and recognized non-gacha announcements", () => {
+    const repository = createRepository();
+    const file = join(repository, "resource-index.json");
+    const index = JSON.parse(readFileSync(file, "utf8"));
+    index.updateSignals = { haoplay: { sourceNoticeIds: [609] } };
+    index.timesets = [{ key: "haoplay:609", name: "Illustration Contest", upItemIds: [] }];
+    index.timesetHash = "diagnostic hash";
+    writeFileSync(file, JSON.stringify(index));
+    execFileSync("git", ["add", "resource-index.json"], { cwd: repository });
+    expect(runClassifier(repository)).toMatchObject({ status: 0, output: "substantive" });
+    // Establish the diagnostic containers first; only their contents are ignored.
+    execFileSync("git", ["commit", "--quiet", "-m", "diagnostics"], { cwd: repository });
+    index.updateSignals.haoplay.sourceNoticeIds = [612];
+    index.timesets = [];
+    index.timesetHash = "new hash";
+    writeFileSync(file, JSON.stringify(index));
+    execFileSync("git", ["add", "resource-index.json"], { cwd: repository });
+    expect(runClassifier(repository)).toMatchObject({ status: 0, output: "metadata-only" });
+  });
+
+  it.each([
+    { key: "banner", name: "Outfit special banner", poolType: 3, upItemIds: [1077] },
+    { key: "banner", name: "Mityl Is Rate Up!", upItemIds: [] },
+    { key: "banner", name: "Unknown future event", upItemIds: [] },
+  ])("preserves real and unrecognized schedules: $name", (timeset) => {
+    const repository = createRepository();
+    const file = join(repository, "resource-index.json");
+    const index = JSON.parse(readFileSync(file, "utf8"));
+    index.timesets = [timeset];
+    writeFileSync(file, JSON.stringify(index));
+    execFileSync("git", ["add", "resource-index.json"], { cwd: repository });
+    expect(runClassifier(repository)).toMatchObject({ status: 0, output: "substantive" });
+  });
+
+  it("keeps rate-up signal changes meaningful", () => {
+    const repository = createRepository();
+    const file = join(repository, "resource-index.json");
+    const index = JSON.parse(readFileSync(file, "utf8"));
+    index.updateSignals = { haoplay: { rateUpNames: ["Mityl"] } };
+    writeFileSync(file, JSON.stringify(index));
+    execFileSync("git", ["add", "resource-index.json"], { cwd: repository });
     expect(runClassifier(repository)).toMatchObject({ status: 0, output: "substantive" });
   });
 

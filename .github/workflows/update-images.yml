@@ -77,14 +77,14 @@ jobs:
               {
                 echo ""
                 echo "## :arrows_counterclockwise: Resource sync required"
-                echo "Catalog, event timesets, rate-up signals, or a pending avatar requires refresh — running the full sync."
+                echo "Catalog, relevant gacha schedules, or a pending avatar requires refresh — running the full sync."
               } >> "$GITHUB_STEP_SUMMARY"
             else
               echo "should_update=false" >> "$GITHUB_OUTPUT"
               {
                 echo ""
                 echo "## :white_check_mark: No resource changes"
-                echo "Catalog, event timesets, and rate-up signals are unchanged. Skipped image sync, i18n refresh, R2 upload and the auto-commit."
+                echo "Catalog and relevant gacha schedules are unchanged, with no pending avatars. Skipped image sync, i18n refresh, R2 upload and the auto-commit."
               } >> "$GITHUB_STEP_SUMMARY"
               echo "Catalog and timesets unchanged; skipping full sync."
             fi
@@ -192,6 +192,11 @@ jobs:
         if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         run: cp public/images/resource-index.json "examples/gf2-resource-index.$(echo "$SERVERS" | cut -d, -f1).json"
 
+      - name: Preserve unchanged resource timestamps
+        if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
+        run: |
+          node scripts/stabilize-resource-timestamps.mjs public/images/resource-index.json examples/gf2-resource-index.*.json
+
       - name: Upload generated mini-program index artifact
         if: success() && steps.check-banners.outputs.should_update == 'true' && steps.download-images.outputs.ready == 'true'
         uses: actions/upload-artifact@v6
@@ -271,12 +276,12 @@ jobs:
                 echo "Sync ran, but the generated files are byte-identical to the committed ones — no commit was created."
               } >> "$GITHUB_STEP_SUMMARY"
               ;;
-            timestamps-only)
-              echo "Only generated verification timestamps changed; skipping the auto-commit."
+            metadata-only)
+              echo "Only timestamps or diagnostic/non-gacha announcement metadata changed; skipping the auto-commit."
               {
                 echo ""
                 echo "## :heavy_minus_sign: No substantive resource changes"
-                echo "Generated indexes changed only in verifiedAt/generatedAt timestamps, so no commit was created."
+                echo "Only verification timestamps, diagnostic notice IDs, or recognized non-gacha announcements changed; no commit was created."
               } >> "$GITHUB_STEP_SUMMARY"
               ;;
             substantive)
