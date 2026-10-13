@@ -13,7 +13,9 @@
       "server": "haoplay",
       "iconUrl": "https://gf2.mcc.wiki/image/doll/Avatar_Head_LoreleySSR.png",
       "imageSource": "mcc-wiki",
-      "aliases": ["Loreley"]
+      "aliases": [
+        "Loreley"
+      ]
     },
     "10693": {
       "id": 10693,

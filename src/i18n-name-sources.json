@@ -1078,6 +1078,18 @@
       "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%B3%E3%83%AB%E3%83%95%E3%82%A7%E3%83%B3%E3%83%BB%E3%83%89%E3%83%83%E3%83%9A%E3%83%AB%E3%82%B2%E3%83%B3%E3%82%AC%E3%83%BC"
     }
   },
+  "1085": {
+    "cn": {
+      "value": "针",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/doll/IglaSSR"
+    },
+    "jp": {
+      "value": "イグラ",
+      "source": "wikiru-detail",
+      "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A4%E3%82%B0%E3%83%A9"
+    }
+  },
   "10001": {
     "cn": {
       "value": "喧闹恶灵",
@@ -2519,6 +2531,27 @@
       "value": "毕宿五",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/weapon/Weapon_ColphneDoppelgaenger_5"
+    }
+  },
+  "10851": {
+    "cn": {
+      "value": "旧式挽歌",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_3"
+    }
+  },
+  "10852": {
+    "cn": {
+      "value": "挽歌",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_4"
+    }
+  },
+  "10853": {
+    "cn": {
+      "value": "天鹅之死",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_5"
     }
   },
   "11007": {

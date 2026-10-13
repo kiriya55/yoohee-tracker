@@ -3827,6 +3827,45 @@
       "en": "ColphneDoppelgaenger",
       "jp": "コルフェン・ドッペルゲンガー"
     },
+    "1085": {
+      "id": 1085,
+      "type": "doll",
+      "name": "Igla",
+      "cn": "针",
+      "code": "IglaSSR",
+      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "doll/Avatar_Head_IglaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "针",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/doll/IglaSSR"
+        },
+        "jp": {
+          "value": "イグラ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A4%E3%82%B0%E3%83%A9"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "avatarPending": true,
+      "avatarPendingReason": "avatar_missing",
+      "avatarPendingPageUrl": "https://dandegate.net/dolls/Igla",
+      "avatarPendingSince": "2026-10-13T18:16:42.996Z",
+      "en": "Igla",
+      "jp": "イグラ"
+    },
     "10001": {
       "id": 10001,
       "type": "weapon",
@@ -9183,6 +9222,96 @@
       ],
       "en": "ColphneDoppelgaenger"
     },
+    "10851": {
+      "id": 10851,
+      "type": "weapon",
+      "name": "Weapon_Igla",
+      "cn": "旧式挽歌",
+      "code": "Weapon_Igla_3",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_3_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Igla_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Igla_3_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "旧式挽歌",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_3"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Igla"
+    },
+    "10852": {
+      "id": 10852,
+      "type": "weapon",
+      "name": "Weapon_Igla",
+      "cn": "挽歌",
+      "code": "Weapon_Igla_4",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_4_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Igla_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Igla_4_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "挽歌",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_4"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Igla"
+    },
+    "10853": {
+      "id": 10853,
+      "type": "weapon",
+      "name": "Weapon_Igla",
+      "cn": "天鹅之死",
+      "code": "Weapon_Igla_5",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Igla_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Igla_5_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "天鹅之死",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_5"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Igla"
+    },
     "11007": {
       "id": 11007,
       "name": "29635",
@@ -11394,5 +11523,5 @@
     }
   ],
   "timesetHash": "adbca4aa264042bb3aad65b54b4d254fd0c934a70cec4792fc57cece6be1f203",
-  "generatedAt": "2026-10-11T16:38:32.665Z"
+  "generatedAt": "2026-10-13T18:16:34.754Z"
 }

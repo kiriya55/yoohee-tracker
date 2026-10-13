@@ -1122,6 +1122,13 @@
       "en": "ColphneDoppelgaenger",
       "jp": "コルフェン・ドッペルゲンガー"
     },
+    "1085": {
+      "code": "IglaSSR",
+      "cn": "针",
+      "type": "doll",
+      "en": "Igla",
+      "jp": "イグラ"
+    },
     "10001": {
       "code": "Weapon_BpHRssr001_5",
       "cn": "喧闹恶灵",
@@ -2297,6 +2304,24 @@
       "cn": "毕宿五",
       "type": "weapon",
       "en": "ColphneDoppelgaenger"
+    },
+    "10851": {
+      "code": "Weapon_Igla_3",
+      "cn": "旧式挽歌",
+      "type": "weapon",
+      "en": "Igla"
+    },
+    "10852": {
+      "code": "Weapon_Igla_4",
+      "cn": "挽歌",
+      "type": "weapon",
+      "en": "Igla"
+    },
+    "10853": {
+      "code": "Weapon_Igla_5",
+      "cn": "天鹅之死",
+      "type": "weapon",
+      "en": "Igla"
     },
     "11007": {
       "code": "Weapon_Blade_4",

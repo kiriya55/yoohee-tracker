@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-10-11T16:38:32.665Z",
+  "generatedAt": "2026-10-13T18:16:34.754Z",
   "servers": [
     "haoplay"
   ],
@@ -3717,6 +3717,31 @@
       "en": "ColphneDoppelgaenger",
       "jp": "コルフェン・ドッペルゲンガー",
       "localIcon": "/images/doll/Avatar_Head_ColphneDoppelgaengerSSR.png"
+    },
+    "1085": {
+      "id": 1085,
+      "type": "doll",
+      "name": "Igla",
+      "cn": "针",
+      "code": "IglaSSR",
+      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "doll/Avatar_Head_IglaSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/doll/Avatar_Head_IglaSSR.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "针",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/doll"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z"
     },
     "10001": {
       "id": 10001,
@@ -8743,6 +8768,81 @@
         "haoplay"
       ],
       "en": "ColphneDoppelgaenger"
+    },
+    "10851": {
+      "id": 10851,
+      "type": "weapon",
+      "name": "Weapon_Igla",
+      "cn": "旧式挽歌",
+      "code": "Weapon_Igla_3",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_3_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Igla_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Igla_3_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "旧式挽歌",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z"
+    },
+    "10852": {
+      "id": 10852,
+      "type": "weapon",
+      "name": "Weapon_Igla",
+      "cn": "挽歌",
+      "code": "Weapon_Igla_4",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_4_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Igla_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Igla_4_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "挽歌",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z"
+    },
+    "10853": {
+      "id": 10853,
+      "type": "weapon",
+      "name": "Weapon_Igla",
+      "cn": "天鹅之死",
+      "code": "Weapon_Igla_5",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Igla_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Igla_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Igla_5_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "天鹅之死",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-10-13T18:16:34.754Z"
     },
     "11007": {
       "id": 11007,
