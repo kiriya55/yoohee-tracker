@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-10-13T18:16:34.754Z",
+  "generatedAt": "2026-10-14T15:49:14.047Z",
   "servers": [
     "haoplay"
   ],
@@ -22,6 +22,7 @@
         638,
         637,
         636,
+        634,
         620,
         610,
         521,
@@ -3731,7 +3732,6 @@
         "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
         "source": "mcc-wiki"
       },
-      "localIcon": "/images/doll/Avatar_Head_IglaSSR.png",
       "aliases": [],
       "nameSources": {
         "cn": {
@@ -3741,7 +3741,18 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-10-13T18:16:34.754Z"
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "avatarPending": true,
+      "avatarPendingReason": "avatar_missing",
+      "avatarPendingPageUrl": "https://dandegate.net/dolls/Igla",
+      "avatarPendingSince": "2026-10-13T18:16:42.996Z",
+      "en": "Igla",
+      "jp": "イグラ",
+      "localIcon": "/images/doll/Avatar_Head_IglaSSR.png"
     },
     "10001": {
       "id": 10001,
@@ -8792,7 +8803,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-10-13T18:16:34.754Z"
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Igla"
     },
     "10852": {
       "id": 10852,
@@ -8817,7 +8833,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-10-13T18:16:34.754Z"
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Igla"
     },
     "10853": {
       "id": 10853,
@@ -8842,7 +8863,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-10-13T18:16:34.754Z"
+      "verifiedAt": "2026-10-13T18:16:34.754Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Igla"
     },
     "11007": {
       "id": 11007,
