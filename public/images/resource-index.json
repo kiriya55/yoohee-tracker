@@ -3834,12 +3834,28 @@
       "name": "Igla",
       "cn": "针",
       "code": "IglaSSR",
-      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
-      "imageSource": "mcc-wiki",
+      "iconUrl": "https://cdn.dandegate.net/dolls/igla/61ada6fc8f2f170d5ba2b19b0c4ab0b065ac2ebe2a766621d4e9fe9aa4b22834.webp",
+      "imageSource": "dandegate",
       "assetPath": "doll/Avatar_Head_IglaSSR.png",
       "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_IglaSSR.png",
-        "source": "mcc-wiki"
+        "sourceUrl": "https://cdn.dandegate.net/dolls/igla/61ada6fc8f2f170d5ba2b19b0c4ab0b065ac2ebe2a766621d4e9fe9aa4b22834.webp",
+        "targetPath": "doll/Avatar_Head_IglaSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_IglaSSR.png",
+        "source": "dandegate",
+        "transform": {
+          "format": "png",
+          "width": 128,
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
+        },
+        "sourcePage": "https://dandegate.net/dolls/Igla"
       },
       "aliases": [],
       "nameSources": {
@@ -3860,12 +3876,9 @@
         "dw-cn",
         "haoplay"
       ],
-      "avatarPending": true,
-      "avatarPendingReason": "avatar_missing",
-      "avatarPendingPageUrl": "https://dandegate.net/dolls/Igla",
-      "avatarPendingSince": "2026-10-13T18:16:42.996Z",
       "en": "Igla",
-      "jp": "イグラ"
+      "jp": "イグラ",
+      "localIcon": "/images/doll/Avatar_Head_IglaSSR.png"
     },
     "10001": {
       "id": 10001,
