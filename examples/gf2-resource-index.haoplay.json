@@ -3692,12 +3692,28 @@
       "name": "ColphneDoppelgaenger",
       "cn": "寇尔芙·镜刻",
       "code": "ColphneDoppelgaengerSSR",
-      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_ColphneDoppelgaengerSSR.png",
-      "imageSource": "mcc-wiki",
+      "iconUrl": "https://cdn.dandegate.net/dolls/colphne-doppelganger/f70a82c97df048281b1922acede6edfb19372414f647ae65ab884f12186b804e.webp",
+      "imageSource": "dandegate",
       "assetPath": "doll/Avatar_Head_ColphneDoppelgaengerSSR.png",
       "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_ColphneDoppelgaengerSSR.png",
-        "source": "mcc-wiki"
+        "sourceUrl": "https://cdn.dandegate.net/dolls/colphne-doppelganger/f70a82c97df048281b1922acede6edfb19372414f647ae65ab884f12186b804e.webp",
+        "targetPath": "doll/Avatar_Head_ColphneDoppelgaengerSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_ColphneDoppelgaengerSSR.png",
+        "source": "dandegate",
+        "transform": {
+          "format": "png",
+          "width": 128,
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
+        },
+        "sourcePage": "https://dandegate.net/dolls/Colphne%20Doppelganger"
       },
       "aliases": [],
       "nameSources": {
@@ -3713,9 +3729,6 @@
         "dw-cn",
         "haoplay"
       ],
-      "avatarPending": true,
-      "avatarPendingReason": "page_missing",
-      "avatarPendingSince": "2026-09-22T15:31:19.632Z",
       "en": "ColphneDoppelgaenger",
       "jp": "コルフェン・ドッペルゲンガー",
       "localIcon": "/images/doll/Avatar_Head_ColphneDoppelgaengerSSR.png"

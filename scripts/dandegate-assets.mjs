@@ -16,6 +16,7 @@ const PAGE_ALIASES = new Map([
   ["Biyoca", "Belka"],
   ["Charolic", "Krolik"],
   ["Clukay", "Klukai"],
+  ["ColphneDoppelgaenger", "Colphne Doppelganger"],
   ["Dusevnyj", "Dushevnaya"],
   ["Lene", "Lainie"],
   ["Macqiato", "Makiatto"],
