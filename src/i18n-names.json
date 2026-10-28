@@ -402,8 +402,11 @@
     "code": "NemesisGnosisSSR",
     "type": "doll",
     "cn": "纳美西丝·衍光",
-    "en": "Nemesis Gnosis",
-    "jp": "ネメシス・グノーシス"
+    "en": "Nemesis: Gnosis",
+    "jp": "ネメシス・グノーシス",
+    "aliases": [
+      "Nemesis Gnosis"
+    ]
   },
   "1076": {
     "code": "SoppoSSR",

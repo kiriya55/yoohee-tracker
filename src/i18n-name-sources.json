@@ -954,6 +954,11 @@
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/NemesisGnosisSSR"
     },
+    "en": {
+      "value": "Nemesis: Gnosis",
+      "source": "gfl2.help-characters",
+      "url": "https://gfl2.help/en/characters"
+    },
     "jp": {
       "value": "ネメシス・グノーシス",
       "source": "wikiru-detail",

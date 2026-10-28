@@ -17,37 +17,28 @@
     "haoplay": {
       "server": "haoplay",
       "newDolls": [],
-      "newWeapons": [],
-      "rateUpNames": [
-        "Mityl",
-        "Cheyanne",
-        "Liushih"
+      "newWeapons": [
+        "Feral Fang",
+        "Silent Sanction",
+        "Sturmgewehr 41",
+        "Welrod MK.II",
+        "Retired Sturmgewehr 41",
+        "Retired Welrod MK.II"
       ],
+      "rateUpNames": [],
       "sourceNoticeIds": [
-        640,
-        639,
-        638,
-        637,
-        636,
-        634,
-        633,
+        670,
+        632,
+        635,
         620,
-        610,
         521,
         467,
-        317,
         40,
         37,
         29,
         28,
         27,
-        14,
-        645,
-        644,
-        643,
-        642,
-        641,
-        629
+        14
       ]
     }
   },
@@ -3349,12 +3340,19 @@
         "sourcePage": "https://dandegate.net/dolls/Nemesis%20Gnosis"
       },
       "localIcon": "/images/doll/Avatar_Head_NemesisGnosisSSR.png",
-      "aliases": [],
+      "aliases": [
+        "Nemesis Gnosis"
+      ],
       "nameSources": {
         "cn": {
           "value": "纳美西丝·衍光",
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/NemesisGnosisSSR"
+        },
+        "en": {
+          "value": "Nemesis: Gnosis",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
         },
         "jp": {
           "value": "ネメシス・グノーシス",
@@ -3369,8 +3367,8 @@
       ],
       "iconUrl": "https://cdn.dandegate.net/dolls/nemesis-gnosis/b2a116df60146e142a6f60682c1f0fefc625d1dcee2058880f017b41e7dce18c.webp",
       "imageSource": "dandegate",
-      "en": "Nemesis Gnosis",
-      "verifiedAt": "2026-10-11T16:38:32.665Z",
+      "en": "Nemesis: Gnosis",
+      "verifiedAt": "2026-10-28T17:09:33.459Z",
       "jp": "ネメシス・グノーシス"
     },
     "1076": {
@@ -11047,66 +11045,6 @@
       "source": "gfl2.help"
     },
     {
-      "key": "haoplay:629",
-      "server": "haoplay",
-      "poolId": 629,
-      "name": "Outfit Procurement - [Stirring Mermaid]",
-      "startTime": "2026-09-17T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:641",
-      "server": "haoplay",
-      "poolId": 641,
-      "name": "Liushih Is Rate Up!",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:642",
-      "server": "haoplay",
-      "poolId": 642,
-      "name": "Cheyanne Is Rate Up!",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:643",
-      "server": "haoplay",
-      "poolId": 643,
-      "name": "Outfit - 90s' Sunset Memories",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:644",
-      "server": "haoplay",
-      "poolId": 644,
-      "name": "Mityl Is Rate Up!",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:645",
-      "server": "haoplay",
-      "poolId": 645,
-      "name": "[Amber Reel of Moonlight]",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
       "key": "haoplay:gfl2:2024-12-03:2024-12-25:suomi,ullrid",
       "server": "haoplay",
       "poolType": 3,
@@ -11551,6 +11489,6 @@
       "source": "gfl2.help"
     }
   ],
-  "timesetHash": "adbca4aa264042bb3aad65b54b4d254fd0c934a70cec4792fc57cece6be1f203",
-  "generatedAt": "2026-10-13T18:16:34.754Z"
+  "timesetHash": "f149a29962b6253e131f7c5a31afa0e0e5f4c81503932f2959b39ec043afdb41",
+  "generatedAt": "2026-10-28T17:09:33.459Z"
 }

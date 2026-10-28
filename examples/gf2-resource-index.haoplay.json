@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-10-16T15:22:10.185Z",
+  "generatedAt": "2026-10-28T17:09:33.459Z",
   "servers": [
     "haoplay"
   ],
@@ -10,101 +10,32 @@
     "haoplay": {
       "server": "haoplay",
       "newDolls": [],
-      "newWeapons": [],
-      "rateUpNames": [
-        "Mityl",
-        "Cheyanne",
-        "Liushih"
+      "newWeapons": [
+        "Feral Fang",
+        "Silent Sanction",
+        "Sturmgewehr 41",
+        "Welrod MK.II",
+        "Retired Sturmgewehr 41",
+        "Retired Welrod MK.II"
       ],
+      "rateUpNames": [],
       "sourceNoticeIds": [
-        640,
-        639,
-        638,
-        637,
-        636,
-        634,
-        633,
+        670,
+        632,
+        635,
         620,
-        610,
         521,
         467,
-        317,
         40,
         37,
         29,
         28,
         27,
-        14,
-        645,
-        644,
-        643,
-        642,
-        641,
-        629
+        14
       ]
     }
   },
   "timesets": [
-    {
-      "key": "haoplay:629",
-      "server": "haoplay",
-      "poolId": 629,
-      "name": "Outfit Procurement - [Stirring Mermaid]",
-      "startTime": "2026-09-17T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:641",
-      "server": "haoplay",
-      "poolId": 641,
-      "name": "Liushih Is Rate Up!",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:642",
-      "server": "haoplay",
-      "poolId": 642,
-      "name": "Cheyanne Is Rate Up!",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:643",
-      "server": "haoplay",
-      "poolId": 643,
-      "name": "Outfit - 90s' Sunset Memories",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:644",
-      "server": "haoplay",
-      "poolId": 644,
-      "name": "Mityl Is Rate Up!",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:645",
-      "server": "haoplay",
-      "poolId": 645,
-      "name": "[Amber Reel of Moonlight]",
-      "startTime": "2026-10-08T01:00:00.000Z",
-      "endTime": "2026-10-28T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
     {
       "key": "haoplay:gfl2:2026-10-08:2026-10-28:mityl,cheyanne,liushih",
       "server": "haoplay",
@@ -550,7 +481,7 @@
       "source": "gfl2.help"
     }
   ],
-  "timesetHash": "91e3f0d0b4a3a6a00ce999387eeb71a9126d4b97c23d4e68d172efd7c2cbdc4b",
+  "timesetHash": "d732922096c8a66b687f4f379df02c0bc8d331ebbffde7f596c325382d49cc09",
   "items": {
     "1001": {
       "id": 1001,
