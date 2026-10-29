@@ -25,9 +25,24 @@
         "Retired Sturmgewehr 41",
         "Retired Welrod MK.II"
       ],
-      "rateUpNames": [],
+      "rateUpNames": [
+        "Faelynn",
+        "Welrod",
+        "Sextans",
+        "Phaetusa"
+      ],
       "sourceNoticeIds": [
         670,
+        660,
+        659,
+        658,
+        657,
+        656,
+        655,
+        654,
+        669,
+        652,
+        653,
         632,
         635,
         620,
@@ -38,7 +53,15 @@
         29,
         28,
         27,
-        14
+        14,
+        668,
+        667,
+        666,
+        665,
+        664,
+        663,
+        662,
+        661
       ]
     }
   },
@@ -2661,6 +2684,11 @@
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/WelrodSSR"
         },
+        "en": {
+          "value": "Welrod",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
         "jp": {
           "value": "ウェルロッド",
           "source": "wikiru-detail",
@@ -2675,7 +2703,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/welrod/e00e71c83c0757d3f88bdf5a7fccf2f0a78f4d65ae50fc47fddd080769f59ac8.webp",
       "imageSource": "dandegate",
       "en": "Welrod",
-      "verifiedAt": "2026-10-11T16:38:32.665Z",
+      "verifiedAt": "2026-10-29T17:24:51.486Z",
       "jp": "ウェルロッド"
     },
     "1064": {
@@ -3520,6 +3548,11 @@
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/FaelynnSSR"
         },
+        "en": {
+          "value": "Faelynn",
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
+        },
         "jp": {
           "value": "フェアリン",
           "source": "wikiru-detail",
@@ -3535,7 +3568,7 @@
       "imageSource": "dandegate",
       "en": "Faelynn",
       "jp": "フェアリン",
-      "verifiedAt": "2026-10-11T16:38:32.665Z"
+      "verifiedAt": "2026-10-29T17:24:51.486Z"
     },
     "1079": {
       "id": 1079,
@@ -11045,6 +11078,101 @@
       "source": "gfl2.help"
     },
     {
+      "key": "dw-cn:gfl2:2026-10-29:2026-11-18:faelynn,welrod,sextans,phaetusa",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Faelynn / Welrod / Sextans / Phaetusa Is Rate Up!",
+      "startTime": "2026-10-29T00:00:00.000Z",
+      "endTime": "2026-11-18T23:59:59.999Z",
+      "upItemIds": [
+        1060,
+        1063,
+        1073,
+        1078
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:661",
+      "server": "haoplay",
+      "poolId": 661,
+      "name": "Phaetusa Is Rate Up!",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:662",
+      "server": "haoplay",
+      "poolId": 662,
+      "name": "Sextans Is Rate Up!",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:663",
+      "server": "haoplay",
+      "poolId": 663,
+      "name": "Outfit - Welwyn Mist",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:664",
+      "server": "haoplay",
+      "poolId": 664,
+      "name": "Outfit - Sunkissed Shimmer",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:665",
+      "server": "haoplay",
+      "poolId": 665,
+      "name": "Welrod Is Rate Up!",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:666",
+      "server": "haoplay",
+      "poolId": 666,
+      "name": "Faelynn Is Rate Up!",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:667",
+      "server": "haoplay",
+      "poolId": 667,
+      "name": "[Themis' Game] Is Now Open!",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:668",
+      "server": "haoplay",
+      "poolId": 668,
+      "name": "[Dreambound Neverland] Is Now Open!",
+      "startTime": "2026-10-29T01:00:00.000Z",
+      "endTime": "2026-11-18T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
       "key": "haoplay:gfl2:2024-12-03:2024-12-25:suomi,ullrid",
       "server": "haoplay",
       "poolType": 3,
@@ -11487,8 +11615,23 @@
         1077
       ],
       "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2026-10-29:2026-11-18:faelynn,welrod,sextans,phaetusa",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Faelynn / Welrod / Sextans / Phaetusa Is Rate Up!",
+      "startTime": "2026-10-29T00:00:00.000Z",
+      "endTime": "2026-11-18T23:59:59.999Z",
+      "upItemIds": [
+        1060,
+        1063,
+        1073,
+        1078
+      ],
+      "source": "gfl2.help"
     }
   ],
-  "timesetHash": "f149a29962b6253e131f7c5a31afa0e0e5f4c81503932f2959b39ec043afdb41",
-  "generatedAt": "2026-10-28T17:09:33.459Z"
+  "timesetHash": "85078002104b55434044902723a7fb7cae2b492bda696f13869c85f0145345c7",
+  "generatedAt": "2026-10-29T17:24:51.486Z"
 }

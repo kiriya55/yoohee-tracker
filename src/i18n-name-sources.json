@@ -755,6 +755,11 @@
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/WelrodSSR"
     },
+    "en": {
+      "value": "Welrod",
+      "source": "gfl2.help",
+      "url": "https://gfl2.help/en/banners"
+    },
     "jp": {
       "value": "ウェルロッド",
       "source": "wikiru-detail",
@@ -1004,6 +1009,11 @@
       "value": "芙铃",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/FaelynnSSR"
+    },
+    "en": {
+      "value": "Faelynn",
+      "source": "gfl2.help",
+      "url": "https://gfl2.help/en/banners"
     },
     "jp": {
       "value": "フェアリン",
