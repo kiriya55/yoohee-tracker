@@ -1105,6 +1105,18 @@
       "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%A4%E3%82%B0%E3%83%A9"
     }
   },
+  "1088": {
+    "cn": {
+      "value": "破坏者",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/doll/DestroyerSSR"
+    },
+    "jp": {
+      "value": "デストロイヤー",
+      "source": "wikiru-detail",
+      "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%87%E3%82%B9%E3%83%88%E3%83%AD%E3%82%A4%E3%83%A4%E3%83%BC"
+    }
+  },
   "10001": {
     "cn": {
       "value": "喧闹恶灵",
@@ -2567,6 +2579,27 @@
       "value": "天鹅之死",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/weapon/Weapon_Igla_5"
+    }
+  },
+  "10881": {
+    "cn": {
+      "value": "旧式铁鬣",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Destroyer_3"
+    }
+  },
+  "10882": {
+    "cn": {
+      "value": "铁鬣",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Destroyer_4"
+    }
+  },
+  "10883": {
+    "cn": {
+      "value": "盖娅终结",
+      "source": "mcc-wiki",
+      "url": "https://gf2.mcc.wiki/weapon/Weapon_Destroyer_5"
     }
   },
   "11007": {

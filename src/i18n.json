@@ -1132,6 +1132,13 @@
       "en": "Igla",
       "jp": "イグラ"
     },
+    "1088": {
+      "code": "DestroyerSSR",
+      "cn": "破坏者",
+      "type": "doll",
+      "en": "Destroyer",
+      "jp": "デストロイヤー"
+    },
     "10001": {
       "code": "Weapon_BpHRssr001_5",
       "cn": "喧闹恶灵",
@@ -2325,6 +2332,24 @@
       "cn": "天鹅之死",
       "type": "weapon",
       "en": "Igla"
+    },
+    "10881": {
+      "code": "Weapon_Destroyer_3",
+      "cn": "旧式铁鬣",
+      "type": "weapon",
+      "en": "Destroyer"
+    },
+    "10882": {
+      "code": "Weapon_Destroyer_4",
+      "cn": "铁鬣",
+      "type": "weapon",
+      "en": "Destroyer"
+    },
+    "10883": {
+      "code": "Weapon_Destroyer_5",
+      "cn": "盖娅终结",
+      "type": "weapon",
+      "en": "Destroyer"
     },
     "11007": {
       "code": "Weapon_Blade_4",

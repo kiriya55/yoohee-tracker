@@ -17,14 +17,7 @@
     "haoplay": {
       "server": "haoplay",
       "newDolls": [],
-      "newWeapons": [
-        "Feral Fang",
-        "Silent Sanction",
-        "Sturmgewehr 41",
-        "Welrod MK.II",
-        "Retired Sturmgewehr 41",
-        "Retired Welrod MK.II"
-      ],
+      "newWeapons": [],
       "rateUpNames": [
         "Faelynn",
         "Welrod",
@@ -32,7 +25,6 @@
         "Phaetusa"
       ],
       "sourceNoticeIds": [
-        670,
         660,
         659,
         658,
@@ -43,7 +35,7 @@
         669,
         652,
         653,
-        632,
+        651,
         635,
         620,
         521,
@@ -3925,6 +3917,45 @@
       "en": "Igla",
       "jp": "イグラ",
       "localIcon": "/images/doll/Avatar_Head_IglaSSR.png"
+    },
+    "1088": {
+      "id": 1088,
+      "type": "doll",
+      "name": "Destroyer",
+      "cn": "破坏者",
+      "code": "DestroyerSSR",
+      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "doll/Avatar_Head_DestroyerSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "破坏者",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/doll/DestroyerSSR"
+        },
+        "jp": {
+          "value": "デストロイヤー",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%83%87%E3%82%B9%E3%83%88%E3%83%AD%E3%82%A4%E3%83%A4%E3%83%BC"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "avatarPending": true,
+      "avatarPendingReason": "avatar_missing",
+      "avatarPendingPageUrl": "https://dandegate.net/dolls/Destroyer",
+      "avatarPendingSince": "2026-11-03T18:24:55.343Z",
+      "en": "Destroyer",
+      "jp": "デストロイヤー"
     },
     "10001": {
       "id": 10001,
@@ -9372,6 +9403,96 @@
       ],
       "en": "Igla"
     },
+    "10881": {
+      "id": 10881,
+      "type": "weapon",
+      "name": "Weapon_Destroyer",
+      "cn": "旧式铁鬣",
+      "code": "Weapon_Destroyer_3",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Destroyer_3_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Destroyer_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Destroyer_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Destroyer_3_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "旧式铁鬣",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Destroyer_3"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Destroyer"
+    },
+    "10882": {
+      "id": 10882,
+      "type": "weapon",
+      "name": "Weapon_Destroyer",
+      "cn": "铁鬣",
+      "code": "Weapon_Destroyer_4",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Destroyer_4_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Destroyer_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Destroyer_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Destroyer_4_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "铁鬣",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Destroyer_4"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Destroyer"
+    },
+    "10883": {
+      "id": 10883,
+      "type": "weapon",
+      "name": "Weapon_Destroyer",
+      "cn": "盖娅终结",
+      "code": "Weapon_Destroyer_5",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Destroyer_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Destroyer_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Destroyer_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Destroyer_5_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "盖娅终结",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Destroyer_5"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Destroyer"
+    },
     "11007": {
       "id": 11007,
       "name": "29635",
@@ -11633,5 +11754,5 @@
     }
   ],
   "timesetHash": "85078002104b55434044902723a7fb7cae2b492bda696f13869c85f0145345c7",
-  "generatedAt": "2026-10-29T17:24:51.486Z"
+  "generatedAt": "2026-11-03T18:24:46.285Z"
 }
