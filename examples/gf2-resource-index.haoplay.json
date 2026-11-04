@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-11-03T18:24:46.285Z",
+  "generatedAt": "2026-11-04T18:37:54.914Z",
   "servers": [
     "haoplay"
   ],
@@ -29,7 +29,7 @@
         652,
         653,
         651,
-        635,
+        649,
         620,
         521,
         467,
@@ -3836,7 +3836,6 @@
         "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
         "source": "mcc-wiki"
       },
-      "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png",
       "aliases": [],
       "nameSources": {
         "cn": {
@@ -3846,7 +3845,18 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-03T18:24:46.285Z"
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "avatarPending": true,
+      "avatarPendingReason": "avatar_missing",
+      "avatarPendingPageUrl": "https://dandegate.net/dolls/Destroyer",
+      "avatarPendingSince": "2026-11-03T18:24:55.343Z",
+      "en": "Destroyer",
+      "jp": "デストロイヤー",
+      "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png"
     },
     "10001": {
       "id": 10001,
@@ -8987,7 +8997,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-03T18:24:46.285Z"
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Destroyer"
     },
     "10882": {
       "id": 10882,
@@ -9012,7 +9027,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-03T18:24:46.285Z"
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Destroyer"
     },
     "10883": {
       "id": 10883,
@@ -9037,7 +9057,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-03T18:24:46.285Z"
+      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Destroyer"
     },
     "11007": {
       "id": 11007,
