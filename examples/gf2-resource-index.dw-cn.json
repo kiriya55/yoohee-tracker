@@ -3924,12 +3924,28 @@
       "name": "Destroyer",
       "cn": "破坏者",
       "code": "DestroyerSSR",
-      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
-      "imageSource": "mcc-wiki",
+      "iconUrl": "https://cdn.dandegate.net/dolls/destroyer/1947bd2aee7dc80121ebf31141d4e5a158f7f6c2a83de7a9198beaba544d878d.webp",
+      "imageSource": "dandegate",
       "assetPath": "doll/Avatar_Head_DestroyerSSR.png",
       "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
-        "source": "mcc-wiki"
+        "sourceUrl": "https://cdn.dandegate.net/dolls/destroyer/1947bd2aee7dc80121ebf31141d4e5a158f7f6c2a83de7a9198beaba544d878d.webp",
+        "targetPath": "doll/Avatar_Head_DestroyerSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png",
+        "source": "dandegate",
+        "transform": {
+          "format": "png",
+          "width": 128,
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
+        },
+        "sourcePage": "https://dandegate.net/dolls/Destroyer"
       },
       "aliases": [],
       "nameSources": {
@@ -3950,12 +3966,9 @@
         "dw-cn",
         "haoplay"
       ],
-      "avatarPending": true,
-      "avatarPendingReason": "avatar_missing",
-      "avatarPendingPageUrl": "https://dandegate.net/dolls/Destroyer",
-      "avatarPendingSince": "2026-11-03T18:24:55.343Z",
       "en": "Destroyer",
-      "jp": "デストロイヤー"
+      "jp": "デストロイヤー",
+      "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png"
     },
     "10001": {
       "id": 10001,
