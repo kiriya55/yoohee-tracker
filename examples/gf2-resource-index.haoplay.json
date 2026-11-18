@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-11-04T18:37:54.914Z",
+  "generatedAt": "2026-11-18T19:23:14.686Z",
   "servers": [
     "haoplay"
   ],
@@ -11,25 +11,10 @@
       "server": "haoplay",
       "newDolls": [],
       "newWeapons": [],
-      "rateUpNames": [
-        "Faelynn",
-        "Welrod",
-        "Sextans",
-        "Phaetusa"
-      ],
+      "rateUpNames": [],
       "sourceNoticeIds": [
-        660,
-        659,
-        658,
-        657,
-        656,
-        655,
-        654,
-        669,
-        652,
-        653,
-        651,
-        649,
+        650,
+        646,
         620,
         521,
         467,
@@ -38,99 +23,11 @@
         29,
         28,
         27,
-        14,
-        668,
-        667,
-        666,
-        665,
-        664,
-        663,
-        662,
-        661
+        14
       ]
     }
   },
   "timesets": [
-    {
-      "key": "haoplay:661",
-      "server": "haoplay",
-      "poolId": 661,
-      "name": "Phaetusa Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:662",
-      "server": "haoplay",
-      "poolId": 662,
-      "name": "Sextans Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:663",
-      "server": "haoplay",
-      "poolId": 663,
-      "name": "Outfit - Welwyn Mist",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:664",
-      "server": "haoplay",
-      "poolId": 664,
-      "name": "Outfit - Sunkissed Shimmer",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:665",
-      "server": "haoplay",
-      "poolId": 665,
-      "name": "Welrod Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:666",
-      "server": "haoplay",
-      "poolId": 666,
-      "name": "Faelynn Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:667",
-      "server": "haoplay",
-      "poolId": 667,
-      "name": "[Themis' Game] Is Now Open!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:668",
-      "server": "haoplay",
-      "poolId": 668,
-      "name": "[Dreambound Neverland] Is Now Open!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
     {
       "key": "haoplay:gfl2:2026-10-29:2026-11-18:faelynn,welrod,sextans,phaetusa",
       "server": "haoplay",
@@ -591,7 +488,7 @@
       "source": "gfl2.help"
     }
   ],
-  "timesetHash": "ca84edceaeb11cd17b8985dc039c406eacc4a8296bb99d180b2bbb1d41a45c03",
+  "timesetHash": "fda797f52890344e3c09522af18a7c228d6e2528b64799d5f9239477fbbfbe5f",
   "items": {
     "1001": {
       "id": 1001,
@@ -3829,12 +3726,28 @@
       "name": "Destroyer",
       "cn": "破坏者",
       "code": "DestroyerSSR",
-      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
-      "imageSource": "mcc-wiki",
+      "iconUrl": "https://cdn.dandegate.net/dolls/destroyer/1947bd2aee7dc80121ebf31141d4e5a158f7f6c2a83de7a9198beaba544d878d.webp",
+      "imageSource": "dandegate",
       "assetPath": "doll/Avatar_Head_DestroyerSSR.png",
       "assetSource": {
-        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_DestroyerSSR.png",
-        "source": "mcc-wiki"
+        "sourceUrl": "https://cdn.dandegate.net/dolls/destroyer/1947bd2aee7dc80121ebf31141d4e5a158f7f6c2a83de7a9198beaba544d878d.webp",
+        "targetPath": "doll/Avatar_Head_DestroyerSSR.png",
+        "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png",
+        "source": "dandegate",
+        "transform": {
+          "format": "png",
+          "width": 128,
+          "height": 128,
+          "crop": {
+            "left": 36,
+            "top": 0,
+            "width": 440,
+            "height": 440,
+            "referenceWidth": 512,
+            "referenceHeight": 512
+          }
+        },
+        "sourcePage": "https://dandegate.net/dolls/Destroyer"
       },
       "aliases": [],
       "nameSources": {
@@ -3845,15 +3758,11 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-03T18:24:46.285Z",
+      "verifiedAt": "2026-11-18T19:23:14.686Z",
       "servers": [
         "dw-cn",
         "haoplay"
       ],
-      "avatarPending": true,
-      "avatarPendingReason": "avatar_missing",
-      "avatarPendingPageUrl": "https://dandegate.net/dolls/Destroyer",
-      "avatarPendingSince": "2026-11-03T18:24:55.343Z",
       "en": "Destroyer",
       "jp": "デストロイヤー",
       "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png"

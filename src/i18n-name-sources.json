@@ -1027,6 +1027,11 @@
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/KoledaSSR"
     },
+    "en": {
+      "value": "Koleda",
+      "source": "gfl2.help-characters",
+      "url": "https://gfl2.help/en/characters"
+    },
     "jp": {
       "value": "コレダ",
       "source": "wikiru-detail",
@@ -1038,6 +1043,11 @@
       "value": "阿斯缇亚",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/AsteriaSSR"
+    },
+    "en": {
+      "value": "Asteria",
+      "source": "gfl2.help-characters",
+      "url": "https://gfl2.help/en/characters"
     },
     "jp": {
       "value": "アステリア",
@@ -1051,6 +1061,11 @@
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/EaglettaSSR"
     },
+    "en": {
+      "value": "Eagletta",
+      "source": "gfl2.help-characters",
+      "url": "https://gfl2.help/en/characters"
+    },
     "jp": {
       "value": "イグレッタ",
       "source": "wikiru-detail",
@@ -1062,6 +1077,11 @@
       "value": "希丽雅",
       "source": "mcc-wiki",
       "url": "https://gf2.mcc.wiki/doll/CeciliaSSR"
+    },
+    "en": {
+      "value": "Cecilia",
+      "source": "gfl2.help-characters",
+      "url": "https://gfl2.help/en/characters"
     },
     "jp": {
       "value": "セシリア",

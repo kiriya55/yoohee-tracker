@@ -18,25 +18,10 @@
       "server": "haoplay",
       "newDolls": [],
       "newWeapons": [],
-      "rateUpNames": [
-        "Faelynn",
-        "Welrod",
-        "Sextans",
-        "Phaetusa"
-      ],
+      "rateUpNames": [],
       "sourceNoticeIds": [
-        660,
-        659,
-        658,
-        657,
-        656,
-        655,
-        654,
-        669,
-        652,
-        653,
-        651,
-        649,
+        650,
+        646,
         620,
         521,
         467,
@@ -45,15 +30,7 @@
         29,
         28,
         27,
-        14,
-        668,
-        667,
-        666,
-        665,
-        664,
-        663,
-        662,
-        661
+        14
       ]
     }
   },
@@ -3597,6 +3574,11 @@
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/KoledaSSR"
         },
+        "en": {
+          "value": "Koleda",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
         "jp": {
           "value": "コレダ",
           "source": "wikiru-detail",
@@ -3612,7 +3594,7 @@
       "imageSource": "dandegate",
       "en": "Koleda",
       "jp": "コレダ",
-      "verifiedAt": "2026-10-11T16:38:32.665Z"
+      "verifiedAt": "2026-11-18T19:23:14.686Z"
     },
     "1080": {
       "id": 1080,
@@ -3649,6 +3631,11 @@
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/AsteriaSSR"
         },
+        "en": {
+          "value": "Asteria",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
         "jp": {
           "value": "アステリア",
           "source": "wikiru-detail",
@@ -3663,7 +3650,7 @@
       "iconUrl": "https://cdn.dandegate.net/dolls/asteria/8ee2a80e5b45bdca052a64e7d1e430392c8810f763aaa2393e79d42ebd61d07b.webp",
       "imageSource": "dandegate",
       "en": "Asteria",
-      "verifiedAt": "2026-10-11T16:38:32.665Z",
+      "verifiedAt": "2026-11-18T19:23:14.686Z",
       "jp": "アステリア"
     },
     "1081": {
@@ -3695,6 +3682,11 @@
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/EaglettaSSR"
         },
+        "en": {
+          "value": "Eagletta",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
         "jp": {
           "value": "イグレッタ",
           "source": "wikiru-detail",
@@ -3702,7 +3694,7 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-10-11T16:38:32.665Z",
+      "verifiedAt": "2026-11-18T19:23:14.686Z",
       "servers": [
         "dw-cn",
         "haoplay"
@@ -3747,6 +3739,11 @@
           "source": "mcc-wiki",
           "url": "https://gf2.mcc.wiki/doll/CeciliaSSR"
         },
+        "en": {
+          "value": "Cecilia",
+          "source": "gfl2.help-characters",
+          "url": "https://gfl2.help/en/characters"
+        },
         "jp": {
           "value": "セシリア",
           "source": "wikiru-detail",
@@ -3754,7 +3751,7 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-10-11T16:38:32.665Z",
+      "verifiedAt": "2026-11-18T19:23:14.686Z",
       "servers": [
         "dw-cn",
         "haoplay"
@@ -11227,86 +11224,6 @@
       "source": "gfl2.help"
     },
     {
-      "key": "haoplay:661",
-      "server": "haoplay",
-      "poolId": 661,
-      "name": "Phaetusa Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:662",
-      "server": "haoplay",
-      "poolId": 662,
-      "name": "Sextans Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:663",
-      "server": "haoplay",
-      "poolId": 663,
-      "name": "Outfit - Welwyn Mist",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:664",
-      "server": "haoplay",
-      "poolId": 664,
-      "name": "Outfit - Sunkissed Shimmer",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:665",
-      "server": "haoplay",
-      "poolId": 665,
-      "name": "Welrod Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:666",
-      "server": "haoplay",
-      "poolId": 666,
-      "name": "Faelynn Is Rate Up!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:667",
-      "server": "haoplay",
-      "poolId": 667,
-      "name": "[Themis' Game] Is Now Open!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
-      "key": "haoplay:668",
-      "server": "haoplay",
-      "poolId": 668,
-      "name": "[Dreambound Neverland] Is Now Open!",
-      "startTime": "2026-10-29T01:00:00.000Z",
-      "endTime": "2026-11-18T10:59:59.000Z",
-      "upItemIds": [],
-      "source": "exilium"
-    },
-    {
       "key": "haoplay:gfl2:2024-12-03:2024-12-25:suomi,ullrid",
       "server": "haoplay",
       "poolType": 3,
@@ -11766,6 +11683,6 @@
       "source": "gfl2.help"
     }
   ],
-  "timesetHash": "85078002104b55434044902723a7fb7cae2b492bda696f13869c85f0145345c7",
-  "generatedAt": "2026-11-03T18:24:46.285Z"
+  "timesetHash": "f5731d7f4bf0a2ff0664fdb912180189e8047a24c9470e22b30bed11453ba856",
+  "generatedAt": "2026-11-18T19:23:14.686Z"
 }
