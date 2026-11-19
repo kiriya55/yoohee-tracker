@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-11-18T19:23:14.686Z",
+  "generatedAt": "2026-11-19T19:28:19.320Z",
   "servers": [
     "haoplay"
   ],
@@ -11,8 +11,27 @@
       "server": "haoplay",
       "newDolls": [],
       "newWeapons": [],
-      "rateUpNames": [],
+      "rateUpNames": [
+        "Koleda",
+        "OTs-14",
+        "Nikketa"
+      ],
       "sourceNoticeIds": [
+        701,
+        700,
+        699,
+        698,
+        697,
+        696,
+        694,
+        695,
+        693,
+        692,
+        688,
+        691,
+        690,
+        687,
+        686,
         650,
         646,
         620,
@@ -23,11 +42,124 @@
         29,
         28,
         27,
-        14
+        14,
+        711,
+        710,
+        707,
+        702,
+        706,
+        704,
+        709,
+        708,
+        703
       ]
     }
   },
   "timesets": [
+    {
+      "key": "haoplay:702",
+      "server": "haoplay",
+      "poolId": 702,
+      "name": "Elmo Annual Report",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:703",
+      "server": "haoplay",
+      "poolId": 703,
+      "name": "2nd Anniversary Illustration Contest",
+      "startTime": "2026-11-19T08:00:00.000Z",
+      "endTime": "2027-01-17T14:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:704",
+      "server": "haoplay",
+      "poolId": 704,
+      "name": "Outfit - Immaculate Devotion",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:706",
+      "server": "haoplay",
+      "poolId": 706,
+      "name": "Outfit Procurement - [Age of Spooms]",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:707",
+      "server": "haoplay",
+      "poolId": 707,
+      "name": "Selected Doll Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:708",
+      "server": "haoplay",
+      "poolId": 708,
+      "name": "Nikketa Is Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:709",
+      "server": "haoplay",
+      "poolId": 709,
+      "name": "OTs-14 Is Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:710",
+      "server": "haoplay",
+      "poolId": 710,
+      "name": "Koleda Is Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:711",
+      "server": "haoplay",
+      "poolId": 711,
+      "name": "[Iliad] Is Now Open!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:gfl2:2026-11-19:2026-12-09:koleda,ots14,nikketa",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Koleda / OTs-14 / Nikketa Is Rate Up!",
+      "startTime": "2026-11-19T00:00:00.000Z",
+      "endTime": "2026-12-09T23:59:59.999Z",
+      "upItemIds": [
+        1055,
+        1074,
+        1079
+      ],
+      "source": "gfl2.help"
+    },
     {
       "key": "haoplay:gfl2:2026-10-29:2026-11-18:faelynn,welrod,sextans,phaetusa",
       "server": "haoplay",
@@ -488,7 +620,7 @@
       "source": "gfl2.help"
     }
   ],
-  "timesetHash": "fda797f52890344e3c09522af18a7c228d6e2528b64799d5f9239477fbbfbe5f",
+  "timesetHash": "0712e7c6a2af76617197ce664b42a5eb2c04d830ad0a5feace6250438c4ba33c",
   "items": {
     "1001": {
       "id": 1001,

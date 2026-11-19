@@ -18,8 +18,27 @@
       "server": "haoplay",
       "newDolls": [],
       "newWeapons": [],
-      "rateUpNames": [],
+      "rateUpNames": [
+        "Koleda",
+        "OTs-14",
+        "Nikketa"
+      ],
       "sourceNoticeIds": [
+        701,
+        700,
+        699,
+        698,
+        697,
+        696,
+        694,
+        695,
+        693,
+        692,
+        688,
+        691,
+        690,
+        687,
+        686,
         650,
         646,
         620,
@@ -30,7 +49,16 @@
         29,
         28,
         27,
-        14
+        14,
+        711,
+        710,
+        707,
+        702,
+        706,
+        704,
+        709,
+        708,
+        703
       ]
     }
   },
@@ -3576,8 +3604,8 @@
         },
         "en": {
           "value": "Koleda",
-          "source": "gfl2.help-characters",
-          "url": "https://gfl2.help/en/characters"
+          "source": "gfl2.help",
+          "url": "https://gfl2.help/en/banners"
         },
         "jp": {
           "value": "コレダ",
@@ -3594,7 +3622,7 @@
       "imageSource": "dandegate",
       "en": "Koleda",
       "jp": "コレダ",
-      "verifiedAt": "2026-11-18T19:23:14.686Z"
+      "verifiedAt": "2026-11-19T19:28:19.320Z"
     },
     "1080": {
       "id": 1080,
@@ -11224,6 +11252,110 @@
       "source": "gfl2.help"
     },
     {
+      "key": "dw-cn:gfl2:2026-11-19:2026-12-09:koleda,ots14,nikketa",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Koleda / OTs-14 / Nikketa Is Rate Up!",
+      "startTime": "2026-11-19T00:00:00.000Z",
+      "endTime": "2026-12-09T23:59:59.999Z",
+      "upItemIds": [
+        1055,
+        1074,
+        1079
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:702",
+      "server": "haoplay",
+      "poolId": 702,
+      "name": "Elmo Annual Report",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:703",
+      "server": "haoplay",
+      "poolId": 703,
+      "name": "2nd Anniversary Illustration Contest",
+      "startTime": "2026-11-19T08:00:00.000Z",
+      "endTime": "2027-01-17T14:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:704",
+      "server": "haoplay",
+      "poolId": 704,
+      "name": "Outfit - Immaculate Devotion",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:706",
+      "server": "haoplay",
+      "poolId": 706,
+      "name": "Outfit Procurement - [Age of Spooms]",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:707",
+      "server": "haoplay",
+      "poolId": 707,
+      "name": "Selected Doll Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:708",
+      "server": "haoplay",
+      "poolId": 708,
+      "name": "Nikketa Is Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:709",
+      "server": "haoplay",
+      "poolId": 709,
+      "name": "OTs-14 Is Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:710",
+      "server": "haoplay",
+      "poolId": 710,
+      "name": "Koleda Is Rate Up!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-09T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
+      "key": "haoplay:711",
+      "server": "haoplay",
+      "poolId": 711,
+      "name": "[Iliad] Is Now Open!",
+      "startTime": "2026-11-19T01:00:00.000Z",
+      "endTime": "2026-12-30T10:59:59.000Z",
+      "upItemIds": [],
+      "source": "exilium"
+    },
+    {
       "key": "haoplay:gfl2:2024-12-03:2024-12-25:suomi,ullrid",
       "server": "haoplay",
       "poolType": 3,
@@ -11681,8 +11813,22 @@
         1078
       ],
       "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2026-11-19:2026-12-09:koleda,ots14,nikketa",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Koleda / OTs-14 / Nikketa Is Rate Up!",
+      "startTime": "2026-11-19T00:00:00.000Z",
+      "endTime": "2026-12-09T23:59:59.999Z",
+      "upItemIds": [
+        1055,
+        1074,
+        1079
+      ],
+      "source": "gfl2.help"
     }
   ],
-  "timesetHash": "f5731d7f4bf0a2ff0664fdb912180189e8047a24c9470e22b30bed11453ba856",
-  "generatedAt": "2026-11-18T19:23:14.686Z"
+  "timesetHash": "cf3190df8e50a88a262bbeb7b998bfb4a3cb41781532c458a988f4d3a1a1d3a6",
+  "generatedAt": "2026-11-19T19:28:19.320Z"
 }
