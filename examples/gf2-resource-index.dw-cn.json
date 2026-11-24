@@ -39,7 +39,7 @@
         690,
         687,
         686,
-        650,
+        685,
         646,
         620,
         521,
@@ -3994,6 +3994,44 @@
       "en": "Destroyer",
       "jp": "デストロイヤー",
       "localIcon": "/images/doll/Avatar_Head_DestroyerSSR.png"
+    },
+    "1089": {
+      "id": 1089,
+      "type": "doll",
+      "name": "Kuro",
+      "cn": "卡萝",
+      "code": "KuroSSR",
+      "iconUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_KuroSSR.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "doll/Avatar_Head_KuroSSR.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_KuroSSR.png",
+        "source": "mcc-wiki"
+      },
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "卡萝",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/doll/KuroSSR"
+        },
+        "jp": {
+          "value": "クロ",
+          "source": "wikiru-detail",
+          "url": "https://dollsfrontline2.wikiru.jp/?%E3%82%AF%E3%83%AD"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "avatarPending": true,
+      "avatarPendingReason": "page_missing",
+      "avatarPendingSince": "2026-11-24T21:09:29.865Z",
+      "en": "Kuro",
+      "jp": "クロ"
     },
     "10001": {
       "id": 10001,
@@ -9531,6 +9569,96 @@
       ],
       "en": "Destroyer"
     },
+    "10891": {
+      "id": 10891,
+      "type": "weapon",
+      "name": "Weapon_Kuro",
+      "cn": "旧式MDR突击步枪",
+      "code": "Weapon_Kuro_3",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Kuro_3_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Kuro_3_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Kuro_3_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Kuro_3_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "旧式MDR突击步枪",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Kuro_3"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Kuro"
+    },
+    "10892": {
+      "id": 10892,
+      "type": "weapon",
+      "name": "Weapon_Kuro",
+      "cn": "MDR突击步枪",
+      "code": "Weapon_Kuro_4",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Kuro_4_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Kuro_4_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Kuro_4_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Kuro_4_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "MDR突击步枪",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Kuro_4"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Kuro"
+    },
+    "10893": {
+      "id": 10893,
+      "type": "weapon",
+      "name": "Weapon_Kuro",
+      "cn": "阈限风暴",
+      "code": "Weapon_Kuro_5",
+      "iconUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Kuro_5_1024.png",
+      "imageSource": "mcc-wiki",
+      "assetPath": "weapon/Weapon_Kuro_5_1024.png",
+      "assetSource": {
+        "sourceUrl": "https://gf2.mcc.wiki/static/image/weapon/Weapon_Kuro_5_1024.png",
+        "source": "mcc-wiki"
+      },
+      "localIcon": "/images/weapon/Weapon_Kuro_5_1024.png",
+      "aliases": [],
+      "nameSources": {
+        "cn": {
+          "value": "阈限风暴",
+          "source": "mcc-wiki",
+          "url": "https://gf2.mcc.wiki/weapon/Weapon_Kuro_5"
+        }
+      },
+      "server": "haoplay",
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Kuro"
+    },
     "11007": {
       "id": 11007,
       "name": "29635",
@@ -11830,5 +11958,5 @@
     }
   ],
   "timesetHash": "cf3190df8e50a88a262bbeb7b998bfb4a3cb41781532c458a988f4d3a1a1d3a6",
-  "generatedAt": "2026-11-19T19:28:19.320Z"
+  "generatedAt": "2026-11-24T21:09:22.656Z"
 }

@@ -1139,6 +1139,13 @@
       "en": "Destroyer",
       "jp": "デストロイヤー"
     },
+    "1089": {
+      "code": "KuroSSR",
+      "cn": "卡萝",
+      "type": "doll",
+      "en": "Kuro",
+      "jp": "クロ"
+    },
     "10001": {
       "code": "Weapon_BpHRssr001_5",
       "cn": "喧闹恶灵",
@@ -2350,6 +2357,24 @@
       "cn": "盖娅终结",
       "type": "weapon",
       "en": "Destroyer"
+    },
+    "10891": {
+      "code": "Weapon_Kuro_3",
+      "cn": "旧式MDR突击步枪",
+      "type": "weapon",
+      "en": "Kuro"
+    },
+    "10892": {
+      "code": "Weapon_Kuro_4",
+      "cn": "MDR突击步枪",
+      "type": "weapon",
+      "en": "Kuro"
+    },
+    "10893": {
+      "code": "Weapon_Kuro_5",
+      "cn": "阈限风暴",
+      "type": "weapon",
+      "en": "Kuro"
     },
     "11007": {
       "code": "Weapon_Blade_4",
