@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-11-24T21:09:22.656Z",
+  "generatedAt": "2026-11-25T20:27:57.262Z",
   "servers": [
     "haoplay"
   ],
@@ -3912,7 +3912,6 @@
         "sourceUrl": "https://gf2.mcc.wiki/static/thumbnail/doll/Avatar_Half_KuroSSR.png",
         "source": "mcc-wiki"
       },
-      "localIcon": "/images/doll/Avatar_Head_KuroSSR.png",
       "aliases": [],
       "nameSources": {
         "cn": {
@@ -3922,7 +3921,17 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-24T21:09:22.656Z"
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "avatarPending": true,
+      "avatarPendingReason": "page_missing",
+      "avatarPendingSince": "2026-11-24T21:09:29.865Z",
+      "en": "Kuro",
+      "jp": "クロ",
+      "localIcon": "/images/doll/Avatar_Head_KuroSSR.png"
     },
     "10001": {
       "id": 10001,
@@ -9153,7 +9162,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-24T21:09:22.656Z"
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Kuro"
     },
     "10892": {
       "id": 10892,
@@ -9178,7 +9192,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-24T21:09:22.656Z"
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Kuro"
     },
     "10893": {
       "id": 10893,
@@ -9203,7 +9222,12 @@
         }
       },
       "server": "haoplay",
-      "verifiedAt": "2026-11-24T21:09:22.656Z"
+      "verifiedAt": "2026-11-24T21:09:22.656Z",
+      "servers": [
+        "dw-cn",
+        "haoplay"
+      ],
+      "en": "Kuro"
     },
     "11007": {
       "id": 11007,
