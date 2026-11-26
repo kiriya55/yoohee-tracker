@@ -11063,6 +11063,20 @@
       "source": "gfl2.help"
     },
     {
+      "key": "dw-cn:gfl2:2025-07-03:2025-08-13:makiatto,ullrid,daiyan,suomi",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Makiatto / Ullrid / Daiyan / Suomi Is Rate Up!",
+      "startTime": "2025-07-03T00:00:00.000Z",
+      "endTime": "2025-08-13T23:59:59.999Z",
+      "upItemIds": [
+        1032,
+        1037,
+        1039
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "dw-cn:gfl2:2025-07-24:2025-08-13:qiuhua,vector",
       "server": "dw-cn",
       "poolType": 3,
@@ -11156,6 +11170,22 @@
       "source": "gfl2.help"
     },
     {
+      "key": "dw-cn:gfl2:2025-11-27:2026-01-07:makiatto,suomi,qiuhua,springfield,centaureissi,klukai",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Makiatto / Suomi / Qiuhua / Springfield / Centaureissi / Klukai Is Rate Up!",
+      "startTime": "2025-11-27T00:00:00.000Z",
+      "endTime": "2026-01-07T23:59:59.999Z",
+      "upItemIds": [
+        1028,
+        1039,
+        1047,
+        1048,
+        1052
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "dw-cn:gfl2:2025-12-18:2026-01-07:robella,belka,jiangyu",
       "server": "dw-cn",
       "poolType": 3,
@@ -11207,6 +11237,23 @@
         1013,
         1056,
         1065
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "dw-cn:gfl2:2026-02-19:2026-04-01:zhaohui,nikketa,daiyan,ullrid,yoohee,dushevnaya",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Zhaohui / Nikketa / Daiyan / Ullrid / Yoohee / Dushevnaya Is Rate Up!",
+      "startTime": "2026-02-19T00:00:00.000Z",
+      "endTime": "2026-04-01T23:59:59.999Z",
+      "upItemIds": [
+        1023,
+        1032,
+        1037,
+        1050,
+        1054,
+        1055
       ],
       "source": "gfl2.help"
     },
@@ -11294,6 +11341,22 @@
       "source": "gfl2.help"
     },
     {
+      "key": "dw-cn:gfl2:2026-06-25:2026-08-05:qiuhua,belka,makiatto,klukai,florence,vector,springfield",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Qiuhua / Belka / Makiatto / Klukai / Florence / Vector / Springfield Is Rate Up!",
+      "startTime": "2026-06-25T00:00:00.000Z",
+      "endTime": "2026-08-05T23:59:59.999Z",
+      "upItemIds": [
+        1044,
+        1047,
+        1048,
+        1052,
+        1064
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "dw-cn:gfl2:2026-07-16:2026-08-05:cheyanne,liushih,helen,yoohee",
       "server": "dw-cn",
       "poolType": 3,
@@ -11333,6 +11396,38 @@
         1066,
         1071,
         1074
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "dw-cn:gfl2:2026-08-27:2026-10-07:lenna,leva,lind,florence,jiangyu,andoris,belka,nikketa,qiuhua,peri,springfield,zhaohui,yoohee,vector,mechty,klukai,centaureissi,dushevnaya,daiyan,makiatto,ullrid,suomi,robella",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Lenna / Leva / Lind / Florence / Jiangyu / Andoris / Belka / Nikketa / Qiuhua / Peri / Springfield / Zhaohui / Yoohee / Vector / Mechty / Klukai / Centaureissi / Dushevnaya / Daiyan / Makiatto / Ullrid / Suomi / Robella Is Rate Up!",
+      "startTime": "2026-08-27T00:00:00.000Z",
+      "endTime": "2026-10-07T23:59:59.999Z",
+      "upItemIds": [
+        1013,
+        1023,
+        1028,
+        1032,
+        1035,
+        1037,
+        1039,
+        1042,
+        1044,
+        1047,
+        1048,
+        1050,
+        1051,
+        1052,
+        1053,
+        1054,
+        1055,
+        1056,
+        1057,
+        1059,
+        1064
       ],
       "source": "gfl2.help"
     },
@@ -11390,6 +11485,24 @@
         1055,
         1074,
         1079
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "dw-cn:gfl2:2026-11-19:2026-12-30:leva,springfield,voymastina,loreley,sakura,lewis,helen",
+      "server": "dw-cn",
+      "poolType": 3,
+      "name": "Leva / Springfield / Voymastina / Loreley / Sakura / Lewis / Helen Is Rate Up!",
+      "startTime": "2026-11-19T00:00:00.000Z",
+      "endTime": "2026-12-30T23:59:59.999Z",
+      "upItemIds": [
+        1047,
+        1056,
+        1062,
+        1066,
+        1067,
+        1068,
+        1069
       ],
       "source": "gfl2.help"
     },
@@ -11626,6 +11739,20 @@
       "source": "gfl2.help"
     },
     {
+      "key": "haoplay:gfl2:2025-07-03:2025-08-13:makiatto,ullrid,daiyan,suomi",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Makiatto / Ullrid / Daiyan / Suomi Is Rate Up!",
+      "startTime": "2025-07-03T00:00:00.000Z",
+      "endTime": "2025-08-13T23:59:59.999Z",
+      "upItemIds": [
+        1032,
+        1037,
+        1039
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "haoplay:gfl2:2025-07-24:2025-08-13:qiuhua,vector",
       "server": "haoplay",
       "poolType": 3,
@@ -11719,6 +11846,22 @@
       "source": "gfl2.help"
     },
     {
+      "key": "haoplay:gfl2:2025-11-27:2026-01-07:makiatto,suomi,qiuhua,springfield,centaureissi,klukai",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Makiatto / Suomi / Qiuhua / Springfield / Centaureissi / Klukai Is Rate Up!",
+      "startTime": "2025-11-27T00:00:00.000Z",
+      "endTime": "2026-01-07T23:59:59.999Z",
+      "upItemIds": [
+        1028,
+        1039,
+        1047,
+        1048,
+        1052
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "haoplay:gfl2:2025-12-18:2026-01-07:robella,belka,jiangyu",
       "server": "haoplay",
       "poolType": 3,
@@ -11770,6 +11913,23 @@
         1013,
         1056,
         1065
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2026-02-19:2026-04-01:zhaohui,nikketa,daiyan,ullrid,yoohee,dushevnaya",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Zhaohui / Nikketa / Daiyan / Ullrid / Yoohee / Dushevnaya Is Rate Up!",
+      "startTime": "2026-02-19T00:00:00.000Z",
+      "endTime": "2026-04-01T23:59:59.999Z",
+      "upItemIds": [
+        1023,
+        1032,
+        1037,
+        1050,
+        1054,
+        1055
       ],
       "source": "gfl2.help"
     },
@@ -11857,6 +12017,22 @@
       "source": "gfl2.help"
     },
     {
+      "key": "haoplay:gfl2:2026-06-25:2026-08-05:qiuhua,belka,makiatto,klukai,florence,vector,springfield",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Qiuhua / Belka / Makiatto / Klukai / Florence / Vector / Springfield Is Rate Up!",
+      "startTime": "2026-06-25T00:00:00.000Z",
+      "endTime": "2026-08-05T23:59:59.999Z",
+      "upItemIds": [
+        1044,
+        1047,
+        1048,
+        1052,
+        1064
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "haoplay:gfl2:2026-07-16:2026-08-05:cheyanne,liushih,helen,yoohee",
       "server": "haoplay",
       "poolType": 3,
@@ -11896,6 +12072,38 @@
         1066,
         1071,
         1074
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2026-08-27:2026-10-07:lenna,leva,lind,florence,jiangyu,andoris,belka,nikketa,qiuhua,peri,springfield,zhaohui,yoohee,vector,mechty,klukai,centaureissi,dushevnaya,daiyan,makiatto,ullrid,suomi,robella",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Lenna / Leva / Lind / Florence / Jiangyu / Andoris / Belka / Nikketa / Qiuhua / Peri / Springfield / Zhaohui / Yoohee / Vector / Mechty / Klukai / Centaureissi / Dushevnaya / Daiyan / Makiatto / Ullrid / Suomi / Robella Is Rate Up!",
+      "startTime": "2026-08-27T00:00:00.000Z",
+      "endTime": "2026-10-07T23:59:59.999Z",
+      "upItemIds": [
+        1013,
+        1023,
+        1028,
+        1032,
+        1035,
+        1037,
+        1039,
+        1042,
+        1044,
+        1047,
+        1048,
+        1050,
+        1051,
+        1052,
+        1053,
+        1054,
+        1055,
+        1056,
+        1057,
+        1059,
+        1064
       ],
       "source": "gfl2.help"
     },
@@ -11955,8 +12163,26 @@
         1079
       ],
       "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2026-11-19:2026-12-30:leva,springfield,voymastina,loreley,sakura,lewis,helen",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Leva / Springfield / Voymastina / Loreley / Sakura / Lewis / Helen Is Rate Up!",
+      "startTime": "2026-11-19T00:00:00.000Z",
+      "endTime": "2026-12-30T23:59:59.999Z",
+      "upItemIds": [
+        1047,
+        1056,
+        1062,
+        1066,
+        1067,
+        1068,
+        1069
+      ],
+      "source": "gfl2.help"
     }
   ],
-  "timesetHash": "cf3190df8e50a88a262bbeb7b998bfb4a3cb41781532c458a988f4d3a1a1d3a6",
-  "generatedAt": "2026-11-24T21:09:22.656Z"
+  "timesetHash": "f6e18377f2bea6a84f1f38caa25499e83b90aba66efde65c3dbbca0b39b23141",
+  "generatedAt": "2026-11-26T20:09:40.010Z"
 }

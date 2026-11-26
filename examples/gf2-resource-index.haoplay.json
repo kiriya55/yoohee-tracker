@@ -2,7 +2,7 @@
   "format": "gf2-resource-index",
   "version": 1,
   "source": "exilium-events-and-mcc-wiki",
-  "generatedAt": "2026-11-25T20:27:57.262Z",
+  "generatedAt": "2026-11-26T20:09:40.010Z",
   "servers": [
     "haoplay"
   ],
@@ -161,6 +161,24 @@
       "source": "gfl2.help"
     },
     {
+      "key": "haoplay:gfl2:2026-11-19:2026-12-30:leva,springfield,voymastina,loreley,sakura,lewis,helen",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Leva / Springfield / Voymastina / Loreley / Sakura / Lewis / Helen Is Rate Up!",
+      "startTime": "2026-11-19T00:00:00.000Z",
+      "endTime": "2026-12-30T23:59:59.999Z",
+      "upItemIds": [
+        1047,
+        1056,
+        1062,
+        1066,
+        1067,
+        1068,
+        1069
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "haoplay:gfl2:2026-10-29:2026-11-18:faelynn,welrod,sextans,phaetusa",
       "server": "haoplay",
       "poolType": 3,
@@ -204,6 +222,38 @@
       "source": "gfl2.help"
     },
     {
+      "key": "haoplay:gfl2:2026-08-27:2026-10-07:lenna,leva,lind,florence,jiangyu,andoris,belka,nikketa,qiuhua,peri,springfield,zhaohui,yoohee,vector,mechty,klukai,centaureissi,dushevnaya,daiyan,makiatto,ullrid,suomi,robella",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Lenna / Leva / Lind / Florence / Jiangyu / Andoris / Belka / Nikketa / Qiuhua / Peri / Springfield / Zhaohui / Yoohee / Vector / Mechty / Klukai / Centaureissi / Dushevnaya / Daiyan / Makiatto / Ullrid / Suomi / Robella Is Rate Up!",
+      "startTime": "2026-08-27T00:00:00.000Z",
+      "endTime": "2026-10-07T23:59:59.999Z",
+      "upItemIds": [
+        1013,
+        1023,
+        1028,
+        1032,
+        1035,
+        1037,
+        1039,
+        1042,
+        1044,
+        1047,
+        1048,
+        1050,
+        1051,
+        1052,
+        1053,
+        1054,
+        1055,
+        1056,
+        1057,
+        1059,
+        1064
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "haoplay:gfl2:2026-08-27:2026-09-16:ots14,basti,voymastina",
       "server": "haoplay",
       "poolType": 3,
@@ -243,6 +293,22 @@
         1067,
         1070,
         1072
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2026-06-25:2026-08-05:qiuhua,belka,makiatto,klukai,florence,vector,springfield",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Qiuhua / Belka / Makiatto / Klukai / Florence / Vector / Springfield Is Rate Up!",
+      "startTime": "2026-06-25T00:00:00.000Z",
+      "endTime": "2026-08-05T23:59:59.999Z",
+      "upItemIds": [
+        1044,
+        1047,
+        1048,
+        1052,
+        1064
       ],
       "source": "gfl2.help"
     },
@@ -330,6 +396,23 @@
       "source": "gfl2.help"
     },
     {
+      "key": "haoplay:gfl2:2026-02-19:2026-04-01:zhaohui,nikketa,daiyan,ullrid,yoohee,dushevnaya",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Zhaohui / Nikketa / Daiyan / Ullrid / Yoohee / Dushevnaya Is Rate Up!",
+      "startTime": "2026-02-19T00:00:00.000Z",
+      "endTime": "2026-04-01T23:59:59.999Z",
+      "upItemIds": [
+        1023,
+        1032,
+        1037,
+        1050,
+        1054,
+        1055
+      ],
+      "source": "gfl2.help"
+    },
+    {
       "key": "haoplay:gfl2:2026-02-19:2026-03-11:alva,lenna,leva",
       "server": "haoplay",
       "poolType": 3,
@@ -381,6 +464,22 @@
       "upItemIds": [
         1035,
         1057
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2025-11-27:2026-01-07:makiatto,suomi,qiuhua,springfield,centaureissi,klukai",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Makiatto / Suomi / Qiuhua / Springfield / Centaureissi / Klukai Is Rate Up!",
+      "startTime": "2025-11-27T00:00:00.000Z",
+      "endTime": "2026-01-07T23:59:59.999Z",
+      "upItemIds": [
+        1028,
+        1039,
+        1047,
+        1048,
+        1052
       ],
       "source": "gfl2.help"
     },
@@ -474,6 +573,20 @@
       "upItemIds": [
         1044,
         1048
+      ],
+      "source": "gfl2.help"
+    },
+    {
+      "key": "haoplay:gfl2:2025-07-03:2025-08-13:makiatto,ullrid,daiyan,suomi",
+      "server": "haoplay",
+      "poolType": 3,
+      "name": "Makiatto / Ullrid / Daiyan / Suomi Is Rate Up!",
+      "startTime": "2025-07-03T00:00:00.000Z",
+      "endTime": "2025-08-13T23:59:59.999Z",
+      "upItemIds": [
+        1032,
+        1037,
+        1039
       ],
       "source": "gfl2.help"
     },
@@ -620,7 +733,7 @@
       "source": "gfl2.help"
     }
   ],
-  "timesetHash": "0712e7c6a2af76617197ce664b42a5eb2c04d830ad0a5feace6250438c4ba33c",
+  "timesetHash": "46df00f2ae18c7800ebd742ff8326f4bce748b84b74cb05bf14b6397671e7bda",
   "items": {
     "1001": {
       "id": 1001,
